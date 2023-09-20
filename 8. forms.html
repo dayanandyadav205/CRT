@@ -51,13 +51,13 @@
             <legend>Registration form</legend>
     
             <label for="enrollment">Enrollment Number:</label><br>
-            <input type="text" id="enrollment" name="enrollment" placeholder="Enrollment Number" maxlength="12"><br><br>
+            <input type="text" id="enrollment" name="enrollment" placeholder="Enrollment Number" pattern="[a-zA-Z0-9]{12,20}"><br><br>
         
             <label for="fname">First Name:</label><br>
-            <input type="text" id="fname"  name="fname" placeholder="First Name" required><br><br>
+            <input type="text" id="fname"  name="fname" placeholder="First Name" pattern="[a-zA-Z]{4,50}" required><br><br>
     
             <label for="lname">Last Name:</label><br>
-            <input type="text" id="lname"  name="lname" placeholder="Last Name" required><br><br>
+            <input type="text" id="lname"  name="lname" placeholder="Last Name" pattern="[a-zA-Z]{4,50}" required><br><br>
      
             <label for="email">Email:</label><br>
             <input type="email" name="email" id="email" placeholder="Email" required><br><br>
@@ -70,7 +70,7 @@
             <input type="radio" id="Gender2" name="Gender">Female<br><br>
            
             <label for="mobile">Mobile No.</label><br>
-            <input type="number" id="mobile" name="mobile" placeholder="Mobile Number" required><br><br>
+            <input type="number" id="mobile" name="mobile" pattern="[0-9]{0,10}" placeholder="Mobile Number" required><br><br>
             
             <label for="country">Select Country</label><br>
             <select class="form-select" id="country" name="country" required>
@@ -388,7 +388,6 @@
             <input type="checkbox" id="chkaadhar" name="chkaadhar">Aadhar card
             <input type="checkbox" id="chkpan" name="chkpan">PAN card
             <input type="checkbox" id="chkdl" name="chkdl">Driving Licence<br><br>
-            
     
             <label for="file">Upload Single Document</label><br>
             <input type="file" id="file" name="file" required><br><br>
@@ -398,7 +397,7 @@
     
             <label for="password">Password:</label><br>
             <input type="password" id="pwd" placeholder="Password" required>
-
+            <br><input type="checkbox" onclick="myFunction()">Show Password<br><br>
             
             
              <br><br><br>
@@ -410,11 +409,18 @@
         
     </div>
         
-        
-        
-
       
-<a href="8.1 javascript form validation.html">Go to Javascript form validation</a>
+    <script>
+        function myFunction() {
+       var x = document.getElementById("pwd");
+       if (x.type === "password") {
+         x.type = "text";
+       } else {
+         x.type = "password";
+       }
+     }
+     
+     </script>
 
 <br><br>
 </body>
