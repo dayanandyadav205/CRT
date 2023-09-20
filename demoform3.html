@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validateForm(){
+            var n= document.getElementById("fname").value;
+            var p= document.getElementById("pwd").value;
+            
+            if(n=="" || p=="")
+            {
+                document.getElementById("name_alert").textContent.value= "Please Enter Your Name";
+                document.getElementById("name_alert").style.color="red";   
+                        
+                document.getElementById("password_alert").textContent= "Please Enter Your Password";
+                document.getElementById("password_alert").style.color="red";              
+                
+                return false;
+            }
+    }
+</script>
+</head>
+<body>
+    <form action="Message.html" onsubmit="return validateForm()">
+        <h1 id="idh1">Basics of Javascript</h1>
+        
+        <input type="text" id="fname" placeholder="Your Name" oninput="validate()">
+        <div id="name_alert"></div>
+     
+        <br>
+        <input type="password" id="pwd" placeholder="Password">
+        <div id="password_alert"></div>
+        <br><br>
+        <input type="submit">
+    </form>
+</body>
+</html>
