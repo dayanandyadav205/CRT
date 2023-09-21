@@ -3,47 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-   <style>
-        .container{
-            display:inline-table;
-            background-color:rgb(107, 216, 48);
-            border: 2px solid;
-            }
-            .div2{
-                display: flexbox;
-                background-color: rgb(48, 48, 60);
-                border: 2px solid;
-            }
-   </style>
+    <title>Multimedia</title>
     
 </head>
 <body>
-    <div class="container">
-        <div class="div1">
+        <div>
+            <h1>video control</h1>
             <video controls>
                 <source src="video/mov_bbb.mp4" type="video/mp4">
             </video>
         </div>
      <hr>
-        <div class="div2">
+            <div>
+                <h1>audio control</h1>
             <audio controls>
                 <source src="audio/horse.mp3" type="audio/mp3">
             </audio>
         </div>
-        <hr>
-        <div class="div2">
-            <audio controls>
-                <source src="audio/horse.mp3" type="audio/mp3">
-            </audio>
-        </div>
-        <hr>
-        <div class="div2">
-            <audio controls>
-                <source src="audio/horse.mp3" type="audio/mp3">
-            </audio>
-        </div>
-    </div>
-   
+   <hr>
+   <div>
+    <h1>iframe (video link from youtube)</h1>
+    <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY">
+    </iframe>
+   </div>
 </body>
 </html>

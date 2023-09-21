@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Form</title>
+    
+</head>
+<body>
+    <h1>Form</h1>
+    <form>
+        <fieldset>
+            <legend>Regisration Form</legend>
+            <label>First Name</label><br>
+            <input type="text" id="fname" placeholder="First Name" pattern="[a-zA-Z]{3,30}" required>
+            
+            <br><br>
+
+            <label>Last Name</label><br>
+            <input type="text" id="lname">
+            
+            <br><br>
+
+            <label>DOB</label><br>
+            <input type="date" id="dob">
+
+            <br><br>
+            <label>Password</label><br>
+            <input type="password" id="pwd">
+
+            <br><br>
+            <label>Select Country</label><br>
+            <select>
+                <option>Select Country</option>
+                <option value="IND">India</option>
+                <option value="SL">Sri Lanka</option>
+            </select>
+
+            <br><br>
+
+            <label>Gender</label><br>
+            <input type="radio" id="m" name="gender">Male
+            <input type="radio" id="f" name="gender">Female
+
+            <br><br>
+
+            <label>Id proof</label><br>
+            <input type="checkbox" id="aadhar">Aadhar Card<br>
+            <input type="checkbox" id="pan">PAN card <br>
+            <input type="checkbox" id="voter">Voter Card <br>
+
+            <br><br>
+            <input type="submit" id="submit">
+            <input type="reset" id="submit">
+        </fieldset>
+    </form>
+</body>
+</html>
