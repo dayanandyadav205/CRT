@@ -12,17 +12,21 @@
          border: 1px solid;
          background-color:rgb(3, 116, 116);
          padding:2%;
-         display: flex;
          display: block;
         }
-        .div0{
+        .div0, .div00{
             border: 3px solid;
             border-radius: 2px;
-            display:flex;
-            background-color:rgb(211, 3, 3);  
-            color: white;
+            background-color:rgb(194, 12, 12) ;  
+            color: white; 
         }
-        
+        .div123{
+            border: 2px solid;
+            border-radius: 2px;
+            display: flex;
+             background-color:rgb(3, 116, 116);  
+             color: white;  
+       }
        .div1{
             border: 2px solid;
             border-radius: 2px;
@@ -31,53 +35,62 @@
              color: white;  
        }
        .div2{
-        border: 2px solid;
-         display: flex;  
-         background-color: rgb(120, 124, 120); 
-         padding: 1%;
+            border: 2px solid;
+            border-radius: 2px;
+            display: flex;
+             background-color:rgb(3, 116, 116);  
+             color: white;  
        }
        .div3{
-        border: 2px solid;
-         display:inline-block;  
-         background-color: rgb(151, 139, 140); 
+            border: 2px solid;
+            border-radius: 2px;
+            display: flex;
+             background-color:rgb(3, 116, 116);  
+             color: white;  
        }
-       .div4{
-        border: 2px solid;
-         display: flex;  
-         background-color: rgb(25, 36, 162); 
-       }
+              h1,h2, h3,h4{
+                color: white;
+              }
 
-       a{
-        color:white;
-        border-radius: 2px;
-        text-decoration: none;
-        font-size: 30px;
-        font-weight: bold;
-        line-height: 2;
-       
-       }
-       a:hover{
-       background-color: green;
-        color: white;
-       }
-       
+              img{
+            border-radius: 30px;
+          }
+              ul {
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+              width: 200px;
+              background-color: #f1f1f1;
+            }
+
+            li a {
+              display: block;
+              color: #000;
+              padding: 8px 16px;
+              text-decoration: none;
+            }
+
+            /* Change the link color on hover */
+            li a:hover {
+              background-color: #555;
+              color: white;
+            }
     </style>
    </head>
 <body>
   
     <div class="gridcontainer">
-      
-        
-          <div class="div0">
-              <a href="home.html"><img src="image/cdgi.jpg" height="100" width="100"></a>
-            <h1>Campus Recruitment Training on Web Development</h1>
-     
-          </div>
-       
+     <div class="div0">
+      <h1 align="center">Chameli Devi Group of Institutions, Indore</h1>
+      <h2 align="center">Campus Recruitment Training (CRT)</h2>
+      <h3 align="center">Web Development (HTML, CSS, JavaScript)</h3>
+      <h4 align="center">CS III Semester (Section A + B)</h4>
+     </div>   
         <hr>
+      <div class="div123">
         <div class="div1">
         <ul style="list-style-type: none;">
-        <li style="font-weight: bolder;font-size: x-large;">Topic Covered:</li>
+        <h2 style="color:black " align="center">HTML</h2>
         <li><a href="introduction to HTML.html">1. Introduction to HTML</a></li>
         <li><a href="html document structure.html">2. HTML Document Structure</a></li>
         <li><a href="text formatting.html">3. Text Formatting</a></li>
@@ -86,11 +99,25 @@
         <li><a href="lists.html">6. Lists</a></li>
         <li><a href="table.html">7. Tables</a></li>
         <li><a href="forms.html">8. Forms</a></li>
-        <li><a href="formvalidation.html">9. Client Side Form validation</a></li>
+        <li><a href="forms.html">9. Client Side Form validation</a></li>
         <li><a href="audio video.html">10. Multimedia: Audio and video elements</a></li>
-        
         </ul>
         </div>
+        <hr>
+        <div class="div2">
+          <ul style="list-style-type: none;">
+          <h2 style="color:black " align="center">CSS</h2>
+          <li><a href="introduction to HTML.html">1. Introduction to HTML</a></li>
+          </ul>
+          </div>
+          <hr>
+          <div class="div3">
+            <ul style="list-style-type: none;">
+            <h2 style="color:black " align="center">JavaScript</h2>
+            <li><a href="introduction to HTML.html">1. Introduction to HTML</a></li>
+            </ul>
+            </div>
+      </div>
       
 </body>
 </html>
