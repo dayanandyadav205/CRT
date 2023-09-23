@@ -9,7 +9,12 @@
     <meta name="keywords" content="B.Tech, B.Tech CSE, Web Development,HTML, 
     CSS, JavaScript, Training">
     <title>Campus Recruitment Training (CRT)</title>
+
+    <!-- external CSS -->
     <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <!-- external JavaScript -->
+    <script src="script.js"></script>
    </head>  
 <body>
   
@@ -48,13 +53,13 @@
         </div>
         </header>
 
-<div class="bgcontentpages"></div> 
+<hr>
 <h2 align="center">HTML Forms and Form Validation (Client-side form validation)</h2>
           
       <hr>
-        <div class="div1">
-            <h3>Built-in form validation</h3>
-            <Form action="message copy.html" autocomplete="off" method="get">
+        <div>
+            <h3>HTM Form with Built-in form validation</h3>
+            <Form action="message copy.html" autocomplete="off" method="get"  onsubmit="return validate()">
             
             <fieldset>
             <legend>Registration form</legend>
@@ -64,12 +69,19 @@
         
             <label for="fname">First Name:</label><br>
             <input type="text" id="fname"  name="fname" placeholder="First Name" pattern="[a-zA-Z]{4,50}" required><br><br>
+            <span id="spnIsFirstNameValid"></span>
     
             <label for="lname">Last Name:</label><br>
             <input type="text" id="lname"  name="lname" placeholder="Last Name" pattern="[a-zA-Z]{4,50}" required><br><br>
+
      
             <label for="email">Email:</label><br>
             <input type="email" name="email" id="email" placeholder="Email" required><br><br>
+
+            
+            <label for="password">Password:</label><br>
+            <input type="password" id="pwd" placeholder="Password" required>
+            <br><input type="checkbox" onclick="myFunction()">Show Password<br><br>
     
             <label>DOB</label><br>
             <input type="date" id="dob" name="dob" required><br><br>
@@ -404,9 +416,6 @@
             <label for="files">Upload Multiple Document</label><br>
             <input type="file" id="files" name="files" multiple><br><br>
     
-            <label for="password">Password:</label><br>
-            <input type="password" id="pwd" placeholder="Password" required>
-            <br><input type="checkbox" onclick="myFunction()">Show Password<br><br>
             
             
              <br><br><br>
@@ -418,19 +427,8 @@
         
     </div>
         
-      
-    <script>
-        function myFunction() {
-       var x = document.getElementById("pwd");
-       if (x.type === "password") {
-         x.type = "text";
-       } else {
-         x.type = "password";
-       }
-     }
-     
-     </script>
-
+    
+   
 <br><br>
 </body>
 </html>
