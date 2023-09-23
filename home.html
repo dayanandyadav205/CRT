@@ -3,94 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
-    <style>
-      body{
-        font-family: sans-serif;
-      }
-      ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: #333333;
-      }
-      
-      li {
-        float: left;
-      }
-      
-      li a {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 16px;
-        text-decoration: none;
-      }
-      
-      li a:hover {
-        background-color:green;
-      }
-      div.container{
-          position: relative;
-          text-align: left;
-          
-        }
-        div.centered{
-            text-align: center; 
-            position: absolute;
-            top: 10%;
-            left: 25%;
-        }
-        div.right{
-            text-align: center; 
-            position: absolute;
-            top: 0%;
-            right: 0%;
-        }
-        .banner{
-          border: 2px solid gray;
-          border-radius: 5px;
-        }
-        h2,h3,h4{
-          text-align: center;
-        }
-      </style>
-    
-   </head>
+    <meta name="description" content="Campus Recruitment Training (CRT)- 
+    A training program based on Web Development (HTML, CSS, JavaScript) 
+    B.Tech 2nd Year 3rd Semester Students">
+    <meta name="keywords" content="B.Tech, B.Tech CSE, Web Development,HTML, 
+    CSS, JavaScript, Training">
+    <title>Campus Recruitment Training (CRT)</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+   </head>  
 <body>
+  
+  <header class="header-area">
   <div class="container">
     
     <img src="image/logo-left.png" style="width:10%;">
     <img src="image/CDIP Logo.png" style="width:8%;">
     <div class="centered">
-    <h1 style="color:  #ca393e;">Chameli Devi Group of Institutions, 
-      Indore</h1>
+    <p>Chameli Devi Group of Institutions, Indore</p>
     </div>
     <div class="right">
       <img src="image/CDIPS Logo.png" style="width:40%;">
-      <img src="image/logo-right.png" style="width:40%;">
+      <img src="image/logo-right.png" style="width:35%;">
     </div>
   </div> 
-  <div class="nav">
-     <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="html/htmlindex.html">HTML</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#about">About</a></li>
-        </ul>
-    </div>
-        <div class="container">
-          <marquee direction="right" style="color:  rgb(2, 49, 49);">
-            <h2>Campus Recruitment Training (CRT) on Web Development (HTML, CSS, JavaScript)</h2>
-            <h3></h3>
-            <h4>CS III Semester</h4>
+  <div>
+    <nav>
+          <a href="home.html">Home</a>
+          <a href="index_html.html">HTML Tutorial</a>
+          <a href="index_css.html">CSS Tutorial</a>
+          <a href="index_javascript.html">JavaScript Tutorial</a>
+          <a href="#about">About us</a>
+          <a href="#about">Contact us</a>
+    </nav>
+  </div>
+  
+        <div class="marquee">
+          <marquee direction="left">
+            <p style="align-items: center; color: rgb(228, 21, 21);
+            font-weight: bold;">Campus Recruitment Training (CRT) on 
+            Web Development (HTML, CSS, JavaScript) for CS 2<sup>nd</sup> Year 3<sup>rd</sup> Semester</p>
           </marquee>
-          <div class="banner">
-            <img src="image/banner0.webp" style="width:100%;">
+        </div>
+  </header>
+         
+        <!-- CDGI banner image -->
+        <div class="banner">
+            <img src="image/banner0.webp">
           </div>
-        </div> 
-        <footer><p style="text-align: center; color: white;">
-          &copy; Chameli Devi Group of Institutions, Indore</p></footer>
-  </body> 
+        
+        <hr>
+        <div class="footericon"> 
+          <a href="https://www.facebook.com/socialcdgi" target="_blank">
+          <img src="image/fb.jfif" width="3%"></a>
+      
+          <a href="https://in.linkedin.com/company/chameli-devi-group-of-institutions" target="_blank">
+          <img src="image/linkedin.jfif" width="3%"></a>
+      
+          <a href="https://www.instagram.com/cdgi_indore" target="_blank">
+            <img src="image/insta.jfif" width="3%"></a>
+      
+          <a href="https://mail.google.com/a/cdgi.edu.in" target="_blank">
+            <img src="image/gmail.jfif" width="5%"></a>
+      
+          <a href="https://www.youtube.com/@socialcdgi" target="_blank">
+            <img src="image/youtube.jfif" width="4%"></a>
+        </div>
+       
+          <footer><p align="center">&copy; Designed & Developed by <a href="image/dayanand yadav.jpg">Dayanand Yadav </a> (Assistant Professor, CSE) CDGI, Indore</p></footer>
+      </body> 
 </html>
