@@ -230,6 +230,7 @@
               .regForm{
                 background-color: lightseagreen;
                 padding:30px;
+                display: inline-block;
                
               }
 
