@@ -9,26 +9,32 @@
           display: table;
       }
 
-      nav{
-        display: flex;
+      .navleft{
         background-color:#333333;
-        width:auto;
-        margin:5px;
+        overflow: hidden;
       }
-      nav a{
+
+      .navleft a{
         text-decoration: none;
-        padding: 20px;
         color:white;
-        font-size: larger;
-        font-weight: bold;
-     
+        font-size:17px;
+        float: left;
+        padding: 14px 16px;
 
       }
-      nav a:hover{
-        background-color:green;
+      .navleft a:hover{
+        background-color: #ddd;
+        color: black;
        
       }
-     
+
+    
+     /* Right-aligned section inside the top navigation */
+     .navright a {
+          float: right;
+        }
+
+    
       div.container{
           position: relative;
           text-align: left;
@@ -36,12 +42,13 @@
       
         div.centered{
             text-align: center; 
-            position:absolute;
-            top: 0%;
-            left: 20%;
+           align-self: center;
+            
+        
             color:rgb(201, 3, 3); 
             font-size:40px; 
             font-weight:bolder; 
+            overflow: hidden;
         }
         div.right{
             text-align: center; 
@@ -91,7 +98,8 @@
           color:white;
         }
         .footer a:hover{
-          background-color:green;
+          background-color: #ddd;
+        color: black;
         }
         
      
