@@ -17,9 +17,9 @@
       .navleft a{
         text-decoration: none;
         color:white;
-        font-size:17px;
+        font-size:20px;
         float: left;
-        padding: 14px 16px;
+        padding: 25px 15px;
 
       }
       .navleft a:hover{
@@ -224,4 +224,16 @@
 
               #myBtn:hover {
                 background-color: #555;
+              }
+
+              /* Registration form */
+              .regForm{
+                background-color: lightseagreen;
+                padding:30px;
+               
+              }
+
+              .regForm *{
+                font-size: larger;
+                padding-block: 10px;
               }
