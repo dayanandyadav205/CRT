@@ -14,26 +14,24 @@
    
     <style>
 
-/* body { position: static; overflow-y:auto } */
+
             body {
-              position: static; overflow-y:auto;
-              /* position: fixed; overflow-y:scroll; */
+             
               font-family: 'Roboto', sans-serif;
               display: flex;
               flex-direction: column;
               align-items: center;
               justify-content: center;
               height: 100vh;
+              width: auto;
               overflow: hidden;
               margin: 0;
-              background-position: center center;
-              background-size: cover;
-              transition: 0.4s;
+             
             }
 
 
             .slider-container {
-              box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+              
               height: 70vh;
               width: 80vw;
               position: relative;
@@ -42,15 +40,15 @@
 
             .slide {
               opacity: 0;
-              height: 75vh;
+              height: 60vh;
               width: 100vw;
               background-position: center center;
               background-size: cover;
               position: absolute;
               top: -5vh;
               left: -8vw;
-              transition: 0.4s ease;
-              z-index: 1;
+              transition: 0.2s ease;
+              /* z-index: 1; */
             }
 
             .slide.active {
@@ -60,45 +58,40 @@
             .arrow {
               position: fixed;
               background-color: transparent;
-              color: #fff;
-              padding: 20px;
-              font-size: 30px;
               border: transparent;
               top: 70%;
               transform: translateY(-50%);
               cursor: pointer;
+              
             }
-
-            .arrow:focus {
-              outline: 0;
+            .arrow:hover{
+              background-color:orange;
             }
 
             .left-arrow {
-              left: calc(7vw - 65px);
+              left: calc(7vw - 60px);
             }
 
             .right-arrow {
-              right: calc(7vw - 65px);
+              right: calc(7vw - 60px);
             }
 
+      
         </style>
   </head>
   <body>
     <header class="header-area">
         <div class="container">
           
-          <img src="image/logo-left.png" style="width:10%;">
-          <img src="image/CDIP Logo.png" style="width:8%;">
+          <img src="image/logo-left.png" style="width: 150px; padding: 20px;">
+          
           <div class="centered">
-          <p>Chameli Devi Group of Institutions, Indore</p>
+          <p style="font-size:120%; line-height: 50%;">Chameli Devi Group of Institutions, Indore</p>
+          <p style="font-size:80%;line-height: 50%;">Campus Recruitment Training (CRT) on Web Development</p>
           
           </div>
-          <div class="right">
-            <img src="image/CDIPS Logo.png" style="width:50%;">
-            <img src="image/logo-right.png" style="width:45%;">
-          </div>
         </div> 
-        <div class="navleft">
+        <div class="navleft"> 
           
                 <a href="home.html">Home</a>
                 <a href="index_html.html">HTML Tutorial</a>
@@ -113,7 +106,7 @@
               <div class="marquee">
                 <marquee direction="left">
                   <p>Campus Recruitment Training (CRT) on 
-                  Web Development (HTML, CSS, JavaScript) for CS 2<sup>nd</sup> Year 3<sup>rd</sup> Semester</p>
+                  Web Development (HTML, CSS, JavaScript) for CS 2<sup>nd</sup> Year (3<sup>rd</sup> Semester)</p>
                 </marquee>
               </div>
         </header>
@@ -124,48 +117,118 @@
   
         <div class="slide" style="background-image: url('image/slide1.jpg');"></div>
       
+        <div class="slide" style="background-image: url('image/slide2.jfif');"></div>
         
-      <button class="arrow left-arrow" id="left" ><img src="image/arrow pre.jpg" width="100px">
+      <button class="arrow left-arrow" id="left" ><img src="image/arrow pre.jpg" width="70px">
       </button>
 
-      <button class="arrow right-arrow" id="right"><img src="image/arrow next.jpg" width="100px">
+      <button class="arrow right-arrow" id="right"><img src="image/arrow next.jpg" width="70px">
       </button>
     </div>
-    <hr>
+   <hr>
     <div class="footer">
-        <footer >&copy; Designed & Developed by <a href="image/dayanand yadav.jpg">Prof. Dayanand Yadav </a> &nbsp;(Assistant Professor, CSE) CDGI, Indore</footer>
-     
+        <footer >&copy; Designed & Developed by <a href="image/dayanand yadav.jpg">Dayanand Yadav</a> &nbsp;(Assistant Professor, CSE) CDGI, Indore</footer>
       </div>
-   
-    
-              <!-- JavaScript slider -->
-            <script src="js/script.js"></script>
+          
+            <!-- // image slider script -->
+          <script>        
+                
+                // In this code, it is used to select all elements with the class name 'slide'.
+                  const slides = document.querySelectorAll('.slide')
+
+                 
+                  // it is used to select the left and right buttons.
+                  const leftBtn = document.getElementById('left')
+                  const rightBtn = document.getElementById('right')
+
+                  let activeSlide = 0
+
+                  
+                  // it is used to listen for the 'click' event on the left and right buttons.
+                  rightBtn.addEventListener('click', () => 
+                  {
+
+                  // activeSlide: This variable keeps track of the currently active slide. It is initially set to 0.
+                  activeSlide++
 
 
-            <!-- Button Go to Top -->
+                  // it is used to check if the active slide index exceeds the total number of slides or goes below 0.
+                  if (activeSlide > slides.length - 1) 
+                  {
+                      activeSlide = 0
+                  }
+
+                  // setActiveSlide: This function is responsible for updating the active slide by adding or removing the 'active' class. 
+                  // It uses a loop to remove the 'active' class from all slides and then adds the 'active' class to the slide at the current
+                  // activeSlide index.
+                  setActiveSlide()
+                  })
+
+                  leftBtn.addEventListener('click', () => 
+                  {
+                  activeSlide--
+
+                  if (activeSlide < 0) 
+                  {
+                      activeSlide = slides.length - 1
+                  }
+
+                  setActiveSlide()
+                  })
+
+                  function setActiveSlide() 
+                  {
+                  slides.forEach((slide) => slide.classList.remove('active'))
+
+                  slides[activeSlide].classList.add('active')
+                  }
+
+          </script>
+
+
+          <!-- // Go to top button script -->
+
+
+<!-- ==========xxxxxxxxxxxxxxxxxxxxxxxxxxx===========xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx================= -->
+
+          <script>
+           
+          //  This button will serve as our "Go to Top" button.
             <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
-              
-            <script>
+           
+          
             // Get the button
             let mybutton = document.getElementById("myBtn");
 
+            // This function is responsible for showing or hiding the button based on the scroll position.
             // When the user scrolls down 20px from the top of the document, show the button
             window.onscroll = function() {scrollFunction()};
 
-            function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            // Inside the scrollFunction(), we check if the scroll position is greater than 20 pixels from the top of the document. 
+            // If it is, we set the display property of the button to "block" to make it visible. Otherwise, we set it to "none" to hide it.
+            function scrollFunction() 
+            {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) 
+            {
                 mybutton.style.display = "block";
-            } else {
+            } 
+            
+            else 
+            {
                 mybutton.style.display = "none";
             }
             }
 
-            // When the user clicks on the button, scroll to the top of the document
+            // This function is triggered when the user clicks on the button. 
+            // It scrolls the document back to the top by setting the scrollTop property of both document.body and document.documentElement to 0.
             function topFunction() {
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
             }
-            </script>
+
+            // Finally, we attach the scrollFunction() to the onscroll event of the window object. 
+            // This ensures that the button's visibility is updated whenever the user scrolls the page.
+        </script>
 </body>
 </html>
