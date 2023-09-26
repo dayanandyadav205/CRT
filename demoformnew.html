@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="message.html" autocomplete="on">
+        <fieldset>
+            <Legend>
+                Demo
+            </Legend>
+            <label>Enrollment No</label><br>
+            <input type="text" id="enrollno" pattern="[a-zA-Z0-9]+" 
+            title="Enrollment should be like this 0832CS221001" placeholder="Enrollment No" required><br><br>
+
+            <!-- <label>Name</label><br>
+            <input type="text" id="txtname" pattern="[a-zA-Z]{3,30}" required><br><br>
+
+            <label>Password</label><br>
+            <input type="password" id="pwd" pattern="[a-zA-Z0-9\W+]{4,8}" required><br><br>
+            <input type="checkbox" id="chkpwd" onclick=" return myFunction()"> Show password<br>
+
+            <label>Email</label><br>
+            <input type="email" id="email" required><br><br>
+
+            <label>age</label><br>
+            <input type="number" id="age" min="18" max="50" required><br><br> -->
+
+           
+            <input type="submit" id="submit">
+        </fieldset>
+    </form>
+
+    <script>
+
+                // Show password checkbox
+                function myFunction() {
+                var x = document.getElementById("pwd");
+                if (x.type === "password") {
+                  x.type = "text";
+                } else {
+                  x.type = "password";
+                }
+              }
+
+     </script>
+    <!-- Code injected by live-server -->
+</body>
+</html>
