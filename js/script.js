@@ -1,48 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Campus Recruitment Training (CRT)- 
-    A training program based on Web Development (HTML, CSS, JavaScript) 
-    B.Tech 2nd Year 3rd Semester Students">
-  <meta name="keywords" content="B.Tech, B.Tech CSE, Web Development,HTML, 
-    CSS, JavaScript, Training">
-  <title>Campus Recruitment Training (CRT)</title>
-  <!-- external CSS -->
-  <link rel="stylesheet" href="css/style.css" type="text/css">
-
-</head>
-
-<body>
-
-  <header>
-    <iframe class="headeriframe" src="header.html"></iframe>
-  </header>
-
-
-  <div class="slider-container">
-    <div class="slide active" style="background-image: url('image/slide0.png');"></div>
-
-    <div class="slide" style="background-image: url('image/slide1.jpg');"></div>
-
-    <div class="slide" style="background-image: url('image/slide2.jfif');"></div>
-
-    <button class="arrow left-arrow" id="left"><img src="image/arrow pre.jpg" width="70px">
-    </button>
-
-    <button class="arrow right-arrow" id="right"><img src="image/arrow next.jpg" width="70px">
-    </button>
-  </div>
-
-  <footer>
-    <iframe class="footeriframe" src="footer.html"></iframe>
-  </footer>
-
-
-  <script>
-    // image slider script
+// image slider script
 
 
     // In this code, it is used to select all elements with the class name 'slide'.
@@ -90,9 +46,4 @@
       slides[activeSlide].classList.add('active')
     }
 
-  </script>
-
-
-</body>
-
-</html>
+ 
