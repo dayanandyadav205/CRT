@@ -5,9 +5,11 @@ body {
 }
 
 h1 {
-  border: 2px solid rgb(73, 69, 69);
-  background-color: rgb(3, 91, 91);
-  color: white;
+  border: 2px solid black;
+  outline: 10px solid #4CAF50;
+  padding: 20px;
+  text-align: center;
+
 }
 
 .headeriframe {
@@ -205,4 +207,13 @@ tfoot {
 
 #myBtn:hover {
   background-color: #555;
+}
+
+
+/* CSS */
+p.ex1 {
+  border: 2px solid black;
+
+  outline: thick;
+ 
 }
