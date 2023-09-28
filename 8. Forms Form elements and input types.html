@@ -41,7 +41,8 @@
                     <div>
                       <marquee direction="left">
                         <p>Campus Recruitment Training (CRT) on 
-                        Web Development (HTML, CSS, JavaScript) for CS 2<sup>nd</sup> Year (3<sup>rd</sup> Semester)</p>
+                        Web Development (HTML, CSS, JavaScript) for CS 2<sup>nd</sup> 
+                        Year (3<sup>rd</sup> Semester)</p>
                       </marquee>
                     </div>
               </header>
@@ -55,10 +56,10 @@
                       <legend>Login</legend>
               
                       <label for="usernane">First Name:</label><br>
-                      <input type="text" id="usernane"  name="usernane" placeholder="User Name" required><br><br>
+                      <input type="text" id="usernane"  name="usernane" placeholder="User Name" pattern="[a-zA-Z]{3,30}" required><br><br>
               
                       <label for="password">Password:</label><br>
-                      <input type="password" id="pwd" placeholder="Password" required>
+                      <input type="password" id="pwd" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
                       
                       <br><br><br>
                       
