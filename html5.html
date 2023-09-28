@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Campus Recruitment Training (CRT)- 
+    A training program based on Web Development (HTML, CSS, JavaScript) 
+    B.Tech 2nd Year 3rd Semester Students">
+  <meta name="keywords" content="B.Tech, B.Tech CSE, Web Development,HTML, 
+    CSS, JavaScript, Training">
+  <title>Campus Recruitment Training (CRT)</title>
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+
+
+</head>
+
+<body>
+
+  <header>
+    <iframe class="headeriframe" src="header.html"></iframe>
+  </header>
+
+
+  <h1>1. Introduction to HTML Tags elements and structure</h1>
+  <div>
+
+
+    <!-- Horizontal Rules tag -->
+    <hr>
+    <h2>What is HTML</h2>
+    <pre>
+                HTML stands for Hyper Text Markup Language
+
+                HTML is the standard markup language for creating Web pages
+
+                HTML describes the structure of a Web page
+
+                HTML consists of a series of elements
+
+                HTML elements tell the browser how to display the content
+                
+                HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.
+                </pre>
+    <!-- Heading and paragraph tag -->
+
+    <h2>This is heading 2</h2>
+    <p>This is some <strong>other</strong> <b>text.</b></p>
+    <hr>
+
+
+    <!-- Line breaks -->
+    <p><b>This is a paragraph <br>with line breaks.</b></p>
+
+
+    <hr>
+
+    <p>this is <i>italic</i> <em>text</em></p>
+
+    <p>this is <mark class="mark1">mark or highlited text</mark></p>
+    <p>this is small text</p>
+    <hr>
+  </div>
+
+
+
+  <h1>2. HTML Document Structure Head body and doctype</h1>
+
+  <pre>
+    The DOCTYPE htmldeclaration defines that this document is an HTML5 document</p>
+    
+    The html element is the root element of an HTML page
+    
+    The head element contains meta information about the HTML page
+    
+    The title element specifies a title for the HTML page 
+     (which is shown in the browser's title bar or in the page's tab)
+    
+    The body element defines the document's body, and is a container for all the    
+    visible contents, such as headings, paragraphs, images, hyperlinks, tables,   
+    lists, etc.
+     
+    The h1 element defines a large heading
+    
+    The p element defines a paragraph
+
+</pre>
+
+  <figure>
+    <pre role="img" aria-label="ASCII COW">
+        ___________________________
+    &lt; I'm an expert in my field. &gt;
+        ---------------------------
+            \   ^__^
+             \  (oo)\_______
+                (__)\       )\/\
+                    ||----w |
+                    ||     ||
+    </pre>
+    <figcaption id="cow-caption">
+      A cow saying, "I'm an expert in my field." The cow is illustrated using
+      preformatted text characters.
+    </figcaption>
+  </figure>
+  <hr>
+  <h1>3. Text Formatting Headings paragraphs and emphasis</h1>
+
+  <!-- bold or strong text -->
+  <div>
+    <b>This text is bold</b>
+    <strong>This text is strong</strong>
+
+    <hr>
+
+    <!-- Emphasized Italic text -->
+    <i>This text is italic</i>
+    <em>This text is emphasized</em>
+
+    <hr>
+
+    <!-- text that should be marked or highlighted -->
+    <p>Do not forget to buy <mark>milk</mark> today.</p>
+
+    <hr>
+
+    <!-- Pre tag (Solution of poem's problem) -->s
+    <pre>
+      Twinkle, twinkle, little star,
+      How I wonder what you are!
+      Up above the world so high,
+      Like a diamond in the sky.
+      
+      When the blazing sun is gone,
+      When he nothing shines upon,
+      Then you show your little light,
+      Twinkle, twinkle, all the night.
+      
+      Then the trav'ller in the dark,
+      Thanks you for your tiny spark,
+      He could not see which way to go
+      If you did not twinkle so.
+      
+      In the dark blue sky you keep,
+      And often thro' my curtains peep,
+      For you never shut your eye,
+      Till the sun is in the sky.
+      
+      'Tis your bright and tiny spark,
+      Lights the trav'ller in the dark,
+      Tho' I know not what you are,
+      Twinkle, twinkle, little star.
+  </pre>
+
+    <hr>
+
+    <!-- small tag -->
+    <p>This is <small>small</small> tag</p>
+
+    <hr>
+
+    <!-- delete tag and insert tag-->
+    <p>This is <del>delete</del> <ins>insert</ins> tag</p>
+
+    <hr>
+
+    <!-- subscript and superscript -->
+    <p>H<sub>2</sub>O</p>
+
+    <p>a<sup>2</sup></p>
+
+    <hr>
+
+    <!-- The HTML <q> tag defines a short quotation. -->
+    <p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p>
+
+    <hr>
+
+    <!-- The HTML <abbr> tag defines an abbreviation or an acronym, like "HTML", "CSS", "Mr.", "Dr.", "ASAP", "ATM". -->
+    <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+
+    <hr>
+
+    <!-- The HTML <address> tag defines the contact information for the author/owner of a document or an article. -->
+    <address>
+      Written by John Doe.<br>
+      Visit us at:<br>
+      Example.com<br>
+      Box 564, Disneyland<br>
+      USA
+    </address>
+
+    <hr>
+
+    <!-- The HTML <cite> tag defines the title of a creative work (e.g. a book, a poem, a song, a movie, a painting, a sculpture, etc.). -->
+    <p>The HTML cite element defines the title of a work.</p>
+    <img src="image/img_the_scream.jpg" width="220" height="277" alt="The Scream">
+    <p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
+
+    <hr>
+
+    <!-- <bdo> tag is used to override the current text direction: -->
+    <p>If your browser supports bi-directional override (bdo), the next line will be written from right to left (rtl):
+    </p>
+
+    <bdo dir="rtl">This line will be written from right to left</bdo>
+
+
+
+    <h2>Subscript</h2>
+    <p>H<sub>2</sub>O</p>
+
+    <h2>Superscript</h2>
+    <p>x<sup>2</sup>+y<sup>2</sup></p>
+
+    <h2>quotation tag</h2>
+    <p>Yes,<q>I am fine</q></p>
+
+    <h2>Abbriviation tag (Full Form)</h2>
+    <p title="World Health Organization"><abbr>WHO</abbr></p>
+
+    <h2>Address tag</h2>
+    <address>
+      50, Eastern Ring Road <br>
+      Near Bombay Hospital <br>
+      Mahalaxmi Nagar <br>
+      Indore 452010
+    </address>
+
+    <img src="image/pic_trulli.jpg" height="100" width="100"></img>
+    <p>This is <cite>House</cite></p>
+
+    <p>simple text</p>
+    <bdo dir="rtl">AMBULANCE</bdo>
+
+    <hr>
+    <h1>4. Working with Links Anchor tags and hyperlinks</h1>
+    <h2>Absolute reference link</h2>
+    <a href="https:\\www.google.com">Google</a>
+    <br>
+    <h2>Relative reference link</h2>
+    <a href="forms.html">HTML Forms</a>
+    <hr>
+
+
+    <h1>5. Working with Images: Image tags and attributes</h1>
+    <hr>
+
+    <h2>How to insert an image:</h2>
+    <img src="image/nature.jfif" alt="nature" width="500" height="600">
+
+    <hr>
+
+    <h2>Add Image border (with CSS)</h2>
+
+    <img src="image/nature.jfif" alt=“nature" width="420" height="420" style="border:5px solid red">
+
+
+    <hr size="5" color="green">
+
+    <h2>How to insert images from another folder</h2>
+    <img src="image/parrot.jpg" alt="beautiful image" width="100" height="100">
+
+
+    <hr>
+
+    <h2>From another web site:</h2>
+    <img
+      src=" https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80"
+      alt="Lamp" width="320" height="320">
+
+    <hr>
+
+    <h2>How to add a hyperlink to an image:</h2>
+    <a href="https://www.cdgi.edu.in"><img src="image/cdgi.jpg" alt="CDGI image link" width="100" height="100"></a>
+
+    <hr>
+
+    <h1>6. Lists: Ordered and unordered lists</h1>
+    <hr>
+    <h2>An Unordered HTML List</h2>
+
+    <ul>
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ul>
+
+    <hr>
+
+    <h2>An Ordered HTML List</h2>
+
+    <ol>
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ol>
+
+    <hr>
+
+    <h2>HTML Description Lists</h2>
+    <dl>
+      <dt>Coffee</dt>
+      <dd>- black hot drink</dd>
+      <dt>Milk</dt>
+      <dd>- white cold drink</dd>
+    </dl>
+
+    <hr>
+
+    <h2>Unordered HTML List - Choose List Item Marker</h2>
+    <ul style="list-style-type:square;">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ul>
+    <hr>
+    <h2>Ordered HTML List - The Type Attribute</h2>
+    <ol type="1">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ol>
+
+
+    <ol type="a">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ol>
+
+    <ol type="i">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ol>
+
+    <hr>
+
+    <h2>Nested HTML Lists. Lists can be nested (list inside list):</h2>
+    <hr>
+    <h3>Unordered</h3>
+    <ul>
+      <li>Coffee</li>
+      <li>Tea</li>
+      <ul>
+        <li>Black tea</li>
+        <li>Green tea</li>
+      </ul>
+      <li>Milk</li>
+    </ul>
+    <hr>
+    <h3>Ordered</h3>
+    <ol>
+      <li>Coffee</li>
+      <li>Tea</li>
+      <ol type="a">
+        <li>Black tea</li>
+        <li>Green tea</li>
+      </ol>
+      <li>Milk</li>
+    </ol>
+
+    <hr>
+
+    <h2>Control List Counting</h2>
+    <ol start="5">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ol>
+    <hr>
+    <h1>7. Tables: Creating tables and formatting data</h1>
+    <hr>
+    <table>
+      <caption>Student Information</caption>
+      <tr>
+        <th rowspan="2">Sr. No.<s /th>
+        <th rowspan="2">Enrollment No.</th>
+        <th rowspan="2">Name of student</th>
+        <th rowspan="2">Branch</th>
+        <th colspan="8">CGPA (semesterwise)</th>
+      </tr>
+      <tr class="sem">
+        <td>Semester 1</td>
+        <td>Semester 2</td>
+        <td>Semester 3</td>
+        <td>Semester 4</td>
+        <td>Semester 5</td>
+        <td>Semester 6</td>
+        <td>Semester 7</td>
+        <td>Semester 8</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>0832CS221001</td>
+        <td>Abhishek</td>
+        <td rowspan="2">CSE</td>
+        <td>8.7</td>
+        <td>7.5</td>
+        <td>7.6</td>
+        <td>8.3</td>
+        <td>7.5</td>
+        <td>7.0</td>
+        <td>7.5</td>
+        <td>7.1</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>0832CS221002</td>
+        <td>Ajay</td>
+
+        <td>8.9</td>
+        <td>8.7</td>
+        <td>7.5</td>
+        <td>7.6</td>
+        <td>8.3</td>
+        <td>7.5</td>
+        <td>7.0</td>
+        <td>7.5</td>
+      </tr>
+    </table>
+    <br>
+    <br>
+    <h2>How to add collapsed borders to a table (with CSS):</h2>
+    <table>
+      <tr>
+        <th>Month</th>
+        <th>Savings</th>
+      </tr>
+      <tr>
+        <td>January</td>
+        <td>$100</td>
+      </tr>
+      <tr>
+        <td>February</td>
+        <td>$80</td>
+      </tr>
+    </table>
+
+    <h2>How to right-align a table (with CSS):</h2>
+    <table style="float:right">
+      <tr>
+        <th>Month</th>
+        <th>Savings</th>
+      </tr>
+      <tr>
+        <td>January</td>
+        <td>$100</td>
+      </tr>
+      <tr>
+        <td>February</td>
+        <td>$80</td>
+      </tr>
+    </table>
+
+    <h2>How to add background-color to a table (with CSS):</h2>
+    <table style="background-color:#00FF00">
+      <tr>
+        <th>Month</th>
+        <th>Savings</th>
+      </tr>
+      <tr>
+        <td>January</td>
+        <td>$100</td>
+      </tr>
+      <tr>
+        <td>February</td>
+        <td>$80</td>
+      </tr>
+    </table>
+
+    <h2>How to set table width (with CSS):</h2>
+    <table style="width:400px">
+      <tr>
+        <th>Month</th>
+        <th>Savings</th>
+      </tr>
+      <tr>
+        <td>January</td>
+        <td>$100</td>
+      </tr>
+      <tr>
+        <td>February</td>
+        <td>$80</td>
+      </tr>
+    </table>
+
+    <h2>Vertical headers:</h2>
+    <table>
+      <tr>
+        <th>Name:</th>
+        <td>John Doe</td>
+      </tr>
+      <tr>
+        <th>Email:</th>
+        <td>john.doe@example.com</td>
+      </tr>
+      <tr>
+        <th>Phone:</th>
+        <td>123-45-678</td>
+      </tr>
+    </table>
+
+    <h2>How to define table cells that span more than one row or one column:
+
+    </h2>
+
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th colspan="2">Phone</th>
+      </tr>
+      <tr>
+        <td>John Doe</td>
+        <td>john.doe@example.com</td>
+        <td>123-45-678</td>
+        <td>212-00-546</td>
+      </tr>
+    </table>
+
+    <h2>An HTML table with a <thead>,
+      <tbody>, and a
+      <tfoot> element:
+    </h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Month</th>
+          <th>Savings</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>January</td>
+          <td>$100</td>
+        </tr>
+        <tr>
+          <td>February</td>
+          <td>$80</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Sum</td>
+          <td>$180</td>
+        </tr>
+      </tfoot>
+    </table>
+    <hr>
+    <hr>
+    <h1>8. Forms Form elements and input types</h1>
+    <div class="regForm">
+  
+      <Form action="message.html" autocomplete="off" method="get">
+  
+        <fieldset>
+          <legend>Login</legend>
+  
+          <label for="usernane">First Name:</label><br>
+          <input type="text" id="usernane" name="usernane" placeholder="User Name" pattern="[a-zA-Z]{3,30}"
+            required><br><br>
+  
+          <label for="password">Password:</label><br>
+          <input type="password" id="pwd" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+  
+          <br><br><br>
+  
+          <button title="Login" id="login">Login</button><br><br>
+          <input type="reset" id="reset" name="reset"><br>
+        </fieldset>
+      </Form>
+  
+    </div>
+  
+    <hr>
+
+    <h1>9. Form Validation Client side form validation</h1>
+
+  <hr>
+  <div class="regForm">
+
+    <Form action="message copy.html" autocomplete="off" method="get" onsubmit="return validate()">
+
+      <fieldset>
+        <legend>Registration form</legend>
+
+        <label>Enrollment No</label><br>
+        <input type="text" id="enrollno" pattern="^(?=.*[a-zA-Z])(?=\w*[0-9])\w{12,}$"
+          title="Enrollment should be like this 0832CS221001" placeholder="Enrollment No" required><br><br>
+
+        <label for="fname">First Name:</label><br>
+        <input type="text" id="fname" name="fname" placeholder="First Name" pattern="[a-zA-Z]{3,30}" required><br><br>
+        <span id="spnIsFirstNameValid"></span>
+
+        <label for="lname">Last Name:</label><br>
+        <input type="text" id="lname" name="lname" placeholder="Last Name" pattern="[a-zA-Z]{3,30}" required><br><br>
+
+
+        <label for="email">Email:</label><br>
+        <input type="email" name="email" id="email" placeholder="Email" required><br><br>
+
+
+        <label for="password">Password:</label><br>
+        <input type="password" id="pwd" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+
+        <label>DOB</label><br>
+        <input type="date" id="dob" name="dob" required><br><br>
+
+        <label>Gender</label><br>
+        <input type="radio" id="Gender1" name="Gender" required>Male
+        <input type="radio" id="Gender2" name="Gender">Female<br><br>
+
+        <label for="mobile">Mobile No.</label><br>
+        <input type="number" id="mobile" name="mobile" pattern="[0-9]{10,}" placeholder="Mobile Number"
+          required><br><br>
+
+        <label for="country">Select Country</label><br>
+        <select class="form-select" id="country" name="country" required>
+          <option value="">country</option>
+          <option value="AFG">Afghanistan</option>
+          <option value="AUS">Australia</option>
+          <option value="GHA">Ghana</option>
+          <option value="GIB">Gibraltar</option>
+          <option value="GRC">Greece</option>
+          <option value="GRL">Greenland</option>
+          <option value="GRD">Grenada</option>
+          <option value="HKG">Hong Kong</option>
+          <option value="HUN">Hungary</option>
+          <option value="ISL">Iceland</option>
+          <option value="IND">India</option>
+
+        </select><br><br>
+
+        <label for="state">Select State</label><br>
+        <select id="state" name="state" required>
+          <option value="">Select state</option>
+          <option value="AN">Andaman and Nicobar Islands</option>
+          <option value="AP">Andhra Pradesh</option>
+          <option value="AR">Arunachal Pradesh</option>
+          <option value="AS">Assam</option>
+          <option value="BR">Bihar</option>
+          <option value="CH">Chandigarh</option>
+          <option value="CT">Chhattisgarh</option>
+          <option value="DN">Dadra and Nagar Haveli</option>
+          <option value="DD">Daman and Diu</option>
+          <option value="DL">Delhi</option>
+          <option value="GA">Goa</option>
+          <option value="GJ">Gujarat</option>
+          <option value="HR">Haryana</option>
+          <option value="HP">Himachal Pradesh</option>
+          <option value="JK">Jammu and Kashmir</option>
+          <option value="JH">Jharkhand</option>
+          <option value="KA">Karnataka</option>
+          <option value="KL">Kerala</option>
+          <option value="LA">Ladakh</option>
+          <option value="LD">Lakshadweep</option>
+          <option value="MP">Madhya Pradesh</option>
+          
+        </select><br><br>
+
+        <label for="district">Select District</label><br>
+        <select id="district" name="district" required>
+          <option value="">Select District</option>
+          <option value="1">Indore</option>
+          <option value="2">Bhopal</option>
+          <option value="3">Ujjain</option>
+          <option value="4">Khargone</option>
+          <option value="5">Khandwa</option>
+          <option value="6">Barwani</option>
+          <option value="7">Jhabua</option>
+
+        </select><br><br>
+
+        <label for="idproof">Select Valid Photo Id proof</label><br>
+        <input type="checkbox" id="chkaadhar" name="chkaadhar">Aadhar card
+        <input type="checkbox" id="chkpan" name="chkpan">PAN card
+        <input type="checkbox" id="chkdl" name="chkdl">Driving Licence<br><br>
+
+        <label for="file">Upload Single Document</label><br>
+        <input type="file" id="file" name="file" required><br><br>
+
+        <label for="files">Upload Multiple Document</label><br>
+        <input type="file" id="files" name="files" multiple><br><br>
+
+
+
+        <br><br><br>
+        <input type="submit" id="submit" name="submit"><br>
+
+      </fieldset>
+    </Form>
+
+      <br><br>
+  </div>
+<hr>
+<h1>10. Multimedia: Audio and video elements</h1>
+<div>
+    <h2>video control</h2>
+    <video controls>
+        <source src="video/mov_bbb.mp4" type="video/mp4">
+    </video>
+</div>
+<hr>
+    <div>
+        <h2>audio control</h2>
+    <audio controls>
+        <source src="audio/horse.mp3" type="audio/mp3">
+    </audio>
+</div>
+<hr>
+<div>
+<h2>iframe (video link from youtube)</h2>
+<iframe src="https://www.youtube.com/embed/tgbNymZ7vqY">
+</iframe>
+</div>
+<hr>
+  </div>
+    </div>
+    <footer>
+      <iframe class="footeriframe" src="footer.html"></iframe>
+    </footer>
+
+
+    <!-- Button Go to Top -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <script>
+    // Get the button
+    let mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    }
+    </script>
+</body>
+
+</html>
