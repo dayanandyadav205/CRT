@@ -1,220 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Campus Recruitment Training (CRT)- 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Campus Recruitment Training (CRT)- 
     A training program based on Web Development (HTML, CSS, JavaScript) 
     B.Tech 2nd Year 3rd Semester Students">
-    <meta name="keywords" content="B.Tech, B.Tech CSE, Web Development,HTML, 
+  <meta name="keywords" content="B.Tech, B.Tech CSE, Web Development,HTML, 
     CSS, JavaScript, Training">
-    <title>Campus Recruitment Training (CRT)</title>
-    <!-- external CSS -->
-    <link rel="stylesheet" href="css/style.css" type="text/css">
-   
-    <style>
+  <title>Campus Recruitment Training (CRT)</title>
+  <!-- external CSS -->
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <!-- external js -->
+  <link rel="script" href="js/script.js" type="text/JavaScript">
+</head>
 
-            body {
-              display:flex;
-              flex-direction:column;
-              align-items: center; 
-            }
+<body>
 
-            .slider-container {
-              
-              height: 70vh;
-              width: 80vw;
-              position: relative;
-              overflow: hidden;
-            }
-
-            .slide {
-              opacity: 0;
-              height: 60vh;
-              width: 100vw;
-              background-position: center center;
-              background-size: cover;
-              position: absolute;
-              top: -5vh;
-              left: -8vw;
-              transition: 0.2s ease;
-              /* z-index: 1; */
-            }
-
-            .slide.active {
-              opacity: 1;
-            }
-
-            .arrow {
-              position: fixed;
-              background-color: transparent;
-              border: transparent;
-              top: 60%;
-              transform: translateY(-50%);
-              cursor: pointer;
-              
-            }
-            .arrow:hover{
-              background-color:orange;
-            }
-
-            .left-arrow {
-              left: calc(7vw - 60px);
-            }
-
-            .right-arrow {
-              right: calc(7vw - 60px);
-            }
-
-      
-        </style>
-  </head>
-  <body>
-    <header class="header-area">
-        <div class="container">
-          <img src="image/logo-left.png">
-          <div class="centered">
-           <p>Chameli Devi Group of Institutions, Indore</p>   
-           <p style="font-size: 20px;">Campus Recruitment Training (CRT) on Web Development</p>
-          </div>
-        
-        </div> 
-        <div class="navleft"> 
-          
-                <a href="home.html">Home</a>
-                <a href="index_html.html">HTML Tutorial</a>
-                <a href="index_css.html">CSS Tutorial</a>
-                <a href="index_javascript.html">JavaScript Tutorial</a>
-                <a href="contact.html">Contact us</a>
-            <div class="navright">
-                <a href="9. Form Validation Client side form validation.html">Register</a>
-                <a href="8. Forms Form elements and input types.html">Login</a>
-            </div>
-        </div>
-              <div>
-                <marquee direction="left">
-                  <p>Campus Recruitment Training (CRT) on 
-                  Web Development (HTML, CSS, JavaScript) for CS 2<sup>nd</sup> Year (3<sup>rd</sup> Semester)</p>
-                </marquee>
-              </div>
-        </header>
-
-       
-    <div class="slider-container">
-        <div class="slide active" style="background-image: url('image/slide0.png');"></div>
-  
-        <div class="slide" style="background-image: url('image/slide1.jpg');"></div>
-      
-        <div class="slide" style="background-image: url('image/slide2.jfif');"></div>
-        
-      <button class="arrow left-arrow" id="left" ><img src="image/arrow pre.jpg" width="70px">
-      </button>
-
-      <button class="arrow right-arrow" id="right"><img src="image/arrow next.jpg" width="70px">
-      </button>
-    </div>
-   <hr>
-    <div class="footer">
-        <footer >&copy; Designed & Developed by <a href="image/dayanand yadav.jpg">Dayanand Yadav</a> &nbsp;(Assistant Professor, CSE) CDGI, Indore</footer>
-      </div>
-          
-            <!-- // image slider script -->
-          <script>        
-                
-                // In this code, it is used to select all elements with the class name 'slide'.
-                  const slides = document.querySelectorAll('.slide')
-
-                 
-                  // it is used to select the left and right buttons.
-                  const leftBtn = document.getElementById('left')
-                  const rightBtn = document.getElementById('right')
-
-                  let activeSlide = 0
-
-                  
-                  // it is used to listen for the 'click' event on the left and right buttons.
-                  rightBtn.addEventListener('click', () => 
-                  {
-
-                  // activeSlide: This variable keeps track of the currently active slide. It is initially set to 0.
-                  activeSlide++
+  <header>
+    <iframe class="headeriframe" src="header.html"></iframe>
+  </header>
 
 
-                  // it is used to check if the active slide index exceeds the total number of slides or goes below 0.
-                  if (activeSlide > slides.length - 1) 
-                  {
-                      activeSlide = 0
-                  }
+  <div class="slider-container">
+    <div class="slide active" style="background-image: url('image/slide0.png');"></div>
 
-                  // setActiveSlide: This function is responsible for updating the active slide by adding or removing the 'active' class. 
-                  // It uses a loop to remove the 'active' class from all slides and then adds the 'active' class to the slide at the current
-                  // activeSlide index.
-                  setActiveSlide()
-                  })
+    <div class="slide" style="background-image: url('image/slide1.jpg');"></div>
 
-                  leftBtn.addEventListener('click', () => 
-                  {
-                  activeSlide--
+    <div class="slide" style="background-image: url('image/slide2.jfif');"></div>
 
-                  if (activeSlide < 0) 
-                  {
-                      activeSlide = slides.length - 1
-                  }
+    <button class="arrow left-arrow" id="left"><img src="image/arrow pre.jpg" width="70px">
+    </button>
 
-                  setActiveSlide()
-                  })
+    <button class="arrow right-arrow" id="right"><img src="image/arrow next.jpg" width="70px">
+    </button>
+  </div>
 
-                  function setActiveSlide() 
-                  {
-                  slides.forEach((slide) => slide.classList.remove('active'))
-
-                  slides[activeSlide].classList.add('active')
-                  }
-
-          </script>
+  <footer>
+    <iframe class="footeriframe" src="footer.html"></iframe>
+  </footer>
 
 
-          <!-- // Go to top button script -->
+  <script>
+    // image slider script
 
 
-<!-- ==========xxxxxxxxxxxxxxxxxxxxxxxxxxx===========xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx================= -->
+    // In this code, it is used to select all elements with the class name 'slide'.
+    const slides = document.querySelectorAll('.slide')
 
-            <!-- This button will serve as our "Go to Top" button. -->
-            <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
-          <script>
-        
-            // Get the button
-            let mybutton = document.getElementById("myBtn");
+    // it is used to select the left and right buttons.
+    const leftBtn = document.getElementById('left')
+    const rightBtn = document.getElementById('right')
 
-            // This function is responsible for showing or hiding the button based on the scroll position.
-            // When the user scrolls down 20px from the top of the document, show the button
-            window.onscroll = function() {scrollFunction()};
+    let activeSlide = 0
 
-            // Inside the scrollFunction(), we check if the scroll position is greater than 20 pixels from the top of the document. 
-            // If it is, we set the display property of the button to "block" to make it visible. Otherwise, we set it to "none" to hide it.
-            function scrollFunction() 
-            {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) 
-            {
-                mybutton.style.display = "block";
-            } 
-            
-            else 
-            {
-                mybutton.style.display = "none";
-            }
-            }
 
-            // This function is triggered when the user clicks on the button. 
-            // It scrolls the document back to the top by setting the scrollTop property of both document.body and document.documentElement to 0.
-            function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-            }
+    // it is used to listen for the 'click' event on the left and right buttons.
+    rightBtn.addEventListener('click', () => {
 
-            // Finally, we attach the scrollFunction() to the onscroll event of the window object. 
-            // This ensures that the button's visibility is updated whenever the user scrolls the page.
-        </script>
+      // activeSlide: This variable keeps track of the currently active slide. It is initially set to 0.
+      activeSlide++
+
+
+      // it is used to check if the active slide index exceeds the total number of slides or goes below 0.
+      if (activeSlide > slides.length - 1) {
+        activeSlide = 0
+      }
+
+      // setActiveSlide: This function is responsible for updating the active slide by adding or removing the 'active' class. 
+      // It uses a loop to remove the 'active' class from all slides and then adds the 'active' class to the slide at the current
+      // activeSlide index.
+      setActiveSlide()
+    })
+
+    leftBtn.addEventListener('click', () => {
+      activeSlide--
+
+      if (activeSlide < 0) {
+        activeSlide = slides.length - 1
+      }
+
+      setActiveSlide()
+    })
+
+    function setActiveSlide() {
+      slides.forEach((slide) => slide.classList.remove('active'))
+
+      slides[activeSlide].classList.add('active')
+    }
+
+  </script>
+
+
 </body>
+
 </html>

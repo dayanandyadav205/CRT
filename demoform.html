@@ -1,62 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <form action="message.html" autocomplete="off">
-        <fieldset>
-            <Legend>Demo Form</Legend>
-            <label>Enrollment No</label><br>
-            <input type="text" id="enrollno" pattern="^(?=.*[a-zA-Z])(?=\w*[0-9])\w{12,}$" title="Enrollment should be like this 0832CS221001" placeholder="Enrollment No" required><br><br>
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>Document</title>
+              <link rel="stylesheet" href="css/style.css" type="text/css">
+          </head>
+          <body>
+          <header>
+            <iframe class="headeriframe" src="header.html"></iframe>
+          </header>
           
-            <label>Name</label><br>
-            <input type="text" id="txtname" pattern="[a-zA-Z]{3,30}" required><br><br>
+              <form action="message.html" autocomplete="off">
+                  <fieldset>
+                      <Legend>Demo Form</Legend>
+                      <label>Enrollment No</label><br>
+                      <input type="text" id="enrollno" pattern="^(?=.*[a-zA-Z])(?=\w*[0-9])\w{12,}$" title="Enrollment should be like this 0832CS221001" placeholder="Enrollment No" required><br><br>
+                    
+                      <label>Name</label><br>
+                      <input type="text" id="txtname" pattern="[a-zA-Z]{3,30}" required><br><br>
 
 
-            <label>Password</label><br>
-            <input type="password" id="pwd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required><br>
-            <input type="checkbox" id="chkpwd" onclick=" return myFunction()"> Show password<br><br>
+                      <label>Password</label><br>
+                      <input type="password" id="pwd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required><br>
+                    
+                      
+                      <!-- (?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,} -->
 
-            
-            <!-- (?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,} -->
+                      <!-- ^(?=.*[a-zA-Z])(?=.*[0-9]).{12,}$ -->
 
-            <!-- ^(?=.*[a-zA-Z])(?=.*[0-9]).{12,}$ -->
+                      <label for="mobile">Mobile No.</label><br>
+                      <input type="number" id="mobile" name="mobile" pattern="[0-9]{10,}" placeholder="Mobile Number" required><br><br>
+                      <br><br>    
 
-            <label for="mobile">Mobile No.</label><br>
-            <input type="number" id="mobile" name="mobile" pattern="[0-9]{10,}" placeholder="Mobile Number" required><br><br>
-            <br><br>    
+                      <!-- <label>Name</label><br>
+                      <input type="text" id="txtname" pattern="[a-zA-Z]{3,30}" required><br><br>
 
-            <!-- <label>Name</label><br>
-            <input type="text" id="txtname" pattern="[a-zA-Z]{3,30}" required><br><br>
+                      
+                      <label>Email</label><br>
+                      <input type="email" id="email" required><br><br>
 
-            
-            <label>Email</label><br>
-            <input type="email" id="email" required><br><br>
+                      <label>age</label><br>
+                      <input type="number" id="age" min="18" max="50" required><br><br> -->
 
-            <label>age</label><br>
-            <input type="number" id="age" min="18" max="50" required><br><br> -->
+                    
+                      <input type="submit" id="submit">
+                  </fieldset>
+              </form>
 
-           
-            <input type="submit" id="submit">
-        </fieldset>
-    </form>
 
-    <script>
+                  <footer>
+                    <iframe class="footeriframe" src="footer.html"></iframe>
+                  </footer>
 
-                // Show password checkbox
-                function myFunction() {
-                var x = document.getElementById("pwd");
-                if (x.type === "password") {
-                  x.type = "text";
-                } else {
-                  x.type = "password";
-                }
-              }
-
-     </script>
-    
-</body>
-</html>
+                </body>
+                </html>

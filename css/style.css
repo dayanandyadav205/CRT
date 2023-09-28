@@ -4,10 +4,22 @@
         
         
       }
-      .header-area {
+      /* .header-area {
           width: 100%;
-          display: table;
-      }
+          height: 100%;
+      } */
+
+   
+      .headeriframe{
+       width: 100%;
+       height: 40vh;
+    }
+
+    .footeriframe{
+      width: 100%;
+       height: 20vh;
+    
+    }
 
       div.container{
         position: relative;
@@ -77,6 +89,7 @@
               color: white;  
               width: 100%;
               float: left;
+             
              
           }
           .div1 a{
@@ -208,3 +221,60 @@
                 padding: 10px;
              
               }
+
+
+              /* .slider-container {
+                display:flex;
+                flex-direction:column;
+                align-items: center; 
+              }
+   */
+              .slider-container {
+                
+                height: 70vh;
+                width: 100vw;
+                position: relative;
+                overflow: hidden;
+                display:flex;
+                flex-direction:column;
+                align-items: center;
+              }
+  
+              .slide {
+                opacity: 0;
+                height: 60vh;
+                width: 80vw;
+                background-position: center center;
+                background-size: cover;
+                position: absolute;
+                top: -5vh;
+                left: 9vw;
+                transition: 0.2s ease;
+                /* z-index: 1; */
+              }
+  
+              .slide.active {
+                opacity: 1;
+              }
+  
+              .arrow {
+                position: absolute;
+                background-color: transparent;
+                border: transparent;
+                top: 40%;
+                transform: translateY(-50%);
+                cursor: pointer;
+                
+              }
+              .arrow:hover{
+                background-color:orange;
+              }
+  
+              .left-arrow {
+                left: calc(7vw - 60px);
+              }
+  
+              .right-arrow {
+                right: calc(7vw - 60px);
+              }
+  
