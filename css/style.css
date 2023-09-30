@@ -22,7 +22,7 @@ h1 {
 .footeriframe {
   width: 100vw;
   height: 20vh;
-  margin:0px;
+  margin: 0px;
   border: 2px solid white;
 }
 
@@ -71,12 +71,12 @@ div.centered {
   float: right;
 }
 
-marquee{
+marquee {
   color: red;
   font-size: 15px;
 }
 
-.footer {
+.footername {
   padding: 10px;
   margin: auto;
   width: 100%;
@@ -87,7 +87,7 @@ marquee{
 
 }
 
-.footer a {
+.footername a {
   color: white;
 }
 
@@ -173,19 +173,14 @@ tfoot {
   cursor: pointer;
 
 }
-/* 
-.arrow:hover {
-  background-color: orange;
-} */
-
 
 .left-arrow {
-  left: calc(2vw - 80px);
+  left: calc(2vw - 350px);
 }
 
 .right-arrow {
-  right: calc(2vw - 50px);
- 
+  right: calc(2vw - 70px);
+
 }
 
 /* button top */
@@ -210,10 +205,8 @@ tfoot {
 }
 
 
-/* CSS */
-p.ex1 {
-  border: 2px solid black;
-
-  outline: thick;
- 
+/* contact */
+.address{
+  display: inline-block;
+  border: 5px solid rgb(15, 231, 7);
 }
