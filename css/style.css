@@ -62,33 +62,13 @@ marquee {
 }
 
 @keyframes slider {
-  0% {
-    left: 0;
-  }
-
-  30% {
-    left: 0;
-  }
-
-  33% {
-    left: -100%;
-  }
-
-  63% {
-    left: -100%;
-  }
-
-  66% {
-    left: -200%;
-  }
-
-  95% {
-    left: -200%;
-  }
-
-  100% {
-    left: 0;
-  }
+  0% {left: 0;}
+  30% {left: 0;}
+  33% {left: -100%;}
+  63% {left: -100%;}
+  66% {left: -200%;}
+  95% {left: -200%;}
+  100% {left: 0;}
 }
 
 #slider figure {
@@ -169,18 +149,17 @@ tfoot {
 }
 
 /* ============================================= */
-details{
-  background-color: lightskyblue;
-}
 summary{
-  background-color:lightslategray;
+  background-color: #33b5e5;
+  color: #ffffff;
   cursor: pointer;
   font-size: large;
   font-weight: bold;
   padding: 20px;
-
 }
-
+summary:hover{
+  background-color: #0099cc;
+}
 /* ===================================== */
 /* totorial CSS */
 #tutorialcss p {
