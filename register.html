@@ -51,7 +51,7 @@
   <content>
     <div class="regForm">
 
-      <Form action="message copy.html" autocomplete="off" method="get" onsubmit="return validate()">
+      <Form action="message.html" autocomplete="on" method="post">
 
         <fieldset>
           <legend>Registration form</legend>
@@ -85,7 +85,7 @@
           <input type="radio" id="Gender2" name="Gender">Female<br><br>
 
           <label for="mobile">Mobile No.</label><br>
-          <input type="number" id="mobile" name="mobile" pattern="[0-9]{10,}" placeholder="Mobile Number"
+          <input type="text" inputmode="numeric" id="mobile" name="mobile" pattern="[0-9]{10,}" placeholder="Mobile Number"
             required><br><br>
 
           <label for="country">Country</label><br>
