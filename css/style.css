@@ -1,17 +1,10 @@
 body {
-  font-family: sans-serif;
+  font-family:Arial, Helvetica, sans-serif;
 
 
 }
 
-h1 {
-  border: 2px solid black;
-  outline: 10px solid #4CAF50;
-  padding: 20px;
-  text-align: center;
-
-}
-
+/* header css */
 .headeriframe {
   width: 100vw;
   height: 35vh;
@@ -19,22 +12,14 @@ h1 {
   border: 2px solid white;
 }
 
-.footeriframe {
-  width: 100vw;
-  height: 20vh;
-  margin: 0px;
-  border: 2px solid white;
-}
-
-div.container {
+.headercontainer {
   position: relative;
-  /* text-align: left; */
   position: relative;
   text-align: left;
 
 }
 
-div.centered {
+.headertitle {
   text-align: center;
   color: red;
   font-size: 30px;
@@ -45,7 +30,6 @@ div.centered {
   left: 25%;
 
 }
-
 
 .navleft {
   background-color: #333333;
@@ -66,15 +50,59 @@ div.centered {
 
 }
 
-
 .navright a {
   float: right;
+  padding: 20px;
+  margin-right: 10px;
 }
 
 marquee {
-  color: red;
+  font-weight: bold;
   font-size: 15px;
 }
+
+/* ======================================= */
+
+/* slider css */
+
+#slider {
+	overflow: hidden;
+}
+
+@keyframes slider {
+	0% { left: 0; }
+	30% { left: 0; }
+	33% { left: -100%; }
+	63% { left: -100%; }
+	66% { left: -200%; }
+	95% { left: -200%; }
+	100% { left: 0; }
+}
+#slider figure {
+	width:300%;
+	position: relative;
+	animation: 9s slider infinite;
+}
+
+#slider figure:hover {
+	animation-play-state: paused; /* pause slider on hover */
+  
+}
+#slider figure img {
+	width:33%;
+	height : 100%;
+	float: left;
+}
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+
+/* footer css */
+.footeriframe {
+  width: 100vw;
+  height: 20vh;
+  margin: 0px;
+  border: 2px solid white;
+}
+
 
 .footername {
   padding: 10px;
@@ -90,7 +118,6 @@ marquee {
 .footername a {
   color: white;
 }
-
 
 
 /* table css */
@@ -118,7 +145,7 @@ thead {
 tfoot {
   color: red;
 }
-
+/* ========================================== */
 
 /* Registration form */
 .regForm {
@@ -133,80 +160,51 @@ tfoot {
   padding-block: 10px;
 }
 
-
-
-/* slider */
-.slider-container {
-
-  height: 70vh;
-  width: 100vw;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.slide {
-  opacity: 0;
-  height: 60vh;
-  width: 80vw;
-  background-position: center center;
-  background-size: cover;
-  position: absolute;
-  top: -5vh;
-  left: 9vw;
-  transition: 0.2s ease;
-  /* z-index: 1; */
-}
-
-.slide.active {
-  opacity: 1;
-}
-
-.arrow {
-  position: absolute;
-  background-color: transparent;
-  border: transparent;
-  top: 40%;
-  transform: translateY(-50%);
-  cursor: pointer;
-
-}
-
-.left-arrow {
-  left: calc(2vw - 350px);
-}
-
-.right-arrow {
-  right: calc(2vw - 70px);
-
-}
-
-/* button top */
-#myBtn {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  z-index: 99;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  background-color: red;
-  color: white;
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 4px;
-}
-
-#myBtn:hover {
-  background-color: #555;
-}
-
+/* ============================================ */
 
 /* contact */
-.address{
+.address {
   display: inline-block;
   border: 5px solid rgb(15, 231, 7);
+}
+
+/* ============================================= */
+
+/* tutorial html */
+
+
+/*collisible ul (for html, css and javascript tutorials) */
+ul {
+  margin: 0;
+  font-size: x-large;
+  padding: 10px;
+}
+
+li {
+  list-style: none;
+  padding: 10px 0px;
+}
+
+summary {
+  background-color: palegoldenrod;
+}
+
+span {
+  background-color: paleturquoise;
+  display: block;
+  margin-top: 0px;
+}
+/* ======================================================= */
+
+/* totorial CSS */
+#tutorialcss p{
+  color:green;
+}
+#tutorialcss #p1{
+  color: red;
+  text-align:center;
+}
+#tutorialcss .p1{
+  color: rgb(51, 0, 255);
+  text-align: center;
 }

@@ -31,19 +31,19 @@
     
             <label for="fname">First Name:</label><br>
             <input type="text" id="fname" name="fname" placeholder="First Name" pattern="[a-zA-Z]{3,30}" required><br><br>
-            <span id="spnIsFirstNameValid"></span>
-    
+            
             <label for="lname">Last Name:</label><br>
             <input type="text" id="lname" name="lname" placeholder="Last Name" pattern="[a-zA-Z]{3,30}" required><br><br>
-    
     
             <label for="email">Email:</label><br>
             <input type="email" name="email" id="email" placeholder="Email" required><br><br>
     
-    
             <label for="password">Password:</label><br>
-            <input type="password" id="pwd" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
-    
+            <input type="password" id="pwd" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required><br><br>
+            
+            <label for="cnfpassword">Confirm Password:</label><br>
+            <input type="password" id="cnfpwd" placeholder="Confirm password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required><br><br>
+            
             <label>DOB</label><br>
             <input type="date" id="dob" name="dob" required><br><br>
     
@@ -55,53 +55,32 @@
             <input type="number" id="mobile" name="mobile" pattern="[0-9]{10,}" placeholder="Mobile Number"
               required><br><br>
     
-            <label for="country">Select Country</label><br>
+            <label for="country">Country</label><br>
             <select class="form-select" id="country" name="country" required>
-              <option value="">country</option>
-              <option value="AFG">Afghanistan</option>
+              <option hidden value="">--Select Country--</option>
+             
               <option value="AUS">Australia</option>
               <option value="GHA">Ghana</option>
               <option value="GIB">Gibraltar</option>
               <option value="GRC">Greece</option>
-              <option value="GRL">Greenland</option>
-              <option value="GRD">Grenada</option>
-              <option value="HKG">Hong Kong</option>
-              <option value="HUN">Hungary</option>
               <option value="ISL">Iceland</option>
               <option value="IND">India</option>
     
             </select><br><br>
     
-            <label for="state">Select State</label><br>
+            <label for="state">State</label><br>
             <select id="state" name="state" required>
-              <option value="">Select state</option>
+              <option hidden value="">--Select State--</option>
               <option value="AN">Andaman and Nicobar Islands</option>
-              <option value="AP">Andhra Pradesh</option>
-              <option value="AR">Arunachal Pradesh</option>
-              <option value="AS">Assam</option>
-              <option value="BR">Bihar</option>
-              <option value="CH">Chandigarh</option>
-              <option value="CT">Chhattisgarh</option>
-              <option value="DN">Dadra and Nagar Haveli</option>
-              <option value="DD">Daman and Diu</option>
-              <option value="DL">Delhi</option>
-              <option value="GA">Goa</option>
-              <option value="GJ">Gujarat</option>
-              <option value="HR">Haryana</option>
-              <option value="HP">Himachal Pradesh</option>
-              <option value="JK">Jammu and Kashmir</option>
               <option value="JH">Jharkhand</option>
-              <option value="KA">Karnataka</option>
-              <option value="KL">Kerala</option>
-              <option value="LA">Ladakh</option>
               <option value="LD">Lakshadweep</option>
               <option value="MP">Madhya Pradesh</option>
               
             </select><br><br>
     
-            <label for="district">Select District</label><br>
-            <select id="district" name="district" required>
-              <option value="">Select District</option>
+            <label for="city">City</label><br>
+            <select id="city" name="city" required>
+              <option hidden value="">--Select City--</option>
               <option value="1">Indore</option>
               <option value="2">Bhopal</option>
               <option value="3">Ujjain</option>
@@ -120,14 +99,9 @@
             <label for="file">Upload Single Document</label><br>
             <input type="file" id="file" name="file" required><br><br>
     
-            <label for="files">Upload Multiple Document</label><br>
-            <input type="file" id="files" name="files" multiple><br><br>
-    
-    
-    
-            <br><br><br>
-            <input type="submit" id="submit" name="submit"><br>
-    
+            <input type="submit" id="submit" name="submit">
+            <input type="reset" id="reset" name="reset">
+       
           </fieldset>
         </Form>
         <footer>
