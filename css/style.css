@@ -1,19 +1,9 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:sans-serif;
 
 
 }
-
-/* header css */
-.headeriframe {
-  width: 100vw;
-  height: 35vh;
-  margin: 0%;
-  border: 2px solid white;
-}
-
 .headercontainer {
-  position: relative;
   position: relative;
   text-align: left;
 
@@ -34,6 +24,7 @@ body {
 .navleft {
   background-color: #333333;
   overflow: hidden;
+  
 }
 
 .navleft a {
@@ -52,13 +43,14 @@ body {
 
 .navright a {
   float: right;
-  padding: 20px;
   margin-right: 10px;
 }
 
 marquee {
   font-weight: bold;
   font-size: 15px;
+  color:white;
+  text-shadow: 1px 1px 2px black, 0 0 25px rgb(224, 11, 11), 0 0 5px rgb(25, 5, 206);
 }
 
 /* ======================================= */
@@ -105,29 +97,13 @@ marquee {
   animation: 9s slider infinite;
 }
 
-#slider figure:hover {
-  animation-play-state: paused;
-  /* pause slider on hover */
-
-}
-
 #slider figure img {
-  width: 33%;
+  width: 33.33%;
   height: 100%;
   float: left;
 }
 
-/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
-
-/* footer css */
-.footeriframe {
-  width: 100vw;
-  height: 15vh;
-  margin-bottom: 0%;
-  border: 2px solid white;
-  
-}
-
+/* =================================*/
 
 .footername {
   padding: 10px;
@@ -144,7 +120,7 @@ marquee {
   color: white;
 }
 
-
+/* =============================== */
 /* table css */
 table,
 th,
@@ -175,15 +151,13 @@ tfoot {
 
 /* Registration form */
 .regForm {
-  background-color: lightseagreen;
-  padding: 30px;
+  background-color:rgb(114, 167, 236);
+  padding: 15px;
   display: inline-block;
-
+ 
 }
-
 .regForm * {
   font-size: large;
-  padding-block: 10px;
 }
 
 /* ============================================ */
@@ -195,34 +169,19 @@ tfoot {
 }
 
 /* ============================================= */
+details{
+  background-color: lightskyblue;
+}
+summary{
+  background-color:lightslategray;
+  cursor: pointer;
+  font-size: large;
+  font-weight: bold;
+  padding: 20px;
 
-/* tutorial html */
-
-
-/*collisible ul (for html, css and javascript tutorials) */
-ul {
-  margin: 0;
-  font-size: x-large;
-  padding: 10px;
 }
 
-li {
-  list-style: none;
-  padding: 10px 0px;
-}
-
-summary {
-  background-color: palegoldenrod;
-}
-
-span {
-  background-color: paleturquoise;
-  display: block;
-  margin-top: 0px;
-}
-
-/* ======================================================= */
-
+/* ===================================== */
 /* totorial CSS */
 #tutorialcss p {
   color: green;
@@ -237,3 +196,4 @@ span {
   color: rgb(51, 0, 255);
   text-align: center;
 }
+

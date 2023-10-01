@@ -1,112 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Campus Recruitment Training (CRT)- 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Campus Recruitment Training (CRT)- 
     A training program based on Web Development (HTML, CSS, JavaScript) 
     B.Tech 2nd Year 3rd Semester Students">
-    <meta name="keywords" content="B.Tech, B.Tech CSE, Web Development,HTML, 
+  <meta name="keywords" content="B.Tech, B.Tech CSE, Web Development,HTML, 
     CSS, JavaScript, Training">
-    <title>Campus Recruitment Training (CRT)</title>
-    <!-- external CSS -->
-    <link rel="stylesheet" href="css/style.css" type="text/css">
-  </head>
-  <body>
-   
-    <header>
-      <iframe class="headeriframe" src="header.html"></iframe>
-    </header>
-      </header>
-      <div class="regForm">
+  <title>Campus Recruitment Training (CRT)</title>
+  <!-- external CSS -->
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
 
-        <Form action="message copy.html" autocomplete="off" method="get" onsubmit="return validate()">
-    
-          <fieldset>
-            <legend>Registration form</legend>
-    
-            <label>Enrollment No</label><br>
-            <input type="text" id="enrollno" pattern="^(?=.*[a-zA-Z])(?=\w*[0-9])\w{12,}$"
-              title="Enrollment should be like this 0832CS221001" placeholder="Enrollment No" required><br><br>
-    
-            <label for="fname">First Name:</label><br>
-            <input type="text" id="fname" name="fname" placeholder="First Name" pattern="[a-zA-Z]{3,30}" required><br><br>
-            
-            <label for="lname">Last Name:</label><br>
-            <input type="text" id="lname" name="lname" placeholder="Last Name" pattern="[a-zA-Z]{3,30}" required><br><br>
-    
-            <label for="email">Email:</label><br>
-            <input type="email" name="email" id="email" placeholder="Email" required><br><br>
-    
-            <label for="password">Password:</label><br>
-            <input type="password" id="pwd" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required><br><br>
-            
-            <label for="cnfpassword">Confirm Password:</label><br>
-            <input type="password" id="cnfpwd" placeholder="Confirm password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required><br><br>
-            
-            <label>DOB</label><br>
-            <input type="date" id="dob" name="dob" required><br><br>
-    
-            <label>Gender</label><br>
-            <input type="radio" id="Gender1" name="Gender" required>Male
-            <input type="radio" id="Gender2" name="Gender">Female<br><br>
-    
-            <label for="mobile">Mobile No.</label><br>
-            <input type="number" id="mobile" name="mobile" pattern="[0-9]{10,}" placeholder="Mobile Number"
-              required><br><br>
-    
-            <label for="country">Country</label><br>
-            <select class="form-select" id="country" name="country" required>
-              <option hidden value="">--Select Country--</option>
-             
-              <option value="AUS">Australia</option>
-              <option value="GHA">Ghana</option>
-              <option value="GIB">Gibraltar</option>
-              <option value="GRC">Greece</option>
-              <option value="ISL">Iceland</option>
-              <option value="IND">India</option>
-    
-            </select><br><br>
-    
-            <label for="state">State</label><br>
-            <select id="state" name="state" required>
-              <option hidden value="">--Select State--</option>
-              <option value="AN">Andaman and Nicobar Islands</option>
-              <option value="JH">Jharkhand</option>
-              <option value="LD">Lakshadweep</option>
-              <option value="MP">Madhya Pradesh</option>
-              
-            </select><br><br>
-    
-            <label for="city">City</label><br>
-            <select id="city" name="city" required>
-              <option hidden value="">--Select City--</option>
-              <option value="1">Indore</option>
-              <option value="2">Bhopal</option>
-              <option value="3">Ujjain</option>
-              <option value="4">Khargone</option>
-              <option value="5">Khandwa</option>
-              <option value="6">Barwani</option>
-              <option value="7">Jhabua</option>
-    
-            </select><br><br>
-    
-            <label for="idproof">Select Valid Photo Id proof</label><br>
-            <input type="checkbox" id="chkaadhar" name="chkaadhar">Aadhar card
-            <input type="checkbox" id="chkpan" name="chkpan">PAN card
-            <input type="checkbox" id="chkdl" name="chkdl">Driving Licence<br><br>
-    
-            <label for="file">Upload Single Document</label><br>
-            <input type="file" id="file" name="file" required><br><br>
-    
-            <input type="submit" id="submit" name="submit">
-            <input type="reset" id="reset" name="reset">
-       
-          </fieldset>
-        </Form>
-        <footer>
-          <iframe class="footeriframe" src="footer.html"></iframe>
-        </footer>      
+<body>
 
-  </body>
+  <!-- header-->
+  <header>
+    <div class="headercontainer">
+      <div class="headerlogo">
+        <img src="image/logo-left.png">
+      </div>
+      <div class="headertitle">
+        <p>Chameli Devi Group of Institutions, Indore</p>
+        <p style="font-size: 20px;">Campus Recruitment Training (CRT) on Web Development</p>
+      </div>
+    </div>
+    <nav>
+      <div class="navleft">
+        <a href="index.html" target="_parent">Home</a>
+        <a href="tutorialhtml.html" target="_parent">HTML Tutorial</a>
+        <a href="tutorialcss.html" target="_parent">CSS Tutorial</a>
+        <a href="tutorialjavascript.html" target="_parent">JavaScript Tutorial</a>
+        <a href="contact.html" target="_parent">Contact us</a>
+        <div class="navright">
+          <a href="login.html" target="_parent">Login</a>
+          <a href="register.html" target="_parent">Register</a>
+        </div>
+      </div>
+    </nav>
+    <div>
+      <marquee>
+        <p>Campus Recruitment Training (CRT) on
+          Web Development (HTML, CSS, JavaScript) for CS 2<sup>nd</sup> Year (3<sup>rd</sup> Semester)</p>
+      </marquee>
+    </div>
+  </header>
+
+  <content>
+    <div class="regForm">
+
+      <Form action="message copy.html" autocomplete="off" method="get" onsubmit="return validate()">
+
+        <fieldset>
+          <legend>Registration form</legend>
+
+          <label>Enrollment No</label><br>
+          <input type="text" id="enrollno" pattern="^(?=.*[a-zA-Z])(?=\w*[0-9])\w{12,}$"
+            title="Enrollment should be like this 0832CS221001" placeholder="Enrollment No" required><br><br>
+
+          <label for="fname">First Name:</label><br>
+          <input type="text" id="fname" name="fname" placeholder="First Name" pattern="[a-zA-Z]{3,30}" required><br><br>
+
+          <label for="lname">Last Name:</label><br>
+          <input type="text" id="lname" name="lname" placeholder="Last Name" pattern="[a-zA-Z]{3,30}" required><br><br>
+
+          <label for="email">Email:</label><br>
+          <input type="email" name="email" id="email" placeholder="Email" required><br><br>
+
+          <label for="password">Password:</label><br>
+          <input type="password" id="pwd" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+            required><br><br>
+
+          <label for="cnfpassword">Confirm Password:</label><br>
+          <input type="password" id="cnfpwd" placeholder="Confirm password"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required><br><br>
+
+          <label>DOB</label><br>
+          <input type="date" id="dob" name="dob" required><br><br>
+
+          <label>Gender</label><br>
+          <input type="radio" id="Gender1" name="Gender" required>Male
+          <input type="radio" id="Gender2" name="Gender">Female<br><br>
+
+          <label for="mobile">Mobile No.</label><br>
+          <input type="number" id="mobile" name="mobile" pattern="[0-9]{10,}" placeholder="Mobile Number"
+            required><br><br>
+
+          <label for="country">Country</label><br>
+          <select class="form-select" id="country" name="country" required>
+            <option hidden value="">--Select Country--</option>
+
+            <option value="AUS">Australia</option>
+            <option value="GHA">Ghana</option>
+            <option value="GIB">Gibraltar</option>
+            <option value="GRC">Greece</option>
+            <option value="ISL">Iceland</option>
+            <option value="IND">India</option>
+
+          </select><br><br>
+
+          <label for="state">State</label><br>
+          <select id="state" name="state" required>
+            <option hidden value="">--Select State--</option>
+            <option value="AN">Andaman and Nicobar Islands</option>
+            <option value="JH">Jharkhand</option>
+            <option value="LD">Lakshadweep</option>
+            <option value="MP">Madhya Pradesh</option>
+
+          </select><br><br>
+
+          <label for="city">City</label><br>
+          <select id="city" name="city" required>
+            <option hidden value="">--Select City--</option>
+            <option value="1">Indore</option>
+            <option value="2">Bhopal</option>
+            <option value="3">Ujjain</option>
+            <option value="4">Khargone</option>
+            <option value="5">Khandwa</option>
+            <option value="6">Barwani</option>
+            <option value="7">Jhabua</option>
+
+          </select><br><br>
+
+          <label for="idproof">Select Valid Photo Id proof</label><br>
+          <input type="checkbox" id="chkaadhar" name="chkaadhar">Aadhar card
+          <input type="checkbox" id="chkpan" name="chkpan">PAN card
+          <input type="checkbox" id="chkdl" name="chkdl">Driving Licence<br><br>
+
+          <label for="file">Upload Single Document</label><br>
+          <input type="file" id="file" name="file" required><br><br>
+
+          <input type="submit" id="submit" name="submit">
+          <input type="reset" id="reset" name="reset">
+
+        </fieldset>
+      </Form>
+    </div>
+  </content>
+  <!-- footer -->
+  <footer>
+    <div>
+      <a href="https://www.facebook.com/socialcdgi" target="_parent">
+        <img src="image/fb.jfif" width="3%"></a>
+
+      <a href="https://in.linkedin.com/company/chameli-devi-group-of-institutions" target="_parent">
+        <img src="image/linkedin.jfif" width="3%"></a>
+
+      <a href="https://www.instagram.com/cdgi_indore" target="_parent">
+        <img src="image/insta.jfif" width="3%"></a>
+
+      <a href="https://mail.google.com/a/cdgi.edu.in" target="_parent">
+        <img src="image/gmail.jfif" width="5%"></a>
+
+      <a href="https://www.youtube.com/@socialcdgi" target="_parent">
+        <img src="image/youtube.jfif" width="4%"></a>
+
+      <div class="footername">
+        &copy; Designed & Developed by <a href="image/dayanand yadav.jpg" target="_parent">Dayanand Yadav</a>
+        &nbsp;(Assistant Professor, CSE) CDGI, Indore
+      </div>
+    </div>
+  </footer>>
+
+</body>
+
 </html>
