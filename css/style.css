@@ -1,5 +1,5 @@
 body {
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 
 
 }
@@ -39,7 +39,7 @@ body {
 .navleft a {
   text-decoration: none;
   color: white;
-  font-size: 17px;
+  font-size: 20px;
   float: left;
   padding: 20px 20px;
 }
@@ -66,41 +66,66 @@ marquee {
 /* slider css */
 
 #slider {
-	overflow: hidden;
+  overflow: hidden;
 }
 
 @keyframes slider {
-	0% { left: 0; }
-	30% { left: 0; }
-	33% { left: -100%; }
-	63% { left: -100%; }
-	66% { left: -200%; }
-	95% { left: -200%; }
-	100% { left: 0; }
+  0% {
+    left: 0;
+  }
+
+  30% {
+    left: 0;
+  }
+
+  33% {
+    left: -100%;
+  }
+
+  63% {
+    left: -100%;
+  }
+
+  66% {
+    left: -200%;
+  }
+
+  95% {
+    left: -200%;
+  }
+
+  100% {
+    left: 0;
+  }
 }
+
 #slider figure {
-	width:300%;
-	position: relative;
-	animation: 9s slider infinite;
+  width: 300%;
+  position: relative;
+  animation: 9s slider infinite;
 }
 
 #slider figure:hover {
-	animation-play-state: paused; /* pause slider on hover */
-  
+  animation-play-state: paused;
+  /* pause slider on hover */
+
 }
+
 #slider figure img {
-	width:33%;
-	height : 100%;
-	float: left;
+  width: 33%;
+  height: 100%;
+  float: left;
 }
+
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 
 /* footer css */
 .footeriframe {
   width: 100vw;
-  height: 20vh;
-  margin: 0px;
+  height: 15vh;
+  margin-bottom: 0%;
   border: 2px solid white;
+  
 }
 
 
@@ -145,6 +170,7 @@ thead {
 tfoot {
   color: red;
 }
+
 /* ========================================== */
 
 /* Registration form */
@@ -194,17 +220,20 @@ span {
   display: block;
   margin-top: 0px;
 }
+
 /* ======================================================= */
 
 /* totorial CSS */
-#tutorialcss p{
-  color:green;
+#tutorialcss p {
+  color: green;
 }
-#tutorialcss #p1{
+
+#tutorialcss #p1 {
   color: red;
-  text-align:center;
+  text-align: center;
 }
-#tutorialcss .p1{
+
+#tutorialcss .p1 {
   color: rgb(51, 0, 255);
   text-align: center;
 }
