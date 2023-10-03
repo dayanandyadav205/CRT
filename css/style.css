@@ -1,178 +1,177 @@
 body {
-  font-family:sans-serif;
-
-
-}
-.headercontainer {
-  position: relative;
-  text-align: left;
-
+  font-family: sans-serif;
 }
 
-.headertitle {
-  text-align: center;
-  color: red;
-  font-size: 30px;
-  font-weight: bolder;
-  margin: -15px 70px;
-  position: absolute;
-  top: 10%;
-  left: 25%;
+  #header h1 {
+    color: red;
+    text-align: center;
+    margin-top: -80px;
 
-}
+  }
 
-.navleft {
-  background-color: #333333;
-  overflow: hidden;
-  
-}
+  #header h2 {
+    color: red;
+    text-align: center;
+    margin-top: -20px;
+  }
 
-.navleft a {
-  text-decoration: none;
-  color: white;
-  font-size: 20px;
-  float: left;
-  padding: 20px 20px;
-}
+  /*Navigation section CSS */
+  #nav {
+    background-color: black;
+    padding: 20px;
+    overflow: hidden;
+  }
 
-.navleft a:hover {
-  background-color: #ddd;
-  color: black;
+  #nav a {
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+    text-decoration: none;
+  }
 
-}
+  #nav a:hover {
+    background-color: rgb(34, 214, 2);
+    color: black;
+  }
 
-.navright a {
-  float: right;
-  margin-right: 10px;
-}
+  #navright {
+    float: right;
+  }
 
-marquee {
-  font-weight: bold;
-  font-size: 15px;
-  color:white;
-  text-shadow: 1px 1px 2px black, 0 0 25px rgb(224, 11, 11), 0 0 5px rgb(25, 5, 206);
-}
+  /*content section slider CSS*/
+  #slider {
+    overflow: hidden;
+  }
 
-/* ======================================= */
+  #slider figure {
+    width: 300%;
+    display: flex;
+    animation: 10s slider infinite;
+    position: relative;
+  }
 
-/* slider css */
+  #slider img {
+    width: 33.33%;
+    height: 100%;
+  }
 
-#slider {
-  overflow: hidden;
-}
+  @keyframes slider {
+    0% {
+      left: 0;
+    }
 
-@keyframes slider {
-  0% {left: 0;}
-  30% {left: 0;}
-  33% {left: -100%;}
-  63% {left: -100%;}
-  66% {left: -200%;}
-  95% {left: -200%;}
-  100% {left: 0;}
-}
+    30% {
+      left: 0;
+    }
 
-#slider figure {
-  width: 300%;
-  position: relative;
-  animation: 9s slider infinite;
-}
+    33.33% {
+      left: -100%;
+    }
 
-#slider figure img {
-  width: 33.33%;
-  height: 100%;
-  float: left;
-}
+    60% {
+      left: -100%;
+    }
 
-/* =================================*/
+    66% {
+      left: -200%
+    }
 
-.footername {
-  padding: 10px;
-  margin: auto;
-  width: 100%;
-  background-color: #333333;
-  color: white;
-  display: block;
-  text-align: center;
+    95% {
+      left: -200%
+    }
 
-}
+    100% {
+      left: 0;
+    }
+  }
 
-.footername a {
-  color: white;
-}
+  /*Footer CSS*/
+  #footertext {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px;
+  }
+  #footertext a{
+    color: aliceblue;
+    
+  }
 
-/* =============================== */
-/* table css */
-table,
-th,
-td {
-  border: 1px solid black;
-  border-collapse: collapse;
-}
+  /* =============================== */
+  /* table css */
+  table,
+  th,
+  td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
 
-table.center {
-  margin-left: auto;
-  margin-right: auto;
-}
+  table.center {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-th,
-td {
-  padding: 10px;
-}
+  th,
+  td {
+    padding: 10px;
+  }
 
-thead {
-  color: green;
-}
+  thead {
+    color: green;
+  }
 
-tfoot {
-  color: red;
-}
+  tfoot {
+    color: red;
+  }
 
-/* ========================================== */
+  /* ========================================== */
 
-/* Registration form */
-.regForm {
-  background-color:rgb(114, 167, 236);
-  padding: 15px;
-  display: inline-block;
- 
-}
-.regForm * {
-  font-size: large;
-}
+  /* Registration form */
+  .regForm {
+    background-color: rgb(114, 167, 236);
+    padding: 15px;
+    display: inline-block;
 
-/* ============================================ */
+  }
 
-/* contact */
-.address {
-  display: inline-block;
-  border: 5px solid rgb(15, 231, 7);
-}
+  .regForm * {
+    font-size: large;
+  }
 
-/* ============================================= */
-summary{
-  background-color: #33b5e5;
-  color: #ffffff;
-  cursor: pointer;
-  font-size: large;
-  font-weight: bold;
-  padding: 20px;
-}
-summary:hover{
-  background-color: #0099cc;
-}
-/* ===================================== */
-/* totorial CSS */
-#tutorialcss p {
-  color: green;
-}
+  /* ============================================ */
 
-#tutorialcss #p1 {
-  color: red;
-  text-align: center;
-}
+  /* contact */
+  .address {
+    display: inline-block;
+    border: 5px solid rgb(15, 231, 7);
+  }
 
-#tutorialcss .p1 {
-  color: rgb(51, 0, 255);
-  text-align: center;
-}
+  /* ============================================= */
+  summary {
+    background-color: #33b5e5;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: large;
+    font-weight: bold;
+    padding: 20px;
+  }
 
+  summary:hover {
+    background-color: #0099cc;
+  }
+
+  /* ===================================== */
+  /* totorial CSS */
+  #tutorialcss p {
+    color: green;
+  }
+
+  #tutorialcss #p1 {
+    color: red;
+    text-align: center;
+  }
+
+  #tutorialcss .p1 {
+    color: rgb(51, 0, 255);
+    text-align: center;
+  }
