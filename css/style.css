@@ -17,7 +17,7 @@ body {
 
 /*Navigation section CSS */
 #nav {
-  background-color: black;
+  background-color: rgb(31, 30, 30);
   padding: 20px;
   overflow: hidden;
 }
@@ -92,7 +92,7 @@ marquee {
 
 /*Footer CSS*/
 #footer {
-  background-color: navy;
+  background-color: rgb(18, 18, 18);
   padding:15px;
 }
 #footer img{
