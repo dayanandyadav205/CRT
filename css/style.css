@@ -12,7 +12,7 @@ body {
 #header h2 {
   color: red;
   text-align: center;
-  margin-top: -20px;
+  /* margin-top: -20px; */
 }
 
 /*Navigation section CSS */
