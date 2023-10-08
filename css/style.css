@@ -1,7 +1,8 @@
+/* Universal selector */
 body {
   font-family: sans-serif;
 }
-
+/* Header CSS */
 #header h1 {
   color: red;
   text-align: center;
@@ -12,10 +13,9 @@ body {
 #header h2 {
   color: red;
   text-align: center;
-  /* margin-top: -20px; */
 }
 
-/*Navigation section CSS */
+/*Navigation section CSS  (Common for all HTML, CSS and Javascript Tutorial)*/
 #nav {
   background-color: rgb(31, 30, 30);
   padding: 20px;
@@ -38,12 +38,31 @@ body {
   float: right;
 }
 
-/* Marquee CSS */
-marquee {
-  background-color: rgb(104, 169, 234);
+
+/*Footer CSS  (Common for all HTML, CSS and Javascript Tutorial)*/
+#footer {
+  background-color: rgb(18, 18, 18);
+  padding:15px;
+}
+#footer img{
+  width: 30px;
+  height: 30px;
+  padding: 2px;
+  border-radius: 20px;
+
+}
+#footertext {
+  color: white;
+  text-align: center;
+  margin-top: -30px;
 }
 
-/*content section slider CSS*/
+#footertext a {
+  color: aliceblue;
+
+}
+
+/*Home page slider CSS*/
 #slider {
   overflow: hidden;
 }
@@ -90,41 +109,41 @@ marquee {
   }
 }
 
-/*Footer CSS*/
-#footer {
-  background-color: rgb(18, 18, 18);
-  padding:15px;
+/* Marquee CSS */
+marquee {
+  background-color: rgb(104, 169, 234);
 }
-#footer img{
-  width: 30px;
-  height: 30px;
-  padding: 2px;
-  border-radius: 20px;
+
+
+/* Common CSS for all HTML, CSS and Javascript Tutorial */
+.tutorials-heading img{
+width: 100px;
+height: 100px;
 
 }
-#footertext {
-  color: white;
+.tutorials-heading h2{
   text-align: center;
-  margin-top: -30px;
+  margin-top: -40px;
 }
 
-#footertext a {
-  color: aliceblue;
-
+summary {
+  background-color: #02212d;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: large;
+  font-weight: bold;
+  padding: 20px;
 }
 
-/* tutorials CSS */
-.tutorials {
-  width: 100%;
-  height: 100px;
+summary:hover {
+  background-color: #0099cc;
+  color: black;
 }
 
-.tutorials h2 {
-  text-align: center;
-  margin-top: -80px;
-}
 
-/* =============================== */
+/* HTML Tutorial */
+
+
 /* table css */
 table,
 th,
@@ -173,21 +192,8 @@ tfoot {
   border: 5px solid rgb(15, 231, 7);
 }
 
-/* ============================================= */
-summary {
-  background-color: #33b5e5;
-  color: #ffffff;
-  cursor: pointer;
-  font-size: large;
-  font-weight: bold;
-  padding: 20px;
-}
-
-summary:hover {
-  background-color: #0099cc;
-}
-
 /* ===================================== */
+
 /* totorial CSS */
 #tutorialcss p {
   color: green;
