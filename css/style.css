@@ -206,19 +206,5 @@ tfoot {
 
 /* ===================================== */
 
-/* totorial CSS */
-#tutorialcss p {
-  color: green;
-}
-
-#tutorialcss #p1 {
-  color: red;
-  text-align: center;
-}
-
-#tutorialcss .p1 {
-  color: rgb(51, 0, 255);
-  text-align: center;
-}
 
 
