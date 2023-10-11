@@ -2,6 +2,7 @@
 body {
   font-family: sans-serif;
 }
+
 /* Header CSS */
 #header h1 {
   color: red;
@@ -42,15 +43,19 @@ body {
 /*Footer CSS  (Common for all HTML, CSS and Javascript Tutorial)*/
 #footer {
   background-color: rgb(18, 18, 18);
-  padding:15px;
+  padding: 15px;
+  height: 100%;
+
 }
-#footer img{
+
+#footer img {
   width: 30px;
   height: 30px;
   padding: 2px;
   border-radius: 20px;
 
 }
+
 #footertext {
   color: white;
   text-align: center;
@@ -70,8 +75,8 @@ body {
 #slider figure {
   width: 300%;
   display: flex;
-  animation: 10s slider infinite;
   position: relative;
+  animation: 10s slider infinite;
 }
 
 #slider img {
@@ -116,19 +121,24 @@ marquee {
 
 
 /* Common CSS for all HTML, CSS and Javascript Tutorial */
-.tutorials-heading img{
-width: 100px;
-height: 100px;
+hr{
+  padding: 2px;
+  background-color: rgb(129, 124, 124);
+}
+.tutorials-heading img {
+  width: 100px;
+  height: 100px;
 
 }
-.tutorials-heading h2{
+
+.tutorials-heading h2 {
   text-align: center;
   margin-top: -40px;
 }
 
 summary {
-  background-color: #02212d;
-  color: #ffffff;
+  background-color: #50bae4;
+  color: #090909;
   cursor: pointer;
   font-size: large;
   font-weight: bold;
@@ -136,8 +146,8 @@ summary {
 }
 
 summary:hover {
-  background-color: #0099cc;
-  color: black;
+  background-color: #012f3e;
+  color: rgb(235, 232, 232);
 }
 
 
@@ -187,10 +197,12 @@ tfoot {
 /* ============================================ */
 
 /* contact */
-.address {
-  display: inline-block;
-  border: 5px solid rgb(15, 231, 7);
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
 }
+
 
 /* ===================================== */
 
@@ -208,3 +220,5 @@ tfoot {
   color: rgb(51, 0, 255);
   text-align: center;
 }
+
+
