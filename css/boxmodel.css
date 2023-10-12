@@ -1,0 +1,10 @@
+*{
+    margin: 0;
+}
+.box{
+    border:10px solid red;
+    padding: 50px 10px 50px 120px;
+}
+p{
+    padding: 50px 80px 100px 130px;
+}
