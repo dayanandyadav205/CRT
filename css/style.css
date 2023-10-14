@@ -202,13 +202,14 @@ tfoot {
 /* ============================================ */
 
 /* contact */
-.column {
-  float: left;
-  width: 50%;
-  padding: 10px;
+.div-container{
+  display: flex;
+  width: 100%;
+  column-gap: 2em;
 }
-
-
+.my-photo p{
+text-align: center;  
+}
 /* ===================================== */
 
 
