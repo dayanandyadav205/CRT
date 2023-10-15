@@ -13,6 +13,7 @@ iframe{
   color: red;
   text-align: center;
   margin-top: -80px;
+  text-shadow: 2px 2px 5px blue;
 
 }
 
@@ -151,7 +152,7 @@ summary {
 }
 
 summary:hover {
-  background-color: white;
+  background-color: rgb(248, 48, 48);
  color: black;
 }
 

@@ -1,0 +1,22 @@
+
+.css-selectors p{
+    color: rgb(8, 147, 4);
+    padding: 1em;
+}
+
+.css-selectors #id1{
+    color: rgb(223, 11, 8);
+}
+.css-selectors .c1>p{
+    color: rgb(40, 12, 221);
+}
+
+
+.css-selectors p::first-letter   {
+    color:rgb(232, 18, 7);
+}
+.css-selectors button:hover{
+    background-color: grey;
+    color: white;
+    font-size: large;
+}

@@ -1,0 +1,12 @@
+.css-fonts p{
+    padding: 1em;
+    font-family:monospace;
+    font-size: 2em;
+    color: red;
+    text-shadow: 3px 1px 5px blue;
+    text-indent: 20em;
+    letter-spacing: 0em;
+    line-height: 2em;
+    text-transform: uppercase;
+}
+

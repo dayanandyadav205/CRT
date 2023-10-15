@@ -1,8 +1,9 @@
-p{
-    background-color:rgb(255, 0, 0);
+.css-colors p{
+    color:rgb(255, 0, 0);
+    padding: 1em;
 }
 
-div p{
-    background-color: #223344;
-    color: #ffffff;
+.css-colors div p{
+    color: #ff0000;
+  
 }
