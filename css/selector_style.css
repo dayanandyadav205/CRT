@@ -1,0 +1,20 @@
+p{
+    background-color: yellow;
+}
+
+#id1{
+    background-color: rgb(223, 11, 8);
+}
+.c1>p{
+    background-color: rgb(40, 12, 221);
+}
+
+
+p::first-letter   {
+    color:rgb(232, 18, 7);
+}
+button:hover{
+    background-color: grey;
+    color: white;
+    font-size: large;
+}

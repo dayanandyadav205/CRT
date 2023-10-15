@@ -1,0 +1,15 @@
+*{
+    margin:0;
+    padding:0;
+}
+.box{
+    border:5px solid red;
+    padding:10px 20px 10px 50px;
+    margin: 50px 10px 20px 20px;
+    width:100px;
+    height: 100px;
+    outline:10px solid yellow;
+}
+p{
+    padding:150px 20px 10px 50px; 
+}

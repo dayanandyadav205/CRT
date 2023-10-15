@@ -1,35 +1,8 @@
-
-/* 
-RGB color scheme
-R= 0-255 
-G= 0-255 
-B= 0-255  
-*/
-
-h4{
-    background-color: rgb(50,50,50);
+p{
+    background-color:rgb(255, 0, 0);
 }
 
-/* 
-HEX color scheme 
-0 (minimum value)
-1
-2
-3
-4
-5
-6
-7
-8
-9
-A
-B
-C
-D
-E
-F (maximum value)
-*/
-
-h5{
-    background-color: #f9f3f5;
+div p{
+    background-color: #223344;
+    color: #ffffff;
 }

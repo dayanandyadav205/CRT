@@ -23,7 +23,7 @@ iframe{
 
 /*Navigation section CSS  (Common for all HTML, CSS and Javascript Tutorial)*/
 #nav {
-  background-color: rgb(29, 28, 28);
+  background-color: #012f3e;
   padding: 1em;
   overflow: hidden;
 }
@@ -142,8 +142,8 @@ hr{
 }
 
 summary {
-  background-color: #50bae4;
-  color: #090909;
+  background-color: #012f3e;
+  color: #ffffff;
   cursor: pointer;
   font-size: large;
   font-weight: bold;
@@ -151,8 +151,8 @@ summary {
 }
 
 summary:hover {
-  background-color: #012f3e;
-  color: rgb(235, 232, 232);
+  background-color: white;
+ color: black;
 }
 
 
