@@ -10,10 +10,10 @@ iframe{
 
 /* Header CSS */
 #header h1 {
-  color: red;
+  color: rgb(240, 5, 5);
   text-align: center;
   margin-top: -80px;
-  text-shadow: 2px 2px 5px blue;
+ 
 
 }
 
@@ -48,7 +48,7 @@ iframe{
 
 /*Footer CSS  (Common for all HTML, CSS and Javascript Tutorial)*/
 #footer {
-  background-color: rgb(18, 18, 18);
+  background-color: rgb(40, 38, 38);
   padding: 15px;
   height: 100%;
 
@@ -74,20 +74,20 @@ iframe{
 }
 
 /*Home page slider CSS*/
-#slider {
+content .slider {
   overflow: hidden;
 }
 
-#slider figure {
+figure {
   width: 300%;
   display: flex;
   position: relative;
   animation: 10s slider infinite;
 }
 
-#slider img {
+figure img {
   width: 33.33%;
-  height: 100%;
+  height: 50%;
 }
 
 @keyframes slider {
