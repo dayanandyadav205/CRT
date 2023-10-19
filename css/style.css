@@ -1,4 +1,8 @@
 /* Universal selector */
+*{
+  padding: 0;
+  margin: 0;
+}
 body {
   font-family: sans-serif;
 }
@@ -10,13 +14,13 @@ iframe{
 
 /* Header CSS */
 #header h1 {
-  color: red;
+  color: rgb(25, 24, 24);
   text-align: center;
   margin-top: -90px;
-  font-size: 2vw;
+  font-size: 2em;
+  text-shadow: 2px 3px rgb(5, 109, 238);
  
-
-}
+}   
 
 #header h2 {
   color: red;
@@ -26,28 +30,36 @@ iframe{
 }
 
 /*Navigation section CSS  (Common for all HTML, CSS and Javascript Tutorial)*/
-#nav {
+nav {
   background-color: #012f3e;
-  padding: 1em;
   overflow: hidden;
+  position: sticky;
+  top:0;
 }
 
-#nav a {
+nav a {
   color: white;
-  padding: 1em;
-  font-size: 1em;
+  padding: 12px;
   text-decoration: none;
 }
 
-#nav a:hover {
+nav a:hover {
   background-color: white;
   color: black;
 }
 
-#navright {
+nav a.right {
   float: right;
 }
 
+  /* Responsive layout - when the screen is less than 400px wide, 
+  make the navigation links stack on top of each other instead of next to each other */
+  @media screen and (max-width: 400px) {
+    nav a {
+      float: none;
+      width: 100%;
+    }
+  }
 
 /*Footer CSS  (Common for all HTML, CSS and Javascript Tutorial)*/
 #footer {
