@@ -8,21 +8,20 @@
 .container {
     border: 2px solid rebeccapurple;
     display: grid;
-    /* gap: 10px; */
-    row-gap: 20px;
-    column-gap: 10px;
-    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
-    /* grid-template-columns: repeat(3, 2fr);
-    grid-template-rows: 100px 80px;
-    grid-auto-rows: 200px; */
+    gap: 20px;
+    /* row-gap: 20px;
+    column-gap: 10px; */
+    /* grid-template-columns: 2fr 3fr 1fr 1fr; */
+    /* grid-template-rows: 100px 80px; */
+    /* grid-auto-rows: 200px; */
     /* justify-content: center; */
-    /* justify-content: end; */
+    /* justify-content: start; */
     /* align-content: center; */
     /* align-items: end; */
-    /* grid-template-areas: "hdr hdr hdr hdr"
+    grid-template-areas: "hdr hdr hdr hdr"
                         "sbr main main main"
                         "sbr main main main"
-                        "ftr ftr ftr ftr"; */
+                        "ftr ftr ftr ftr";
 
 }
 
@@ -43,11 +42,11 @@
 
 }
 #box-2{
-    /* grid-area: sbr; */
+    grid-area: sbr;
 }
 #box-3{
-    /* grid-area: main; */
+    grid-area: main;
 }
 #box-4{
-    /* grid-area:ftr; */
+    grid-area:ftr;
 }
