@@ -8,14 +8,12 @@
   box-sizing: border-box;
 }
 
-/* Style the top navigation bar */
-.topnav {
+.nav {
   overflow: hidden;
   background-color: #333;
 }
 
-/* Style the topnav links */
-.topnav a {
+.nav a {
   float: left;
   display: block;
   color: #f2f2f2;
@@ -24,15 +22,16 @@
   text-decoration: none;
 }
 
-/* Change color on hover */
-.topnav a:hover {
+.nav a:hover {
   background-color: #ddd;
   color: black;
 }
 
-/* On screens that are 600px wide or less, make the menu links stack on top of each other instead of next to each other */
+/* On screens that are 600px wide or less, 
+make the menu links stack on top of each other 
+instead of next to each other */
 @media screen and (max-width: 600px) {
-  .topnav a {
+  .nav a {
     float: none;
     width: 100%;
   }
@@ -40,14 +39,14 @@
 </style>
 </head>
 <body>
-
+  <a href="/tutorialcss.html">Go back to CSS tutorial</a>
 <h2>Responsive navigation menu</h2>
 <p>Resize the browser window to see the effect: When the screen is less than 600px, the navigation menu will be displayed vertically instead of horizontally.</p>
 
-<div class="topnav">
-  <a href="#">Link</a>
-  <a href="#">Link</a>
-  <a href="#">Link</a>
+<div class="nav">
+  <a href="#">Home</a>
+  <a href="#">Services</a>
+  <a href="#">Contact</a>
 </div>
 
 </body>

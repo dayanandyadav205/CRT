@@ -1,73 +1,78 @@
 /* Universal selector */
-*{
+* {
   padding: 0;
   margin: 0;
 }
+
 body {
   font-family: sans-serif;
+ 
 }
-iframe{
-  width:100vw; 
-  height:15em;
+
+iframe {
+  width: 100vw;
+  height: 15em;
   border: 2px solid transparent;
 }
 
 /* Header CSS */
 #header h1 {
-  color: rgb(25, 24, 24);
+  color: rgb(38, 36, 36);
   text-align: center;
   margin-top: -90px;
   font-size: 2em;
-  text-shadow: 2px 3px rgb(5, 109, 238);
- 
-}   
-
-#header h2 {
-  color: red;
-  text-align: center;
-  font-size: 2vw;
+  text-shadow: 2px 2px 7px blue;
 
 }
 
-   /*Navigation section CSS  (Common for all HTML, CSS and Javascript Tutorial)*/
-   nav {
-    background-color: #012f3e;
-    overflow: hidden;
-    padding: 12px;
-    position: sticky;
-    top:0;
-  }
-  
-  nav a {
-    float: left;
-    color: white;
-    padding: 12px 15px;
-    text-decoration: none;
-    text-align: center;
-  }
-  
-  nav a:hover {
-    background-color: white;
-    color: black;
-  }
-  
-  nav a.right {
-    float: right;
-  }
-  
-    /* Responsive layout - when the screen is less than 400px wide, 
+#header h2 {
+  color: rgb(36, 33, 33);
+  text-align: center;
+  font-size: 2vw;
+  text-shadow: 3px 1px 5px blue;
+  margin: 20px;
+}
+
+/*Navigation section CSS  (Common for all HTML, CSS and Javascript Tutorial)*/
+nav {
+  background-color: #012f3e;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+}
+
+nav a {
+  float: left;
+  display: block;
+  color: white;
+  padding: 12px 15px;
+  text-decoration: none;
+  text-align: center;
+
+}
+
+nav a:hover {
+  background-color: white;
+  color: black;
+}
+
+nav a.right {
+  float: right;
+}
+
+/* Responsive layout - when the screen is less than 400px wide, 
     make the navigation links stack on top of each other instead of next to each other */
-    @media screen and (max-width: 400px) {
-      nav a {
-        float: none;
-        width: 100%;
-      }
-    }
+@media screen and (max-width: 400px) {
+  nav a {
+    float: none;
+    width: 100%;
+  }
+}
 
 /*Footer CSS  (Common for all HTML, CSS and Javascript Tutorial)*/
 #footer {
   background-color: rgb(40, 38, 38);
-  padding: 15px;
+  padding: 10px 10px;
   height: 100%;
 
 }
@@ -145,10 +150,11 @@ marquee {
 
 
 /* Common CSS for all HTML, CSS and Javascript Tutorial */
-hr{
+hr {
   padding: 2px;
   background-color: rgb(129, 124, 124);
 }
+
 .tutorials-heading img {
   width: 100px;
   height: 100px;
@@ -161,7 +167,7 @@ hr{
 }
 
 summary {
-  background-color: #012f3e;
+  background-color: #33b5e5;
   color: #ffffff;
   cursor: pointer;
   font-size: large;
@@ -170,8 +176,8 @@ summary {
 }
 
 summary:hover {
-  background-color: rgb(248, 48, 48);
- color: black;
+  background-color: #0099cc;
+
 }
 
 
@@ -221,15 +227,18 @@ tfoot {
 /* ============================================ */
 
 /* contact */
-.div-container{
+.div-container {
   display: flex;
   width: 100%;
   column-gap: 2em;
 }
-.my-photo p{
-text-align: center;  
+
+.my-photo p {
+  text-align: center;
 }
+
 /* ===================================== */
 
-
-
+.abc{
+  display: flex;
+}
