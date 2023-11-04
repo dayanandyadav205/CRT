@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>My Mobile-First Approach</title>
+   <style>
+     /* Default styles for mobile */
+     .grid-container-flex {
+       display: flex;
+       flex-direction: column;
+       background-color: purple;
+       font-size: 0.9rem;
+       color: white;
+       margin-top: 1rem;
+       height: 9em;
+     }
+
+     .grid-container-grid {
+       display: grid;
+       grid-template-columns: 20em;
+       height: 8em;
+       font-size: 1.1rem;
+     }
+
+     /* Media query for tablets */
+     @media (min-width: 768px) {
+       .grid-container-flex {
+         font-size: 1.3rem;
+       }
+
+       .grid-container-grid {
+         grid-template-columns: none;
+         height: 10em;
+       }
+     }
+
+     /* Media query for desktops */
+     @media (min-width: 1024px) {
+       .grid-container-flex {
+         font-size: 2rem;
+       }
+
+       .grid-container-grid {
+         grid-template-columns: none;
+         height: 12em;
+       }
+     }
+   </style>
+ </head>
+ <body>
+   <header>
+     <h1>My Mobile-First Approach HTML Structuring</h1>
+     <nav>
+       <a href="">Home</a>
+       <a href="">Shop</a>
+       <a href="">Contact</a>
+       <a href="">Store</a>
+     </nav>
+   </header>
+
+   <main>
+     <section class="grid-container-flex">
+       <h2>About Us</h2>
+       <p>We work with skilled artisans and select premium materials to craft footwear that stands the test of time</p>
+     </section>
+
+     <section class="grid-container-grid">
+       <h2>Our Products</h2>
+       <ul>
+         <li>Men's shoes</li>
+         <li>Women's Shoes</li>
+         <li>Kid's Shoes</li>
+       </ul>
+     </section>
+
+     <section>
+       <h2>Contact Us</h2>
+       <form>
+         <label for="name">Name:</label>
+         <input type="text" id="name" name="name">
+
+         <label for="email">Email:</label>
+         <input type="email" id="email" name="email">
+
+         <label for="message">Message:</label>
+         <textarea id="message" name="message"></textarea>
+
+         <input type="submit" value="Send Message">
+       </form>
+     </section>
+   </main>
+
+   <footer>
+     <p>&copy; 2023 My Mobile-First Approach Example. All rights reserved.</p>
+   </footer>
+ </body>
+</html>

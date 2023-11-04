@@ -23,89 +23,37 @@
   <content>
     <div class="regForm">
 
-      <Form action="message.html" autocomplete="on" method="post">
+      <Form action="insert.php" autocomplete="on" method="post">
 
         <fieldset>
           <legend>Registration form</legend>
 
-          <label>Enrollment No</label><br>
-          <input type="text" id="enrollno" pattern="^(?=.*[a-zA-Z])(?=\w*[0-9])\w{12,}$"
-            title="Enrollment should be like this 0832CS221001" placeholder="Enrollment No" required><br><br>
-
-          <label for="fname">First Name:</label><br>
-          <input type="text" id="fname" name="fname" placeholder="First Name" pattern="[a-zA-Z]{3,30}" required><br><br>
-
-          <label for="lname">Last Name:</label><br>
-          <input type="text" id="lname" name="lname" placeholder="Last Name" pattern="[a-zA-Z]{3,30}" required><br><br>
-
-          <label for="email">Email:</label><br>
-          <input type="email" name="email" id="email" placeholder="Email" required><br><br>
+          <label for="username">Name:</label><br>
+          <input type="text" name="username" placeholder="username" pattern="[a-zA-Z]{3,30}" required><br><br>
 
           <label for="password">Password:</label><br>
-          <input type="password" id="pwd" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-            required><br><br>
+          <input type="password" name="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required><br><br>
 
-          <label for="cnfpassword">Confirm Password:</label><br>
-          <input type="password" id="cnfpwd" placeholder="Confirm password"
-            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required><br><br>
+          <!-- <label for="lname">Last Name:</label><br>
+          <input type="text" id="lname" name="lname" placeholder="Last Name" pattern="[a-zA-Z]{3,30}" required><br><br> -->
 
-          <label>DOB</label><br>
-          <input type="date" id="dob" name="dob" required><br><br>
+          <label for="email">Email:</label><br>
+          <input type="email" name="email" placeholder="Email" required><br><br>
 
-          <label>Gender</label><br>
-          <input type="radio" id="Gender1" name="Gender" required>Male
-          <input type="radio" id="Gender2" name="Gender">Female<br><br>
+         
+
+          <!-- <label for="cnfpassword">Confirm Password:</label><br>
+          <input type="password" name="cpwd" placeholder="Confirm password"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required><br><br> -->
+
+          <!-- <label>DOB</label><br>
+          <input type="date" name="dob" required><br><br> -->
 
           <label for="mobile">Mobile No.</label><br>
-          <input type="text" inputmode="numeric" id="mobile" name="mobile" pattern="[0-9]{10,}" placeholder="Mobile Number"
+          <input type="phone" name="mobile" placeholder="Mobile Number"
             required><br><br>
 
-          <label for="country">Country</label><br>
-          <select class="form-select" id="country" name="country" required>
-            <option hidden value="">--Select Country--</option>
-
-            <option value="AUS">Australia</option>
-            <option value="GHA">Ghana</option>
-            <option value="GIB">Gibraltar</option>
-            <option value="GRC">Greece</option>
-            <option value="ISL">Iceland</option>
-            <option value="IND">India</option>
-
-          </select><br><br>
-
-          <label for="state">State</label><br>
-          <select id="state" name="state" required>
-            <option hidden value="">--Select State--</option>
-            <option value="AN">Andaman and Nicobar Islands</option>
-            <option value="JH">Jharkhand</option>
-            <option value="LD">Lakshadweep</option>
-            <option value="MP">Madhya Pradesh</option>
-
-          </select><br><br>
-
-          <label for="city">City</label><br>
-          <select id="city" name="city" required>
-            <option hidden value="">--Select City--</option>
-            <option value="1">Indore</option>
-            <option value="2">Bhopal</option>
-            <option value="3">Ujjain</option>
-            <option value="4">Khargone</option>
-            <option value="5">Khandwa</option>
-            <option value="6">Barwani</option>
-            <option value="7">Jhabua</option>
-
-          </select><br><br>
-
-          <label for="idproof">Select Valid Photo Id proof</label><br>
-          <input type="checkbox" id="chkaadhar" name="chkaadhar">Aadhar card
-          <input type="checkbox" id="chkpan" name="chkpan">PAN card
-          <input type="checkbox" id="chkdl" name="chkdl">Driving Licence<br><br>
-
-          <label for="file">Upload Single Document</label><br>
-          <input type="file" id="file" name="file" required><br><br>
-
-          <input type="submit" id="submit" name="submit">
-          <input type="reset" id="reset" name="reset">
+          <input type="submit" value="Register" id="submit" name="submit">
 
         </fieldset>
       </Form>

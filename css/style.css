@@ -6,7 +6,7 @@
 
 body {
   font-family: sans-serif;
- 
+  width: 100%;
 }
 
 iframe {
@@ -39,6 +39,7 @@ nav {
   overflow: hidden;
   position: sticky;
   top: 0;
+
 }
 
 nav a {
@@ -214,14 +215,17 @@ tfoot {
 
 /* Registration form */
 .regForm {
-  background-color: rgb(114, 167, 236);
-  padding: 15px;
-  display: inline-block;
+  background-color: rgb(107, 163, 236);
+  border:5px solid #012f3e;
+  padding: 10px;
+  /* justify-content: center; */
+ 
 
 }
 
 .regForm * {
-  font-size: large;
+  font-size: 15px;
+
 }
 
 /* ============================================ */

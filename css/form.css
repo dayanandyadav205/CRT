@@ -1,0 +1,23 @@
+.nav{
+    background-color: gray;
+    padding: 20px;
+}
+.nav a{
+    color: white;
+    padding: 15px 20px;
+}
+.nav a:hover{
+    background-color: black;
+
+}
+
+
+.frm{
+    background-color: aqua;
+}
+.frm2{
+    background-color: rgb(255, 255, 0);
+}
+p{
+   background-color: rgb(34, 0, 255);
+}
