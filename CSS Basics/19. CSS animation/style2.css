@@ -1,20 +1,21 @@
 
 ul{
     position:absolute;
+    display: flex;
     top:50%;
     left: 50%;
-    display: flex;
+    
 }
+
 ul li{
-   
     background: #262626;
     margin: 4px;
     width: 5px;
     height: 20px;
     list-style: none;
     animation: animate 0.7s infinite alternate;
-
 }
+
 @keyframes animate {
     0%{
         transform: scaleY(1);

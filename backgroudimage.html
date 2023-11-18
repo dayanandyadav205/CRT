@@ -1,43 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
-            background-image: url(image/slide0.png);
-            width: 100%;
-            height: 100vh;
-            margin-left: 120px;
-            background-size: cover;
+        * {
+            margin: 0;
         }
-        .text{
-            background-color: #f9f9f9;
-            /* display: flex; */
-            /* justify-content: center; */
-            /* align-items: center; */
-            /* z-index: 1; */
-            /* background: transparent; */
 
+           body {
+            width: 100vw;
+            height: 100vh;
+            display: block;
+            position: relative;
+
+        }
+
+        body::after {
+            content: "";
+            background: url(image/slide0.png);
+            opacity: 0.5;
+            background-size: cover;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1;
+        }
+
+      .text {
+         width: 500px;
+         height: 100px;
+         display: flex;
+        margin-top: 50px;
+         justify-items: center;
+         align-items: center;
+            background-color: rgb(245, 237, 237);
+           
         }
     </style>
 </head>
+
 <body>
-    <div class="text">
-        <h1>Lorem ipsum dolor sit amet.</h1>
-        <p>Lorem ipsum dolor sit amet 
-            consectetur adipisicing elit. 
-            Vel sed, neque dolorem debitis 
-            voluptates laudantium? Maiores 
-            omnis vel debitis recusandae magni 
-            saepe laudantium cumque sed? Odit 
-            iste ratione ut eligendi, doloremque 
-            ducimus. Voluptates aspernatur unde 
-            laboriosam, reprehenderit fugiat 
-            dicta! Esse eveniet non accusamus
-             rem asperiores molestias mollitia a
-             lias consequuntur eligendi!</p>
+    <div class="background">
+      
+
+        <div class="text">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum possimus soluta reprehenderit odio
+                asperiores, molestiae labore placeat repellendus quisquam omnis voluptates quod explicabo odit,
+                aspernatur consequuntur obcaecati rem quibusdam maiores!</p>
+        </div>
     </div>
 </body>
+
 </html>

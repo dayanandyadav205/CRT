@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>23. Control Flow: conditional statements</title>
+</head>
+
+<body>
+    <!-- If Else -->
+    <h2>JavaScript <mark>If else</mark></h2>
+
+    <p id="demo"></p>
+    <script>
+        let hour = 20;
+
+        if (hour < 18) {
+            greeting = "Good morning";
+            document.getElementById("demo").innerHTML = greeting;
+        }
+
+        if (hour > 18) {
+            greeting = "Good day";
+            document.getElementById("demo").innerHTML = greeting;
+        } else {
+            greeting = "Good evening";
+            document.getElementById("demo").innerHTML = greeting;
+        }
+
+    </script>
+    <hr>
+    <!-- if elseif  -->
+    <h2>JavaScript <mark>If else</mark></h2>
+
+    <p id="demo0"></p>
+    <script>
+        let time = 9;
+
+        if (time < 10) {
+            greeting = "Good morning";
+            document.getElementById("demo0").innerHTML = greeting;
+        }
+        else if (time < 20) {
+            greeting = "Good day";
+            document.getElementById("demo0").innerHTML = greeting;
+        } else {
+            greeting = "Good evening";
+            document.getElementById("demo0").innerHTML = greeting;
+        }
+    </script>
+    <hr>
+    <!-- Switch case -->
+    <h2>JavaScript <mark>switch case</mark></h2>
+
+    <p id="demo1"></p>
+    <script>
+        switch (new Date().getDay()) {
+            case 0: day = "Sunday";
+                break;
+            case 1: day = "Monday";
+                break;
+            case 2: day = "Tuesday";
+                break;
+            case 3: day = "Wednesday";
+                break;
+            case 4: day = "Thursday";
+                break;
+            case 5: day = "Friday";
+                break;
+            case 6: day = "Saturday";
+        }
+        document.getElementById("demo1").innerHTML = day;
+    </script>
+    <hr>
+
+    <!-- For Loop -->
+    <h2>JavaScript <mark>for</mark> Loop</h2>
+
+    <p id="demo2"></p>
+
+    <script>
+        const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+
+        let text = "";
+        for (let i = 0; i < cars.length; i++) {
+            text += cars[i] + "<br>";
+        }
+
+        document.getElementById("demo2").innerHTML = text;
+    </script>
+    <hr>
+
+    <!-- for in Loop  -->
+    <h2>JavaScript <mark>for in</mark> Loop</h2>
+    <p>The for in statement loops through the <mark>properties</mark> of an object:</p>
+
+    <p id="demo3"></p>
+
+    <script>
+        const person = { fname: "John", lname: "Doe", age: 25 };
+
+        let txt = "";
+        for (let x in person) {
+            txt += person[x] + " ";
+        }
+
+        document.getElementById("demo3").innerHTML = txt;
+    </script>
+    <hr>
+    <!-- for of Loop  -->
+    <h2>JavaScript <mark>for of</mark> Loop</h2>
+    <p>The for in statement loops through the <mark>values</mark> of an object:</p>
+
+    <p id="demo4"></p>
+    <script>
+        const cars1 = ["BMW", "Volvo", "Mini"];
+        let text1 = "";
+        for (let x of cars) {
+            text1 += x + "<br>";
+        }
+        document.getElementById("demo4").innerHTML = text1;
+    </script>
+
+    <hr>
+    <!-- while loop -->
+    <h2>JavaScript <mark>while loop</mark></h2>
+
+    <p id="demo5"></p>
+
+    <script>
+        let text2 = "";
+        let i = 0;
+        while (i < 10) {
+            text2 += "<br>The number is " + i;
+            i++;
+        }
+        document.getElementById("demo5").innerHTML = text2;
+    </script>
+
+    <hr>
+    <!-- do while loop -->
+    <h2>JavaScript <mark>do while loop</mark></h2>
+
+    <p id="demo6"></p>
+
+    <script>
+        let text3 = ""
+        let j = 0;
+
+        do {
+            text3 += "<br>The number is " + j;
+            j++;
+        }
+        while (j < 10);
+
+        document.getElementById("demo6").innerHTML = text3;
+    </script>
+</body>
+
+</html>

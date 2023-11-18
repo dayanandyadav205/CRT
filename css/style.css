@@ -106,7 +106,7 @@ figure {
   width: 300%;
   display: flex;
   position: relative;
-  animation: 10s slider infinite;
+  animation: linear 10s slider infinite;
 }
 
 figure img {
@@ -216,10 +216,10 @@ tfoot {
 /* Registration form */
 .regForm {
   background-color: rgb(107, 163, 236);
-  border:5px solid #012f3e;
+  border: 5px solid #012f3e;
   padding: 10px;
   /* justify-content: center; */
- 
+
 
 }
 

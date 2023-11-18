@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24. Functions: Creating and calling functions</title>
+</head>
+
+<body>
+
+<h1>JavaScript Functions</h1>
+<br>
+<ul>
+   <li>JavaScript functions are used to perform operations. </li> 
+   <li>We can call JavaScript function many times to reuse the code.</li>
+</ul> 
+Advantage of JavaScript function
+There are mainly two advantages of JavaScript functions.
+
+Code reusability: We can call a function several times so it save coding.
+Less coding: It makes our program compact. We don’t need to write many lines of code each time to perform a common task.
+
+
+
+    <h1>JavaScript Functions</h1>
+
+    <p>Call a function which performs a calculation and returns the result:</p>
+
+    <p id="demo"></p>
+
+    <script>
+        let x = myFunction(4, 3);
+        document.getElementById("demo").innerHTML = x;
+
+        function myFunction(a, b) {
+            return a * b;
+        }
+    </script>
+
+    <hr>
+
+    <h1>JavaScript Functions</h1>
+
+    <p>Outside myFunction() carName is undefined.</p>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+
+    <script>
+        let text = "Outside: " + typeof carName;
+        document.getElementById("demo1").innerHTML = text;
+
+        function myFunction() {
+            let carName = "Volvo";
+            let text = "Inside: " + typeof carName + " " + carName;
+            document.getElementById("demo2").innerHTML = text;
+        }
+
+        myFunction();
+    </script>
+
+    <script>
+        function myFunction() {
+            alert("Hi")
+        }
+        myFunction();
+    </script>
+
+    <hr>
+    <!-- Factorial -->
+    <h2>Factorial</h2>
+    <p id="demo3"></p>
+    <script>
+
+        function factorial(n) {
+            if (n === 0 || n === 1) {
+                return 1;
+            } else {
+                return n * factorial(n - 1);
+
+            }
+        }
+        document.getElementById("demo3").innerHTML = "<b>Factorial =<b>" + " " + factorial(8);
+        // document.getElementById("demo3").style.color = "red";
+    </script>
+
+    <hr>
+
+    <!-- Nested Functions -->
+    <h2>Nested functions</h2>
+    <p id="demo4"></p>
+    <script>
+        function A(x) {
+            function B(y) {
+                function C(z) {
+                    document.getElementById("demo4").innerHTML = x + y + z; // 6 (which is 1 + 2 + 3)
+                }
+                C(3);
+            }
+            B(2);
+        }
+        A(1);
+
+    </script>
+
+
+    <script>
+        function outside() {
+            // const x = 7;
+            function inside(x) {
+                return x * 2;
+            }
+            return inside;
+        }
+        console.log(outside()(8));
+    </script>
+</body>
+
+</html>

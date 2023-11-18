@@ -16,7 +16,6 @@ body{
 
 a{
     position: relative;
-    display: inline-block;
     padding:10px 30px;
     text-decoration: none;
     text-transform: uppercase;
@@ -33,7 +32,6 @@ a:hover {
 }
 
 a span{
-    display: block;
     position: absolute;
     background: #2894ff;
 }
@@ -44,12 +42,10 @@ a span:nth-child(1){
     width: 100%;
     height: 1px;
     transform: scaleX(0);
-    transform-origin: right;
     transition: transform 0.5s;
 }
 a:hover span:nth-child(1){
     transform: scaleX(1);
-    transform-origin: left;
     transition: transform 0.5s;
 }
 
