@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25. Arrays: Working with arrays and array methods</title>
+</head>
+
+<body>
+    <!-- <h1>JavaScript Arrays</h1>
+
+    <p id="demo"></p>
+
+    <script>
+        const cars = [];
+        cars[0] = "Saab";
+        cars[1] = "Volvo";
+        cars[2] = "BMW";
+        document.getElementById("demo").innerHTML = cars;
+    </script> -->
+
+    <hr>
+
+    <!-- <h1>JavaScript Arrays</h1>
+    <h2>Bracket Indexing</h2>
+
+    <p>JavaScript array elements are accessed using numeric indexes (starting from 0).</p>
+
+    <p id="demo"></p>
+
+    <script>
+        const cars = ["Saab", "Volvo", "BMW"];
+        document.getElementById("demo").innerHTML = cars[0];
+    </script> -->
+
+    <hr>
+
+    <!-- <h1>JavaScript Arrays</h1>
+
+    <h2>Changing an Array Element</h2>
+    <h3>Bracket Indexing</h3>
+
+    <p>JavaScript array elements are accessed using numeric indexes (starting from 0).</p>
+
+    <p id="demo"></p>
+
+    <script>
+        const cars = ["Saab", "Volvo", "BMW"];
+        cars[0] = "Opel";
+        document.getElementById("demo").innerHTML = cars;
+    </script> -->
+
+    <hr>
+    <!-- 
+    <h1>Converting an Array to a String</h1>
+    <h1>JavaScript Arrays</h1>
+    <h2>The toString() Method</h2>
+
+    <p>The toString() method returns an array as a comma separated string:</p>
+
+    <p id="demo"></p>
+
+    <script>
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo").innerHTML = fruits.toString();
+    </script> -->
+
+    <hr>
+
+    <!-- <h1>Arrays are Objects</h1>
+    <h2>JavaScript Arrays</h2>
+
+    <p>Arrays use numbers to access its elements.</p>
+
+    <p id="demo"></p>
+
+    <script>
+        const person = ["John", "Doe", 46];
+        document.getElementById("demo").innerHTML = person[0];
+    </script> -->
+
+    <hr>
+    <!-- 
+    <h1>The length Property</h1>
+    <h1>JavaScript Arrays</h1>
+    <h2>The length Property</h2>
+
+    <p>The length property returns the length of an array:</p>
+
+    <p id="demo"></p>
+
+    <script>
+        const fruits = ["Banana", "Orange", "Apple", "Mango", "Cherry", "Pears"];
+        document.getElementById("demo").innerHTML = fruits.length;
+    </script> -->
+
+    <hr>
+
+    <!-- <h1>Accessing the Last Array Element</h1>
+    <h1>JavaScript Arrays</h1>
+    <h2>Bracket Indexing</h2>
+
+    <p>JavaScript array elements are accesses using numeric indexes (starting from 0).</p>
+
+    <p id="demo"></p>
+
+    <script>
+        const fruits = ["Banana", "Orange", "Apple"];
+        document.getElementById("demo").innerHTML = fruits[fruits.length - 1];
+    </script> -->
+
+    <hr>
+
+    <!-- <h1>Looping Array Elements</h1>
+    <h1>JavaScript Arrays</h1>
+    <h2>Looping an Array</h2>
+
+    <p id="demo"></p>
+
+    <script>
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        let fLen = fruits.length;
+
+        let text = "<ul>";
+        for (let i = 0; i < fLen; i++) {
+            text += "<li>" + fruits[i] + "</li>";
+        }
+        text += "</ul>";
+
+        document.getElementById("demo").innerHTML = text;
+    </script> -->
+
+    <hr>
+    <!-- <h1>Adding Array Elements</h1>
+    <h1>JavaScript Arrays</h1>
+    <h2>The push() Method</h2>
+
+    <p>The push method appends a new element to an array.</p>
+
+    <button onclick="myFunction()">Add New Item</button>
+
+    <p id="demo"></p>
+
+    <script>
+        const fruits = ["Banana", "Orange", "Apple"];
+        document.getElementById("demo").innerHTML = fruits;
+
+        function myFunction() {
+            fruits.push("Lemon");
+            document.getElementById("demo").innerHTML = fruits;
+        }
+    </script> -->
+
+    <hr>
+    <!-- <h1>Removing Array Elements</h1>
+    <h1>JavaScript Arrays</h1>
+    <h2>The push() Method</h2>
+
+    <p>The pop method delete an element from array.</p>
+
+    <button onclick="myFunction()">Remove Item</button>
+
+    <p id="demo"></p>
+
+    <script>
+        const fruits = ["Banana", "Orange", "Apple"];
+        document.getElementById("demo").innerHTML = fruits;
+
+        function myFunction() {
+            fruits.pop("Apple");
+            document.getElementById("demo").innerHTML = fruits;
+        }
+    </script> -->
+
+    <hr>
+
+    <!-- <h1>Sorting an Array (Sort A-Z)</h1>
+
+    <h1>JavaScript Arrays</h1>
+    <h2>The sort() Method</h2>
+
+    <p>The sort() method sorts an array alphabetically:</p>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+
+    <script>
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo1").innerHTML = fruits;
+
+        fruits.sort();
+        document.getElementById("demo2").innerHTML = fruits;
+    </script> -->
+
+    <hr>
+    <!-- <h1>Reversing an Array (Sort Z-A)</h1>
+    <h1>JavaScript Arrays</h1>
+    <h2>Sort in Reverse</h2>
+
+    <p>The reverse() method reverses the elements in an array.</p>
+    <p>By combining sort() and reverse() you can sort an array in descending order:</p>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+
+    <script>
+        // Create and display an array:
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo1").innerHTML = fruits;
+
+        // First sort the array
+        fruits.sort();
+
+        // Then reverse it:
+        fruits.reverse();
+
+        document.getElementById("demo2").innerHTML = fruits;
+    </script> -->
+
+    <hr>
+
+    <!-- <h1>Numeric Sort using Compare function (ascending order)</h1>
+    <h1>JavaScript Arrays</h1>
+    <h2>The sort() Method</h2>
+
+    <p>Sort the array in ascending order:</p>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+
+    <script>
+        const points = [40, 100, 1, 5, 25, 10];
+        document.getElementById("demo1").innerHTML = points;
+
+        // Compare Function
+        points.sort(function (a, b) { return a - b });
+        document.getElementById("demo2").innerHTML = points;
+    </script> -->
+
+
+    <hr>
+
+    <!-- <h1>Numeric Sort using Compare function (descending order)</h1>
+    <h1>JavaScript Arrays</h1>
+    <h2>The sort() Method</h2>
+
+    <p>Sort the array in descending order:</p>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+
+    <script>
+        const points = [40, 100, 1, 5, 25, 10];
+        document.getElementById("demo1").innerHTML = points;
+
+        // Compare Function
+        points.sort(function (a, b) { return b - a });
+        document.getElementById("demo2").innerHTML = points;
+    </script> -->
+
+    <hr>
+
+    <!-- <h1>JavaScript Array map()</h1>
+    <h1>JavaScript Arrays</h1>
+    <h2>The map() Method</h2>
+
+    <p>Create a new array by performing a function on each array element:</p>
+
+    <p id="demo"></p>
+
+    <script>
+        const numbers1 = [45, 4, 9, 16, 25];
+        const numbers2 = numbers1.map(myFunction);
+
+        document.getElementById("demo").innerHTML = numbers2;
+
+        function myFunction(value, index, array) {
+            return value * 2;
+        }
+    </script> -->
+
+    <hr>
+<!-- 
+    <h1>JavaScript Array flatMap()</h1>
+    <h2> ES2019 added the Array flatMap() method to JavaScript.</h2>
+    <h1>JavaScript Arrays</h1>
+    <h2>The flatMap() Method</h2>
+
+    <p id="demo"></p>
+
+    <script>
+        const myArr = [1, 2, 3, 4, 5, 6];
+        const newArr = myArr.flatMap((x) => x * 2);
+        document.getElementById("demo").innerHTML = newArr;
+    </script> -->
+
+    <hr>
+    <h1>JavaScript Array filter()</h1>
+    <h1>JavaScript Arrays</h1>
+    <h2>The filter() Method</h2>
+
+    <p>Create a new array from all array elements that passes a test:</p>
+
+    <p id="demo"></p>
+
+    <script>
+        const numbers = [45, 4, 9, 16, 25];
+        const over18 = numbers.filter(myFunction);
+
+        document.getElementById("demo").innerHTML = over18;
+
+        function myFunction(value, index, array) {
+            return value > 18;
+        }
+    </script>
+</body>
+
+</html>
