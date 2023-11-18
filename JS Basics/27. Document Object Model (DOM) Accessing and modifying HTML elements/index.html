@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>27. Document Object Model (DOM): Accessing and modifying HTML elements</title>
+    <style>
+        .btn-wrapper {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .student {
+            padding: 40px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .student:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Changing HTML Content</h1>
+    <p id="p1">Hello World!</p>
+
+    <script>
+        document.getElementById("p1").innerHTML = "New text!";
+    </script>
+
+    <hr>
+
+    <!-- <h2>JavaScript HTML DOM</h2>
+    <p>Changing the HTML style:</p>
+
+
+    <p id="p1">Hello World!</p>
+    <p id="p2">Hello World!</p>
+
+    <script>
+        document.getElementById("p2").style.color = "blue";
+        document.getElementById("p2").style.fontFamily = "Arial";
+        document.getElementById("p2").style.fontSize = "larger";
+    </script>
+
+    <hr>
+    <h1 id="id1">My Heading 1</h1>
+
+    <button type="button" onclick="document.getElementById('id1').style.color = 'red'">
+        Click Me!</button> -->
+
+    <hr>
+
+    <!-- <h2>JavaScript HTML Events</h2>
+    <h2 onclick="changeText(this)">Click on this text!</h2>
+
+    <script>
+        function changeText(id) {
+            id.innerHTML = "Ooops!";
+        }
+    </script> -->
+
+    <hr>
+
+    <!-- <h2>JavaScript HTML Events</h2>
+    Enter your name: <input type="text" id="fname" onchange="upperCase()">
+    <p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
+
+    <script>
+        function upperCase() {
+            const x = document.getElementById("fname");
+            x.value = x.value.toUpperCase();
+        }
+    </script> -->
+
+    <hr>
+
+    <!-- <h1>Changing HTML Content</h1>
+    <h1 id="id01">Old Heading</h1>
+
+    <script>
+        const element = document.getElementById("id01");
+        element.innerHTML = "New Heading";
+    </script> -->
+
+    <hr>
+
+    <!-- <h1>Changing the Value of an Attribute</h1>
+    <img id="myImage" src="/image/coffee.jpeg">
+
+    <script>
+        document.getElementById("myImage").src = "/image/computer.jpg";
+    </script> -->
+
+    <hr>
+
+    <!-- <h1>How to Access the DOM</h1>
+    <div id="wrapper" class="btn-wrapper">
+        <button id="create-btn" class="btn">Create new button</button>
+    </div>
+
+    <script>
+        let createButton = document.getElementById("create-btn");
+        let wrapper = document.getElementById("wrapper");
+
+        createButton.addEventListener("click", () => {
+            let newButton = document.createElement("button");
+            newButton.innerHTML = "Click me";
+            wrapper.appendChild(newButton);
+        });
+    </script> -->
+
+    <hr>
+
+    <!-- <h1>How to Access the DOM</h1>
+    <div id="student-list">
+        <div id="student-1" class="student">John</div>
+        <div id="student-2" class="student">Alice</div>
+        <div id="student-3" class="student">Bob</div>
+    </div>
+
+    <script>
+        let student1 = document.getElementById("student-2");
+
+        student1.addEventListener("click", () => {
+            student1.style.backgroundColor = "lightblue";
+        });
+    </script> -->
+
+    <hr>
+
+    <!-- <h2>Finding HTML Elements Using document.images</h2>
+
+    <img src="/image/computer.jpg" width="486" height="266">
+    <img src="/image/coffee.jpeg" width="362" height="255">
+
+    <p id="demo"></p>
+
+    <script>
+        document.getElementById("demo").innerHTML =
+            "Number of images: " + document.images.length;
+    </script> -->
+
+    <hr>
+
+    <!-- <h2>Finding HTML Elements Using document.links</h2>
+
+    <p>
+        <a href="/html/default.asp">HTML</a>
+        <br>
+        <a href="/css/default.asp">CSS</a>
+    </p>
+
+    <p id="demo"></p>
+
+    <script>
+        document.getElementById("demo").innerHTML =
+            "Number of links: " + document.links.length;
+    </script> -->
+
+    <hr>
+    <!-- 
+    <h2>Finding HTML Elements Using document.scripts</h2>
+
+    <p id="demo1"></p>
+
+    <script>
+        document.getElementById("demo1").innerHTML =
+            "Number of scripts: " + document.scripts.length;
+    </script> -->
+
+    <hr>
+
+    <!-- <h2>JavaScript HTML DOM</h2>
+    <p>Finding HTML Elements Using <b>document.forms</b>.</p>
+
+    <form id="frm1" action=" ">
+        First name: <input type="text" name="fname" value="Donald"><br>
+        Last name: <input type="text" name="lname" value="Duck"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <p>These are the values of each element in the form:</p>
+
+    <p id="demo"></p>
+
+    <script>
+        const x = document.forms["frm1"];
+        let text = "";
+        for (let i = 0; i < x.length; i++) {
+            text += x.elements[i].value + "<br>";
+        }
+        document.getElementById("demo").innerHTML = text;
+    </script> -->
+
+    <hr>
+
+    <!-- <h1>Dynamic HTML content</h1>
+    <p id="demo"></p>
+    <script>
+        document.getElementById("demo").innerHTML = Date(); 
+    </script>
+    <hr>
+
+    <h1>document.write()</h1>
+
+    <script>
+        document.write(Date());
+    </script> -->
+
+    <hr>
+
+    <!-- <h1>JavaScript Form Validation</h1>
+
+    <h2>JavaScript Validation</h2>
+
+    <form name="myForm" action=" " onsubmit="return validateForm()" method="post">
+        Name: <input type="text" name="fname">
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function validateForm() {
+            let x = document.forms["myForm"]["fname"].value;
+            if (x == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+        }
+    </script> -->
+
+    <hr>
+
+    <!-- <h2>JavaScript Validation</h2>
+
+    <p>Please input a number between 1 and 10:</p>
+
+    <input id="number">
+
+    <button type="button" onclick="myFunction()">Submit</button>
+
+    <p id="demo"></p>
+
+    <script>
+        function myFunction() {
+            // Get the value of the input field with id="number"
+            let x = document.getElementById("number").value;
+            // If x is Not a Number or less than one or greater than 10
+            let text;
+            if (isNaN(x) || x < 1 || x > 10) {
+                text = "Input not valid";
+            } else {
+                text = "Input OK";
+            }
+            document.getElementById("demo").innerHTML = text;
+        }
+    </script> -->
+
+    <hr>
+
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)"
+        style="background-color: #D94A38; height: 100px; width: 200px;">
+        Mouse Over Me</div>
+
+    <script>
+        function mOver(obj) {
+            obj.innerHTML = "Thank You"
+        }
+
+        function mOut(obj) {
+            obj.innerHTML = "Mouse Over Me"
+        }
+    </script>
+
+    <hr>
+
+
+    <div onmousedown="mDown(this)" onmouseup="mUp(this)"
+        style="background-color:#D94A38;width:90px;height:20px;padding:40px;">
+        Click Me</div>
+
+    <script>
+        function mDown(obj) {
+            obj.style.backgroundColor = "#1ec5e5";
+            obj.innerHTML = "Release Me";
+        }
+
+        function mUp(obj) {
+            obj.style.backgroundColor = "#D94A38";
+            obj.innerHTML = "Thank You";
+        }
+    </script>
+
+    <hr>
+    <h2>JavaScript addEventListener()</h2>
+
+    <p>This example demonstrates how to pass parameter values when using the addEventListener() method.</p>
+
+    <p>Click the button to perform a calculation.</p>
+
+    <button id="myBtn">Try it</button>
+
+    <p id="demo"></p>
+
+    <script>
+        let p1 = 5;
+        let p2 = 7;
+        document.getElementById("myBtn").addEventListener("click", function () {
+            myFunction(p1, p2);
+        });
+
+        function myFunction(a, b) {
+            document.getElementById("demo").innerHTML = a * b;
+        }
+    </script>
+
+  
+
+    
+</body>
+
+</html>

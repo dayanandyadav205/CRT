@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>28. Event Handling: Responding to user actions</title>
+    <style>
+        #myDiv1,
+        #myDiv2 {
+            background-color: coral;
+            padding: 50px;
+        }
+
+        #myP1,
+        #myP2 {
+            background-color: white;
+            font-size: 20px;
+            border: 1px solid;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <hr>
+
+    <h2>JavaScript HTML DOM</h2>
+
+    <p>Hello World!</p>
+
+    <p>Hello Norway!</p>
+
+    <p>Click the button to change the color of all p elements.</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <script>
+        function myFunction() {
+            const myCollection = document.getElementsByTagName("p");
+            for (let i = 0; i < myCollection.length; i++) {
+                myCollection[i].style.color = "red";
+            }
+        }
+    </script>
+
+    <hr>
+    <h2>JavaScript HTML DOM</h2>
+    <h3>Remove an HTML Element.</h3>
+
+    <div>
+        <p id="p1">This is a paragraph.</p>
+        <p id="p2">This is another paragraph.</p>
+    </div>
+
+    <button onclick="myFunction()">Remove Element</button>
+
+    <script>
+        function myFunction() {
+            document.getElementById("p1").remove();
+        }
+    </script>
+
+    <hr>
+
+    <h2>JavaScript addEventListener()</h2>
+
+    <div id="myDiv1">
+        <h2>Bubbling:</h2>
+        <p id="myP1">Click me!</p>
+    </div><br>
+
+    <div id="myDiv2">
+        <h2>Capturing:</h2>
+        <p id="myP2">Click me!</p>
+    </div>
+
+    <script>
+        document.getElementById("myP1").addEventListener("click", function () {
+            alert("You clicked the white element!");
+        }, false);
+
+        document.getElementById("myDiv1").addEventListener("click", function () {
+            alert("You clicked the orange element!");
+        }, false);
+
+        document.getElementById("myP2").addEventListener("click", function () {
+            alert("You clicked the white element!");
+        }, true);
+
+        document.getElementById("myDiv2").addEventListener("click", function () {
+            alert("You clicked the orange element!");
+        }, true);
+    </script>
+
+
+</body>
+
+</html>
