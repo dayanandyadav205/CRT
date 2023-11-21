@@ -39,6 +39,7 @@ nav {
   overflow: hidden;
   position: sticky;
   top: 0;
+ 
 
 }
 
@@ -46,7 +47,8 @@ nav a {
   float: left;
   display: block;
   color: white;
-  padding: 12px 15px;
+  padding: 10px 15px;
+  margin:15px;
   text-decoration: none;
   text-align: center;
 
@@ -248,7 +250,7 @@ tfoot {
   max-width: 600px;
   margin: auto;
   padding: 50px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
 }
 
 .form-group{

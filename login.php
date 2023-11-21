@@ -2,7 +2,7 @@
 session_start();
 if(isset($_SESSION["user"]))
 {
-header("Location: index.php");
+header("Location: dashboard.php");
 }
 ?>
 <!DOCTYPE html>
@@ -35,7 +35,7 @@ header("Location: index.php");
                 {
                 session_start();
                 $_SESSION["user"] = "yes";
-                header("Location: index.php");
+                header("Location: dashboard.php");
                 die();
                 }else{
                     echo "<div class='alert alert-success'>Password does not match.</div>";
@@ -56,9 +56,10 @@ header("Location: index.php");
                 <input type="submit" class="btn btn-primary" name="login" value="Login">
             </div>
             </form>
+            <br>
             <div><p>Not registered yet?</p><a href="registration.php">Register Here</a> </div>
             </div>
-
+<br>
             <!-- footer iframe -->
   <iframe src="footer.html" scrolling="no"></iframe>
 </body>

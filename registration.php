@@ -94,9 +94,10 @@
                 <input type="submit" class="btn btn-primary" name="submit" value="Register">
             </div>
         </form>
+        <br>
         <div><p>Already registered?</p><a href="login.php">Login Here</a></div>
     </div>
-
+<br>
                 <!-- footer iframe -->
   <iframe src="footer.html" scrolling="no"></iframe>
 </body>
