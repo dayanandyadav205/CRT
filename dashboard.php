@@ -22,6 +22,7 @@ header("Location: login.php");
 
     <div class="container">
         <h1>Welcome to Dashboard</h1>
+        <h1>You are logged in</h1>
         <a class="btn btn-primary" href="logout.php">Logout</a>
     </div>
 
