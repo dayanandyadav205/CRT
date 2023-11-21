@@ -1,3 +1,11 @@
+<?php
+session_start();
+if(!isset($_SESSION["user"]))
+{
+header("Location: login.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,6 +23,12 @@
 <body>
   <!-- Header Section-->
   <iframe src="header.html" scrolling="no"></iframe>
+
+
+  <div class="container">
+    <h1>Welcome to Dashboard</h1>
+    <a href="logout.php">Logout</a>
+</div>
 
   <!--Content Section (Slider)-->
   <content class="slider">
