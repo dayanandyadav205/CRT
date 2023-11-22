@@ -10,6 +10,8 @@ body {
     margin: 100px auto;
     justify-content: center;
     align-items: center;
+    /* transition: linear; */
+    /* transition-duration: 0.5s; */
     transition: all 0.5s ease-in;
     display: flex;
 
@@ -19,7 +21,7 @@ body {
     /* background-color: red; */
     border-radius: 50%;
     /* transform:rotate(180deg); */
-    transform: rotate(45deg);
+    /* transform: rotate(45deg); */
     /* transform: rotateX(70deg); */
     /* transform: rotateY(50deg); */
     /* transform: translateX(200px); */

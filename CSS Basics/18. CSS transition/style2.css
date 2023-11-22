@@ -1,8 +1,8 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
+    /* box-sizing: border-box;
+    font-family: sans-serif; */
 }
 
 
@@ -10,18 +10,18 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100vh; 
     background: #1f242d;
 }
 
 a{
     position: relative;
-    padding:10px 30px;
+    /* padding:10px 30px; */
     text-decoration: none;
     text-transform: uppercase;
     color: rgba(255,255,255, 0.4);
     background: #262c37;
-    letter-spacing: 2px;
+    letter-spacing: 5px;
     font-size: 16px;
     transition: 0.5s;
 }
