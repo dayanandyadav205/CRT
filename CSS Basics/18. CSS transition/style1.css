@@ -10,22 +10,21 @@ body {
     margin: 100px auto;
     justify-content: center;
     align-items: center;
-    /* transition: linear; */
-    /* transition-duration: 0.5s; */
-    transition: all 0.5s ease-in;
-    display: flex;
+
+    transition: 2s;
+    /* display: flex; */
 
 }
 
 .box:hover {
-    /* background-color: red; */
-    border-radius: 50%;
+    background-color: red;
+    /* border-radius: 50%; */
     /* transform:rotate(180deg); */
     /* transform: rotate(45deg); */
     /* transform: rotateX(70deg); */
-    /* transform: rotateY(50deg); */
+    /* transform: rotateY(80deg); */
     /* transform: translateX(200px); */
-    /* transform: translateY(200px); */
-    /* transform: scale(-1); */
+    /* transform: translateY(-200px); */
+    /* transform: scale(3); */
     /* transform: skew(-40deg); */
 }

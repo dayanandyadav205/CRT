@@ -21,7 +21,7 @@ iframe {
   text-align: center;
   margin-top: -90px;
   font-size: 2em;
-  text-shadow: 2px 2px 7px blue;
+  /* text-shadow: 2px 2px 7px blue; */
 
 }
 
@@ -29,7 +29,7 @@ iframe {
   color: rgb(36, 33, 33);
   text-align: center;
   font-size: 2vw;
-  text-shadow: 3px 1px 5px blue;
+  /* text-shadow: 3px 1px 5px blue; */
   margin: 20px;
 }
 
@@ -47,8 +47,8 @@ nav a {
   float: left;
   display: block;
   color: white;
-  padding: 10px 15px;
-  margin:15px;
+  padding: 8px 10px;
+  margin:10px;
   text-decoration: none;
   text-align: center;
 
