@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- divinectorweb.com -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Add a header to the top of the page -->
+    <div class="header">
+        <img src="logo.png" alt="">
+    </div>
+  
+  <!-- Add a top navigation bar -->
+  <div class="nav" id="menu">
+    <a href="#" class="active">Home</a>
+    <a href="#">About</a>
+    <a href="#">Blog</a>
+    <a href="#">Portfolio</a>
+    <a href="#">Services</a>
+    <a href="#">Store</a>
+    <a href="#">Policy</a>
+    <a href="#">Contact</a>
+    <a href="javascript:void(0);" class="icon" onclick="cusNav()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+  
+
+  <script>
+    function cusNav() {
+        var x = document.getElementById("menu");
+        if (x.className === "nav") {
+            x.className += " responsive";
+        } else{
+            x.className = "nav";
+        }
+        }
+  </script>
+</body>
+</html>

@@ -1,21 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style4.css">
 </head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: #111;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .flip {
+
+        position: relative;
+
+
+    }
+
+    .flip span {
+        display: inline-block;
+        position: relative;
+        color: #fff;
+        font-size: 40px;
+        animation: flip 2s infinite;
+        animation-delay: calc(.2s * var(--i));
+    }
+
+    @keyframes flip {
+
+        0%,
+        80% {
+            transform: rotateY(360deg);
+        }
+
+    }
+</style>
+
 <body>
     <div class="flip">
-        <span class="--i:1">D</span>
-        <span class="--i:2">A</span>
-        <span class="--i:3">Y</span>
-        <span class="--i:4">A</span>
-        <span class="--i:5">N</span>
-        <span class="--i:6">A</span>
-        <span class="--i:7">N</span>
-        <span class="--i:8">D</span>
+        <span style="--i:1">D</span>
+        <span style="--i:2">A</span>
+        <span style="--i:3">Y</span>
+        <span style="--i:4">A</span>
+        <span style="--i:5">N</span>
+        <span style="--i:6">A</span>
+        <span style="--i:7">N</span>
+        <span style="--i:8">D</span>
     </div>
 </body>
+
 </html>

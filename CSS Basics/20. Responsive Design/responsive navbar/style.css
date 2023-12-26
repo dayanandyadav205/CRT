@@ -1,0 +1,61 @@
+.header{
+    text-align: center;
+}
+.nav {
+	background-color: #333;
+	overflow: hidden;
+	width: 95%;
+	margin: auto;
+}
+
+  /* Style the links inside the navigation bar */
+  .nav a {
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+  /* Change the color of links on hover */
+  .nav a:hover {
+    background-color: #fff;
+    color: #000;
+  }
+
+  /* Add a color to the active/current link */
+  .nav a.active {
+	background-color: deepskyblue;
+	color: #fff;
+}
+
+  /* Hide the link that should open and close the nav on small screens */
+  .nav .icon {
+    display: none;
+  }
+
+  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that should open and close the nav (.icon) */
+  @media screen and (max-width: 600px) {
+    .nav a:not(:first-child) {display: none;}
+    .nav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+
+  /* The "responsive" class is added to the nav with JavaScript when the user clicks on the icon. This class makes the nav look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 600px) {
+    .nav.responsive {position: relative;}
+    .nav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .nav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
