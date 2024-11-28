@@ -33,7 +33,7 @@ iframe {
   margin: 20px;
 }
 
-/*Navigation section CSS  (Common for all HTML, CSS and Javascript Tutorial)*/
+/*Navigation section CSS (Common for all HTML, CSS and Javascript Tutorial)*/
 nav {
   background-color: #012f3e;
   overflow: hidden;
@@ -63,8 +63,7 @@ nav a.right {
   float: right;
 }
 
-/* Responsive layout - when the screen is less than 400px wide, 
-    make the navigation links stack on top of each other instead of next to each other */
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
 @media screen and (max-width: 400px) {
   nav a {
     float: none;
