@@ -36,10 +36,10 @@
     /* height: 80px; */
 }
 #box-1{
-    /* order:1; */
-   /* flex-grow: 5; */
-    /* flex-basis: 200px; */
-    /* height: 100px; */
+    order:1;
+    flex-grow: 5;
+    flex-basis: 200px;
+    height: 100px;
     
 }
 #box-3{

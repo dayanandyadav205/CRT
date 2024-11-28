@@ -18,13 +18,13 @@ body {
 
 .box:hover {
     background-color: red;
-    /* border-radius: 50%; */
-    /* transform:rotate(180deg); */
+    border-radius: 50%; 
+    transform:rotate(180deg);
     /* transform: rotate(45deg); */
     /* transform: rotateX(70deg); */
     /* transform: rotateY(80deg); */
-    /* transform: translateX(200px); */
+    transform: translateX(200px);
     /* transform: translateY(-200px); */
-    /* transform: scale(3); */
+    transform: scale(-2); 
     /* transform: skew(-40deg); */
 }

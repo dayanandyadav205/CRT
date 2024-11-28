@@ -1,0 +1,14 @@
+body{
+    background-color: lightblue;
+}
+
+
+table, tr, td, th{
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+}
+th{
+    background-color: green;
+    color: white;
+}

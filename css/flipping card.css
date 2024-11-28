@@ -31,7 +31,7 @@ body {
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 }
-.front {
+.front img {
 	cursor: pointer;
 	height: 100%;
 	background-image: url(1.jpg);
