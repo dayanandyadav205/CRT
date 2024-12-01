@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1>How to Access the DOM</h1>
+    <div id="student-list">
+        <div id="student-1">John</div>
+        <div id="student-2">Alice</div>
+        <div id="student-3">Bob</div>
+    </div>
+
+    <script>
+        var student1 = document.getElementById("student-1");
+
+        student1.addEventListener("click", () => {
+            student1.style.backgroundColor = "lightblue";
+        });
+
+        
+        var student2 = document.getElementById("student-2");
+
+        student2.addEventListener("click", () => {
+            student2.style.color = "green";
+        });
+
+        
+        var student3 = document.getElementById("student-3");
+
+        student3.addEventListener("click", () => {
+            student3.style.backgroundColor = "red";
+        });
+
+    </script>
+
+
+<hr>
+
+<h1>How to Access the DOM</h1>
+<div id="wrapper" class="btn-wrapper">
+    <button id="create-btn" class="btn">Create new button</button>
+</div>
+
+<script>
+    var createButton = document.getElementById("create-btn");
+    var wrapper = document.getElementById("wrapper");
+
+    createButton.addEventListener("click", () => {
+        var newButton = document.createElement("button");
+        newButton.innerHTML = "Click me";
+        wrapper.appendChild(newButton);
+    });
+</script>
+
+<hr>
+</body>
+</html>
