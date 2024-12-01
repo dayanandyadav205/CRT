@@ -5,10 +5,11 @@ body{
 
 h1{
     font-size: 100px;
+    color: rgb(255, 100, 50);
 }
 
 #id1{
-  color: rgb(1,0,0);
+  color: #ff9922;
 }
 
 .c1{
