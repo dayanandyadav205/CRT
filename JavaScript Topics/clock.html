@@ -1,15 +1,23 @@
-<!DOCTYPE html>
+<doctype html>
 <head>
+<title>clock</title>
 </head>
-<body>
-<h1>JavaScript time Objects</h1>
-<div id="txt"></div>
+<body onload="currTime()">
+<div id="id1">
+
+</div>
 <script>
-var time = new Date();
-var hh = time.getHours();
-var min = time.getMinutes();
-var ss = time.getSeconds();
-document.getElementById('txt').innerHTML ="Current Time: " +hh  + ":" +min + ":" +ss;
+    function currTime()
+    {
+    var time=new Date();
+    var hh = time.getHours();
+    var mm = time.getMinutes();
+    var ss = time.getSeconds();
+    document.getElementById('id1').innerHTML= "Current Time is :  " +hh +":" +mm +":" +ss;
+
+    setTimeout(currTime);
+        
+    }
 </script>
-</body>	
-</html> 
+</body>
+</html>
