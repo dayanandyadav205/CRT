@@ -1,0 +1,29 @@
+body{
+    background-color: hsl(10,80%,100%);
+    /* background-image:url("img/image1.jpg"); */
+}
+
+h1{
+    font-size: 100px;
+}
+
+#id1{
+  color: rgb(1,0,0);
+}
+
+.c1{
+  color: navy;
+  font-family: sans-serif;
+  text-transform: uppercase;
+}
+
+input[type="submit"]:hover
+{
+background-color: green;
+}
+
+
+
+
+
+

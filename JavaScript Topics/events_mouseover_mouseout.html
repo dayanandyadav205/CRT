@@ -1,0 +1,23 @@
+// onmouseover & onmouseout Events
+
+<!doctype html>
+<head>
+<title></title>
+<script>
+function MouseOverBig(obj)
+{
+obj.style.height="300px";
+obj.style.width="300px";
+}
+function MouseOutSmall(obj)
+{
+obj.style.height="30px";
+obj.style.width="30px";
+}
+</script>
+</head>
+<body>
+<img src="img/JavaScript Logo.png" width="100px" height="100px" 
+onmouseover="MouseOverBig(this)" onmouseout="MouseOutSmall(this)">
+</body>
+</html>

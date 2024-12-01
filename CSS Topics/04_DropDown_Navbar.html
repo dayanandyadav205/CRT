@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DropDown Navbar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav{
+            background-color: #ff9900;
+            overflow: hidden;
+        }
+
+        nav ul{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li{
+            float: left; /* bg color orange hidden*/
+            
+        }
+
+        nav ul li a{
+            text-decoration: none;
+            color:black ;
+            padding: 10px;
+            display: inline-block;
+        }
+
+        nav ul li a:hover{
+            background-color:green;
+            color: white;
+        }
+
+        .dropdown_list{
+            background-color: lightsalmon;
+            position: absolute;
+            display: none; /* to hide drop down list*/
+        }
+
+        .dropdown_list a{
+            display: block;
+        }
+
+        .dropdown:hover .dropdown_list{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="#"><i class="fa fa-fw fa-home"></i>Home</a>
+            </li>
+            <li class="dropdown">
+                <a href="#News"><i class="fa fa-fw fa-newspaper-o"></i>News<i class="fa fa-fw fa-caret-down"></i></a>
+                <div class="dropdown_list">
+                <a href="#"><i class="fa fa-fw fa-soccer-ball-o"></i>Sports</a>
+                <a href="#"><i class="fa fa-fw fa-image"></i>Arts</a>
+                <a href="#"><i class="fa fa-fw fa-laptop"></i>Technology</a>
+                </div>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-fw fa-id-card"></i>About Us</a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-fw fa-envelope"></i>Contact Us</a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-fw fa-graduation-cap"></i>Careers</a>
+            </li>
+            <li class="dropdown">
+                <a href="#Courses"><i class="fa fa-fw fa-book"></i>Courses<i class="fa fa-fw fa-caret-down"></i></a>
+                <div class="dropdown_list">
+                <a href="#"><i class="fa fa-fw fa-coffee"></i>Java</a>
+                <a href="#"><i class="fa fa-fw fa-code"></i>PHP</a>
+                <a href="#"><i class="fa fa-fw fa-windows"></i>.NET</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>

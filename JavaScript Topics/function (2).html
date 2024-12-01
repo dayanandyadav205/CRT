@@ -1,0 +1,24 @@
+<doctype html>
+<head>
+<title>clock</title>
+</head>
+<body onload="currTime()">
+<div id="id1">
+
+</div>
+<script>
+    function currTime()
+    {
+    var time=new Date();
+    var hh = time.getHours();
+    var mm = time.getMinutes();
+    var ss = time.getSeconds();
+    document.getElementById('id1').innerHTML= +hh +":" +mm +":" +ss;
+    // document.write("time :" +hh +":"+mm +":" +ss);
+
+    setTimeout(currTime);
+        
+    }
+</script>
+</body>
+</html>
