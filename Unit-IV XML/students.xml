@@ -1,0 +1,18 @@
+<?xml-stylesheet type = "text/xsl" href = "student.xsl"?>
+<class>
+	<student>
+		<firstname>Graham</firstname>
+		<lastname>Bell</lastname>
+		<nickname>Garry</nickname>
+	</student>
+	<student>
+		<firstname>Albert</firstname>
+		<lastname>Einstein</lastname>
+		<nickname>Ally</nickname>
+	</student>
+	<student>
+		<firstname>Thomas</firstname>
+		<lastname>Edison</lastname>
+		<nickname>Eddy</nickname>
+	</student>
+</class>
