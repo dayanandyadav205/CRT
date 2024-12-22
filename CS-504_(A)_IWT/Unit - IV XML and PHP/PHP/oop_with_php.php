@@ -9,16 +9,16 @@ class Fruit {
   public $color;
 
   // Methods
-  function set_name($name) {
+  function set_name($name): void {
     $this->name = $name;
   }
-  function get_name() {
+  function get_name(): mixed {
     return $this->name;
   }
-  function set_color($color) {
+  function set_color($color): void {
     $this->color = $color;
   }
-  function get_color() {
+  function get_color(): mixed {
     return $this->color;
   }
 }

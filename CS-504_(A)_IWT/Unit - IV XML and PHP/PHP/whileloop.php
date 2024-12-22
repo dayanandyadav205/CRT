@@ -7,10 +7,12 @@
 </head>
 <body>
     <?php
-    $i = 1; 
+    $i = 0; 
     while ($i < 6) 
-    { 
-    echo $i; $i++; 
+    {
+    $i++;
+    if($i==3) continue ;
+    echo $i; 
     } 
     ?>
 </body>
