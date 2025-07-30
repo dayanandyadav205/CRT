@@ -8,11 +8,7 @@
 <body>
     <center>
         <?php
-        // servername => localhost
-        // username => root
-        // password => empty
-        // database name => company
-        $conn = mysqli_connect("localhost", "root", "", "company");
+        $conn = mysqli_connect("localhost", "root", "", "student_info");
         
         // Check connection
         if($conn === false){
@@ -20,16 +16,15 @@
         }
         
         // Taking all 5 values from the form data(input)
+        $roll =  $_REQUEST['roll_no'];
         $first_name =  $_REQUEST['first_name'];
         $last_name = $_REQUEST['last_name'];
-        $gender =  $_REQUEST['gender'];
-        $address = $_REQUEST['address'];
+        $branch =  $_REQUEST['branch'];
         $email = $_REQUEST['email'];
         
         // Performing insert query execution
         // here our table name is emp
-        $sql = "INSERT INTO emp  VALUES ('$first_name', 
-            '$last_name','$gender','$address','$email')";
+        $sql = "INSERT INTO student  VALUES (' $roll','$first_name','$last_name','$branch','$email')";
         
         if(mysqli_query($conn, $sql)){
             echo "<h3>data stored in a database successfully." 

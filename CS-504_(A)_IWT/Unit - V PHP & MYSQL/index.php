@@ -9,6 +9,11 @@
          <table>
          <form action="insert.php" method="post">
             
+             <tr>
+               <td><label for="rollno">Roll No:</label></td>
+               <td><input type="text" name="roll_no" id="rollno" required></td>
+            </tr>
+
             <tr>
                <td><label for="firstName">First Name:</label></td>
                <td><input type="text" name="first_name" id="firstName" required></td>
@@ -20,13 +25,8 @@
             </tr>
 
             <tr>
-               <td> <label for="Gender">Gender:</label></label></td>
-               <td><input type="text" name="gender" id="Gender" required></td>
-            </tr>
-
-            <tr>
-               <td><label for="Address">Address:</label> </td>
-               <td><input type="text" name="address" id="Address" required></td>
+               <td> <label for="Branch">Branch:</label></label></td>
+               <td><input type="text" name="branch" id="branch" required></td>
             </tr>
 
             <tr>
