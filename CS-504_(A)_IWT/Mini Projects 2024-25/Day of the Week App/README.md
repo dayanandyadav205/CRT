@@ -1,1 +1,0 @@
-# day-of-week-app

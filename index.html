@@ -1,33 +1,386 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="Campus Recruitment Training (CRT)- A training program based on Web Development (HTML, CSS, JavaScript) B.Tech 2nd Year 3rd Semester Students">
-  <meta name="keywords" content="B.Tech, B.Tech CSE, Web Development,HTML, CSS, JavaScript, Training">
-  <title>Campus Recruitment Training (CRT)</title>
-  <!-- external CSS -->
-  <link rel="stylesheet" href="css/style.css" type="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <!-- Header Section-->
-  <iframe src="header.html" scrolling="no"></iframe>
+    <!-- Header Section -->
+    <header>
+        <a href="https://www.cdgi.edu.in" target="_blank"><img src="images/cdgi.jpg" alt="CDGI Logo" width="100"
+                height="100" id="logo1" /></a>
+        <h2>CS-310 CRT (Class Room Training) </h2>
+        <a href="https://github.com/dayanandyadav205" target="_blank"><img src="images/github.png" alt="GitHub"
+                style="float: right;" width="100" height="100" id="logo2" /></a>
+    </header>
 
-  <!--Content Section (Slider)-->
-  <content class="slider">
-    <figure>
-      <img src="image/slide0.png">
-      <img src="image/slide1.jpg">
-      <img src="image/slide2.jpg">
-    </figure>
-  </content>
+    <!-- Navigation Section -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#headings">Headings</a>
+        <a href="#para_formatting">Paragraph</a>
+        <a href="#list">Lists</a>
+        <a href="#table">Table</a>
+        <a href="#form">Form</a>
+        <a href="#media">Media</a>
+        <a href="#" style="float: right;">Sign In</a>
+        <a href="#" style="float: right;">Sign Up</a>
+    </nav>
 
-  <!-- Footer Section -->
-  <iframe src="footer.html" scrolling="no"></iframe>
+    <!-- Aside Section -->
+    <aside>
+        <h4>References</h4>
+        <ul>
+            <li><a href="https://www.w3schools.com/">W3C</a></li>
+            <li><a href="https://whatwg.org/">WHATWG</a></li>
+            <li><a href="https://github.com/">GitHub</a></li>
+            <li><a href="https://www.google.com">Google</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Section -->
+    <main>
+
+        <summary>
+            <h2>Syllabus CS-310 CRT (Class Room Training) </h2>
+            <details>
+                <h4>Week 1: HTML (Days 1-5)</h4>
+                Day 1: Introduction to HTML, basic structure, tags, elements, and attributes. <br />
+                Day 2: Headings, paragraphs, lists, images, and links.<br />
+                Day 3: Tables, forms, and input types.<br />
+                Day 4: Semantic HTML: header, footer, nav, article, section, etc.<br />
+                Day 5: HTML5 elements: video, audio, iframe, and mini portfolio page.<br />
+                <hr />
+                <h4>Week 2: CSS (Days 6-10)</h4>
+                Day 6: CSS syntax, selectors, colors, and font styling.<br />
+                Day 7: Box model, margin, padding, borders, display.<br />
+                Day 8: Positioning (static, relative, absolute), float, flexbox.<br />
+                Day 9: CSS Grid and responsive layouts using media queries.<br />
+                Day 10: CSS transitions and mini landing page project.<br />
+                <hr />
+                Week 3: JavaScript Basics (Days 11-17)<br />
+                Day 11: Intro to JS, variables (let/const), and data types.<br />
+                Day 12: Operators and conditional statements.<br />
+                Day 13: Loops: for, while, do-while.<br />
+                Day 14: Nested loops and break/continue statements.<br />
+                Day 15: Mini practice session on conditions and loops.<br />
+                Day 16: Basic debugging with console and dev tools.<br />
+                Day 17: Overview project: simple quiz or logic task.<br />
+                <hr />
+                Week 4: Arrays & Functions (Days 18-24)<br />
+                Day 18: Intro to arrays, creating, accessing, updating elements.<br />
+                Day 19: Array methods: push, pop, shift, unshift, splice, slice.<br />
+                Day 20: Looping through arrays: for, forEach, map.<br />
+                Day 21: Functions: declaration, expression, arrow functions.<br />
+                Day 22: Function parameters, return, and scope.<br />
+                Day 23: Callback functions, nested functions.<br />
+                Day 24: Practice task using functions and arrays.<br />
+                <hr />
+                Week 5: DOM Manipulation (Days 25-31)<br />
+                Day 25: Understanding DOM structure and selectors.<br />
+                Day 26: getElementById, getElementsByClassName, querySelector.<br />
+                Day 27: Changing element content and attributes dynamically.<br />
+                Day 28: Creating, appending, and removing elements.<br />
+                Day 29: Event handling: click, input, submit, mouse events.<br />
+                Day 30: Form validation and DOM-based tasks.<br />
+                Day 31: Mini DOM project: To-Do List or Quiz App.<br />
+                <hr />
+                Week 6: Advanced JS (Days 32-38)<br />
+                Day 32: String and number methods.<br />
+                Day 33: Object manipulation and nested data.<br />
+                Day 34: ES6: destructuring, spread, rest, template literals.<br />
+                Day 35: Asynchronous JS: setTimeout, setInterval.<br />
+                Day 36: Promises and async/await.<br />
+                Day 37: LocalStorage and sessionStorage.<br />
+                Day 38: Practice with async, storage, and ES6 features.<br />
+                <hr />
+                Week 7: jQuery (Days 39-43)<br />
+                Day 39: jQuery intro, CDN setup, basic selectors.<br />
+                Day 40: DOM manipulation and CSS class handling.<br />
+                Day 41: jQuery events and animations.<br />
+                Day 42: AJAX intro with jQuery.<br />
+                Day 43: Mini project using jQuery and AJAX.<br />
+                <hr />
+                Week 8: Final Project Using Fetch API (Days 44-48)<br />
+                Day 44: Choose API (weather/news/todo), setup HTML/CSS.<br />
+                Day 45: Fetch API GET: Displaying data.<br />
+                Day 46: Fetch API POST: Form submission.<br />
+                Day 47: Dynamic DOM updates, loading states.<br />
+                Day 48: Testing, error handling, and final polish.<br />
+                <hr />
+                <h4>Week 9: Project Finalization & Review (Days 49-52)</h4>
+                Day 49: Full review of key JS concepts (arrays, DOM, async).<br />
+                Day 50: Bug fixing and improvements in the project.<br />
+                Day 51: Add comments, responsive design to the project.<br />
+                Day 52: Final project submission and live deployment<br />
+            </details>
+        </summary>
+
+        <summary>
+            <h2>Six Levels of Headings</h2>
+            <details>
+                <section id="headings">
+                    <h1>Heading1</h1>
+                    <h2>Heading2</h2>
+                    <h3>heading3</h3>
+                    <h4>heading4</h4>
+                    <h5>heading5</h5>
+                    <h6>heading6</h6>
+                </section>
+            </details>
+        </summary>
+
+        <summary>
+            <h2>Paragraph Formatting</h2>
+            <details>
+                <h3>Bold or Strong Text</h3>
+                <p><strong>Lorem</strong> ipsum, dolor sit amet consectetur adipisicing elit. Incidunt natus quas
+                    aliquam,
+                    nemo itaque magni possimus eos rerum qui aspernatur explicabo. Debitis eos iste, velit nobis
+                    fugit
+                    similique harum dolore.</p>
+
+                <h3>Italic or Emphasis Text</h3>
+                <p><em>Lorem</em> ipsum dolor sit amet consectetur adipisicing elit. Quidem eligendi rerum
+                    aspernatur
+                    distinctio repellat? Sit, totam, quaerat odio, dignissimos provident necessitatibus vel deserunt
+                    dolor
+                    ex nisi eaque atque autem voluptatem.</p>
+
+                <h3>Highlighted or Mark Text</h3>
+                <p><mark>Lorem</mark> ipsum dolor sit amet consectetur, adipisicing elit. Quis architecto deleniti
+                    unde
+                    aliquid veniam perferendis provident ratione cum aperiam rerum. Eos quam cupiditate nesciunt
+                    quis aut
+                    autem officia dolorum vero?</p>
+
+                <h3>Subscript</h3>
+                <p>H<sub>2</sub>O</p>
+
+                <h3>Super Script</h3>
+                <p>x<sup>2</sup></p>
+            </details>
+        </summary>
+
+        <summary>
+            <h2>HTML Lists</h2>
+            <details>
+                <section id="list">
+
+                    <!-- Ordered List -->
+                    <h2>Ordered List</h2>
+                    <ol>
+                        <li>Pen</li>
+                        <li>Pencil</li>
+                        <li>Eraser</li>
+                    </ol>
+
+                    <!-- Unordered List -->
+                    <h2>Unordered List</h2>
+                    <ul>
+                        <li>Pen</li>
+                        <li>Pencil</li>
+                        <li>Eraser</li>
+                    </ul>
+
+                    <!-- Nested list -->
+                    <h2>Nested List</h2>
+                    <ol>
+                        <li>Pen</li>
+                        <ul>
+                            <li>Renold</li>
+                            <li>Montex</li>
+                            <li>Cello</li>
+                        </ul>
+                        <li>Pencil</li>
+                        <ul>
+                            <li>Natraj</li>
+                            <li>Apsara</li>
+                            <li>DOMS</li>
+                        </ul>
+                    </ol>
+                </section>
+            </details>
+        </summary>
+
+        <!-- This is my table -->
+        <summary>
+            <h2>Table</h2>
+            <details>
+                <section id="table">
+
+                    <table>
+                        <caption>Student Table</caption>
+                        <tr>
+                            <th>Enrollment No</th>
+                            <th>Name of Student</th>
+                            <th>Course</th>
+                        </tr>
+
+
+                        <tr>
+                            <td>101</td>
+                            <td>Amit</td>
+                            <td>B.Tech CSE</td>
+                        </tr>
+
+                        <tr>
+                            <td>102</td>
+                            <td>Ajay</td>
+                            <td>B.Tech CSE</td>
+                        </tr>
+                    </table>
+                </section>
+            </details>
+        </summary>
+
+        <!-- This is my Form   -->
+        <summary>
+            <h2>Form</h2>
+            <details>
+                <section id="form">
+
+                    <form action="" method="post" style="background-color: rgba(4, 110, 110, 0.614); width: 50%;">
+                        <fieldset>
+                            <legend>Registration Form</legend>
+                            <table id="frm_tbl">
+                                <tr>
+                                    <td><label for="fname">First Name:</label></td>
+                                    <td><input type="text" id="fname" name="fname" required></td>
+                                </tr>
+
+                                <tr>
+                                    <td><label for="lname">Last Name:</label></td>
+                                    <td><input type="text" id="lname" name="lname" required></td>
+                                </tr>
+
+
+                                <tr>
+                                    <td><label for="email">Email:</label></td>
+                                    <td><input type="email" id="email" name="email" required></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="password">Password:</label></td>
+                                    <td><input type="password" id="myPassword" name="password" pattern="Abc@12345"
+                                            required>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td><label for="phone">Phone</label></td>
+                                    <td><input type="tel" name="phone" placeholder="XXX-XXX-XXXX" minlength="10"
+                                            maxlength="11">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><label for="dob">Date of Birth:</label></td>
+                                    <td><input type="date" id="dob" name="dob"></td>
+                                </tr>
+
+                                <tr>
+                                    <td><label for="gender">Gender:</label></td>
+                                    <td>
+                                        <input type="radio" id="male" name="gender" value="male">
+                                        <label for="male">Male</label>
+                                        <input type="radio" id="female" name="gender" value="female">
+                                        <label for="female">Female</label>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td><label for="hobbies">Hobbies:</label></td>
+                                    <td>
+                                        <input type="checkbox" id="reading" name="hobbies" value="reading">
+                                        <label for="reading">Reading</label>
+                                        <input type="checkbox" id="sports" name="hobbies" value="sports">
+                                        <label for="sports">Sports</label>
+                                        <input type="checkbox" id="music" name="hobbies" value="music">
+                                        <label for="music">Music</label>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td><label for="country">Country:</label></td>
+                                    <td>
+                                        <select id="country" name="country">
+                                            <option value="">--Select--</option>
+                                            <option value="india">India</option>
+                                            <option value="usa">USA</option>
+                                            <option value="uk">UK</option>
+                                            <option value="australia">Australia</option>
+                                        </select>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td><label for="file">Upload File:</label></td>
+                                    <td><input type="file" id="file" name="file"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="message">Message:</label></td>
+                                    <td><textarea id="message" name="message" rows="4" cols="40"></textarea></td>
+                                </tr>
+
+                                <tr>
+                                    <td></td>
+                                    <td><input type="submit" value="Submit"></td>
+                                </tr>
+                            </table>
+                        </fieldset>
+                    </form>
+
+                </section>
+            </details>
+        </summary>
+
+        <!-- Section -->
+        <summary>
+            <h2>HTML Media Elements</h2>
+            <details>
+                <section id="media">
+
+                    <h3>HTML Video</h3>
+                    <video src="video/movie.mp4" controls>Wild Life</video>
+
+                    <h3>HTML Audio</h3>
+                    <audio src="audio/horse.mp3" controls>Horse Sound</audio>
+
+                    <h2>iframe</h2>
+                    <h3>Map</h3>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2642.3867536361213!2d75.88653547530167!3d22.615117879461543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fb28a5660d8b%3A0x2a7a0698a930c80f!2sChameli%20Devi%20Group%20of%20Institutions!5e1!3m2!1sen!2sin!4v1758175120964!5m2!1sen!2sin"
+                        width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </section>
+
+            </details>
+        </summary>
+
+        <br />
+
+        <div class="btn">
+            <button><a href="#top">Go To Top</a></button>
+        </div>
+        <br />
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <a href="https://in.linkedin.com/company/chameli-devi-group-of-institutions">
+            <img src="images/linkedin.jpg" width="3%"></a>
+
+        <a href="https://mail.google.com/a/cdgi.edu.in">
+            <img src="images/gmail.jpg" width="5%"></a>
+
+        <a href="https://www.youtube.com/@socialcdgi">
+            <img src="images/youtube.jpg" width="3%"></a>
+
+        <p>&copy; Designed & Developed by Dayanand Yadav, Assistant Professor, CSE Department, CDGI, Indore</p>
+    </footer>
 </body>
 
 </html>

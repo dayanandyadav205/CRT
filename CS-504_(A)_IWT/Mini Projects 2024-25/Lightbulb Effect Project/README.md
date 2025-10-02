@@ -1,1 +1,0 @@
-# javascript-light-switch-project

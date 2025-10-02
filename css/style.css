@@ -1,257 +1,192 @@
 /* Universal selector */
 * {
-  padding: 0;
-  margin: 0;
+    padding: 0;
+    margin: 0;
 }
 
+/* Semantic Layout */
 body {
-  font-family: sans-serif;
-  width: 100%;
+    font-family: sans-serif;
+    display: grid;
+    grid-template-areas:
+        "header  header"
+        "nav     nav"
+        "aside   main"
+        "footer  footer";
 }
 
-iframe {
-  width: 100vw;
-  height: 15em;
-  border: 2px solid transparent;
+p {
+    text-align: justify;
 }
 
-/* Header CSS */
-#header h1 {
-  color: rgb(38, 36, 36);
-  text-align: center;
-  margin-top: -90px;
-  font-size: 2em;
-  /* text-shadow: 2px 2px 7px blue; */
-
+hr {
+    height: 2px;
+    background-color: #011d02;
 }
 
-#header h2 {
-  color: rgb(36, 33, 33);
-  text-align: center;
-  font-size: 2vw;
-  /* text-shadow: 3px 1px 5px blue; */
-  margin: 20px;
+details {
+    background-color: rgb(145, 232, 174);
+    padding: 15px;
 }
 
-/*Navigation section CSS (Common for all HTML, CSS and Javascript Tutorial)*/
-nav {
-  background-color: #012f3e;
-  overflow: hidden;
-  position: sticky;
-  top: 0;
+header {
+    grid-area: header;
+    background: #f6f8fa;
+    height: 150px;
+}
+
+header #logo1 {
+    border-radius: 50px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+header #logo2 {
+    border-radius: 50px;
+    margin-right: 20px;
+     margin-top: -70px;
  
+}
 
+header h2 {
+    text-align: center;
+    margin-top: -60px;
+    color:  #333333;
+}
+
+/* nav  */
+nav {
+    background-color: #333333;
+    grid-area: nav;
 }
 
 nav a {
-  float: left;
-  display: block;
-  color: white;
-  padding: 8px 10px;
-  margin:10px;
-  text-decoration: none;
-  text-align: center;
-
+    text-decoration: none;
+    color: #e5d8c7;
+    padding: 20px;
+    float: left;
 }
 
 nav a:hover {
-  background-color: white;
-  color: black;
+    background: #1aaf09;
 }
 
-nav a.right {
-  float: right;
+/* aside */
+aside {
+    background: rgb(18, 147, 119);
+    grid-area: aside;
+    padding: 20px;
+    margin: 5px;
+    width: 200px;
 }
 
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-  nav a {
-    float: none;
-    width: 100%;
-  }
-}
-
-/*Footer CSS  (Common for all HTML, CSS and Javascript Tutorial)*/
-#footer {
-  background-color: rgb(40, 38, 38);
-  padding: 10px 10px;
-  height: 100%;
+aside li {
+    list-style-type: none;
 
 }
 
-#footer img {
+aside a {
+    color: aliceblue;
+    line-height: 40px;
+    text-decoration: none;
+}
+
+aside a:hover {
+    background-color: rgb(3, 44, 46);
+}
+
+main {
+    grid-area: main;
+    margin: 1vh;
+    width: 75vw;
+    line-height: 40px;
+
+}
+
+footer {
+    background: #333333;
+    color: azure;
+    grid-area: footer;
+    padding: 15px;
+}
+
+footer p {
+    text-align: center;
+    margin-top: -20px;
+}
+
+footer a{
+  padding: 5x;
+}
+footer img{
   width: 30px;
   height: 30px;
-  padding: 2px;
-  border-radius: 20px;
-
+border-radius: 20px;
 }
 
-#footertext {
-  color: white;
-  text-align: center;
-  margin-top: -30px;
-}
-
-#footertext a {
-  color: aliceblue;
-
-}
-
-/*Home page slider CSS*/
-content .slider {
-  overflow: hidden;
-}
-
-figure {
-  width: 300%;
-  display: flex;
-  position: relative;
-  animation: linear 10s slider infinite;
-}
-
-figure img {
-  width: 33.33%;
-  height: 50%;
-}
-
-@keyframes slider {
-  0% {
-    left: 0;
-  }
-
-  30% {
-    left: 0;
-  }
-
-  33.33% {
-    left: -100%;
-  }
-
-  60% {
-    left: -100%;
-  }
-
-  66% {
-    left: -200%
-  }
-
-  95% {
-    left: -200%
-  }
-
-  100% {
-    left: 0;
-  }
-}
-
-/* Marquee CSS */
-marquee {
-  color: red;
-}
-
-
-/* Common CSS for all HTML, CSS and Javascript Tutorial */
-hr {
-  padding: 2px;
-  background-color: rgb(129, 124, 124);
-}
-
-.tutorials-heading img {
-  width: 100px;
-  height: 100px;
-
-}
-
-.tutorials-heading h2 {
-  text-align: center;
-  margin-top: -40px;
-}
-
-summary {
-  background-color: #33b5e5;
-  color: #ffffff;
-  cursor: pointer;
-  font-size: large;
-  font-weight: bold;
-  padding: 20px;
-}
-
-summary:hover {
-  background-color: #0099cc;
-
-}
-
-
-/* HTML Tutorial */
-
-
-/* table css */
-table, th,tr,td
-{
-  border: 1px solid black;
-  border-collapse: collapse;
-
-}
-
-table.center {
-  margin-left: auto;
-  margin-right: auto;
-}
-
+/* ============================================================== */
+table,
 th,
 td {
-  padding: 10px;
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+    margin: 10px;
 }
 
-thead {
-  color: green;
+label {
+    font-weight: bold;
 }
 
-tfoot {
-  color: red;
+
+form {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
 }
 
-/* ========================================== */
+input[type=text],
+input[type=number],
+input[type=password],
+input[type=email],
+input[type=date],
+input[type=tel] {
+    width: 90%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
 
-/* Registration form */
-.regForm {
-  background-color: rgb(107, 163, 236);
-  border: 5px solid #012f3e;
-  padding: 10px;
-  /* justify-content: center; */
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px;
+    /* margin: 8px 0; */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
 
+input[type=submit]:hover {
+    background-color: #61c166;
+}
+
+.btn {
+    position: sticky;
+}
+
+button {
+    float: right;
+    background-color: #011101;
+    padding: 10px;
+    border-radius: 20px;
 
 }
 
-.regForm * {
-  font-size: 15px;
+button a {
+    text-decoration: none;
+    color: rgb(235, 233, 229);
 
-}
-
-/* ============================================ */
-
-/* contact */
-.div-container {
-  display: flex;
-  width: 100%;
-  column-gap: 2em;
-}
-
-.my-photo p {
-  text-align: center;
-}
-
-/* ===================================== */
-
-
-.container{
-  max-width: 600px;
-  margin: auto;
-  padding: 50px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
-}
-
-.form-group{
-  margin-bottom: 30px;
 }
