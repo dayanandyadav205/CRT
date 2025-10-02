@@ -3,11 +3,15 @@
 $hostName = "localhost";
 $dbUser = "root";
 $dbPassword = "";
-$dbName = "login_register";
+$dbName = "registration";
 
 $conn = mysqli_connect($hostName, $dbUser, $dbPassword, $dbName);
-if(!$conn)
+if($conn)
 {
-    die("Something went wrong");
+    // echo "Connection Ok";
+}
+else
+{
+    echo "Connection failed".mysqli_connect_error();
 }
 ?>
