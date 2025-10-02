@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        table,
+        th,
+        td {
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+    </style>
 </head>
 
 <body>
@@ -20,33 +28,39 @@
 
     <!-- Navigation Section -->
     <nav>
-        <a href="index.html">Home</a>
-        <a href="#headings">Headings</a>
-        <a href="#para_formatting">Paragraph</a>
-        <a href="#list">Lists</a>
-        <a href="#table">Table</a>
-        <a href="#form">Form</a>
-        <a href="#media">Media</a>
-        <a href="#" style="float: right;">Sign In</a>
-        <a href="#" style="float: right;">Sign Up</a>
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <div class="dropdown">
+                <button class="dropdown-btn">HTML Elements ▼</button>
+                <div class="dropdown-content">
+                    <a href="#headings">Headings</a>
+                    <a href="#para_formatting">Paragraph</a>
+                    <a href="#list">Lists</a>
+                    <a href="#tbl">Table</a>
+                    <a href="#media">Media</a>
+                </div>
+            </div>
+            <a href="contact.html">Contact</a>
+            <a href="sign_up.php" style="float: right;">Sign Up</a>
+            <a href="sign_in.php" style="float: right;">Sign In</a>
+        </div>
     </nav>
 
     <!-- Aside Section -->
     <aside>
-        <h4>References</h4>
+        <h3>References</h3>
         <ul>
-            <li><a href="https://www.w3schools.com/">W3C</a></li>
-            <li><a href="https://whatwg.org/">WHATWG</a></li>
             <li><a href="https://github.com/">GitHub</a></li>
             <li><a href="https://www.google.com">Google</a></li>
+            <li><a href="https://www.w3schools.com/">W3C</a></li>
+            <li><a href="https://whatwg.org/">WHATWG</a></li>
         </ul>
     </aside>
 
     <!-- Main Section -->
     <main>
-
         <summary>
-            <h2>Syllabus fCS-310 CRT (Class Room Training) </h2>
+            <h2>Syllabus CS-310 CRT (Class Room Training) </h2>
             <details>
                 <h4>Week 1: HTML (Days 1-5)</h4>
                 Day 1: Introduction to HTML, basic structure, tags, elements, and attributes. <br />
@@ -137,6 +151,7 @@
         <summary>
             <h2>Paragraph Formatting</h2>
             <details>
+                <section id="para_formatting">
                 <h3>Bold or Strong Text</h3>
                 <p><strong>Lorem</strong> ipsum, dolor sit amet consectetur adipisicing elit. Incidunt natus quas
                     aliquam,
@@ -163,6 +178,7 @@
 
                 <h3>Super Script</h3>
                 <p>x<sup>2</sup></p>
+                 </section>
             </details>
         </summary>
 
@@ -211,8 +227,7 @@
         <summary>
             <h2>Table</h2>
             <details>
-                <section id="table">
-
+                <section id="tbl">
                     <table>
                         <caption>Student Table</caption>
                         <tr>
@@ -234,105 +249,6 @@
                             <td>B.Tech CSE</td>
                         </tr>
                     </table>
-                </section>
-            </details>
-        </summary>
-
-        <!-- This is my Form   -->
-        <summary>
-            <h2>Form</h2>
-            <details>
-                <section id="form">
-
-                    <form action="" method="post" style="background-color: rgba(4, 110, 110, 0.614); width: 50%;">
-                        <fieldset>
-                            <legend>Registration Form</legend>
-                            <table id="frm_tbl">
-                                <tr>
-                                    <td><label for="fname">First Name:</label></td>
-                                    <td><input type="text" id="fname" name="fname" required></td>
-                                </tr>
-
-                                <tr>
-                                    <td><label for="lname">Last Name:</label></td>
-                                    <td><input type="text" id="lname" name="lname" required></td>
-                                </tr>
-
-
-                                <tr>
-                                    <td><label for="email">Email:</label></td>
-                                    <td><input type="email" id="email" name="email" required></td>
-                                </tr>
-                                <tr>
-                                    <td><label for="password">Password:</label></td>
-                                    <td><input type="password" id="myPassword" name="password" pattern="Abc@12345"
-                                            required>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td><label for="phone">Phone</label></td>
-                                    <td><input type="tel" name="phone" placeholder="XXX-XXX-XXXX" minlength="10"
-                                            maxlength="11">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><label for="dob">Date of Birth:</label></td>
-                                    <td><input type="date" id="dob" name="dob"></td>
-                                </tr>
-
-                                <tr>
-                                    <td><label for="gender">Gender:</label></td>
-                                    <td>
-                                        <input type="radio" id="male" name="gender" value="male">
-                                        <label for="male">Male</label>
-                                        <input type="radio" id="female" name="gender" value="female">
-                                        <label for="female">Female</label>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td><label for="hobbies">Hobbies:</label></td>
-                                    <td>
-                                        <input type="checkbox" id="reading" name="hobbies" value="reading">
-                                        <label for="reading">Reading</label>
-                                        <input type="checkbox" id="sports" name="hobbies" value="sports">
-                                        <label for="sports">Sports</label>
-                                        <input type="checkbox" id="music" name="hobbies" value="music">
-                                        <label for="music">Music</label>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td><label for="country">Country:</label></td>
-                                    <td>
-                                        <select id="country" name="country">
-                                            <option value="">--Select--</option>
-                                            <option value="india">India</option>
-                                            <option value="usa">USA</option>
-                                            <option value="uk">UK</option>
-                                            <option value="australia">Australia</option>
-                                        </select>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td><label for="file">Upload File:</label></td>
-                                    <td><input type="file" id="file" name="file"></td>
-                                </tr>
-                                <tr>
-                                    <td><label for="message">Message:</label></td>
-                                    <td><textarea id="message" name="message" rows="4" cols="40"></textarea></td>
-                                </tr>
-
-                                <tr>
-                                    <td></td>
-                                    <td><input type="submit" value="Submit"></td>
-                                </tr>
-                            </table>
-                        </fieldset>
-                    </form>
-
                 </section>
             </details>
         </summary>
@@ -361,10 +277,8 @@
         </summary>
 
         <br />
-
-        <div class="btn">
-            <button><a href="#top">Go To Top</a></button>
-        </div>
+        <!-- Go to top -->
+       <a href="#top">Go To Top</a>
         <br />
     </main>
 

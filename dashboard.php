@@ -2,7 +2,7 @@
 session_start();
 if(!isset($_SESSION["user"]))
 {
-header("Location: login.php");
+header("Location: sign_in.php");
 }
 ?>
 
@@ -17,16 +17,10 @@ header("Location: login.php");
  
 </head>
 <body>
-     <!-- Header iframe -->
-  <iframe src="header.html" scrolling="no"></iframe>
-
     <div class="container">
         <h1>Welcome to Dashboard</h1>
         <h1>You are logged in</h1>
-        <a class="btn btn-primary" href="logout.php">Logout</a>
+        <a class="btn btn-primary" href="log_out.php">Logout</a>
     </div>
-
-                <!-- footer iframe -->
-  <iframe src="footer.html" scrolling="no"></iframe>
 </body>
 </html>

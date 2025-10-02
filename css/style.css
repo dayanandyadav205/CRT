@@ -1,11 +1,12 @@
 /* Universal selector */
 * {
     padding: 0;
-    margin: 0;
+    margin: 2px;
 }
 
 /* Semantic Layout */
 body {
+    width: 98vw;
     font-family: sans-serif;
     display: grid;
     grid-template-areas:
@@ -19,20 +20,29 @@ p {
     text-align: justify;
 }
 
+h2 {
+    color: #333333;
+}
+
+h3 {
+    color: antiquewhite;
+}
+
 hr {
     height: 2px;
-    background-color: #011d02;
+    background-color: #333333;
 }
 
 details {
-    background-color: rgb(145, 232, 174);
+    background-color: #333333;
+    color: antiquewhite;
     padding: 15px;
 }
 
 header {
     grid-area: header;
     background: #f6f8fa;
-    height: 150px;
+    height: 140px;
 }
 
 header #logo1 {
@@ -44,45 +54,101 @@ header #logo1 {
 header #logo2 {
     border-radius: 50px;
     margin-right: 20px;
-     margin-top: -70px;
- 
+    margin-top: -70px;
+
 }
 
 header h2 {
     text-align: center;
     margin-top: -60px;
-    color:  #333333;
+    color: #333333;
 }
 
 /* nav  */
 nav {
     background-color: #333333;
     grid-area: nav;
-}
+} 
 
-nav a {
+/* nav a {
     text-decoration: none;
     color: #e5d8c7;
-    padding: 20px;
+    padding: 15px;
     float: left;
 }
 
 nav a:hover {
-    background: #1aaf09;
+    background: #43b349;
+}
+
+.navbar {
+     grid-area: nav;
+    background-color: #333;
+    overflow: hidden;
+} */
+
+.navbar a{
+    float: left;
+    font-size: 16px;
+    color: antiquewhite;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.dropdown-btn {
+    float: left;
+    border: none;
+    font-size: 16px;
+    color: antiquewhite;
+    background: #333333;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropdown-btn {
+    background-color: #333333;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333333;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: block;
+    float: none;
+    color: antiquewhite;
+    padding: 12px 16px;
+    text-decoration: none;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #666;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 /* aside */
 aside {
-    background: rgb(18, 147, 119);
+    background: #333333;
     grid-area: aside;
     padding: 20px;
     margin: 5px;
     width: 200px;
-}
-
-aside li {
-    list-style-type: none;
-
 }
 
 aside a {
@@ -92,7 +158,7 @@ aside a {
 }
 
 aside a:hover {
-    background-color: rgb(3, 44, 46);
+    font-size: xx-large;
 }
 
 main {
@@ -107,42 +173,43 @@ footer {
     background: #333333;
     color: azure;
     grid-area: footer;
-    padding: 15px;
+    padding: 10px;
 }
 
 footer p {
     text-align: center;
-    margin-top: -20px;
+    margin-top: -25px;
 }
 
-footer a{
-  padding: 5x;
+footer a {
+    padding: 10x;
 }
-footer img{
-  width: 30px;
-  height: 30px;
-border-radius: 20px;
+
+footer img {
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
 }
 
 /* ============================================================== */
-table,
-th,
-td {
-    border: 2px solid black;
-    border-collapse: collapse;
-    padding: 10px;
+form {
+    border-radius: 5px;
+    background-color: #333333;
+    padding: 20px;
     margin: 10px;
+    width: 85%;
+}
+
+fieldset {
+    padding: 20px;
+}
+
+legend {
+    color: antiquewhite;
 }
 
 label {
     font-weight: bold;
-}
-
-
-form {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
 }
 
 input[type=text],
@@ -151,19 +218,19 @@ input[type=password],
 input[type=email],
 input[type=date],
 input[type=tel] {
-    width: 90%;
-    padding: 12px;
+    width: 350%;
+    padding: 10px;
     margin: 8px 0;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
 input[type=submit] {
-    width: 100%;
+    width: 350%;
     background-color: #4CAF50;
     color: white;
-    padding: 14px;
-    /* margin: 8px 0; */
+    padding: 10px;
+    margin: 8px 0;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -173,11 +240,9 @@ input[type=submit]:hover {
     background-color: #61c166;
 }
 
-.btn {
-    position: sticky;
-}
 
-button {
+
+/* #top {
     float: right;
     background-color: #011101;
     padding: 10px;
@@ -185,8 +250,8 @@ button {
 
 }
 
-button a {
+#top a {
     text-decoration: none;
     color: rgb(235, 233, 229);
 
-}
+} */
