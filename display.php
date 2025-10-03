@@ -18,11 +18,9 @@
 
 <body>
 
-</body>
-
 <?php
 include("connection.php");
-// error_reporting(0);
+error_reporting(0);
 
 $query = "SELECT * FROM registration_form";
 
@@ -38,19 +36,22 @@ if ($total != 0) {
     <h2 style="text-align: center;"><mark>Display All Records</mark></h2>
     <table border="1" cellspacing="7" width="100%">
         <tr>
-            <th width="10%">First Name</th>
-            <th width="10%">Last Name</th>
-            <th width="10%">Gender</th>
+            <th width="5%">Id</th>
+            <th width="8%">First Name</th>
+            <th width="8%">Last Name</th>
+            <th width="5%">Gender</th>
             <th width="10%">DOB</th>
             <th width="20%">Email</th>
             <th width="10%">Phone</th>
-            <th width="30%">Address</th>
+            <th width="18%">Address</th>
+            <th width="16%">Edit Options</th>
         </tr>
 
         <?php
         while ($result = mysqli_fetch_assoc($data)) 
             {
           echo "<tr>
+                <td>".$result['id']."</td>
                 <td>".$result['fname']."</td>
                 <td>".$result['lname']."</td>
                 <td>".$result['gender']."</td>
@@ -58,6 +59,7 @@ if ($total != 0) {
                 <td>".$result['email']."</td>
                 <td>".$result['phone']."</td>
                 <td>".$result['address']."</td>
+                <td><a href='update_design.php?id=$result[id]'>Update</a></td>
           </tr>";
         }
     // echo "Table has records";
@@ -67,7 +69,6 @@ if ($total != 0) {
 ?>
 </table>
 
-</html>
 
-  <!-- echo $result['fname'] . " " . $result['lname'] . " " . $result['gender'] . " " .
-                $result['dob'] . " " . $result['email'] . " " . $result['address'] . "<br>"; -->
+</body>
+</html>

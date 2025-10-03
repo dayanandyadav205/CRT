@@ -1,5 +1,15 @@
-<?php include("connection.php"); 
+<?php include("connection.php");
 // error_reporting(0);
+
+$Id = $_GET['id'];
+
+$query = "SELECT * FROM registration_form where id= '$Id'";
+
+$data = mysqli_query($conn, $query);
+
+$total = mysqli_num_rows($data);
+
+$result = mysqli_fetch_assoc($data);
 ?>
 
 <!DOCTYPE html>
@@ -8,34 +18,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form</title>
+    <title>Update Details</title>
     <link rel="stylesheet" href="css\style.css">
 </head>
 
 <body>
     <form action="registration.php" method="POST">
         <fieldset>
-            <legend>Registration Form</legend>
+            <legend>Update Details</legend>
             <table>
                 <tr>
-                    <td><input type="text" name="fname" pattern="[a-zA-Z]{3,30}" placeholder="First Name" required>
+                    <td><input type="text" name="fname" value="<?php echo $result['fname']; ?>" pattern="[a-zA-Z]{3,30}"
+                            placeholder="First Name" required>
                     </td>
                 </tr>
 
                 <tr>
-                    <td><input type="text" name="lname" pattern="[a-zA-Z]{3,30}" placeholder="Last Name" required>
+                    <td><input type="text" name="lname" value="<?php echo $result['lname']; ?>" pattern="[a-zA-Z]{3,30}"
+                            placeholder="Last Name" required>
                     </td>
                 </tr>
-
                 <tr>
-                    <td><input type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    <td><input type="password" name="password" value="<?php echo $result['password']; ?>" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                             placeholder="Password" required></td>
                 </tr>
 
                 <tr>
-                    <td><input type="password" name="conpassword" placeholder="Confirm Password" required></td>
+                    <td><input type="password" name="conpassword" value="<?php echo $result['conpassword']; ?>" placeholder="Confirm Password" required></td>
                 </tr>
-
                 <tr>
                     <td style="color:white;">Gender<select name="gender" required>
                             <option value="Gender_Not_Selected">Select Your Gender</option>
@@ -45,19 +55,24 @@
                 </tr>
 
                 <tr>
-                    <td style="color:white;">DOB<input type="date" name="dob" required></td>
+                    <td style="color:white;">DOB<input type="date" name="dob" value="<?php echo $result['dob']; ?>"
+                            required></td>
                 </tr>
 
                 <tr>
-                    <td> <input type="email" name="email" placeholder="Email" required></td>
+                    <td> <input type="email" name="email" placeholder="Email" value="<?php echo $result['email']; ?>"
+                            required></td>
                 </tr>
 
                 <tr>
-                    <td><input type="number" name="phone" placeholder="Phone Number" required></td>
+                    <td><input type="number" name="phone" placeholder="Phone Number"
+                            value="<?php echo $result['phone']; ?>" required></td>
                 </tr>
 
                 <tr>
-                    <td><textarea name="address" placeholder="Address" required></textarea></td>
+                    <td><textarea name="address" placeholder="Address" required>
+                        <?php echo $result['address']; ?>
+                    </textarea></td>
                 </tr>
 
                 <tr>
@@ -69,21 +84,18 @@
                 </tr>
 
                 <tr>
-                    <td> <input type="submit" value="Register" name="register"></td>
+                    <td> <input type="submit" value="Update Details" name="register"></td>
                 </tr>
             </table>
         </fieldset>
     </form>
     <br>
-    <p>Already registered?</p>    <br>
-    <a href="login.php">Login Here</a>    <br>    <br>
 </body>
 
 </html>
 
 <?php
-if ($_POST['register']) 
-    {
+if ($_POST['register']) {
     $first_name = $_POST['fname'];
     $last_name = $_POST['lname'];
     $password = $_POST['password'];
@@ -101,7 +113,7 @@ if ($_POST['register'])
     $data = mysqli_query($conn, $query);
 
     if ($data) {
-        echo "Data Inserted into Database";
+        echo "Details Updated Database";
     } else {
         echo "failed";
     }
