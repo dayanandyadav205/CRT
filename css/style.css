@@ -39,6 +39,12 @@ details {
     padding: 15px;
 }
 
+details:hover {
+    cursor: pointer;
+    font-size: x-large;
+}
+
+
 header {
     grid-area: header;
     background: #f6f8fa;
@@ -68,26 +74,9 @@ header h2 {
 nav {
     background-color: #333333;
     grid-area: nav;
-} 
-
-/* nav a {
-    text-decoration: none;
-    color: #e5d8c7;
-    padding: 15px;
-    float: left;
 }
 
-nav a:hover {
-    background: #43b349;
-}
-
-.navbar {
-     grid-area: nav;
-    background-color: #333;
-    overflow: hidden;
-} */
-
-.navbar a{
+.navbar a {
     float: left;
     font-size: 16px;
     color: antiquewhite;
@@ -199,10 +188,12 @@ form {
     margin: 10px;
     width: 80%;
     
+
 }
 
 fieldset {
     padding: 20px;
+    
 }
 
 legend {
@@ -238,21 +229,5 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-    background-color: #61c166;
+    /* background-color: #61c166; */
 }
-
-
-
-/* #top {
-    float: right;
-    background-color: #011101;
-    padding: 10px;
-    border-radius: 20px;
-
-}
-
-#top a {
-    text-decoration: none;
-    color: rgb(235, 233, 229);
-
-} */

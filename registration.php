@@ -1,4 +1,5 @@
-<?php include("connection.php"); ?>
+<?php include("connection.php"); 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +12,7 @@
 </head>
 
 <body>
-    <form action="registration.php" method="post">
+    <form action="registration.php" method="POST">
         <fieldset>
             <legend>Registration Form</legend>
             <table>
@@ -35,11 +36,15 @@
                 </tr>
 
                 <tr>
-                    <td><select name="gender" required>
+                    <td style="color:white;">Gender<select name="gender" required>
                             <option value="Gender_Not_Selected">Select Your Gender</option>
                             <option value="male">Male</option>
                             <option value="female">Female</option>
                         </select></td>
+                </tr>
+
+                <tr>
+                    <td style="color:white;">DOB<input type="date" name="dob" required></td>
                 </tr>
 
                 <tr>
@@ -63,7 +68,7 @@
                 </tr>
 
                 <tr>
-                    <td> <input type="submit" name="register"></td>
+                    <td> <input type="submit" value="Register" name="register"></td>
                 </tr>
             </table>
         </fieldset>
@@ -75,18 +80,20 @@
 </html>
 
 <?php
-if ($_POST['register']) {
+if ($_POST['register']) 
+    {
     $first_name = $_POST['fname'];
     $last_name = $_POST['lname'];
     $password = $_POST['password'];
     $confirmpassword = $_POST['conpassword'];
     $gender = $_POST['gender'];
+    $birtdate = $_POST['dob'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
     $address = $_POST['address'];
 
-    $query = "INSERT INTO registration_form values('$first_name', '$last_name', '$password', '$confirmpassword', 
-                                                    '$gender', '$email', '$phone', '$address')";
+    $query = "INSERT INTO registration_form VALUES ('$first_name', '$last_name', '$password', '$confirmpassword', 
+                                                    '$gender',' $birtdate', '$email', '$phone', '$address')";
 
     $data = mysqli_query($conn, $query);
 
