@@ -1,9 +1,10 @@
 <?php
+// error_reporting(0);
 
 $hostName = "localhost";
 $dbUser = "root";
 $dbPassword = "";
-$dbName = "registration";
+$dbName = "responsiveform3";
 
 $conn = mysqli_connect($hostName, $dbUser, $dbPassword, $dbName);
 if($conn)

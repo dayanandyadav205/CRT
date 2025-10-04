@@ -12,39 +12,41 @@
         }
         table{
             background: white;
+            margin-left: 30px;
         }
      </style>
 </head>
 
-<body>
+
 
 <?php
 include("connection.php");
-error_reporting(0);
+// error_reporting(0);
 
-$query = "SELECT * FROM registration_form";
-
+$query = "SELECT * FROM form";
 $data = mysqli_query($conn, $query);
 
 $total = mysqli_num_rows($data);
+// $result = mysqli_fetch_assoc($data);
 
-
+// echo $result;
 // echo $total;
 
-if ($total != 0) {
+if($total != 0) 
+    {
     ?>
+
     <h2 style="text-align: center;"><mark>Display All Records</mark></h2>
-    <table border="1" cellspacing="7" width="100%">
+    <table border="1" cellspacing="7" width="90%">
         <tr>
-            <th width="5%">Id</th>
-            <th width="8%">First Name</th>
-            <th width="8%">Last Name</th>
+             <th width="5%">id</th>
+            <th width="10%">First Name</th>
+            <th width="10%">Last Name</th>
             <th width="5%">Gender</th>
-            <th width="10%">DOB</th>
-            <th width="20%">Email</th>
+            <th width="15%">Email</th>
             <th width="10%">Phone</th>
-            <th width="18%">Address</th>
-            <th width="16%">Edit Options</th>
+            <th width="20%">Address</th>
+            <th width="25%">Edit Options</th>
         </tr>
 
         <?php
@@ -55,20 +57,20 @@ if ($total != 0) {
                 <td>".$result['fname']."</td>
                 <td>".$result['lname']."</td>
                 <td>".$result['gender']."</td>
-                <td>".$result['dob']."</td>
                 <td>".$result['email']."</td>
                 <td>".$result['phone']."</td>
                 <td>".$result['address']."</td>
-                <td><a href='update_design.php?id=$result[id]'>Update</a></td>
-          </tr>";
+                <td><a href='update_design.php?id=$result[id]'>Update</a></td> 
+          </tr>
+          ";
         }
     // echo "Table has records";
-} else {
-    echo "No record found";
-}
+} 
+else 
+    {
+        echo "No record found";
+    }
 ?>
 </table>
-
-
-</body>
 </html>
+

@@ -1,14 +1,11 @@
-<?php include("connection.php");
-// error_reporting(0);
+<?php include("connection.php"); 
 
-$Id = $_GET['id'];
+$id= $_GET['id'];
 
-$query = "SELECT * FROM registration_form where id= '$Id'";
-
+$query = "SELECT * FROM form WHERE id='$id'";
 $data = mysqli_query($conn, $query);
 
 $total = mysqli_num_rows($data);
-
 $result = mysqli_fetch_assoc($data);
 ?>
 
@@ -18,104 +15,120 @@ $result = mysqli_fetch_assoc($data);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Update Details</title>
-    <link rel="stylesheet" href="css\style.css">
+    <title>Register</title>
+    <link rel="stylesheet" href="css/form.css">
 </head>
 
 <body>
-    <form action="registration.php" method="POST">
-        <fieldset>
-            <legend>Update Details</legend>
-            <table>
-                <tr>
-                    <td><input type="text" name="fname" value="<?php echo $result['fname']; ?>" pattern="[a-zA-Z]{3,30}"
-                            placeholder="First Name" required>
-                    </td>
-                </tr>
+    <div class="container">
+        <div class="title">
+            Registration Form
+        </div>
+        <form action=" " method="post">
+        <div class="form">
+            <div class="input_field">
+                <label for="">First Name</label>
+                <input type="text" value="<?php echo $result['fname'];?>" class="input" name="fname" required>
+            </div>
 
-                <tr>
-                    <td><input type="text" name="lname" value="<?php echo $result['lname']; ?>" pattern="[a-zA-Z]{3,30}"
-                            placeholder="Last Name" required>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="password" name="password" value="<?php echo $result['password']; ?>" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                            placeholder="Password" required></td>
-                </tr>
+            <div class="input_field">
+                <label for="">Last Name</label>
+                <input type="text" value="<?php echo $result['lname'];?>" class="input" name="lname" required>
+            </div>
 
-                <tr>
-                    <td><input type="password" name="conpassword" value="<?php echo $result['conpassword']; ?>" placeholder="Confirm Password" required></td>
-                </tr>
-                <tr>
-                    <td style="color:white;">Gender<select name="gender" required>
-                            <option value="Gender_Not_Selected">Select Your Gender</option>
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
-                        </select></td>
-                </tr>
+             <div class="input_field">
+                <label for="">Password</label>
+                <input type="password" value="<?php echo $result['password'];?>" class="input" name="password" required>
+            </div>
 
-                <tr>
-                    <td style="color:white;">DOB<input type="date" name="dob" value="<?php echo $result['dob']; ?>"
-                            required></td>
-                </tr>
+            <div class="input_field">
+                <label for="">Confirm Password</label>
+                <input type="password" value="<?php echo $result['cpassword'];?>" class="input" name="cpassword" required>
+            </div>
 
-                <tr>
-                    <td> <input type="email" name="email" placeholder="Email" value="<?php echo $result['email']; ?>"
-                            required></td>
-                </tr>
+            <div class="input_field">
+                <label for="">Gender</label>
+                <div class="custom_select">
+                    <select name="gender" id="" required>
+                        <option value="Not Selected">Select</option>
 
-                <tr>
-                    <td><input type="number" name="phone" placeholder="Phone Number"
-                            value="<?php echo $result['phone']; ?>" required></td>
-                </tr>
+                        <option value="Male" 
+                            <?php
+                                if($result['gender'] == 'Male')
+                                {
+                                    echo "selected";
+                                }
+                            ?>
+                        >
+                        
+                        Male</option>
+                        <option value="Female"
+                            <?php
+                                if($result['gender'] == 'Female')
+                                {
+                                    echo "selected";
+                                }
+                            ?>
+                        >
+                        Female</option>
+                    </select>
+                </div>
+            </div>
 
-                <tr>
-                    <td><textarea name="address" placeholder="Address" required>
-                        <?php echo $result['address']; ?>
-                    </textarea></td>
-                </tr>
+            <div class="input_field">
+                <label for="">Email Address</label>
+                <input type="email" value="<?php echo $result['email'];?>" class="input" name="email" required>
+            </div>
 
-                <tr>
-                    <td><input type="file" name="uploadfile"></td>
-                </tr>
+            <div class="input_field">
+                <label for="">Phone Number</label>
+                <input type="text" value="<?php echo $result['phone'];?>" class="input" name="phone" required>
+            </div>
 
-                <tr>
-                    <td style="color:white;"><input type="checkbox" required> Agree to terms and conditions </td>
-                </tr>
+            <div class="input_field">
+                <label for="">Address</label>
+                <textarea name="address" id=""><?php echo $result['address'];?></textarea>
+            </div>
 
-                <tr>
-                    <td> <input type="submit" value="Update Details" name="register"></td>
-                </tr>
-            </table>
-        </fieldset>
-    </form>
-    <br>
+            <div class="input_field terms">
+                <label for="" class="check">
+                    <input type="checkbox" name="check" required>
+                    <span class="checkmark"></span>
+                </label>
+                <p>Agree terms and conditions</p>
+            </div>
+            <div class="input_field">
+                <input type="submit" value="Update Details" class="btn" name="update">
+            </div>
+        </div>
+        </form>
+    </div>
 </body>
 
 </html>
 
 <?php
-if ($_POST['register']) {
-    $first_name = $_POST['fname'];
-    $last_name = $_POST['lname'];
-    $password = $_POST['password'];
-    $confirmpassword = $_POST['conpassword'];
-    $gender = $_POST['gender'];
-    $birtdate = $_POST['dob'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $address = $_POST['address'];
+if ($_POST['update']) 
+    {
+        $fname      = $_POST['fname'];
+        $lname      = $_POST['lname'];
+        $pwd        = $_POST['password'];
+        $cpwd       = $_POST['cpassword'];
+        $gender     = $_POST['gender'];
+        $email      = $_POST['email'];
+        $phone      = $_POST['phone'];
+        $address    = $_POST['address'];
 
-    $query = "INSERT INTO registration_form (fname, lname, password, conpassword, gender, dob, email, 
-    phone, address) VALUES ('$first_name', '$last_name', '$password', '$confirmpassword', '$gender',
-                            '$birtdate', '$email', '$phone', '$address')";
+    $query = "UPDATE form set fname='$fname', lname='$lname', password='$pwd', cpassword='$$cpwd',
+             gender='$gender', email='$email', phone='$phone', address='$address' WHERE id='$id'";
 
     $data = mysqli_query($conn, $query);
 
     if ($data) {
-        echo "Details Updated Database";
+        echo "Record Updated";
     } else {
-        echo "failed";
+        echo "Failed to Update";
     }
 }
-?>
+
+?> 
