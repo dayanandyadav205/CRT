@@ -1,0 +1,29 @@
+ body 
+ {
+     background: #D071f9;
+ }
+
+ table 
+ {
+     background: white;
+     margin-left: 30px;
+ }
+
+ .update,
+ .delete
+ {
+    background-color: green;
+    color: white;
+    border: 0;
+    outline: none;
+    border-radius: 5px;
+    height: 23px;
+    width: 80px;
+    font-weight:bold;
+    cursor: pointer;
+ }
+
+ .delete
+ {
+    background-color: red;
+ }

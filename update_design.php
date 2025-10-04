@@ -7,6 +7,10 @@ $data = mysqli_query($conn, $query);
 
 $total = mysqli_num_rows($data);
 $result = mysqli_fetch_assoc($data);
+
+$language   = $result['language'];
+$language1  = explode(",", $language)
+
 ?>
 
 <!DOCTYPE html>
@@ -22,28 +26,32 @@ $result = mysqli_fetch_assoc($data);
 <body>
     <div class="container">
         <div class="title">
-            Registration Form
+            Update Details
         </div>
         <form action=" " method="post">
         <div class="form">
             <div class="input_field">
                 <label for="">First Name</label>
-                <input type="text" value="<?php echo $result['fname'];?>" class="input" name="fname" required>
+                <input type="text" value="<?php echo $result['fname'];?>" class="input" 
+                name="fname" required>
             </div>
 
             <div class="input_field">
                 <label for="">Last Name</label>
-                <input type="text" value="<?php echo $result['lname'];?>" class="input" name="lname" required>
+                <input type="text" value="<?php echo $result['lname'];?>" class="input" 
+                name="lname" required>
             </div>
 
              <div class="input_field">
                 <label for="">Password</label>
-                <input type="password" value="<?php echo $result['password'];?>" class="input" name="password" required>
+                <input type="password" value="<?php echo $result['password'];?>" class="input" 
+                name="password" required>
             </div>
 
             <div class="input_field">
                 <label for="">Confirm Password</label>
-                <input type="password" value="<?php echo $result['cpassword'];?>" class="input" name="cpassword" required>
+                <input type="password" value="<?php echo $result['cpassword'];?>" class="input" 
+                name="cpassword" required>
             </div>
 
             <div class="input_field">
@@ -77,17 +85,105 @@ $result = mysqli_fetch_assoc($data);
 
             <div class="input_field">
                 <label for="">Email Address</label>
-                <input type="email" value="<?php echo $result['email'];?>" class="input" name="email" required>
+                <input type="email" value="<?php echo $result['email'];?>" class="input" 
+                name="email" required>
             </div>
 
             <div class="input_field">
                 <label for="">Phone Number</label>
-                <input type="text" value="<?php echo $result['phone'];?>" class="input" name="phone" required>
+                <input type="text" value="<?php echo $result['phone'];?>" class="input" 
+                name="phone" required>
+            </div>
+
+             <div class="input_field">
+                <label style="margin-right: 100px">Caste</label>
+                <input type="radio" class="input" name="caste" value="General" required 
+                
+                <?php 
+                     if($result['caste'] == "General")
+                     {
+                        echo "checked";
+                     }
+                ?>
+                   
+                >
+                <label style="margin-left: -20px">General</label>
+
+                <input type="radio" class="input" name="caste" value="OBC" required
+                
+                <?php 
+                    if($result['caste'] == "OBC")
+                    {
+                    echo "checked";
+                    }
+                ?>
+                
+                >
+                <label style="margin-left: -20px">OBC</label>
+
+                <input type="radio" class="input" name="caste" value="SC" required
+                
+                <?php 
+                    if($result['caste'] == "SC")
+                    {
+                    echo "checked";
+                    }
+                ?>
+                
+                >
+                <label style="margin-left: -20px">SC</label>
+
+                <input type="radio" class="input" name="caste" value="ST" required
+                
+                <?php 
+                    if($result['caste'] == "ST")
+                    {
+                    echo "checked";
+                    }
+                ?>
+                
+                ><label style="margin-left: -20px">ST</label>
+            </div>
+
+            <div class="input_field">
+                <label style="margin-right: 100px">Languages</label>
+                <input type="checkbox" class="input" name="language[]" value="Hindi"
+                
+                <?php
+                    if(in_array('Hindi', $language1))
+                    {
+                        echo "checked";
+                    }
+                ?>
+                
+                ><label style="margin-left: 5px">Hindi</label>
+
+                <input type="checkbox" class="input" name="language[]" value="Urdu"
+                
+                <?php
+                    if(in_array('Urdu', $language1))
+                    {
+                        echo "checked";
+                    }
+                ?>
+                
+                ><label style="margin-left: 5px">Urdu</label>
+
+                <input type="checkbox" class="input" name="language[]" value="English"
+                
+                <?php
+                    if(in_array('English', $language1))
+                    {
+                        echo "checked";
+                    }
+                ?>
+                
+                ><label style="margin-left: 5px">English</label>
             </div>
 
             <div class="input_field">
                 <label for="">Address</label>
-                <textarea name="address" id=""><?php echo $result['address'];?></textarea>
+                <textarea name="address" id="" required><?php echo $result['address'];?></textarea>
             </div>
 
             <div class="input_field terms">
@@ -110,23 +206,37 @@ $result = mysqli_fetch_assoc($data);
 <?php
 if ($_POST['update']) 
     {
-        $fname      = $_POST['fname'];
         $lname      = $_POST['lname'];
         $pwd        = $_POST['password'];
+        $fname      = $_POST['fname'];
         $cpwd       = $_POST['cpassword'];
         $gender     = $_POST['gender'];
         $email      = $_POST['email'];
         $phone      = $_POST['phone'];
+        $caste      = $_POST['caste'];
+
+        $lang     = $_POST['language'];
+        $lang1    = implode(",", $lang);
+
         $address    = $_POST['address'];
 
-    $query = "UPDATE form set fname='$fname', lname='$lname', password='$pwd', cpassword='$$cpwd',
-             gender='$gender', email='$email', phone='$phone', address='$address' WHERE id='$id'";
+    $query = "UPDATE form set fname='$fname',lname='$lname',password='$pwd',cpassword='$$cpwd',
+              gender='$gender',email='$email',phone='$phone',caste='$caste',language='$$lang1',address='$address' 
+              WHERE id='$id'";
 
     $data = mysqli_query($conn, $query);
 
-    if ($data) {
-        echo "Record Updated";
-    } else {
+    if ($data) 
+        {
+        echo "<script >alert('Record Updated')</script>";
+        ?>
+
+            <meta http-equiv="refresh" content="0;url = http://localhost/web_development/display.php"/>
+
+        <?php
+        } 
+    else 
+    {
         echo "Failed to Update";
     }
 }
