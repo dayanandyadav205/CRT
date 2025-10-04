@@ -1,12 +1,12 @@
 /* Universal selector */
 * {
     padding: 0;
-    margin: 2px;
+    margin: 0;
 }
 
 /* Semantic Layout */
 body {
-    width: 98vw;
+    background-color: #D071F9;
     font-family: sans-serif;
     display: grid;
     grid-template-areas:
@@ -52,21 +52,26 @@ header {
 }
 
 header #logo1 {
-    border-radius: 50px;
-    margin-left: 20px;
-    margin-top: 20px;
+    margin-left: 40px;
+    margin-top: 25px;
 }
 
 header #logo2 {
-    border-radius: 50px;
-    margin-right: 20px;
-    margin-top: -70px;
+    border-radius: 5px;
+    margin-right: 40px;
+    margin-top: -80px;
 
 }
+header h1 {
+    text-align: center;
+    margin-top: -90px;
+    color: #333333;
+}
+
 
 header h2 {
     text-align: center;
-    margin-top: -60px;
+    /* margin-top: -20px; */
     color: #333333;
 }
 
@@ -75,17 +80,24 @@ nav {
     grid-area: nav;
     padding: 20px;
     background-color: #333333;
+    height: 15px;
+   
 }
 
-.navbar a {
+nav a {
     float: left;
-    /* font-size: 16px; */
     color: antiquewhite;
-    text-align: center;
-    padding: 14px 20px;
+    padding: 15px;
     text-decoration: none;
+     margin-top: -15px;
 }
 
+
+nav a:hover
+ {
+    background: #D071F9;
+    color: antiquewhite;
+}
 
 /* aside */
 aside {
