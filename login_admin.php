@@ -9,8 +9,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/login_style.css">
-    <link rel="stylesheet" href="css/index_style.css">
+    <link rel="stylesheet" href="css/style.css">
     
     <script>
         function message()
@@ -66,12 +65,7 @@ session_start();
         <div class="form">
             <input type="text" name="username" class="textfield" placeholder="Email">
              <input type="password" name="password" class="textfield" placeholder="Password">
-
-             <div class="forgotpass"><a href="#" class="link" onclick="message()">Forgot Password?</a></div>
-             
              <input type="submit" name="login" value="Login" class="btn">
-
-             <div class="signup">New Member?<a href="#" class="link">Sign Up Here</a></div>
         </div>
     </div>
 </form>

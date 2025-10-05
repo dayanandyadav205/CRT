@@ -1,0 +1,483 @@
+/* Universal selector */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Semantic Layout */
+body {
+    background-color: #D071F9;
+    font-family: sans-serif;
+    display: grid;
+    grid-template-areas:
+        "header  header"
+        "nav     nav"
+        "aside   main"
+        "footer  footer";
+}
+
+p {
+    text-align: justify;
+}
+
+h2 {
+    color: #333333;
+}
+
+h3 {
+    color: antiquewhite;
+}
+
+hr {
+    height: 2px;
+    background-color: #333333;
+}
+
+details {
+    background-color: #333333;
+    color: antiquewhite;
+    padding: 10px;
+}
+
+details:hover {
+    cursor: pointer;
+}
+
+
+header {
+    grid-area: header;
+    background: #f6f8fa;
+    height: 150px;
+}
+
+header #logo1 {
+    margin-left: 40px;
+    margin-top: 25px;
+}
+
+header #logo2 {
+    border-radius: 5px;
+    margin-right: 40px;
+    margin-top: -80px;
+
+}
+header h1 {
+    text-align: center;
+    margin-top: -90px;
+    color: #333333;
+}
+
+
+header h2 {
+    text-align: center;
+    /* margin-top: -20px; */
+    color: #333333;
+}
+
+
+main .top{
+    background-color:#333333;
+    width: 80px; 
+    height: 30px; 
+    float: right;
+    text-align: center; 
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+main .top a
+{
+    text-decoration: none; 
+    color: antiquewhite;
+}
+
+main .top:hover{
+    background: purple;
+}
+
+
+/* nav  */
+nav {
+    grid-area: nav;
+    padding: 20px;
+    background-color: #333333;
+    height: 15px;
+   
+}
+
+nav a {
+    float: left;
+    color: antiquewhite;
+    padding: 15px;
+    text-decoration: none;
+     margin-top: -15px;
+}
+
+
+nav a:hover
+ {
+    background: #D071F9;
+    color: antiquewhite;
+}
+
+/* aside */
+.aside
+{
+    grid-area: aside;
+    background-color: #D071F9;
+    padding: 30px;
+
+}
+
+.aside a{
+    padding: 20px;
+    line-height: 40px;
+    text-decoration: none;
+}
+
+/* main */
+main {
+    grid-area: main;
+    /* margin: 1vh; */
+    width: 80vw;
+    line-height: 40px;
+
+}
+
+footer {
+    background: #333333;
+    color: azure;
+    grid-area: footer;
+    padding: 10px;
+}
+
+footer p {
+    text-align: center;
+    margin-top: -25px;
+}
+
+footer a {
+    padding: 10x;
+}
+
+footer img {
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+}
+
+/* ============================================================== */
+/* Form CSS */
+
+/* *
+{
+    margin: 0;
+    padding: 0;
+} */
+
+/* body
+{
+    background-color: #D071F9;
+    padding: 0 10px;
+} */
+
+.container
+{
+    max-width: 700px;
+    width: 50%;
+    background-color: white;
+    margin: 20px 20px;
+    padding: 30px;
+    box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+.container .title
+{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #D071F9;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.container .form
+{
+    width: 100%;
+}
+
+.container .form .input_field
+{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.container .form .input_field label
+{
+    width: 200px;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.container .form .input_field .input,
+.container .form .input_field textarea
+{
+    width: 100%;
+    outline: none;
+    border: 1px solid #D071F9;
+    font-size: 15px;
+    padding: 8px 10px;
+    border-radius: 3px;
+    transition: all 0.5s ease;
+}
+
+.container .form .input_field textarea
+{
+    resize: none;
+    height: 100px;
+}
+
+.container .form .input_field .custom_select
+{
+    position: relative;
+    width: 100%;
+    height: 37px;
+}
+
+.container .form .input_field .custom_select select
+{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    padding: 8px 10px;
+    border: 1px solid #D071F9;
+     outline: none;
+     border-radius: 3px;
+}
+
+.container .form .input_field .custom_select::before
+{
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    border: 8px solid black;
+    border-color: #D071F9 transparent transparent transparent;
+    pointer-events: none;
+}
+
+.container .form .input_field .input:focus,
+.container .form .input_field textarea:focus,
+.container .form .input_field select:focus
+{
+    border: 1px solid purple;
+}
+
+.container .form .input_field p
+{
+    font-size: 14px;
+    color: #757575;
+}
+
+.container .form .input_field .check
+{
+    width: 15px;
+    height: 15px;
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+
+.container .form .input_field .btn
+{
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 15px;
+    border: 0;
+    background: #D071F9;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+    outline: none;
+}
+
+.container .form .input_field .btn:hover
+{
+    background: purple;
+}
+
+.container .form .input_field:last-child
+{
+    margin-bottom: 0;
+}
+
+@media(max-width:420px)
+{
+    .container .form .input_field
+    {
+       flex-direction: column;
+       align-items: flex-start;
+    } 
+    
+    .container .form .input_field label
+    {
+        margin-bottom: 5px;
+    }
+
+    .container .form .input_field.terms
+    {
+        flex-direction: row;
+    }
+}
+
+/* ============================================================= */
+/* Contact css */
+.contact
+{
+    margin-left: -250px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    width: 600px;
+    height: 300px;
+    background-color:white;
+}
+
+/* ========================================================= */
+
+/* display CSS */
+
+ body 
+ {
+     background: #D071f9;
+     width: 100%;
+ }
+
+ table 
+ {
+     background: white;
+     margin-left: 30px;
+ }
+
+ .update,
+ .delete
+ {
+    background-color: green;
+    color: white;
+    border: 0;
+    outline: none;
+    border-radius: 5px;
+    height: 23px;
+    width: 80px;
+    font-weight:bold;
+    cursor: pointer;
+ }
+
+ .delete
+ {
+    background-color: red;
+ }
+
+
+ .btn_logout
+ {
+    background-color: blue; 
+    color: white; 
+    height: 35px; 
+    width: 100px; 
+    margin-top: 20px; 
+    border: 0; 
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+ }
+
+ /* =================================================== */
+ /* login CSS */
+ body 
+{
+    margin: 0;
+    padding: 0;
+    background-color: #D071f9;
+}
+
+.center
+{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background-color: white;
+    border-radius: 5px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid silver;
+}
+
+.center h1
+{
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid silver;
+}
+
+.form
+{
+    padding-bottom: 15px;
+    margin: 0 20px;
+    text-align: center;
+}
+
+.textfield
+{
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    border: 2px solid #D071f9;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding-left: 10px;
+    margin: 7px 0;
+}
+
+.btn
+{
+    width: 100%;
+     height: 50px;
+     background-color: #D071f9;
+     border-radius: 5px;
+     font-size: 20px;
+     margin: 7px 0;
+     color: white;
+     border: 0;
+     cursor: pointer;
+}
+
+.btn:hover
+{
+    background-color: #0a63d8;
+}
+
+.forgotpass
+{
+    font-size: 16px;
+    padding: 4px 0;
+    margin: 3px;
+}
+
+.link
+{
+    text-decoration: none;
+    color: #0a63d8;
+}
+
+@media (max-width:470px)
+{
+    .center
+    {
+        width: 88%;
+    }
+}
