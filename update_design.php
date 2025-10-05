@@ -1,6 +1,22 @@
 <?php include("connection.php"); 
+error_reporting(0);
+
+
+session_start();
 
 $id= $_GET['id'];
+
+$userprofile = $_SESSION['user_name'];
+
+if($userprofile == true)
+{
+    
+}
+
+else
+{
+     header('location:login.php');
+}
 
 $query = "SELECT * FROM form WHERE id='$id'";
 $data = mysqli_query($conn, $query);
@@ -20,7 +36,8 @@ $language1  = explode(",", $language)
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <link rel="stylesheet" href="css/form.css">
+     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/form_style.css">
 </head>
 
 <body>
@@ -28,8 +45,14 @@ $language1  = explode(",", $language)
         <div class="title">
             Update Details
         </div>
-        <form action=" " method="post">
+        <form action="#" method="post" enctype="multipart/form-data">
         <div class="form">
+
+            <!-- <div class="input_field">
+                <label>Upload Image</label>
+                <input type="file" value="<?php echo $result['upload_img'];?>" name="uploadfile_img" style="width:100%;" required>
+            </div> -->
+
             <div class="input_field">
                 <label for="">First Name</label>
                 <input type="text" value="<?php echo $result['fname'];?>" class="input" 
@@ -186,6 +209,11 @@ $language1  = explode(",", $language)
                 <textarea name="address" id="" required><?php echo $result['address'];?></textarea>
             </div>
 
+            <!-- <div class="input_field">
+                <label>Upload Document</label>
+                <input type="file" value="<?php echo $result['upload_doc'] ?>" name="uploadfile_doc" style="width:100%;" required>
+            </div> -->
+
             <div class="input_field terms">
                 <label for="" class="check">
                     <input type="checkbox" name="check" required>
@@ -206,23 +234,24 @@ $language1  = explode(",", $language)
 <?php
 if ($_POST['update']) 
     {
-        $lname      = $_POST['lname'];
-        $pwd        = $_POST['password'];
-        $fname      = $_POST['fname'];
-        $cpwd       = $_POST['cpassword'];
-        $gender     = $_POST['gender'];
-        $email      = $_POST['email'];
-        $phone      = $_POST['phone'];
-        $caste      = $_POST['caste'];
+        $upload_img      = $_POST['upload_img'];
+        $fname           = $_POST['fname'];
+        $lname           = $_POST['lname'];
+        $pwd             = $_POST['password'];
+        $cpwd            = $_POST['cpassword'];
+        $gender          = $_POST['gender'];
+        $email           = $_POST['email'];
+        $phone           = $_POST['phone'];
+        $caste           = $_POST['caste'];
 
-        $lang     = $_POST['language'];
-        $lang1    = implode(",", $lang);
+        $lang            = $_POST['language'];
+        $lang1           = implode(",", $lang);
 
-        $address    = $_POST['address'];
+        $address         = $_POST['address'];
+        $upload_doc      = $_POST['upload_doc'];
 
-    $query = "UPDATE form set fname='$fname',lname='$lname',password='$pwd',cpassword='$$cpwd',
-              gender='$gender',email='$email',phone='$phone',caste='$caste',language='$$lang1',address='$address' 
-              WHERE id='$id'";
+    $query = "UPDATE form set upload_img='$upload_img',fname='$fname',lname='$lname',password='$pwd',cpassword='$cpwd',gender='$gender',
+              email='$email',phone='$phone',caste='$caste',language='$lang1',address='$address',upload_doc='$upload_doc' WHERE id='$id'";
 
     $data = mysqli_query($conn, $query);
 
