@@ -60,7 +60,7 @@ session_start();
     <!-- Admin Login Form -->
     <div class="container">
          <div class="title">
-                Admin Login
+                User Login
         </div>
         <form action="#" method="POST" autocomplete="off" enctype="multipart/form-data">
         <div class="form">
