@@ -9,8 +9,8 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/login_style.css">
     <link rel="stylesheet" href="css/index_style.css">
+    <link rel="stylesheet" href="css/form_style.css">
     
     <script>
         function message()
@@ -18,6 +18,7 @@ session_start();
             alert("To password yadd kar lo bhai")
         }
     </script>
+    
     <title>Admin Login</title>
 </head>
 <body>
@@ -57,23 +58,31 @@ session_start();
         </aside>
     </div>
 
-    <!-- Main Section -->
-    <main>
-
-    <div class="center">
-        <h1>Admin Login</h1>
-        <form action="#" method="POST" autocomplete="off">
-        <div class="form">
-            <input type="text" name="username" class="textfield" placeholder="Email">
-             <input type="password" name="password" class="textfield" placeholder="Password">
-
-             <div class="forgotpass"><a href="#" class="link" onclick="message()">Forgot Password?</a></div>
-             
-             <input type="submit" name="login" value="Login" class="btn">
+    <!-- Admin Login Form -->
+    <div class="container">
+         <div class="title">
+                Admin Login
         </div>
-    </div>
+        <form action="#" method="POST" autocomplete="off" enctype="multipart/form-data">
+        <div class="form">
+            <div class="input_field">
+            <input type="text" class="input" name="username" placeholder="Email">
+             </div>
+
+             <div class="input_field">
+             <input type="password" class="input" name="password" placeholder="Password">
+             </div>
+
+             <div class="forgotpass">
+                <a href="#" class="link" onclick="message()">Forgot Password?</a>
+             </div>
+
+              <div class="input_field">
+             <input type="submit" name="login" value="Login" class="btn">
+            </div>
+        </div>
 </form>
-</main>
+ </div>
     
 <!-- Footer Section -->
     <footer>

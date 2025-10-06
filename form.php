@@ -64,9 +64,8 @@ error_reporting(0);
             </ul>
         </aside>
     </div>
-    <!-- Main Section -->
 
-    <body>
+    <!-- Form -->
         <div class="container">
             <div class="title">
                 Sign Up
@@ -161,7 +160,7 @@ error_reporting(0);
                         <p>Agree terms and conditions</p>
                     </div>
                     <div class="input_field">
-                        <input type="submit" value="Register" class="btn" name="register" onclick="validatePassword()">
+                        <input type="submit" value="Register" class="btn" name="register">
                     </div>
                 </div>
             </form>

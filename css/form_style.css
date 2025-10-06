@@ -1,15 +1,3 @@
-/* *
-{
-    margin: 0;
-    padding: 0;
-} */
-
-/* body
-{
-    background-color: #D071F9;
-    padding: 0 10px;
-} */
-
 .container
 {
     max-width: 700px;
@@ -140,6 +128,19 @@
 .container .form .input_field:last-child
 {
     margin-bottom: 0;
+}
+
+forgotpass
+{
+    font-size: 16px;
+    padding: 4px 0;
+    margin: 3px;
+}
+
+.link
+{
+    text-decoration: none;
+    color: #0a63d8;
 }
 
 @media(max-width:420px)
