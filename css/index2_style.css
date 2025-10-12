@@ -4,26 +4,24 @@
 
 /* Style the body */
 body {
-  font-family: Arial;
+  font-family: sans-serif;
   margin: 0;
 }
 
 /* Header/logo Title */
 .header {
-  padding: 60px;
+  display: flex;
+  padding: 50px;
   text-align: center;
   background: #1abc9c;
   color: white;
+  align-items: center;
+  justify-content:space-between;
 }
 
-.header h1{
-    font-size: 3vw;
+.header img{
+    border-radius: 50%;
 }
-
-.header h2{
-    font-size: 2vw;
-}
-
 
 /* Style the top navigation bar */
 .navbar {
@@ -34,7 +32,7 @@ body {
 /* Style the navigation bar links */
 .navbar a {
   color: white;
-  padding: 14px 20px;
+  padding: 20px;
   text-decoration: none;
   text-align: center;
   transition: all 0.5s ease-in-out;
@@ -49,11 +47,13 @@ body {
 /* Go to Top button */
 .top {
   background-color: #333;
-  position: fixed;
-  top: 300px;
-  left: 1200px;
+  position: sticky;
+  right: 10px;
+  top: 30px;
   padding: 10px;
-  border-radius: 50px;
+  border-radius: 50%;
+  float: right;
+  font-size: 14px;
 }
 
 .top a{
@@ -61,37 +61,42 @@ body {
      text-decoration: none;
 }
 
-.top a:hover{
-  background-color: white;
-  color: #333333;
+.top:hover{
+  background-color: #1abc9c;
+  color: white;
 }
 
 /* Column container */
 .row {  
   display: flex;
   flex-wrap: wrap;
+  /* border: 5px solid red; */
+  width: 100%;
 }
 
 /* Create two unequal columns that sits next to each other */
 /* Sidebar/left column */
 .side {
-  flex: 30%;
+  flex: 20%;
   background-color: #f1f1f1;
   padding: 20px;
+  /* border: 5px solid red; */
 }
 
-/* Main column */
+.side p{
+    text-align: justify;
+}
+
+/* Main column/right column */
 .main {
-  flex: 70%;
-  background-color: white;
+  flex: 80%;
+  background-color: #f1f1f1;
   padding: 20px;
+  /* border: 5px solid red; */
 }
 
-/* Fake image, just for this example */
-.myimg, .myimg1, .myimg2 {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
+.main p{
+    text-align: justify;
 }
 
 /* Footer */
@@ -101,19 +106,9 @@ body {
   background: #ddd;
 }
 
-.footer h2{
-    font-size: 1vw;
-}
-
-
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .header, .row, .navbar{   
+@media screen and (max-width: 500px) {
+  .navbar, .row{   
     flex-direction: column;
-  }
-
-  .myimg1, .myimg2{
-    width: 100px;
-    height: 100px;
   }
 }

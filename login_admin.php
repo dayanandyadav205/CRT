@@ -22,42 +22,49 @@ session_start();
     <title>Admin Login</title>
 </head>
 <body>
- <!-- Header Section -->
-    <header>
-        <a href="https://www.cdgi.edu.in" target="_blank"><img src="images/cdgi.jpg" alt="CDGI Logo" width="100"
-                height="100" id="logo1" /></a>
+   <div class="grid-container">
+        <!-- Header Section -->
+        <div class="header">
+            <a href="https://www.cdgi.edu.in" target="_blank"><img src="images/cdgi.jpg" alt="CDGI Logo" width="100"
+                    height="100" id="logo1" /></a>
 
-        <h1>Chameli Devi Group of Institutions, Indore</h1>
-        <h2>Web Development</h2>
+            <h1>Chameli Devi Group of Institutions, Indore</h1>
+            <h2>Web Development</h2>
 
-        <a href="https://github.com/dayanandyadav205" target="_blank"><img src="images/Dayanand.jpg" alt="GitHub"
-                style="float: right;" width="100" height="100" id="logo2" /></a>
-    </header>
-
-     <!-- Navigation Section -->
-    <!-- Navigation Section -->
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="contact.html">Contact</a>
-        <a href="login_admin.php" style="float: right;">Admin Login</a>
-        <a href="login_user.php" style="float: right;">User Login</a>
-        <a href="form.php" style="float: right;">Sign Up</a>
+            <a href="https://github.com/dayanandyadav205" target="_blank"><img src="images/Dayanand.jpg" alt="GitHub"
+                    style="float: right;" width="100" height="100" id="logo2" /></a>
         </div>
-    </nav>
 
-    <!-- Aside Section -->
-    <div class="aside">
-        <aside>
-            <h3>References</h3>
-            <ul>
-                <li><a href="https://github.com/">GitHub</a></li>
-                <li><a href="https://www.google.com">Google</a></li>
-                <li><a href="https://www.w3schools.com/">W3C</a></li>
-                <li><a href="https://whatwg.org/">WHATWG</a></li>
-            </ul>
-        </aside>
-    </div>
+        <!-- Navigation Section -->
+        <div class="nav">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="contact.html">Contact</a>
+                <a href="login_admin.php" style="float: right;">Admin Login</a>
+                <a href="login_user.php" style="float: right;">User Login</a>
+                <a href="form.php" style="float: right;">Sign Up</a>
+            </nav>
+        </div>
 
+        <!--Go to Top -->
+        <div class="top">
+            <a href="#top">Top</a>
+        </div>
+
+
+        <!-- Aside Section -->
+        <div class="aside">
+            <aside>
+                <h3>References</h3>
+                <ul>
+                    <li><a href="https://github.com/">GitHub</a></li>
+                    <li><a href="https://www.google.com">Google</a></li>
+                    <li><a href="https://www.w3schools.com/">W3C</a></li>
+                    <li><a href="https://whatwg.org/">WHATWG</a></li>
+                </ul>
+            </aside>
+        </div>
+        
     <!-- Admin Login Form -->
     <div class="container">
          <div class="title">
@@ -83,21 +90,23 @@ session_start();
         </div>
 </form>
  </div>
-    
-<!-- Footer Section -->
-    <footer>
-        <a href="https://in.linkedin.com/company/chameli-devi-group-of-institutions">
-            <img src="images/linkedin.jpg" width="3%"></a>
 
-        <a href="https://mail.google.com/a/cdgi.edu.in">
-            <img src="images/gmail.jpg" width="5%"></a>
+        </div>
+        <!-- Footer Section -->
+        <div class="footer">
+            <a href="https://in.linkedin.com/company/chameli-devi-group-of-institutions">
+                <img src="images/linkedin.jpg" width="3%"></a>
 
-        <a href="https://www.youtube.com/@socialcdgi">
-            <img src="images/youtube.jpg" width="3%"></a>
+            <a href="https://mail.google.com/a/cdgi.edu.in">
+                <img src="images/gmail.jpg" width="5%"></a>
 
-        <p>&copy; Designed & Developed by Dayanand Yadav, Assistant Professor, CSE Department, CDGI, Indore</p>
-    </footer>
+            <a href="https://www.youtube.com/@socialcdgi">
+                <img src="images/youtube.jpg" width="3%"></a>
 
+            <p>&copy; Designed & Developed by Dayanand Yadav, Assistant Professor, CSE Department, CDGI, Indore</p>
+
+        </div>
+    </div>
 </body>
 </html>
 
