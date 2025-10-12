@@ -10,10 +10,10 @@ body {
     font-family: sans-serif;
     display: grid;
     grid-template-areas:
-        "header  header"
-        "nav     nav"
-        "aside   main"
-        "footer  footer";
+        "header         header"
+        "nav            nav"
+        "aside          main"
+        "footer         footer";
 }
 
 header {
@@ -156,5 +156,13 @@ footer img
     width: 30px;
     height: 30px;
     border-radius: 20px;
+    margin-right: -200px;
 }
 
+
+.top
+{
+    top: 0;
+    left: 0;
+    position: fixed;
+}

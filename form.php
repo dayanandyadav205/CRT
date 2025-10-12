@@ -70,9 +70,8 @@ error_reporting(0);
             <div class="title">
                 Sign Up
             </div>
-            <form name="f1" action="#" method="post" enctype="multipart/form-data">
+            <form name="f1" action="#" method="POST" enctype="multipart/form-data" onsubmit="return checkpwd()" autocomplete="on">
                 <div class="form">
-
                     <div class="input_field">
                         <label>Upload Image</label>
                         <input type="file" name="uploadfile_img" style="width:100%;" required>
@@ -102,7 +101,7 @@ error_reporting(0);
                     <div class="input_field">
                         <label>Gender</label>
                         <div class="custom_select">
-                            <select name="gender" id="" onclick="return checkpwd()" required>
+                            <select name="gender" id="" required>
                                 <option value="Not Selected">Select</option>
                                 <option value="Male">Male</option>
                                 <option value="Female">Female</option>
@@ -122,13 +121,13 @@ error_reporting(0);
 
                     <div class="input_field">
                         <label style="margin-right: 100px">Caste</label>
-                        <input type="radio" class="input" name="caste" value="General" required><label
+                        <input type="radio" class="input" name="caste" value="General"><label
                             style="margin-left: -20px">General</label>
-                        <input type="radio" class="input" name="caste" value="OBC" required><label
+                        <input type="radio" class="input" name="caste" value="OBC"><label
                             style="margin-left: -20px">OBC</label>
-                        <input type="radio" class="input" name="caste" value="SC" required><label
+                        <input type="radio" class="input" name="caste" value="SC"><label
                             style="margin-left: -20px">SC</label>
-                        <input type="radio" class="input" name="caste" value="ST" required><label
+                        <input type="radio" class="input" name="caste" value="ST"><label
                             style="margin-left: -20px">ST</label>
                     </div>
 
