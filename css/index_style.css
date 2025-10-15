@@ -24,12 +24,12 @@ body {
 .header {
     grid-area: header;
     background: #f6f8fa;
-    height: 150px;
+    padding: 40px;
 }
 
 .header #logo1 {
-    margin-left: 40px;
-    margin-top: 25px;
+    /* margin-left: 40px;
+    margin-top: 25px; */
 }
 
 .header #logo2 {
@@ -118,16 +118,18 @@ body {
 
 /* footer*/
 .footer {
+    display: flex;
     grid-area: footer;
     background: #333333;
     color: azure;
     grid-area: footer;
     padding: 10px;
+    align-items: center;
+
 }
 
 .footer p {
     text-align: center;
-    margin-top: -25px;
 }
 
 .footer a {
@@ -138,7 +140,6 @@ body {
     width: 30px;
     height: 30px;
     border-radius: 20px;
-    margin-right: -200px;
 }
 
 

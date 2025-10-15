@@ -10,7 +10,7 @@ body {
 
 /* Header/logo Title */
 .header {
-  display: flex;
+  display: flex; 
   padding: 50px;
   text-align: center;
   background: #1abc9c;
@@ -46,10 +46,10 @@ body {
 
 /* Go to Top button */
 .top {
-  background-color: #333;
+  background-color: #333333;
   position: sticky;
-  right: 10px;
-  top: 30px;
+  right: 20px;
+  top: 20px;
   padding: 10px;
   border-radius: 50%;
   float: right;
@@ -68,19 +68,19 @@ body {
 
 /* Column container */
 .row {  
+  /* border: 10px solid red; */
   display: flex;
   flex-wrap: wrap;
-  /* border: 5px solid red; */
   width: 100%;
 }
 
 /* Create two unequal columns that sits next to each other */
 /* Sidebar/left column */
 .side {
-  flex: 20%;
-  background-color: #f1f1f1;
+  /* border: 10px solid green; */
+  flex: 30%;
+  background-color: #9b9b9b;
   padding: 20px;
-  /* border: 5px solid red; */
 }
 
 .side p{
@@ -89,8 +89,9 @@ body {
 
 /* Main column/right column */
 .main {
-  flex: 80%;
-  background-color: #f1f1f1;
+  /* border: 10px solid blue; */
+  flex: 70%;
+  background-color: #b9b9b9;
   padding: 20px;
   /* border: 5px solid red; */
 }
@@ -101,13 +102,20 @@ body {
 
 /* Footer */
 .footer {
+  display: flex;
   padding: 10px;
-  text-align: center;
-  background: #ddd;
+  background: #333333;
+  color: white;
+  justify-content:center;
+}
+
+.footer .footer-logo
+{
+  justify-content: left;
 }
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 480px) {
   .navbar, .row{   
     flex-direction: column;
   }
