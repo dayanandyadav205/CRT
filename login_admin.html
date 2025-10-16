@@ -1,9 +1,3 @@
-<?php
-
-session_start();
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -113,34 +107,3 @@ session_start();
 </body>
 
 </html>
-
-<?php
-    include("connection.php");
-    // error_reporting(0);
-
-    if(isset($_POST['login']))
-    {
-        $username = $_POST['username'];
-        $pwd = $_POST['password'];
-
-        $query = "SELECT * FROM admin WHERE email ='$username' && password = '$pwd'";
-        $data = mysqli_query($conn,$query);
-
-        $total = mysqli_num_rows($data);
-        // echo $total;
-
-        {
-            if($total == 1)
-            {
-               $_SESSION['user_name'] = $username;
-                header('location:display_admin.php');
-                // echo "Login Success";
-            }
-            else
-            {
-                echo "Login failed";
-            }
-        }
-       
-    }
-?>
