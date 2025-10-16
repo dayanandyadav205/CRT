@@ -6,23 +6,24 @@ session_start();
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index_style.css">
     <link rel="stylesheet" href="css/form_style.css">
-    
+
     <script>
-        function message()
-        {
+        function message() {
             alert("To password yadd kar lo bhai")
         }
     </script>
-    
+
     <title>Admin Login</title>
 </head>
+
 <body>
-   <div class="grid-container">
+    <div class="grid-container">
         <!-- Header Section -->
         <div class="header">
             <a href="https://www.cdgi.edu.in" target="_blank"><img src="images/cdgi.jpg" alt="CDGI Logo" width="100"
@@ -64,50 +65,53 @@ session_start();
                 </ul>
             </aside>
         </div>
-        
-    <!-- Admin Login Form -->
-    <div class="container">
-         <div class="title">
-                Admin Login
-        </div>
-        <form action="#" method="POST" autocomplete="off" enctype="multipart/form-data">
-        <div class="form">
-            <div class="input_field">
-            <input type="text" class="input" name="username" placeholder="Email">
-             </div>
 
-             <div class="input_field">
-             <input type="password" class="input" name="password" placeholder="Password">
-             </div>
+        <!-- Admin Login Form -->
+        <div class="main">
+            <div class="container">
+                <div class="title">
+                    Admin Login
+                </div>
+                <form action="#" method="POST" autocomplete="off" enctype="multipart/form-data">
+                    <div class="form">
+                        <div class="input_field">
+                            <input type="text" class="input" name="username" placeholder="Email">
+                        </div>
 
-             <div class="forgotpass">
-                <a href="#" class="link" onclick="message()">Forgot Password?</a>
-             </div>
+                        <div class="input_field">
+                            <input type="password" class="input" name="password" placeholder="Password">
+                        </div>
 
-              <div class="input_field">
-             <input type="submit" name="login" value="Login" class="btn">
+                        <div class="forgotpass">
+                            <a href="#" class="link" onclick="message()">Forgot Password?</a>
+                        </div>
+
+                        <div class="input_field">
+                            <input type="submit" name="login" value="Login" class="btn">
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
-</form>
- </div>
 
-        </div>
-        <!-- Footer Section -->
-        <div class="footer">
-            <a href="https://in.linkedin.com/company/chameli-devi-group-of-institutions">
-                <img src="images/linkedin.jpg" width="3%"></a>
+    </div>
+    <!-- Footer Section -->
+    <div class="footer">
+        <a href="https://in.linkedin.com/company/chameli-devi-group-of-institutions">
+            <img src="images/linkedin.jpg" width="3%"></a>
 
-            <a href="https://mail.google.com/a/cdgi.edu.in">
-                <img src="images/gmail.jpg" width="5%"></a>
+        <a href="https://mail.google.com/a/cdgi.edu.in">
+            <img src="images/gmail.jpg" width="5%"></a>
 
-            <a href="https://www.youtube.com/@socialcdgi">
-                <img src="images/youtube.jpg" width="3%"></a>
+        <a href="https://www.youtube.com/@socialcdgi">
+            <img src="images/youtube.jpg" width="3%"></a>
 
-            <p>&copy; Designed & Developed by Dayanand Yadav, Assistant Professor, CSE Department, CDGI, Indore</p>
+        <p>&copy; Designed & Developed by Dayanand Yadav, Assistant Professor, CSE Department, CDGI, Indore</p>
 
-        </div>
+    </div>
     </div>
 </body>
+
 </html>
 
 <?php
@@ -140,5 +144,3 @@ session_start();
        
     }
 ?>
-
-               

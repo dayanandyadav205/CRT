@@ -6,23 +6,24 @@ session_start();
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index_style.css">
     <link rel="stylesheet" href="css/form_style.css">
 
-     <script>
-        function message()
-        {
+    <script>
+        function message() {
             alert("To password yaad kar lo bhai")
         }
     </script>
 
     <title>User Login</title>
 </head>
+
 <body>
- <div class="grid-container">
+    <div class="grid-container">
         <!-- Header Section -->
         <div class="header">
             <a href="https://www.cdgi.edu.in" target="_blank"><img src="images/cdgi.jpg" alt="CDGI Logo" width="100"
@@ -38,7 +39,7 @@ session_start();
         <!-- Navigation Section -->
         <div class="nav">
             <nav>
-                 <a href="index.html"><img src="images/home.ico" alt="" width="20" height="20"></a>
+                <a href="index.html"><img src="images/home.ico" alt="" width="20" height="20"></a>
                 <a href="contact.html">Contact</a>
                 <a href="login_admin.html" style="float: right;">Admin Login</a>
                 <a href="login_user.html" style="float: right;">User Login</a>
@@ -64,33 +65,34 @@ session_start();
                 </ul>
             </aside>
         </div>
-        
-   <!-- User Login Form -->
-    <div class="container">
-         <div class="title">
-                User Login
-        </div>
-        <form action="#" method="POST" autocomplete="off" enctype="multipart/form-data">
-        <div class="form">
-            <div class="input_field">
-            <input type="text" class="input" name="username" placeholder="Email">
-             </div>
 
-             <div class="input_field">
-             <input type="password" class="input" name="password" placeholder="Password">
-             </div>
+        <!-- User Login Form -->
+        <div class="main">
+            <div class="container">
+                <div class="title">
+                    User Login
+                </div>
+                <form action="#" method="POST" autocomplete="off" enctype="multipart/form-data">
+                    <div class="form">
+                        <div class="input_field">
+                            <input type="text" class="input" name="username" placeholder="Email">
+                        </div>
 
-             <div class="forgotpass">
-                <a href="#" class="link" onclick="message()">Forgot Password?</a>
-             </div>
+                        <div class="input_field">
+                            <input type="password" class="input" name="password" placeholder="Password">
+                        </div>
 
-              <div class="input_field">
-             <input type="submit" name="login" value="Login" class="btn">
+                        <div class="forgotpass">
+                            <a href="#" class="link" onclick="message()">Forgot Password?</a>
+                        </div>
+
+                        <div class="input_field">
+                            <input type="submit" name="login" value="Login" class="btn">
+                        </div>
+                        <div class="signup">New Member?<a href="form.php" class="link"> Sign Up Here</a></div>
+                    </div>
+                </form>
             </div>
-            <div class="signup">New Member?<a href="form.php" class="link"> Sign Up Here</a></div>
-
-        </div>
-
         </div>
         <!-- Footer Section -->
         <div class="footer">
@@ -104,14 +106,13 @@ session_start();
                 <img src="images/youtube.jpg" width="3%"></a>
 
             <p>&copy; Designed & Developed by Dayanand Yadav, Assistant Professor, CSE Department, CDGI, Indore</p>
-
         </div>
     </div>
-</form>
- </div>
+    </div>
 
-    
+
 </body>
+
 </html>
 
 <?php
@@ -144,5 +145,3 @@ session_start();
        
     }
 ?>
-
-               

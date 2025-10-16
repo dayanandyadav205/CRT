@@ -78,7 +78,7 @@ body {
 /* Sidebar/left column */
 .side {
   /* border: 10px solid green; */
-  flex: 30%;
+  flex: 20%;
   background-color: #9b9b9b;
   padding: 20px;
 }
@@ -90,7 +90,7 @@ body {
 /* Main column/right column */
 .main {
   /* border: 10px solid blue; */
-  flex: 70%;
+  flex: 80%;
   background-color: #b9b9b9;
   padding: 20px;
   /* border: 5px solid red; */

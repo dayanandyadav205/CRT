@@ -28,12 +28,11 @@ body {
 }
 
 .header #logo1 {
-    /* margin-left: 40px;
-    margin-top: 25px; */
+   border-radius: 50%;
 }
 
 .header #logo2 {
-    border-radius: 5px;
+    border-radius: 50%;
     margin-right: 40px;
     margin-top: -80px;
 
@@ -61,9 +60,8 @@ body {
 .nav a {
     float: left;
     color: antiquewhite;
-    padding: 15px;
+    padding: 10px;
     text-decoration: none;
-    margin-top: -15px;
 }
 
 .nav a:hover {
@@ -76,7 +74,7 @@ body {
     grid-area: top;
     background-color: #333;
     position: sticky;
-    left: 1200px;
+    left: 1480px;
     top: 20px;
     width: 50px;
     padding: 10px;
@@ -99,6 +97,7 @@ body {
     grid-area: aside;
     background-color: #D071F9;
     padding: 30px;
+    width: 20vw;
 
 }
 
