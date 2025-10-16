@@ -1,7 +1,3 @@
-<?php include("connection.php");
-error_reporting(0);
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,11 +40,11 @@ error_reporting(0);
         <!-- Navigation Section -->
         <div class="nav">
             <nav>
-                <a href="index.html">Home</a>
+                 <a href="index.html"><img src="images/home.ico" alt="" width="20" height="20"></a>
                 <a href="contact.html">Contact</a>
-                <a href="login_admin.php" style="float: right;">Admin Login</a>
-                <a href="login_user.php" style="float: right;">User Login</a>
-                <a href="form.php" style="float: right;">Sign Up</a>
+                <a href="login_admin.html" style="float: right;">Admin Login</a>
+                <a href="login_user.html" style="float: right;">User Login</a>
+                <a href="form.html" style="float: right;">Sign Up</a>
             </nav>
         </div>
 
@@ -193,43 +189,3 @@ error_reporting(0);
 </body>
 
 </html>
-
-<?php
-if ($_POST['register']) {
-    $filename = $_FILES["uploadfile_img"]["name"];
-    $tempname = $_FILES["uploadfile_img"]["tmp_name"];
-    $folder = "images/" . $filename;
-    move_uploaded_file($tempname, $folder);
-
-    $fname = $_POST['fname'];
-    $lname = $_POST['lname'];
-    $pwd = $_POST['password'];
-    $cpwd = $_POST['cpassword'];
-    $gender = $_POST['gender'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $caste = $_POST['caste'];
-
-    $lang = $_POST['language'];
-    $lang1 = implode(",", $lang);
-
-    $address = $_POST['address'];
-
-    $filename = $_FILES["uploadfile_doc"]["name"];
-    $tempname = $_FILES["uploadfile_doc"]["tmp_name"];
-    $folder_doc = "documents/" . $filename;
-    move_uploaded_file($tempname, $folder_doc);
-
-    $query = "INSERT INTO form (upload_img,fname,lname,password,cpassword,gender,email,phone,caste,language,address,upload_doc) 
-              VALUES ('$folder','$fname','$lname','$pwd','$cpwd','$gender','$email','$phone','$caste','$lang1','$address','$folder_doc')";
-
-    $data = mysqli_query($conn, $query);
-
-    if ($data) {
-        echo "<script> alert ('Data Inserted into Database') </script>";
-    } else {
-        echo "<script> alert ('Failed to Insert') </script>";
-    }
-}
-
-?>
