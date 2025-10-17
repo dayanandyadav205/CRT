@@ -45,8 +45,8 @@ height: 25px;
 
 /* Change color on hover */
 .navbar a:hover {
-  background-color: white;
-  color: #333333;
+  background-color: #1abc9c;
+  color: #ffffff;
 }
 
 /* Go to Top button */
@@ -77,28 +77,38 @@ height: 25px;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  margin: 10px;
 }
 
 /* Create two unequal columns that sits next to each other */
 /* Sidebar/left column */
 .side {
   /* border: 10px solid green; */
-  flex: 20%;
-  background-color: #9b9b9b;
+  flex: 25%;
+  background-color: #1abc9c;
   padding: 20px;
+  line-height: 30px;
 }
 
 .side p {
   text-align: justify;
 }
 
+.side a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.side a:hover{
+  color: #333333;
+}
+
+
+
 /* Main column/right column */
 .main {
-  /* border: 10px solid blue; */
-  flex: 80%;
-  background-color: #b9b9b9;
+  flex: 75%;
   padding: 20px;
-  /* border: 5px solid red; */
 }
 
 .main p {
