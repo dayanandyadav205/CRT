@@ -11,6 +11,7 @@ class MyHeader extends HTMLElement {
 
     <div>
       <h1>Chameli Devi Group of Institutions, Indore</h1>
+      <h2>Classroom Training (CRT)</h2>
       <h2>Web Development</h2>
     </div>
 
