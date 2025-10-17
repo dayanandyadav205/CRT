@@ -1,57 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="icon" type="image/x-icon" href="images/home.ico">
-    <link rel="stylesheet" href="css/index_style.css">
-    <style>
-        table,
-        th,
-        td {
-            border: 2px solid antiquewhite;
-            border-collapse: collapse;
-            padding: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-    <div class="grid-container">
-        <!-- Header Section -->
-        <div class="header">
-            <a href="https://www.cdgi.edu.in" target="_blank"><img src="images/cdgi.jpg" alt="CDGI Logo" width="100"
-                    height="100" id="logo1" /></a>
+  <!-- Header JS -->
+    <script src="js/header.js"></script>
+    <my-header></my-header>
 
-            <h1>Chameli Devi Group of Institutions, Indore</h1>
-            <h2>Web Development</h2>
-
-            <a href="https://github.com/dayanandyadav205" target="_blank"><img src="images/Dayanand.jpg" alt="GitHub"
-                    style="float: right;" width="100" height="100" id="logo2" /></a>
-        </div>
-
-        <!-- Navigation Section -->
-        <div class="nav">
-            <nav>
-                 <a href="index.html"><img src="images/home.ico" alt="" width="20" height="20"></a>
-                <a href="contact.html">Contact</a>
-                <a href="login_admin.html" style="float: right;">Admin Login</a>
-                <a href="login_user.html" style="float: right;">User Login</a>
-                <a href="form.html" style="float: right;">Sign Up</a>
-            </nav>
-        </div>
-
+    <main>
         <!--Go to Top -->
         <div class="top">
             <a href="#top">Top</a>
         </div>
 
-
-        <!-- Aside Section -->
-        <div class="aside">
-            <aside>
+        <!-- The flexible grid (content) -->
+        <div class="row">
+            <div class="side">
                 <h3>References</h3>
                 <ul>
                     <li><a href="https://github.com/">GitHub</a></li>
@@ -59,139 +28,154 @@
                     <li><a href="https://www.w3schools.com/">W3C</a></li>
                     <li><a href="https://whatwg.org/">WHATWG</a></li>
                 </ul>
-            </aside>
-        </div>
 
-        <!-- Main Section -->
-        <div class="main">
-            <h2>HTML Headings</h2>
-            <h1>Heading1</h1>
-            <h2>Heading2</h2>
-            <h3>heading3</h3>
-            <h4>heading4</h4>
-            <h5>heading5</h5>
-            <h6>heading6</h6>
+                <h2>About Me</h2>
+                <h5>Photo of me:</h5>
+                <div class="myimg" style="height:160px;">
+                    <img src="images/Dayanand.jpg" alt="" height="120px" width="120px">
+                </div>
+                <p>My Name is Dayanand Yadav and I am an Assistant Professor in Computer Science & Engineering
+                    Department at
+                    Chameli Devi Group of Institutions Indore</p>
+                <h3>More Text</h3>
+                <p>Lorem ipsum dolor sit ame.</p>
+                <div class="myimg" style="height:160px;">
+                    <img src="images/man1.jpg" alt="" height="120px" width="120px">
+                </div><br>
 
-            <br>
+                <div class="myimg" style="height:160px;">
+                    <img src="images/smile.jpg" alt="" height="120px" width="120px">
+                </div>
+            </div>
 
-            <h2>Paragraph Formatting</h2>
-            <h3>Bold or Strong Text</h3>
-            <p><strong>Lorem</strong> ipsum, dolor sit amet consectetur adipisicing elit. Incidunt natus
-                quas
-                aliquam,
-                nemo itaque magni possimus eos rerum qui aspernatur explicabo. Debitis eos iste, velit
-                nobis
-                fugit
-                similique harum dolore.</p>
+            <div class="main">
+                <h2>Classroom Training (CRT) in Web Development</h2>
+                <h5>B.Tech CSE, III Semester</h5>
+                <div class="myimg1">
+                    <img src="images/CDGI2.jpg" alt="" height="300px" width="400px">
+                </div>
 
-            <h3>Italic or Emphasis Text</h3>
-            <p><em>Lorem</em> ipsum dolor sit amet consectetur adipisicing elit. Quidem eligendi rerum
-                aspernatur
-                distinctio repellat? Sit, totam, quaerat odio, dignissimos provident necessitatibus vel
-                deserunt
-                dolor
-                ex nisi eaque atque autem voluptatem.</p>
+                <hr />
 
-            <h3>Highlighted or Mark Text</h3>
-            <p><mark>Lorem</mark> ipsum dolor sit amet consectetur, adipisicing elit. Quis architecto
-                deleniti
-                unde
-                aliquid veniam perferendis provident ratione cum aperiam rerum. Eos quam cupiditate
-                nesciunt
-                quis aut
-                autem officia dolorum vero?</p>
+                <h2>HTML Headings</h2>
+                <h1>Heading1</h1>
+                <h2>Heading2</h2>
+                <h3>heading3</h3>
+                <h4>heading4</h4>
+                <h5>heading5</h5>
+                <h6>heading6</h6>
 
-            <h3>Subscript</h3>
-            <p>H<sub>2</sub>O</p>
+                <hr />
 
-            <h3>Super Script</h3>
-            <p>x<sup>2</sup></p>
+                <h2>Paragraph Formatting</h2>
+                <h3>Bold or Strong Text</h3>
+                <p><strong>Lorem</strong> ipsum, dolor sit amet consectetur adipisicing elit. Incidunt natus
+                    quas
+                    aliquam,
+                    nemo itaque magni possimus eos rerum qui aspernatur explicabo. Debitis eos iste, velit
+                    nobis
+                    fugit
+                    similique harum dolore.</p>
 
-            <br>
-            <h2>HTML Lists</h2>
-            <!-- Ordered List -->
-            <h2>Ordered List</h2>
-            <ol>
-                <li>Pen</li>
-                <li>Pencil</li>
-                <li>Eraser</li>
-            </ol>
+                <h3>Italic or Emphasis Text</h3>
+                <p><em>Lorem</em> ipsum dolor sit amet consectetur adipisicing elit. Quidem eligendi rerum
+                    aspernatur
+                    distinctio repellat? Sit, totam, quaerat odio, dignissimos provident necessitatibus vel
+                    deserunt
+                    dolor
+                    ex nisi eaque atque autem voluptatem.</p>
 
-            <!-- Unordered List -->
-            <h2>Unordered List</h2>
-            <ul>
-                <li>Pen</li>
-                <li>Pencil</li>
-                <li>Eraser</li>
-            </ul>
+                <h3>Highlighted or Mark Text</h3>
+                <p><mark>Lorem</mark> ipsum dolor sit amet consectetur, adipisicing elit. Quis architecto
+                    deleniti
+                    unde
+                    aliquid veniam perferendis provident ratione cum aperiam rerum. Eos quam cupiditate
+                    nesciunt
+                    quis aut
+                    autem officia dolorum vero?</p>
 
-            <!-- Nested list -->
-            <h2>Nested List</h2>
-            <ol>
-                <li>Pen</li>
+                <h3>Subscript</h3>
+                <p>H<sub>2</sub>O</p>
+
+                <h3>Super Script</h3>
+                <p>x<sup>2</sup></p>
+
+                <hr />
+
+                <h2>HTML Lists</h2>
+                <!-- Ordered List -->
+                <h2>Ordered List</h2>
+                <ol>
+                    <li>Pen</li>
+                    <li>Pencil</li>
+                    <li>Eraser</li>
+                </ol>
+
+                <!-- Unordered List -->
+                <h2>Unordered List</h2>
                 <ul>
-                    <li>Renold</li>
-                    <li>Montex</li>
-                    <li>Cello</li>
+                    <li>Pen</li>
+                    <li>Pencil</li>
+                    <li>Eraser</li>
                 </ul>
-                <li>Pencil</li>
-                <ul>
-                    <li>Natraj</li>
-                    <li>Apsara</li>
-                    <li>DOMS</li>
-                </ul>
-            </ol>
-            
-            <br>
 
-            <!-- This is my table -->
+                <!-- Nested list -->
+                <h2>Nested List</h2>
+                <ol>
+                    <li>Pen</li>
+                    <ul>
+                        <li>Renold</li>
+                        <li>Montex</li>
+                        <li>Cello</li>
+                    </ul>
+                    <li>Pencil</li>
+                    <ul>
+                        <li>Natraj</li>
+                        <li>Apsara</li>
+                        <li>DOMS</li>
+                    </ul>
+                </ol>
+
+                <hr />
+
+                <!-- This is my table -->
                 <h2>Table</h2>
-                    <table>
-                        <caption>Student Table</caption>
-                        <tr>
-                            <th>Enrollment No</th>
-                            <th>Name of Student</th>
-                            <th>Course</th>
-                        </tr>
+                <table>
+                    <caption>Student Table</caption>
+                    <tr>
+                        <th>Enrollment No</th>
+                        <th>Name of Student</th>
+                        <th>Course</th>
+                    </tr>
 
-                        <tr>
-                            <td>101</td>
-                            <td>Amit</td>
-                            <td>B.Tech CSE</td>
-                        </tr>
+                    <tr>
+                        <td>101</td>
+                        <td>Amit</td>
+                        <td>B.Tech CSE</td>
+                    </tr>
 
-                        <tr>
-                            <td>102</td>
-                            <td>Ajay</td>
-                            <td>B.Tech CSE</td>
-                        </tr>
-                    </table>
+                    <tr>
+                        <td>102</td>
+                        <td>Ajay</td>
+                        <td>B.Tech CSE</td>
+                    </tr>
+                </table>
 
-            <br>
- 
+                <hr />
+
                 <h2>HTML Media Elements</h2>
-                    <h3>HTML Video</h3>
-                    <video src="video/movie.mp4" controls>Wild Life</video>
+                <h3>HTML Video</h3>
+                <video src="video/movie.mp4" controls>Wild Life</video>
 
-                    <h3>HTML Audio</h3>
-                    <audio src="audio/horse.mp3" controls>Horse Sound</audio>
-
+                <h3>HTML Audio</h3>
+                <audio src="audio/horse.mp3" controls>Horse Sound</audio>
+            </div>
         </div>
+    </main>
 
-        <!-- Footer Section -->
-        <div class="footer">
-            <a href="https://in.linkedin.com/company/chameli-devi-group-of-institutions">
-                <img src="images/linkedin.jpg"></a>
-
-            <a href="https://mail.google.com/a/cdgi.edu.in">
-                <img src="images/gmail.jpg"></a>
-
-            <a href="https://www.youtube.com/@socialcdgi">
-                <img src="images/youtube.jpg"></a>
-
-            <p>&copy; Designed & Developed by Dayanand Yadav, Assistant Professor, CSE Department, CDGI, Indore</p>
-        </div>
-    </div>
+    <!-- Footer JS -->
+    <script src="js/footer.js"></script>
+    <my-footer></my-footer>
 </body>
 
 </html>

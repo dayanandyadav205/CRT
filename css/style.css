@@ -1,0 +1,289 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  display: flex;
+  padding: 50px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header img {
+  border-radius: 50%;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  display: flex;
+  background-color: #333333;
+}
+
+.navbar img{
+width: 30px;
+height: 25px;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  color: white;
+  padding: 20px;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: white;
+  color: #333333;
+}
+
+/* Go to Top button */
+.top {
+  background-color: #333333;
+  position: sticky;
+  right: 20px;
+  top: 20px;
+  padding: 10px;
+  border-radius: 50%;
+  float: right;
+  font-size: 14px;
+}
+
+.top a {
+  color: white;
+  text-decoration: none;
+}
+
+.top:hover {
+  background-color: #1abc9c;
+  color: white;
+}
+
+/* Column container */
+.row {
+  /* border: 10px solid red; */
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  /* border: 10px solid green; */
+  flex: 20%;
+  background-color: #9b9b9b;
+  padding: 20px;
+}
+
+.side p {
+  text-align: justify;
+}
+
+/* Main column/right column */
+.main {
+  /* border: 10px solid blue; */
+  flex: 80%;
+  background-color: #b9b9b9;
+  padding: 20px;
+  /* border: 5px solid red; */
+}
+
+.main p {
+  text-align: justify;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  padding: 10px;
+  background: #333333;
+  color: white;
+  justify-content: center;
+}
+/* =========================================================================================== */
+/* Form CSS */
+.form_container
+{
+    max-width: 700px;
+    width: 50%;
+    background-color: #1abc9c;
+    margin: 20px 20px;
+    padding: 30px;
+    box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+.form_container .title
+{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.form_container .form
+{
+    width: 100%;
+}
+
+.form_container .form .input_field
+{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.form_container .form .input_field label
+{
+    width: 200px;
+    margin-right: 10px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.form_container .form .input_field .input,
+.form_container .form .input_field textarea
+{
+    width: 100%;
+    outline: none;
+    border: 1px solid #1abc9c;
+    font-size: 15px;
+    padding: 8px 10px;
+    border-radius: 3px;
+    transition: all 0.5s ease;
+}
+
+.form_container .form .input_field textarea
+{
+    resize: none;
+    height: 100px;
+}
+
+.form_container .form .input_field .custom_select
+{
+    position: relative;
+    width: 100%;
+    height: 37px;
+}
+
+.form_container .form .input_field .custom_select select
+{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    padding: 8px 10px;
+    border: 1px solid #1abc9c;
+     outline: none;
+     border-radius: 3px;
+}
+
+.form_container .form .input_field .custom_select::before
+{
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    border: 8px solid black;
+    border-color: #1abc9c transparent transparent transparent;
+    pointer-events: none;
+}
+
+.form_container .form .input_field .input:focus,
+.form_container .form .input_field textarea:focus,
+.form_container .form .input_field select:focus
+{
+    border: 1px solid #1abc9c;
+}
+
+.form_container .form .input_field p
+{
+    font-size: 14px;
+    color: #757575;
+}
+
+.form_container .form .input_field .check
+{
+    width: 15px;
+    height: 15px;
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+
+.form_container .form .input_field .btn
+{
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 15px;
+    border: 0;
+    background: #665e5e;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+    outline: none;
+}
+
+.form_container .form .input_field .btn:hover
+{
+    background: #333333;
+}
+
+.form_container .form .input_field:last-child
+{
+    margin-bottom: 0;
+}
+
+forgotpass
+{
+    font-size: 16px;
+    padding: 4px 0;
+    margin: 3px;
+}
+
+.link
+{
+    text-decoration: none;
+    color: #0a63d8;
+}
+
+/* ======================================================================================== */
+/* Media Qury for all pages */
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 480px) {
+   .navbar, .row {
+    flex-direction: column;
+  }
+
+  .form_container .form {
+    width: 100%;
+  }
+
+  .form_container .form .input_field {
+    flex-direction: column;
+    align-items: flex-start;
+
+  }
+
+  .form_container .form .input_field label {
+    margin-bottom: 5px;
+  }
+
+  .form_container .form .input_field.terms {
+    flex-direction: row;
+  }
+}
