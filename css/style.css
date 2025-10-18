@@ -26,12 +26,20 @@ body {
 /* Style the top navigation bar */
 .navbar {
   display: flex;
+  justify-content: space-between;
   background-color: #333333;
+  align-items: center;
 }
 
-.navbar img{
-width: 30px;
-height: 25px;
+.right-group {
+  display: flex;
+  justify-content: flex-end; /* Aligns items to the right by default */
+  align-items: center;
+}
+
+.navbar img {
+  width: 25px;
+  height: 15px;
 }
 
 /* Style the navigation bar links */
@@ -39,7 +47,6 @@ height: 25px;
   color: white;
   padding: 20px;
   text-decoration: none;
-  text-align: center;
   transition: all 0.5s ease-in-out;
 }
 
@@ -99,7 +106,7 @@ height: 25px;
   color: #ffffff;
 }
 
-.side a:hover{
+.side a:hover {
   color: #333333;
 }
 
@@ -123,160 +130,148 @@ height: 25px;
   color: white;
   justify-content: center;
 }
+
 /* =========================================================================================== */
 /* Form CSS */
-.form_container
-{
-    max-width: 700px;
-    width: 50%;
-    background-color: #1abc9c;
-    margin: 20px 20px;
-    padding: 30px;
-    box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.5);
+.form_container {
+  max-width: 700px;
+  width: 50%;
+  background-color: #1abc9c;
+  margin: 20px 20px;
+  padding: 30px;
+  box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.5);
 }
 
-.form_container .title
-{
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 25px;
-    color: #ffffff;
-    text-transform: uppercase;
-    text-align: center;
+.form_container .title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
 }
 
-.form_container .form
-{
-    width: 100%;
+.form_container .form {
+  width: 100%;
 }
 
-.form_container .form .input_field
-{
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
+.form_container .form .input_field {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
 }
 
-.form_container .form .input_field label
-{
-    width: 200px;
-    margin-right: 10px;
-    font-size: 14px;
-    color: #ffffff;
+.form_container .form .input_field label {
+  width: 200px;
+  margin-right: 10px;
+  font-size: 14px;
+  color: #ffffff;
 }
 
 .form_container .form .input_field .input,
-.form_container .form .input_field textarea
-{
-    width: 100%;
-    outline: none;
-    border: 1px solid #1abc9c;
-    font-size: 15px;
-    padding: 8px 10px;
-    border-radius: 3px;
-    transition: all 0.5s ease;
+.form_container .form .input_field textarea {
+  width: 100%;
+  outline: none;
+  border: 1px solid #1abc9c;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  transition: all 0.5s ease;
 }
 
-.form_container .form .input_field textarea
-{
-    resize: none;
-    height: 100px;
+.form_container .form .input_field textarea {
+  resize: none;
+  height: 100px;
 }
 
-.form_container .form .input_field .custom_select
-{
-    position: relative;
-    width: 100%;
-    height: 37px;
+.form_container .form .input_field .custom_select {
+  position: relative;
+  width: 100%;
+  height: 37px;
 }
 
-.form_container .form .input_field .custom_select select
-{
-    -webkit-appearance: none;
-    appearance: none;
-    width: 100%;
-    height: 100%;
-    padding: 8px 10px;
-    border: 1px solid #1abc9c;
-     outline: none;
-     border-radius: 3px;
+.form_container .form .input_field .custom_select select {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  padding: 8px 10px;
+  border: 1px solid #1abc9c;
+  outline: none;
+  border-radius: 3px;
 }
 
-.form_container .form .input_field .custom_select::before
-{
-    content: "";
-    position: absolute;
-    top: 15px;
-    right: 10px;
-    border: 8px solid black;
-    border-color: #1abc9c transparent transparent transparent;
-    pointer-events: none;
+.form_container .form .input_field .custom_select::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  border: 8px solid black;
+  border-color: #1abc9c transparent transparent transparent;
+  pointer-events: none;
 }
 
 .form_container .form .input_field .input:focus,
 .form_container .form .input_field textarea:focus,
-.form_container .form .input_field select:focus
-{
-    border: 1px solid #1abc9c;
+.form_container .form .input_field select:focus {
+  border: 1px solid #1abc9c;
 }
 
-.form_container .form .input_field p
-{
-    font-size: 14px;
-    color: #757575;
+.form_container .form .input_field p {
+  font-size: 14px;
+  color: #757575;
 }
 
-.form_container .form .input_field .check
-{
-    width: 15px;
-    height: 15px;
-    position: relative;
-    display: block;
-    cursor: pointer;
+.form_container .form .input_field .check {
+  width: 15px;
+  height: 15px;
+  position: relative;
+  display: block;
+  cursor: pointer;
 }
 
-.form_container .form .input_field .btn
-{
-    width: 100%;
-    padding: 8px 10px;
-    font-size: 15px;
-    border: 0;
-    background: #665e5e;
-    color: white;
-    cursor: pointer;
-    border-radius: 3px;
-    outline: none;
+.form_container .form .input_field .btn {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 15px;
+  border: 0;
+  background: #665e5e;
+  color: white;
+  cursor: pointer;
+  border-radius: 3px;
+  outline: none;
 }
 
-.form_container .form .input_field .btn:hover
-{
-    background: #333333;
+.form_container .form .input_field .btn:hover {
+  background: #333333;
 }
 
-.form_container .form .input_field:last-child
-{
-    margin-bottom: 0;
+.form_container .form .input_field:last-child {
+  margin-bottom: 0;
 }
 
-forgotpass
-{
-    font-size: 16px;
-    padding: 4px 0;
-    margin: 3px;
+forgotpass {
+  font-size: 16px;
+  padding: 4px 0;
+  margin: 3px;
 }
 
-.link
-{
-    text-decoration: none;
-    color: #0a63d8;
+.link {
+  text-decoration: none;
+  color: #0a63d8;
 }
 
 /* ======================================================================================== */
 /* Media Qury for all pages */
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 480px) {
-   .navbar, .row {
-    flex-direction: column;
+
+  .navbar,
+  .row,
+  .right-group {
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center vertically (if needed) */
+    align-items: center;
   }
 
   .form_container .form {
