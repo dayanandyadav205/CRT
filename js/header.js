@@ -33,7 +33,7 @@ class MyHeader extends HTMLElement {
           <a href="form.html">Sign Up</a>
       </div>
   </div>
-  
+    
     </header>`;
   }
 }

@@ -10,8 +10,7 @@ body {
 
 /* Semantic Layout */
 .grid-container {
-    background-color: #D071F9;
-    font-family: sans-serif;
+    /* background-color: #D071F9; */
     display: grid;
     grid-template-areas:
         "header header"
@@ -21,39 +20,30 @@ body {
         "footer footer";
 }
 
+.grid-container>div {
+    padding: 10px;
+    font-size: 16px;
+}
+
 .header {
     grid-area: header;
-    background: #f6f8fa;
-    padding: 40px;
+    background-color: #33b5e5;
+    text-align: center;
+    color: #ffffff;
 }
 
-.header #logo1 {
-   border-radius: 50%;
+.header > h1 {
+  font-size: 40px;
 }
 
-.header #logo2 {
+.header>img {
     border-radius: 50%;
-    margin-right: 40px;
-    margin-top: -80px;
-
 }
 
-.header h1 {
-    text-align: center;
-    margin-top: -90px;
-    color: #333333;
-}
-
-.header h2 {
-    text-align: center;
-    margin-top: 10px;
-    color: #333333;
-}
 
 /* nav  */
 .nav {
     grid-area: nav;
-    padding: 10px 20px;
     background-color: #333333;
 }
 
@@ -65,7 +55,7 @@ body {
 }
 
 .nav a:hover {
-    background: #D071F9;
+     background-color: #33b5e5;
     color: antiquewhite;
 }
 
@@ -95,36 +85,50 @@ body {
 /* aside */
 .aside {
     grid-area: aside;
-    background-color: #D071F9;
-    padding: 30px;
-    width: 20vw;
-
 }
 
-.aside a {
-    padding: 20px;
-    line-height: 40px;
+.aside ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.aside li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: #33b5e5;
+}
+
+.aside a{
     text-decoration: none;
+    color: #ffffff;
+}
+
+.aside li:hover {
+  background-color: #0099cc;
 }
 
 /* main */
 .main {
     grid-area: main;
-    width: 80vw;
-    line-height: 40px;
 }
 
+.main > h1 {
+  font-size: 30px;
+  margin-bottom: 7px;
+}
+
+.main > p {
+  margin-bottom: 7px;
+  text-align: justify;
+}
 
 /* footer*/
 .footer {
-    display: flex;
-    grid-area: footer;
-    background: #333333;
-    color: azure;
-    grid-area: footer;
-    padding: 10px;
-    align-items: center;
-
+  grid-area: footer;
+  background-color: #0099cc;
+  color: #ffffff;
+  text-align: center;
 }
 
 .footer p {
@@ -139,14 +143,4 @@ body {
     width: 30px;
     height: 30px;
     border-radius: 20px;
-}
-
-
-@media only screen and (max-width: 500px) {
-  .header {grid-area: 1 / span 3;}
-  .nav {grid-area: 2 / span 3;}
-  .top {grid-area: 3 / span 3;}
-  .aside {grid-area: 4 / span 1;}
-  .main {grid-area: 5 / span 2;}
-  .footer {grid-area: 6 / span 3;}
 }

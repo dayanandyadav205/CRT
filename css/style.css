@@ -42,7 +42,6 @@ body {
   height: 15px;
 }
 
-/* Style the navigation bar links */
 .navbar a {
   color: white;
   padding: 20px;
@@ -50,7 +49,6 @@ body {
   transition: all 0.5s ease-in-out;
 }
 
-/* Change color on hover */
 .navbar a:hover {
   background-color: #1abc9c;
   color: #ffffff;
