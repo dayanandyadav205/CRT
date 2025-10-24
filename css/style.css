@@ -56,12 +56,12 @@ body {
 
 /* Go to Top button */
 .top {
-  background-color: #333333;
+  background-color: #bd0a0a;
+  border-radius: 50%;
   position: sticky;
   right: 20px;
   top: 20px;
   padding: 10px;
-  border-radius: 50%;
   float: right;
   font-size: 14px;
 }

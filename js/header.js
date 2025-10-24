@@ -3,6 +3,10 @@ class MyHeader extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `<header>
 
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
   <!-- Header -->
   <div class="header">
     <div>
@@ -23,7 +27,7 @@ class MyHeader extends HTMLElement {
   <!-- Navigation Bar -->
   <div class="navbar">
        <div class="left-group">
-          <a href="index.html"><img src="images/home.ico" alt=""></a>
+          <a href="index.html"><i class="fa-solid fa-house"></i></a>
           <a href="contact.html">Contact</a>
       </div>
 
