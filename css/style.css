@@ -1,3 +1,4 @@
+/* Universal Selector */
 * {
   box-sizing: border-box;
 }
@@ -6,6 +7,7 @@
 body {
   font-family: sans-serif;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 /* Header/logo Title */
@@ -16,20 +18,21 @@ body {
   background: #1abc9c;
   color: white;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .header img {
   border-radius: 50%;
 }
 
-.header h1{
+.header h1 {
   font-size: 2.5vw;
 }
 
-.header h2{
+.header h2 {
   font-size: 1.5vw;
 }
+
 /* Style the top navigation bar */
 .navbar {
   display: flex;
@@ -49,25 +52,30 @@ body {
 }
 
 /* Go to Top button */
-.top {
-  background-color: #333333;
-  border-radius: 50%;
+.container-top {
+  display: flex;
   position: sticky;
-  right: 20px;
-  top: 40px;
-  padding: 10px;
+  right: 10px;
+  top: 20px;
+  width: 60px;
   float: right;
-  font-size: 14px;
 }
 
-.top a {
-  color: white;
-  text-decoration: none;
+.top {
+  padding: 20px;
+  width: 100%;
+  aspect-ratio: 1;
+  background: #ff8b24;
+  border-radius: 10px;
 }
 
-.top:hover {
-  background-color: #1abc9c;
-  color: white;
+.top:before {
+  content: "";
+  position: absolute;
+  inset: 30%;
+  transform: translateY(20%) rotate(-45deg);
+  border-top: 5px solid #fff;
+  border-right: 5px solid #fff;
 }
 
 /* Column container */
@@ -89,7 +97,7 @@ body {
   line-height: 30px;
 }
 
-.side ul li{
+.side ul li {
   list-style: none;
 }
 
@@ -105,8 +113,6 @@ body {
 .side a:hover {
   color: #333333;
 }
-
-
 
 /* Main column/right column */
 .main {
@@ -258,11 +264,13 @@ forgotpass {
 
 /* ======================================================================================== */
 /* Media Qury for all pages */
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+/* Responsive layout - when the screen is between 360px wide and 768px wide make the two columns stack on top of each other instead of next to each other */
 @media only screen and (min-width: 360px) and (max-width: 768px) {
+
   .navbar,
   .row {
-    flex-direction: column; /* Stack items vertically */
+    flex-direction: column;
+    /* Stack items vertically */
     text-align: center;
   }
 

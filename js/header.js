@@ -19,7 +19,7 @@ class MyHeader extends HTMLElement {
     </div>
 
     <div>
-      <img src="images/Dayanand.jpg" alt="GitHub" width="100" height="100" />
+     
     </div>
   </div>
 
@@ -31,7 +31,7 @@ class MyHeader extends HTMLElement {
           <a href="login_user.html">User Login</a>
           <a href="form.html">Sign Up</a>
   </div>
-    
+  
     </header>`;
   }
 }
