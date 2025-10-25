@@ -83,7 +83,7 @@ body {
 /* Sidebar/left column */
 .side {
   /* border: 10px solid green; */
-  flex: 25%;
+  flex: 20%;
   background-color: #1abc9c;
   padding: 20px;
   line-height: 30px;
@@ -110,7 +110,7 @@ body {
 
 /* Main column/right column */
 .main {
-  flex: 75%;
+  flex: 80%;
   padding: 20px;
 }
 
@@ -259,7 +259,7 @@ forgotpass {
 /* ======================================================================================== */
 /* Media Qury for all pages */
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media only screen and (min-width: 450px) and (max-width: 768px) {
+@media only screen and (min-width: 360px) and (max-width: 768px) {
   .navbar,
   .row {
     flex-direction: column; /* Stack items vertically */
@@ -267,7 +267,7 @@ forgotpass {
   }
 
   .form_container .form {
-    width: 100%;
+    width: 80%;
   }
 
   .form_container .form .input_field {
