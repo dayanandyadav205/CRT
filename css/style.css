@@ -16,30 +16,24 @@ body {
   background: #1abc9c;
   color: white;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .header img {
   border-radius: 50%;
 }
 
+.header h1{
+  font-size: 2.5vw;
+}
+
+.header h2{
+  font-size: 1.5vw;
+}
 /* Style the top navigation bar */
 .navbar {
   display: flex;
-  justify-content: space-between;
   background-color: #333333;
-  align-items: center;
-}
-
-.right-group {
-  display: flex;
-  justify-content: flex-end; /* Aligns items to the right by default */
-  align-items: center;
-}
-
-.navbar img {
-  width: 25px;
-  height: 15px;
 }
 
 .navbar a {
@@ -60,7 +54,7 @@ body {
   border-radius: 50%;
   position: sticky;
   right: 20px;
-  top: 20px;
+  top: 40px;
   padding: 10px;
   float: right;
   font-size: 14px;
@@ -93,6 +87,10 @@ body {
   background-color: #1abc9c;
   padding: 20px;
   line-height: 30px;
+}
+
+.side ul li{
+  list-style: none;
 }
 
 .side p {
@@ -261,14 +259,12 @@ forgotpass {
 /* ======================================================================================== */
 /* Media Qury for all pages */
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 400px) {
 
   .navbar,
-  .row,
-  .right-group {
+  .row {
     flex-direction: column; /* Stack items vertically */
-    justify-content: center; /* Center vertically (if needed) */
-    align-items: center;
+    text-align: center;
   }
 
   .form_container .form {

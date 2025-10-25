@@ -10,32 +10,26 @@ class MyHeader extends HTMLElement {
   <!-- Header -->
   <div class="header">
     <div>
-      <img src="images/cdgi.jpg" alt="CDGI Logo" width="100" height="100" />
+      <img src="images/cdgi.jpg" alt="CDGI Logo" width="80" height="80" />
     </div>
 
     <div>
       <h1>Chameli Devi Group of Institutions, Indore</h1>
-      <h2>Classroom Training (CRT)</h2>
       <h2>Web Development</h2>
     </div>
 
     <div>
-      <img src="images/Dayanand.jpg" alt="GitHub" width="100" height="100" />
+      <img src="images/Dayanand.jpg" alt="GitHub" width="80" height="80" />
     </div>
   </div>
 
   <!-- Navigation Bar -->
   <div class="navbar">
-       <div class="left-group">
           <a href="index.html"><i class="fa-solid fa-house"></i></a>
-          <a href="contact.html">Contact</a>
-      </div>
-
-      <div class="right-group">
+          <a href="contact.html">Contact Us</a>
           <a href="login_admin.html">Admin Login</a>
           <a href="login_user.html">User Login</a>
           <a href="form.html">Sign Up</a>
-      </div>
   </div>
     
     </header>`;
