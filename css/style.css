@@ -63,26 +63,19 @@ body {
 
 .top {
   padding: 20px;
-  width: 100%;
-  aspect-ratio: 1;
   background: #ff8b24;
   border-radius: 10px;
 }
 
-.top:before {
-  content: "";
-  position: absolute;
-  inset: 30%;
-  transform: translateY(20%) rotate(-45deg);
-  border-top: 5px solid #fff;
-  border-right: 5px solid #fff;
+.container-top a{
+  text-decoration: none;
+  color: white;
 }
 
 /* Column container */
 .row {
   /* border: 10px solid red; */
   display: flex;
-  flex-wrap: wrap;
   width: 100%;
   margin: 10px;
 }
@@ -237,7 +230,7 @@ body {
   }
 
   .form_container .form {
-    width: 80%;
+    width: 50%;
   }
 
   .form_container .form .input_field {
