@@ -133,7 +133,7 @@ body {
   justify-content: center;
 }
 
-/* =========================================================================================== */
+/* ================================================================ */
 /* Form CSS */
 .form_container {
   max-width: 500px;
@@ -187,36 +187,16 @@ body {
 }
 
 .form_container .form .input_field .custom_select {
-  position: relative;
   width: 100%;
   height: 37px;
 }
 
 .form_container .form .input_field .custom_select select {
-  -webkit-appearance: none;
-  appearance: none;
   width: 100%;
   height: 100%;
   padding: 8px 10px;
   border: 1px solid #1abc9c;
-  outline: none;
   border-radius: 3px;
-}
-
-.form_container .form .input_field .custom_select::before {
-  content: "";
-  position: absolute;
-  top: 15px;
-  right: 10px;
-  border: 8px solid black;
-  border-color: #1abc9c transparent transparent transparent;
-  pointer-events: none;
-}
-
-.form_container .form .input_field .input:focus,
-.form_container .form .input_field textarea:focus,
-.form_container .form .input_field select:focus {
-  border: 1px solid #1abc9c;
 }
 
 .form_container .form .input_field p {
@@ -227,9 +207,6 @@ body {
 .form_container .form .input_field .check {
   width: 15px;
   height: 15px;
-  position: relative;
-  display: block;
-  cursor: pointer;
 }
 
 .form_container .form .input_field .btn {
@@ -241,26 +218,10 @@ body {
   color: white;
   cursor: pointer;
   border-radius: 3px;
-  outline: none;
 }
 
 .form_container .form .input_field .btn:hover {
   background: #333333;
-}
-
-.form_container .form .input_field:last-child {
-  margin-bottom: 0;
-}
-
-forgotpass {
-  font-size: 16px;
-  padding: 4px 0;
-  margin: 3px;
-}
-
-.link {
-  text-decoration: none;
-  color: #0a63d8;
 }
 
 /* ======================================================================================== */
