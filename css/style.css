@@ -220,12 +220,11 @@ body {
 /* ======================================================================================== */
 /* Media Qury for all pages */
 /* Responsive layout - when the screen is between 360px wide and 768px wide make the two columns stack on top of each other instead of next to each other */
-@media only screen and (min-width: 360px) and (max-width: 768px) {
+@media (min-width: 360px) and (max-width: 768px) {
 
   .navbar,
   .row {
-    flex-direction: column;
-    /* Stack items vertically */
+    flex-direction: column; /* Stack items vertically */
     text-align: center;
   }
 
