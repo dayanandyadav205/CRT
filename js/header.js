@@ -19,7 +19,7 @@ class MyHeader extends HTMLElement {
     </div>
 
     <div>
-          <img src="images/dayanand.jpg" width="100" height="100" />
+      <img src="images/dayanand.jpg" width="100" height="100" />
     </div>
  </div>
   <!-- Navigation Bar -->
