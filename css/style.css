@@ -92,6 +92,8 @@ body {
 
 .side ul li {
   list-style: none;
+  line-height: 50px;
+  font-size: 30px;
 }
 
 .side p {
