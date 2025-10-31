@@ -99,7 +99,6 @@ body {
 .side ul li {
   display: inline-block;
   list-style: none;
-  line-height: 50px;
   font-size: 30px;
   align-self: center;
 
