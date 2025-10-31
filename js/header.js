@@ -18,9 +18,10 @@ class MyHeader extends HTMLElement {
       <h2>Web Development</h2>
     </div>
 
-    <div>
-      <img src="images/dayanand.jpg" alt="My Photo"/>
+     <div>
+      <img src="images/cdgi.jpg" alt="CDGI Logo"/>
     </div>
+
  </div>
   <!-- Navigation Bar -->
   <div class="navbar">
