@@ -18,11 +18,13 @@ body {
   background: #1abc9c;
   color: white;
   align-items: center;
-  justify-content: space-between;
+  justify-content:space-around;
 }
 
 .header img {
   border-radius: 50%;
+  height: 100px;
+  width: 100px;
 }
 
 .header h1 {
