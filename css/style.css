@@ -23,8 +23,8 @@ body {
 
 .header img {
   border-radius: 50%;
-  width: 7vw;
-  height: 14vh;
+  width: 100px;
+  height: 100px;
 }
 
 .header h1 {
@@ -39,6 +39,10 @@ body {
 .navbar {
   display: flex;
   background-color: #333333;
+}
+
+.navbar i{
+  font-size: 2vw;
 }
 
 .navbar a {
@@ -96,8 +100,8 @@ body {
   list-style: none;
   font-size: 30px;
   align-self: center;
-  line-height: 15vh;
-  margin-top: -30px;
+  line-height: 100px;
+  margin-top: -40px;
   margin-left: -20px;
 
 }
@@ -253,8 +257,6 @@ p {
   .header img {
     flex-direction: column;
     text-align: center;
-    width: 100px;
-    height: 100px;
   }
 
   .form_container .form {
