@@ -19,7 +19,7 @@ class MyHeader extends HTMLElement {
     </div>
 
      <div>
-      
+      <img src="images/cdgi.jpg" alt="CDGI Logo"/>
     </div>
 
  </div>
