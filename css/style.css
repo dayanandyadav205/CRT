@@ -254,10 +254,13 @@ p {
     text-align: center;
   }
 
-  .header img {
-    flex-direction: column;
-    text-align: center;
-  }
+ .side {
+  margin-top: -50px;
+}
+
+ .main {
+  margin-top: -10px;
+}
 
   .form_container .form {
     width: 50%;
