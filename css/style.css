@@ -85,24 +85,19 @@ body {
 /* Create two unequal columns that sits next to each other */
 /* Sidebar/left column */
 .side {
-  /* border: 10px solid green; */
-
   flex: 20%;
   background-color: #1abc9c;
   padding: 20px;
-}
-
-.side img{
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  margin-top: -55px;
 }
 
 .side ul li {
-  display: inline-block;
   list-style: none;
   font-size: 30px;
   align-self: center;
+  line-height: 10vh;
+  margin-top: -20px;
+  margin-left: -20px;
 
 }
 
