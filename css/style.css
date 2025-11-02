@@ -18,13 +18,13 @@ body {
   background: #1abc9c;
   color: white;
   align-items: center;
-  justify-content:space-around;
+  justify-content: space-around;
 }
 
 .header img {
   border-radius: 50%;
-  height: 100px;
-  width: 100px;
+  width: 7vw;
+  height: 14vh;
 }
 
 .header h1 {
@@ -69,9 +69,10 @@ body {
   border-radius: 10px;
 }
 
-.container-top a{
+.container-top a {
   text-decoration: none;
   color: white;
+  font-size: 14px;
 }
 
 /* Column container */
@@ -79,7 +80,7 @@ body {
   /* border: 10px solid red; */
   display: flex;
   width: 100%;
-  margin: 10px;
+  /* margin: 10px; */
 }
 
 /* Create two unequal columns that sits next to each other */
@@ -95,8 +96,8 @@ body {
   list-style: none;
   font-size: 30px;
   align-self: center;
-  line-height: 10vh;
-  margin-top: -20px;
+  line-height: 15vh;
+  margin-top: -30px;
   margin-left: -20px;
 
 }
@@ -118,11 +119,24 @@ body {
 .main {
   flex: 80%;
   padding: 20px;
+  margin-top: -70px;
 }
 
-.main p {
-  text-align: justify;
+.main img{
+  width: 100%;
+  height: 100%;
 }
+
+.main h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  text-align: center;
+}
+
 
 /* Footer */
 .footer {
@@ -231,8 +245,16 @@ body {
 
   .navbar,
   .row {
-    flex-direction: column; /* Stack items vertically */
+    flex-direction: column;
+    /* Stack items vertically */
     text-align: center;
+  }
+
+  .header img {
+    flex-direction: column;
+    text-align: center;
+    width: 100px;
+    height: 100px;
   }
 
   .form_container .form {
