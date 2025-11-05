@@ -10,16 +10,15 @@ class MyHeader extends HTMLElement {
   <!-- Header -->
   <div class="header">
     <div>
-      <img src="images/cdgi.jpg" alt="CDGI Logo"/>
+      <img src="images/iwt5.png" alt="IWT5 Logo"/>
     </div>
 
     <div>
-      <h1>Chameli Devi Group of Institutions, Indore</h1>
-      <h2>Web Development</h2>
+      <h1>Internet and Web Technology</h1>
     </div>
 
      <div>
-      <img src="images/dayanand.ico" alt=" "/>
+     
     </div>
 
  </div>

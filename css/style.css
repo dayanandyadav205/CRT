@@ -14,11 +14,11 @@ body {
 .header {
   display: flex;
   padding: 40px;
-  text-align: center;
   background: #1abc9c;
   color: white;
   align-items: center;
-  justify-content: space-around;
+  text-align: center;
+  justify-content: space-between;
 }
 
 .header img {
@@ -27,22 +27,14 @@ body {
   height: 100px;
 }
 
-.header h1 {
-  font-size: 2.5vw;
-}
-
-.header h2 {
-  font-size: 1.5vw;
-}
-
 /* Style the top navigation bar */
 .navbar {
   display: flex;
   background-color: #333333;
 }
 
-.navbar i{
-  font-size: 2vw;
+.navbar i {
+  font-size: 20px;
 }
 
 .navbar a {
@@ -89,49 +81,73 @@ body {
 
 /* Create two unequal columns that sits next to each other */
 /* Sidebar/left column */
-.side {
-  flex: 20%;
+.row .side {
+  /* display: flex; */
+  flex: 25%;
   background-color: #1abc9c;
   padding: 20px;
-  margin-top: -55px;
+  margin-top: -50px;
 }
 
-.side ul li {
+.row .side .aboutMe {
+  display: flex;
+  border: 2px solid white;
+  box-sizing: border-box;
+  padding: 10px;
+  height: auto;
+}
+
+.row .side .aboutMe .myImg img {
+  border-radius: 10px;
+  width: 120px;
+  height: 130px;
+}
+
+.row .side .aboutMe .myIntro {
+  padding: 10px;
+  text-align: left;
+  color: white;
+  margin-top: -30px;
+}
+
+.row .side .myLinks{
+ display: flex;
+  border: 2px solid white;
+  box-sizing: border-box;
+  padding: 10px;
+  height: auto;
+  color: white;
+}
+
+.row .side .myLinks ul li {
   list-style: none;
   font-size: 30px;
   align-self: center;
-  line-height: 100px;
-  margin-top: -40px;
-  margin-left: -20px;
-
+  line-height: 50px;
 }
 
-.side p {
-  text-align: justify;
-}
-
-.side a {
+.row .side .myLinks ul li a {
   text-decoration: none;
   color: #ffffff;
 }
 
-.side a:hover {
+.row .side .myLinks ul li a:hover {
   color: #333333;
 }
 
 /* Main column/right column */
-.main {
-  flex: 80%;
+.row .main {
+  flex: 75%;
   padding: 20px;
-  margin-top: -70px;
+  margin-top: -80px;
 }
 
-.main img{
+.row .main img {
   width: 100%;
   height: 100%;
 }
 
-.main h1,
+.row .main h1,
 h2,
 h3,
 h4,
@@ -141,14 +157,36 @@ p {
   text-align: center;
 }
 
+.row .main .headings {
+  background-color: lightblue;
+}
+
+.row .main .para-formatting {
+  background-color: lightcoral;
+}
+
+.row .main .myLists {
+  background-color: lightgreen;
+}
+
+.row .main .myTable {
+  background-color: lightsalmon;
+}
+
+.row .main .myMedia {
+  padding: 10px;
+  background-color: lightpink;
+}
 
 /* Footer */
 .footer {
-  display: flex;
-  padding: 10px;
+  padding: 20px;
   background: #333333;
-  color: white;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
   justify-content: center;
+  color: white;
 }
 
 /* ================================================================ */
@@ -254,13 +292,13 @@ p {
     text-align: center;
   }
 
- .side {
-  margin-top: -50px;
-}
+  /* .side {
+    margin-top: -40px;
+  }
 
- .main {
-  margin-top: -10px;
-}
+  .main {
+    margin-top: 10px;
+  } */
 
   .form_container .form {
     width: 50%;
