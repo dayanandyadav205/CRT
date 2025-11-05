@@ -98,7 +98,7 @@ body {
 }
 
 .row .side .aboutMe .myImg img {
-  border-radius: 10px;
+  border-radius: 50%;
   width: 120px;
   height: 130px;
 }
