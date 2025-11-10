@@ -1,13 +1,13 @@
 /* Universal Selector */
 * {
   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
 }
 
 /* Style the body */
 body {
   font-family: sans-serif;
-  margin: 0;
-  scroll-behavior: smooth;
 }
 
 /* Header/logo Title */
@@ -90,7 +90,7 @@ body {
   flex: 25%;
   background-color: #1abc9c;
   padding: 20px;
-  margin-top: -40px;
+  margin-top: -20px;
 }
 
 .row .side .aboutMe {
@@ -111,7 +111,6 @@ body {
   padding: 10px;
   text-align: left;
   color: white;
-  margin-top: -30px;
 }
 
 .row .side .myLinks{
@@ -143,7 +142,7 @@ body {
 .row .main {
   flex: 75%;
   padding: 20px;
-  margin-top: -50px;
+  margin-top: -40px;
 }
 
 .row .main img {
