@@ -115,7 +115,7 @@ body {
   color: white;
 }
 
-.row .side .aboutMe .myIntro p{
+.row .side .aboutMe .myIntro p {
   font-size: 14px;
 }
 
@@ -172,6 +172,21 @@ body {
   align-content: center;
   justify-content: center;
   color: white;
+}
+
+/* Contact CSS */
+.contact-container {
+  background-color: #333333;
+  margin: 50px;
+  margin-left: 20%;
+  padding: 20px;
+  width: 750px;
+  height: 600px;
+}
+
+.map-iframe iframe {
+  width: 700px;
+  height: 500px;
 }
 
 /* ================================================================ */
@@ -278,16 +293,16 @@ body {
     text-align: center;
   }
 
-  /* .side {
-    margin-top: -40px;
+  .form_container .form {
+    width: 70%;
   }
 
-  .main {
-    margin-top: 10px;
-  } */
+  .contact-container {
+    width: 70%;
+  }
 
-  .form_container .form {
-    width: 50%;
+  .map-iframe iframe {
+    width: 100%;
   }
 
   .form_container .form .input_field {
