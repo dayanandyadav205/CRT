@@ -115,6 +115,10 @@ body {
   color: white;
 }
 
+.row .side .aboutMe .myIntro p{
+  font-size: 14px;
+}
+
 .row .side .myLinks {
   display: flex;
   border: 2px solid white;
