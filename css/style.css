@@ -8,14 +8,15 @@
 /* Style the body */
 body {
   font-family: sans-serif;
-  background-color: whitesmoke;
+  /* background-color: whitesmoke; */
 }
 
 /* Header/logo Title */
 .header {
   display: flex;
   padding: 50px;
-  background-color: #1D1044;
+  background-color: #4F6E7D;
+  /* background-color: #1D1044; */
   /* background-color: #8DBCD0; */
   /* background:#4ABCAD; */
   color: white;
@@ -37,8 +38,8 @@ body {
 /* Style the top navigation bar */
 .navbar {
   display: flex;
-  /* background-color: #FCA49E; */
-  background-color: #c7c3c3;
+  background-color: #2C2C2C;
+  /* background-color: #c7c3c3; */
 }
 
 .navbar i {
@@ -46,14 +47,14 @@ body {
 }
 
 .navbar a {
-  color: #1D1044;
+  color: white;
   padding: 20px;
   text-decoration: none;
   transition: all 0.5s ease-in-out;
 }
 
 .navbar a:hover {
-  background-color: #1D1044;
+  background-color: #4F6E7D;
   color: #ffffff;
 }
 
@@ -69,7 +70,7 @@ body {
 
 .top {
   padding: 10px;
-  background: #1D1044;
+  background: #2C2C2C;
   border-radius: 50%;
 }
 
@@ -101,7 +102,7 @@ body {
   height: auto;
   /* box-shadow: 20px 10px 50px 5px rgb(47, 34, 31); */
   border-radius: 10px;
-  background-color: #1D1044;
+  background-color: #4F6E7D;
   color: white;
 }
 
@@ -132,7 +133,7 @@ body {
   /* color: white; */
   /* box-shadow: 20px 10px 50px 5px rgb(47, 34, 31); */
   border-radius: 10px;
-  background-color: #1D1044;
+  background-color: #4F6E7D;
 }
 
 .row .side .myLinks ul li {
@@ -170,7 +171,7 @@ body {
 /* Footer */
 .footer {
   padding: 20px;
-  background: #1D1044;
+  background: #4F6E7D;
   align-items: center;
   justify-items: center;
   align-content: center;
@@ -180,7 +181,7 @@ body {
 
 /* Contact CSS */
 .contact-container {
-  background-color: #1D1044;
+  background-color: #4F6E7D;
   border-radius: 20px;
   margin: 50px;
   margin-left: 20%;
@@ -198,7 +199,7 @@ body {
 /* Form CSS */
 .form_container {
   max-width: 500px;
-  background-color: #1D1044;
+  background-color: #4F6E7D;
   border: 2px solid white;
   margin: 20px 20px;
   padding: 30px;
