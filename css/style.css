@@ -8,14 +8,14 @@
 /* Style the body */
 body {
   font-family: sans-serif;
-  background-color: #1abc9c;
+  /* background-color: #1abc9c; */
 }
 
 /* Header/logo Title */
 .header {
   display: flex;
   padding: 40px;
-  background: #1abc9c;
+  background: #d4d41f;
   color: white;
   align-items: center;
   text-align: center;
@@ -50,7 +50,7 @@ body {
 }
 
 .navbar a:hover {
-  background-color: #1abc9c;
+  background-color: #0d9fe7;
   color: #ffffff;
 }
 
@@ -86,7 +86,7 @@ body {
 /* Sidebar/left column */
 .row .side {
   flex: 25%;
-  background-color: #1abc9c;
+  background-color: #e18d06;
   padding: 20px;
 }
 
@@ -151,7 +151,7 @@ body {
 .row .main {
   flex: 75%;
   padding: 10px;
-  background-color: #1abc9c;
+  /* background-color: #1abc9c; */
 }
 
 .row .main img {
