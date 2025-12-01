@@ -9,6 +9,7 @@
 body {
   font-family: sans-serif;
   /* background-color: #1abc9c; */
+  /* background-color: whitesmoke; */
 }
 
 /* Header/logo Title */
@@ -16,6 +17,11 @@ body {
   display: flex;
   padding: 40px;
   background: #d4d41f;
+  padding: 50px;
+  background-color: #4F6E7D;
+  /* background-color: #1D1044; */
+  /* background-color: #8DBCD0; */
+  /* background:#4ABCAD; */
   color: white;
   align-items: center;
   text-align: center;
@@ -35,7 +41,8 @@ body {
 /* Style the top navigation bar */
 .navbar {
   display: flex;
-  background-color: #333333;
+  background-color: #2C2C2C;
+  /* background-color: #c7c3c3; */
 }
 
 .navbar i {
@@ -51,6 +58,7 @@ body {
 
 .navbar a:hover {
   background-color: #0d9fe7;
+  background-color: #4F6E7D;
   color: #ffffff;
 }
 
@@ -66,7 +74,7 @@ body {
 
 .top {
   padding: 10px;
-  background: #ff8b24;
+  background: #2C2C2C;
   border-radius: 50%;
 }
 
@@ -87,6 +95,8 @@ body {
 .row .side {
   flex: 25%;
   background-color: #e18d06;
+  flex: 20%;
+  background-color: #EFEFEF;
   padding: 20px;
 }
 
@@ -98,7 +108,8 @@ body {
   height: auto;
   /* box-shadow: 20px 10px 50px 5px rgb(47, 34, 31); */
   border-radius: 10px;
-  background-color: #333333;
+  background-color: #4F6E7D;
+  color: white;
 }
 
 .row .side .aboutMe .myImg img {
@@ -112,7 +123,7 @@ body {
 .row .side .aboutMe .myIntro {
   padding: 10px;
   text-align: left;
-  color: white;
+  /* color: white; */
 }
 
 .row .side .aboutMe .myIntro p {
@@ -125,10 +136,10 @@ body {
   box-sizing: border-box;
   padding: 10px;
   height: auto;
-  color: white;
+  /* color: white; */
   /* box-shadow: 20px 10px 50px 5px rgb(47, 34, 31); */
   border-radius: 10px;
-  background-color: #333333;
+  background-color: #4F6E7D;
 }
 
 .row .side .myLinks ul li {
@@ -143,15 +154,16 @@ body {
   color: #ffffff;
 }
 
-.row .side .myLinks ul li a:hover {
-  color: #1abc9c;
-}
+/* .row .side .myLinks ul li a:hover {
+  color: #1D1044;
+} */
 
 /* Main column/right column */
 .row .main {
   flex: 75%;
   padding: 10px;
   /* background-color: #1abc9c; */
+  background-color: whitesmoke;
 }
 
 .row .main img {
@@ -166,7 +178,7 @@ body {
 /* Footer */
 .footer {
   padding: 20px;
-  background: #333333;
+  background: #4F6E7D;
   align-items: center;
   justify-items: center;
   align-content: center;
@@ -176,7 +188,8 @@ body {
 
 /* Contact CSS */
 .contact-container {
-  background-color: #333333;
+  background-color: #4F6E7D;
+  border-radius: 20px;
   margin: 50px;
   margin-left: 20%;
   padding: 20px;
@@ -193,7 +206,7 @@ body {
 /* Form CSS */
 .form_container {
   max-width: 500px;
-  background-color: #333333;
+  background-color: #4F6E7D;
   border: 2px solid white;
   margin: 20px 20px;
   padding: 30px;
