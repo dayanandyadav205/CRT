@@ -8,12 +8,15 @@
 /* Style the body */
 body {
   font-family: sans-serif;
+  /* background-color: #1abc9c; */
   /* background-color: whitesmoke; */
 }
 
 /* Header/logo Title */
 .header {
   display: flex;
+  padding: 40px;
+  background: #d4d41f;
   padding: 50px;
   background-color: #4F6E7D;
   /* background-color: #1D1044; */
@@ -54,6 +57,7 @@ body {
 }
 
 .navbar a:hover {
+  background-color: #0d9fe7;
   background-color: #4F6E7D;
   color: #ffffff;
 }
@@ -89,6 +93,8 @@ body {
 /* Create two unequal columns that sits next to each other */
 /* Sidebar/left column */
 .row .side {
+  flex: 25%;
+  background-color: #e18d06;
   flex: 20%;
   background-color: #EFEFEF;
   padding: 20px;
@@ -156,6 +162,7 @@ body {
 .row .main {
   flex: 75%;
   padding: 10px;
+  /* background-color: #1abc9c; */
   background-color: whitesmoke;
 }
 
