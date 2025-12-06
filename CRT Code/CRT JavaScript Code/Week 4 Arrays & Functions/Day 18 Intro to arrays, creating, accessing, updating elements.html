@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1> Day 18: Intro to arrays, creating, accessing, updating elements</h1>
+
+  <h1>Intro to arrays</h1>
+
+  <b>Definition 1:</b> An Array is an object type designed for storing data. <br>
+
+  <img src="images/Array-Data-Structure.jpg" alt="" height="300" width="600">
+
+  <hr>
+
+  <b>Definition 2:</b> An array is a data structure that stores a collection of items, usually of the same data type, in
+  a single variable at contiguous memory locations (means they are next to each other in sequence without any gaps). <br><br>
+
+  <img src="images/Continuous-allocation.jpg" alt="" height="300" width="500">
+
+  <hr>
+
+  <b>Key characteristics of JavaScript arrays are:</b><br><br>
+
+  <b>Elements:</b> An array is a list of values, known as elements. <br> <br>
+
+  <b>Ordered:</b> Array elements are ordered based on their index. <br><br>
+
+  <b>Zero indexed:</b> The first element is at index 0, the second at index 1, and so on. <br><br>
+
+  <b>Dynamic size:</b> Arrays can grow or shrink as elements are added or removed.
+  <br><br>
+
+  <b>Heterogeneous:</b> Arrays can store elements of different data types (numbers, strings, objects).
+  <br>
+
+  <hr>
+
+  <h1>Creating and accessing an array storing numbers</h1>
+
+  <p id="result1"></p>
+  <p id="result2"></p>
+
+  <script>
+    // creating array
+    let array = [10,20, 30, 45, 50, 12, 5, 65, 70, 8];
+    document.getElementById("result1").innerHTML = array;
+
+    // Accessing array
+    document.getElementById("result2").innerHTML = array[0];
+  </script>
+
+  <hr>
+
+  <h1>Creating and accessing an array storing strings</h1>
+
+  <p id="result3"></p>
+  <p id="result4"></p>
+
+  <script>
+    //Creating an array
+    const cars = ["Maruti", "Mahindra", "TATA"];
+    document.getElementById("result3").innerHTML = cars;
+
+    //Accessing an array
+    document.getElementById("result4").innerHTML = cars[2];
+  </script>
+
+  <hr>
+
+  <h1>Creating and accessing an array storing objects</h1>
+
+  <p id="result5"></p>
+  <p id="result6"></p>
+
+  <script>
+    //Creating an array
+    let car = [{ brand: "Maruti", model: "M700", color: "White" },
+               { brand: "Mahindra", model: "M300", color: "Black" },
+               { brand: "Mahindra", model: "M300", color: "Black" },
+               { brand: "Mahindra", model: "M300", color: "Black" },
+              ];
+
+    document.getElementById("result5").innerHTML = car;
+
+    //Accessing an array
+    document.getElementById("result6").innerHTML = car[1].color;
+  </script>
+
+  <hr>
+
+  <h1>Updating elements in an array</h1>
+
+  In JavaScript, there are several ways to update an element within an array. The choice of method depends on whether you need to modify the original array or create a new array with the updated element.
+
+  <br>
+  <br>
+
+  We will discuss various methods to update elements in an array like <b>push(), pop(), delete,shift(), unshift(), splice(), slice(), sort(), reverse()</b>
+
+</body>
+
+</html>

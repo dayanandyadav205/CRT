@@ -1,0 +1,324 @@
+/* Universal Selector */
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+/* Header/logo Title */
+.header {
+  display: flex;
+  padding: 40px;
+  background: #1abc9c;
+  color: white;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.header img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.header h1{
+  font-family: "Audiowide", sans-serif;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  display: flex;
+  background-color: #333333;
+}
+
+.navbar i {
+  font-size: 20px;
+}
+
+.navbar a {
+  color: white;
+  padding: 20px;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.navbar a:hover {
+  background-color: #1abc9c;
+  color: #ffffff;
+}
+
+/* Go to Top button */
+.container-top {
+  display: flex;
+  position: sticky;
+  right: 10px;
+  top: 20px;
+  width: 60px;
+  float: right;
+}
+
+.top {
+  padding: 20px;
+  background: #ff8b24;
+  border-radius: 10px;
+}
+
+.container-top a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+}
+
+/* Column container */
+.row {
+  /* border: 10px solid red; */
+  display: flex;
+  width: 100%;
+  /* margin: 10px; */
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.row .side {
+  /* display: flex; */
+  flex: 25%;
+  background-color: #1abc9c;
+  padding: 20px;
+  margin-top: -40px;
+}
+
+.row .side .aboutMe {
+  display: flex;
+  border: 2px solid white;
+  box-sizing: border-box;
+  padding: 10px;
+  height: auto;
+}
+
+.row .side .aboutMe .myImg img {
+  border-radius: 50%;
+  width: 120px;
+  height: 130px;
+}
+
+.row .side .aboutMe .myIntro {
+  padding: 10px;
+  text-align: left;
+  color: white;
+  margin-top: -30px;
+}
+
+.row .side .myLinks{
+ display: flex;
+  border: 2px solid white;
+  box-sizing: border-box;
+  padding: 10px;
+  height: auto;
+  color: white;
+}
+
+.row .side .myLinks ul li {
+  list-style: none;
+  font-size: 30px;
+  align-self: center;
+  line-height: 50px;
+}
+
+.row .side .myLinks ul li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.row .side .myLinks ul li a:hover {
+  color: #333333;
+}
+
+/* Main column/right column */
+.row .main {
+  flex: 75%;
+  padding: 20px;
+  margin-top: -50px;
+}
+
+.row .main img {
+  width: 100%;
+  height: 100%;
+}
+
+.row .main h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  text-align: center;
+}
+
+.row .main .headings {
+  background-color: lightblue;
+}
+
+.row .main .para-formatting {
+  background-color: lightcoral;
+}
+
+.row .main .myLists {
+  background-color: lightgreen;
+}
+
+.row .main .myTable {
+  background-color: lightsalmon;
+}
+
+.row .main .myMedia {
+  padding: 10px;
+  background-color: lightpink;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  background: #333333;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  justify-content: center;
+    color: white;
+}
+
+/* ================================================================ */
+/* Form CSS */
+.form_container {
+  max-width: 500px;
+  background-color: #1abc9c;
+  margin: 20px 20px;
+  padding: 30px;
+  box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+}
+
+.form_container .title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.form_container .form {
+  width: 100%;
+}
+
+.form_container .form .input_field {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.form_container .form .input_field label {
+  width: 200px;
+  margin-right: 10px;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.form_container .form .input_field .input,
+.form_container .form .input_field textarea {
+  width: 100%;
+  outline: none;
+  border: 1px solid #1abc9c;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  transition: all 0.5s ease;
+}
+
+.form_container .form .input_field textarea {
+  resize: none;
+  height: 100px;
+}
+
+.form_container .form .input_field .custom_select {
+  width: 100%;
+  height: 37px;
+}
+
+.form_container .form .input_field .custom_select select {
+  width: 100%;
+  height: 100%;
+  padding: 8px 10px;
+  border: 1px solid #1abc9c;
+  border-radius: 3px;
+}
+
+.form_container .form .input_field p {
+  font-size: 14px;
+  color: #757575;
+}
+
+.form_container .form .input_field .check {
+  width: 15px;
+  height: 15px;
+}
+
+.form_container .form .input_field .btn {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 15px;
+  border: 0;
+  background: #665e5e;
+  color: white;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.form_container .form .input_field .btn:hover {
+  background: #333333;
+}
+
+/* ======================================================================================== */
+/* Media Qury for all pages */
+/* Responsive layout - when the screen is between 360px wide and 768px wide make the two columns stack on top of each other instead of next to each other */
+@media (min-width: 360px) and (max-width: 768px) {
+
+  .navbar,
+  .row {
+    flex-direction: column;
+    /* Stack items vertically */
+    text-align: center;
+  }
+
+  /* .side {
+    margin-top: -40px;
+  }
+
+  .main {
+    margin-top: 10px;
+  } */
+
+  .form_container .form {
+    width: 50%;
+  }
+
+  .form_container .form .input_field {
+    flex-direction: column;
+    align-items: flex-start;
+
+  }
+
+  .form_container .form .input_field label {
+    margin-bottom: 5px;
+  }
+
+  .form_container .form .input_field.terms {
+    flex-direction: row;
+  }
+}

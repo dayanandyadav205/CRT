@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // Loose Equality (==)
+    // console.log(5 == "5");   // string "5" is coerced to number 5
+    // console.log(0 == false); // false is coerced to 0
+     console.log(1 === true); // false is coerced to 0
+    // console.log(null == undefined); // special case
+
+    // Strict Equality (===)
+    console.log(5 === "5");  // different types: number vs string
+    console.log(0 === false); // different types: number vs boolean
+    console.log(null === undefined); // different types: null vs undefined
+  </script>
+</body>
+
+</html>

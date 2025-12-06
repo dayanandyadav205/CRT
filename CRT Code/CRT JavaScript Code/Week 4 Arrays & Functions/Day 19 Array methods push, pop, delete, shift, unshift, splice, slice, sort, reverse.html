@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <h1>We will discuss various methods to update elements in an array like <mark>push(), pop(), delete,shift(), unshift(), splice(), slice(), sort(), reverse()</mark></h1>
+  <hr>
+
+  <h1> Day 19: Array methods: push, pop, delete, shift, unshift, splice, slice, sort(), reverse()</h1>
+  <h1>The push() method in an array</h1>
+
+  <p>The push() method appends a new element to an array at last</p>
+
+  <p id="demo1"></p>
+  <p id="demo2"></p>
+
+  <script>
+    const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo1").innerHTML = fruits1;
+
+    fruits1.push("Kiwi");
+    document.getElementById("demo2").innerHTML = fruits1;
+  </script>
+
+  <hr>
+
+  <h1>The pop() method in an array</h1>
+
+  <p>The pop() method removes the last element from an array.</p>
+
+  <p id="demo3"></p>
+  <p id="demo4"></p>
+
+  <script>
+    const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo3").innerHTML = fruits2;
+    fruits2.pop();
+    document.getElementById("demo4").innerHTML = fruits2;
+  </script>
+
+  <hr>
+
+  <h1>The delete keyword in an array</h1>
+
+  <p>The delete keyword removes a specific element from an array of your choice</p>
+
+  <p id="demo5"></p>
+  <p id="demo6"></p>
+
+  <script>
+    const fruits3 = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo5").innerHTML = fruits3;
+
+    delete fruits3[1];
+    document.getElementById("demo6").innerHTML = fruits3;
+  </script>
+
+  <hr>
+
+  <h1>The shift() Method in an array</h1>
+
+  <p>The shift() method removes the first element of an array (and "shifts" the other elements to the left):</p>
+
+  <p id="demo7"></p>
+  <p id="demo8"></p>
+
+  <script>
+    const fruits4 = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo7").innerHTML = fruits4;
+
+    fruits4.shift();
+    document.getElementById("demo8").innerHTML = fruits4;
+  </script>
+
+  <hr>
+
+  <h1>The unshift() Method</h1>
+
+  <p>The unshift() method adds new elements to the beginning of an array:</p>
+
+  <p id="demo9"></p>
+  <p id="demo10"></p>
+
+  <script>
+    const fruits5 = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo9").innerHTML = fruits5;
+
+    fruits5.unshift("Lemon");
+    document.getElementById("demo10").innerHTML = fruits5;
+  </script>
+
+  <hr>
+
+  <h2>The splice() Method</h2>
+
+  <p>The splice() method adds or removes array elements and add new.</p>
+
+  <p id="demo11"></p>
+  <p id="demo12"></p>
+
+  <script>
+    // Create an Array
+    const fruits6 = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo11").innerHTML = fruits6;
+
+    // At index 1, position 2, add "Lemon" and "Kiwi"
+    fruits6.splice(0, 2, "Lemon", "Kiwi");
+    document.getElementById("demo12").innerHTML = fruits6;
+  </script>
+
+  <hr>
+
+  <h1>The slice() Method</h1>
+
+  <p>slice() returns selected array elements as a new array:</p>
+
+  <p id="demo13"></p>
+  <p id="demo14"></p>
+
+  <script>
+    const fruits7 = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+    document.getElementById("demo13").innerHTML = fruits7;
+
+    const citrus = fruits7.slice(1, 4);
+    document.getElementById("demo14").innerHTML = citrus;
+  </script>
+
+  <hr>
+
+  <h1>sort() method</h1>
+  <h2>sort() method arrange the array element in ascending order</h2>
+
+  <p id="demo15"></p>
+  <p id="demo16"></p>
+
+  <script>
+    const fruits8 = ["Apple", "Kiwi", "Banana", "Orange"];
+    document.getElementById("demo15").innerHTML = fruits8;
+
+    fruits8.sort();
+    document.getElementById("demo16").innerHTML = fruits8;
+  </script>
+
+  <hr>
+
+  <h1>reverse() method</h1>
+  <h2>reverse() method arrange the array element in descending order</h2>
+
+  <p id="demo17"></p>
+  <p id="demo18"></p>
+
+  <script>
+    const fruits9 = ["Apple", "Kiwi", "Banana", "Orange"];
+    document.getElementById("demo17").innerHTML = fruits9;
+
+    fruits9.reverse();
+    document.getElementById("demo18").innerHTML = fruits9;
+  </script>
+</body>
+
+</html>

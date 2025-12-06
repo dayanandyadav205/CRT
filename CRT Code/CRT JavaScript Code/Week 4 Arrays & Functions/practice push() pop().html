@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stack Demo (pop method)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f4f6;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    input,
+    button {
+      padding: 8px;
+      margin: 5px 0;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      background: #fff;
+      margin: 5px 0;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Stack Application</h1>
+  <input type="text" id="itemInput" placeholder="Enter an item">
+  <button onclick="pushItem()">Push (Add)</button>
+  <button onclick="popItem()">Pop (Remove Last)</button>
+
+  <h2>Stack Items:</h2>
+  <ul id="stackList"></ul>
+
+  <script>
+    // Array representing the stack
+    let stack = [];
+
+    function pushItem() {
+      const input = document.getElementById("itemInput");
+      const value = input.value.trim();
+
+      if (value !== "") {
+        stack.push(value); // add item to end
+        input.value = "";
+        renderStack();
+      }
+    }
+
+    function popItem() {
+      if (stack.length > 0) {
+        const removed = stack.pop(); // remove last item
+        alert("Removed: " + removed);
+        renderStack();
+      } else {
+        alert("Stack is empty!");
+      }
+    }
+
+    function renderStack() {
+      const list = document.getElementById("stackList");
+      list.innerHTML = "";
+      stack.forEach((item, index) => {
+        const li = document.createElement("li");
+        li.textContent = `${index + 1}. ${item}`;
+        list.appendChild(li);
+      });
+    }
+  </script>
+</body>
+
+</html>

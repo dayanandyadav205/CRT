@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+  <h2>Do While loop</h2>
+
+  <script>
+    let j = 1;
+    do {
+      document.writeln(j, "&nbsp;" + "I love javaScript" + "<br>");
+      j = j + 1;
+    }
+    while (j <= 10) 
+  </script>
+
+  <hr>
+
+  <script>
+    let sum = 0, num = 0;
+
+    do {
+
+      // add all positive numbers
+      sum += num;
+
+      // take input from the user
+      num = parseInt(prompt("Enter a number: "));
+
+      // loop terminates if num is negative
+    } while (num >= 0);
+
+    // last, display sum
+    console.log(`The sum is ${sum}`);
+  </script>
+</body>
+
+</html>

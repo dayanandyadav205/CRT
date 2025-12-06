@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>3. JavaScript Program to check whether a password and confirm password matched or not?</h1>
+
+  <form action="#" name="f1" onsubmit="return chkpwd()">
+    <input type="password" name="password" placeholder="Enter Password"><br><br>
+    <input type="password" name="cpassword" placeholder="Confirm Password"><br><br>
+    <p id="msg"></p>
+    <input type="submit">
+  </form>
+
+  <script>
+    function chkpwd(){
+      let p1 = document.f1.password.value;
+      let p2 = document.f1.cpassword.value;
+
+      if(p1 === p2){
+        return true;
+      }
+      else{
+        document.getElementById("msg").innerHTML = "Password mismatch";
+        document.getElementById("msg").style.color = "red";
+        return false;
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>2. JavaScript program to show password.</h1>
+
+  <form action="#">
+    <input type="password" id="pwd">
+    <input type="checkbox" onclick="showpwd()">
+  </form>
+
+  <script>
+    function showpwd(){
+      let p = document.getElementById("pwd");
+      if(p.type === "password"){
+        p.type = "text";
+      }
+      else{
+        p.type = "password";
+      }
+    }
+  </script>
+</body>
+</html>

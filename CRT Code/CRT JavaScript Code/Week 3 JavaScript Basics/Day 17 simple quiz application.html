@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Quiz Application</title>
+</head>
+
+<body>
+  Q1. What is 2+3?<br>
+  <input type="radio" name="question1">8 <br>
+  <input type="radio" name="question1">9 <br>
+  <input type="radio" name="question1" id="correct1">5 <br>
+  <input type="radio" name="question1">10 <br><br>
+
+  Q2. What is 8+3?<br>
+  <input type="radio" name="question2">2 <br>
+  <input type="radio" name="question2">8 <br>
+  <input type="radio" name="question2" id="correct2">11 <br>
+  <input type="radio" name="question2">9 <br><br>
+
+  Q3. What is 28+3?<br>
+  <input type="radio" name="question3">15 <br>
+  <input type="radio" name="question3" id="correct3">31 <br>
+  <input type="radio" name="question3">10 <br>
+  <input type="radio" name="question3">19 <br><br>
+
+  <p id="score"></p>
+
+  <input type="submit" value="SubmitQuiz" onClick="result()">
+
+  <script>
+    function result() {
+      var score = 0;
+      if (document.getElementById('correct1').checked) {
+        score++;
+      }
+      if (document.getElementById('correct2').checked) {
+        score++;
+      }
+      if (document.getElementById('correct3').checked) {
+        score++;
+      }
+      document.getElementById("score").innerHTML = "Your score is: " +score;
+    }
+  </script>
+
+</body>
+
+</html>

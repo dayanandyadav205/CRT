@@ -27,11 +27,11 @@ class MyHeader extends HTMLElement {
   <!-- Navigation Bar -->
   <div class="navbar">
           <a href="index.html"><i class="fa-solid fa-house"></i></a>
-          <a href="contact.html">Our Contact</a>
+         
           <a href="login_admin.html">Admin Login</a>
           <a href="login_user.html">User Login</a>
           <a href="form.html">Sign Up</a>
-          <a href="#">Services</a>
+           <a href="contact.html">Our Contact</a>
   </div>
   
     </header>`;

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>For loop break statement</h1>
+  <script>
+    const numbers = [10, 20, 30, 40, 50];
+    const target = 70;
+    for(let i = 0; i <=numbers.length; i++){
+      if(numbers[i] === target){
+        console.log(`${target} found at index ${i}`);
+        break;
+      }
+      else{
+        console.log(`${target} not found in the array`);
+      }
+    }
+    
+  </script>
+</body>
+</html>
