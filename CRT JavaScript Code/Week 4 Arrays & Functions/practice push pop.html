@@ -5,31 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <style>
-    .listContainer {
-      background-color: rgb(2, 172, 164);
-      border-radius: 20px;
-      border: 5px solid gray;
-      width: 400px;
-      height: 400px;
-      padding: 20px;
-      margin-left: 20%;
-    }
-
-    .listContainer input {
-      height: 20px;
-      width: 150px;
-
-    }
-
-    .listContainer button {
-      border: 2px solid wheat;
-      border-radius: 5px;
-      height: 30px;
-      width: 100px;
-
-    }
-  </style>
 </head>
 
 <body>
@@ -45,21 +20,21 @@
   </div>
 
   <script>
-    let items = [];
+    let item = [];
 
     function pushItem() {
       const input = document.getElementById("itemInput").value;
 
       if (input !== "") {
-        items.push(input);
+        item.push(input);
         document.getElementById("itemInput").value = "";
         renderItems();
       }
     }
 
     function popItem() {
-      if (items.length > 0) {
-        items.pop();
+      if (item.length > 0) {
+        item.pop();
         renderItems();
       } else {
         alert("Array is empty");
@@ -67,15 +42,13 @@
     }
 
     function renderItems() {
-      const list = document.getElementById("toDoList");
+      const toDolist = document.getElementById("toDoList");
       document.getElementById("toDoList").innerHTML = "";
 
-      items.forEach((items) => {
-        const li = document.createElement('li');
-        li.textContent = `${items}`;
-        list.appendChild(li);
-
-
+      item.forEach((item) => {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${item}`;
+        toDolist.appendChild(listItem);
       });
     }
 
