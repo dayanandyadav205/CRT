@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stack Demo (pop method)</title>
-  <style>
+  <!-- <style>
     body {
       font-family: Arial, sans-serif;
       background: #f3f4f6;
@@ -34,49 +34,54 @@
       border-radius: 5px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
-  </style>
+  </style> -->
 </head>
 
 <body>
-  <h1>Stack Application</h1>
+  <h1>To Do List Application</h1>
   <input type="text" id="itemInput" placeholder="Enter an item">
-  <button onclick="pushItem()">Push (Add)</button>
-  <button onclick="popItem()">Pop (Remove Last)</button>
+  <button onclick="pushItem()">Add Item</button>
+  <button onclick="popItem()">Remove Item</button>
 
-  <h2>Stack Items:</h2>
-  <ul id="stackList"></ul>
+  <h2>List Items:</h2>
+  <ol id="toDoList">
+    <!-- Items will be inserted here -->
+  </ol>
 
   <script>
     // Array representing the stack
-    let stack = [];
+    let items = [];
 
     function pushItem() {
-      const input = document.getElementById("itemInput");
-      const value = input.value.trim();
+      const input = document.getElementById("itemInput").value;
 
-      if (value !== "") {
-        stack.push(value); // add item to end
-        input.value = "";
-        renderStack();
+      if (input !== "") {
+        items.push(input); // add item to end
+        document.getElementById("itemInput").value = "";
+        renderItems();
       }
     }
 
     function popItem() {
-      if (stack.length > 0) {
-        const removed = stack.pop(); // remove last item
-        alert("Removed: " + removed);
-        renderStack();
+      if (items.length > 0) {
+        items.pop(); // remove last item
+        renderItems();
       } else {
-        alert("Stack is empty!");
+        alert("List is empty!");
       }
     }
 
-    function renderStack() {
-      const list = document.getElementById("stackList");
+    function renderItems() {
+      const list = document.getElementById("toDoList");
       list.innerHTML = "";
-      stack.forEach((item, index) => {
+
+      // const li = document.createElement("li");
+      // li.textContent = `${items}`;
+      // list.appendChild(li);
+
+      items.forEach((items) => {
         const li = document.createElement("li");
-        li.textContent = `${index + 1}. ${item}`;
+        li.textContent = `${items}`;
         list.appendChild(li);
       });
     }
