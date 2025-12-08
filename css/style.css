@@ -8,12 +8,14 @@
 /* Style the body */
 body {
   font-family: sans-serif;
+  /* background-color: #1abc9c; */
 }
 
 /* Header/logo Title */
 .header {
   display: flex;
   padding: 40px;
+  background: #ff8b24;
   background: #d4d41f;
   padding: 50px;
   background-color: #066595;
@@ -51,6 +53,7 @@ body {
 }
 
 .navbar a:hover {
+  /* background-color: #1abc9c; */
   background-color: #066595;
   color: #ffffff;
 }
@@ -87,6 +90,7 @@ body {
 /* Sidebar/left column */
 .row .side {
   flex: 25%;
+  /* background-color: #1abc9c; */
   background-color: #066595;
   flex: 20%;
   padding: 20px;
