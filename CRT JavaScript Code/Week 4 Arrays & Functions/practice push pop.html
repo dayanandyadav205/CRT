@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="listContainer">
+    <h2>To Do List Application</h2>
+    <input type="text" placeholder="Enter an item" id="itemInput">
+    <button onclick="pushItem()">Add Item</button>
+    <button onclick="popItem()">Remove Item</button>
+
+    <ol id="toDoList">
+
+    </ol>
+  </div>
+
+  <script>
+    let item = [];
+
+    function pushItem() {
+      const input = document.getElementById("itemInput").value;
+
+      if (input !== "") {
+        item.push(input);
+        document.getElementById("itemInput").value = "";
+        renderItems();
+      }
+    }
+
+    function popItem() {
+      if (item.length > 0) {
+        item.pop();
+        renderItems();
+      } else {
+        alert("Array is empty");
+      }
+    }
+
+    function renderItems() {
+      const toDolist = document.getElementById("toDoList");
+      document.getElementById("toDoList").innerHTML = "";
+
+      item.forEach((item) => {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${item}`;
+        toDolist.appendChild(listItem);
+      });
+    }
+
+  </script>
+</body>
+
+</html>

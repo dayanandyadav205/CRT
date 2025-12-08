@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  
+<h1>Example 2 of continue</h1>
+  <script>
+    const users = [
+      { name: "Aman", age: 30 },
+      { name: "Bhumika", age: null }, // Invalid age
+      { name: "Chetan", age: 25 }
+    ];
+    for (let i = 0; i < users.length; i++) {
+      if (users[i].age === null) { // Skip users with no age
+        console.log("Skipping user with missing age:", users[i].name);
+        continue;
+      }
+      console.log(`${users[i].name} is ${users[i].age} years old.`);
+    }
+  </script>
+</body>
+
+</html>

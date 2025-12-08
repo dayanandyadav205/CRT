@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function chkpwd() {
+      let p1 = document.f1.password.value;
+      let p2 = document.f1.cpassword.value;
+
+      if (p1 === p2) {
+        document.getElementById("msg").innerHTML = "Password matched";
+        return true;
+      }
+      else {
+        document.getElementById("msg").innerHTML = "Password Mismatch";
+        return false;
+      }
+    }
+
+    function showpwd() {
+      let x = document.getElementById("pwd");
+      if (x.type === "password") {
+        x.type = "text";
+      }
+      else {
+        x.type = "password";
+      }
+    }
+  </script>
+
+  <style>
+    .formContainer{
+      background-color: aqua;
+      width: 500px;
+      height: 200px;
+      margin-left: 20%;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="formContainer">
+    <h3>JavaScript Code to Check & Show Password</h3>
+    <form action="#" name="f1" onsubmit="return chkpwd()">
+      <input type="password" name="password" id="pwd" placeholder="Enter Password">
+      <input type="checkbox" onclick="showpwd()"><br><br>
+      <input type="password" name="cpassword" placeholder="Confirm Password">
+
+      <p id="msg"></p>
+      <input type="submit">
+    </form>
+  </div>
+</body>
+
+</html>

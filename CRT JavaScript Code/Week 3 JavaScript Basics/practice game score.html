@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .demo,
+    .demo2 {
+      display: flex;
+    }
+
+    img {
+      height: 50px;
+      width: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Rock Paper Scissor Game with Graphics & Score</h1>
+  <div class="demo">
+    <p>Computer's Move</p>
+    <img src="" alt="" id="img2">
+  </div>
+
+  <br><br>
+
+  <div class="demo2">
+    <p>Your Move</p>
+    <button onclick="userRock()"><img src="img/rock.png" alt=""></button><br>
+    <button onclick="userPaper()"><img src="img/paper.png" alt=""></button>
+    <button onclick="userScissors()"><img src="img/scissors.png" alt=""></button>
+  </div>
+
+  <br>
+
+  Result: <span id="result"></span>
+
+  <br>
+  <p id="score"></p>
+
+  <script>
+    function userRock() {
+      let score = JSON.parse(localStorage.getItem("score")) ||
+        { wins: 0, losses: 0, ties: 0 };
+
+      const randomNumber = Math.random();
+
+      let computerMove = "";
+
+      if (randomNumber >= 0 && randomNumber < 1 / 3) {
+        computerMove = "Rock";
+        document.getElementById("img2").src = 'img/rock.png';
+        // document.getElementById("compMove").innerHTML = "Computer Select Rock";
+      } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+        computerMove = "Paper";
+        document.getElementById("img2").src = 'img/paper.png';
+      } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
+        computerMove = "Scissors";
+        document.getElementById("img2").src = 'img/scissors.png';
+      }
+
+      let result = "";
+
+      if (computerMove === "Rock") {
+        result = "Tie";
+        document.getElementById("result").innerHTML = "Tie";
+      } else if (computerMove === "Paper") {
+        result = "You Lose";
+        document.getElementById("result").innerHTML = "You Lose";
+      } else if (computerMove === "Scissors") {
+        result = "You Win";
+        document.getElementById("result").innerHTML = "You Win";
+      }
+
+
+      if (result === "You Win") {
+        score.wins += 1;
+      } else if (result === "You Lose") {
+        score.losses += 1;
+      } else if (result === "Tie") {
+        score.ties += 1;
+      }
+
+      localStorage.setItem("score", JSON.stringify(score));
+
+      document.getElementById("score").innerHTML = `Wins: ${score.wins}. Losses: ${score.losses}. Ties: ${score.ties}`;
+
+    }
+
+
+    function userPaper() {
+      let score = JSON.parse(localStorage.getItem("score")) ||
+        { wins: 0, losses: 0, ties: 0 };
+
+      const randomNumber = Math.random();
+
+      let computerMove = "";
+
+      if (randomNumber >= 0 && randomNumber < 1 / 3) {
+        computerMove = "Rock";
+        document.getElementById("img2").src = 'img/rock.png';
+      } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+        computerMove = "Paper";
+        document.getElementById("img2").src = 'img/paper.png';
+      } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
+        computerMove = "Scissors";
+        document.getElementById("img2").src = 'img/scissors.png';
+      }
+
+      let result = "";
+
+      if (computerMove === "Rock") {
+        result = "You Lose";
+        document.getElementById("result").innerHTML = "You Win";
+      } else if (computerMove === "Paper") {
+        result = "You Win";
+        document.getElementById("result").innerHTML = "Tie";
+      } else if (computerMove === "Scissors") {
+        result = "Tie";
+        document.getElementById("result").innerHTML = "You Lose";
+      }
+
+
+      if (result === "You Win") {
+        score.wins += 1;
+      } else if (result === "You Lose") {
+        score.losses += 1;
+      } else if (result === "Tie") {
+        score.ties += 1;
+      }
+
+      localStorage.setItem("score", JSON.stringify(score));
+
+      document.getElementById("score").innerHTML = `Wins: ${score.wins}. Losses: ${score.losses}. Ties: ${score.ties}`;
+
+    }
+
+
+    function userScissors() {
+      let score = JSON.parse(localStorage.getItem("score")) ||
+        { wins: 0, losses: 0, ties: 0 };
+
+      const randomNumber = Math.random();
+
+      let computerMove = "";
+
+      if (randomNumber >= 0 && randomNumber < 1 / 3) {
+        computerMove = "Rock";
+        document.getElementById("img2").src = 'img/rock.png';
+      } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+        computerMove = "Paper";
+        document.getElementById("img2").src = 'img/paper.png';
+      } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
+        computerMove = "Scissors";
+        document.getElementById("img2").src = 'img/scissors.png';
+      }
+
+      let result = "";
+
+      if (computerMove === "Rock") {
+        result = "You Lose";
+        document.getElementById("result").innerHTML = "You Lose";
+      } else if (computerMove === "Paper") {
+        result = "You Win";
+        document.getElementById("result").innerHTML = "You Win";
+      } else if (computerMove === "Scissors") {
+        result = "Tie";
+        document.getElementById("result").innerHTML = "Tie";
+      }
+
+
+      if (result === "You Win") {
+        score.wins += 1;
+      } else if (result === "You Lose") {
+        score.losses += 1;
+      } else if (result === "Tie") {
+        score.ties += 1;
+      }
+
+      localStorage.setItem("score", JSON.stringify(score));
+
+      document.getElementById("score").innerHTML = `Wins: ${score.wins}. Losses: ${score.losses}. Ties: ${score.ties}`;
+
+    }
+
+
+
+  </script>
+</body>
+
+</html>

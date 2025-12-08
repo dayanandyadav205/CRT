@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .form-container {
+      padding: 50px;
+      background-color: aqua;
+      width: 300px;
+      height: 300px;
+      margin-left: 30%;
+    }
+  </style>
+
+  <script>
+    function checkpwd() {
+      let p1 = document.f1.password.value;
+      let p2 = document.f1.cpassword.value;
+
+      if (p1 == p2) {
+        return true;
+      }
+
+      else {
+        
+        document.getElementById("demo").innerHTML = "Password Mismatch";
+        document.getElementById("demo").style.color = "red";
+        return false;
+      }
+    }
+
+
+
+function showpwd(){
+    let x = document.getElementById("pwd");
+
+    if(x.type == "password")
+    {
+      x.type = "text";
+    }
+    else {
+      x.type = "password";
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+  <div class="form-container">
+    <form name="f1" action="" onsubmit="return checkpwd()">
+
+      <input type="password" id="pwd" name="password" placeholder="password">
+      <input type="checkbox" onclick="showpwd()"><br><br>
+      <input type="password" name="cpassword" placeholder="Confirm Password"><br><br>
+
+      <span id="demo"></span><br>
+
+      <input type="submit" name="" id="">
+
+    </form>
+  </div>
+</body>
+
+</html>

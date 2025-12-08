@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function addition(){
+    let n1 = parseFloat(document.getElementById("num1").value);
+    let n2 = parseFloat(document.getElementById("num2").value);
+
+    let sum = n1 + n2;
+    
+    document.getElementById("result").innerHTML = "Result = " +sum;
+    }
+  </script>
+</head>
+<body>
+  <form action="#">
+      Enter the value of First No. <input type="text" id="num1"><br><br>
+      Enter the value of second No. <input type="text" id="num2"><br><br>
+
+      <button onclick="addition()">+</button>
+
+      <button>-</button>
+
+      <button>*</button>
+
+      <button>/</button> <br><br>
+
+      <span id="result"></span>
+  </form>
+</body>
+</html>

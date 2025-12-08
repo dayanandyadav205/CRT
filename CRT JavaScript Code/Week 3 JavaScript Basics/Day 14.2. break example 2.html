@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Example 2 of Break</h1>
+
+  <script>
+    const numbers = [10, 25, 30, 45, 50];
+    const target = 25;
+
+    for (let i = 0; i < numbers.length; i++) {
+      if (numbers[i] === target) {
+        console.log(`Found ${target} at index ${i}`);
+        break; // Exit the loop once the target is found
+      }
+      else{
+           console.log(`${target} not found in the array.`);
+      }
+    }
+  </script>
+</body>
+
+</html>

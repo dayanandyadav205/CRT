@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1> Exercise 4: Make a Calculator using HTML form</h1>
+  
+  <script>
+    function addition() {
+      let x = parseFloat(document.getElementById("num1").value);
+      let y = parseFloat(document.getElementById("num2").value);
+      let sum;
+
+      // Perform addition
+      sum = x + y;
+
+      // Display the result in the label
+      document.getElementById("result").innerHTML = "Result: " + sum;
+    }
+
+
+    function subtraction() {
+      let num1 = parseFloat(document.getElementById("num1").value);
+      let num2 = parseFloat(document.getElementById("num2").value);
+      let sub;
+
+      // Perform suntraction
+      sub = num1 - num2;
+
+      // Display the result in the label
+      document.getElementById("result").innerHTML = "Result: " + sub;
+    }
+  </script>
+
+  <!-- Text boxes to accept input from the user -->
+  Enter Number 1: <input type="text" id="num1"><br><br>
+  Enter Number 2: <input type="text" id="num2"><br><br>
+
+  <!-- Button to trigger the addition -->
+  <button onclick="addition()">+</button>
+
+  <!-- Button to trigger the subtraction -->
+  <button onclick="subtraction()">-</button><br><br>
+
+  <!-- Label to display the result -->
+  <span id="result"></span>
+</body>
+
+</html>

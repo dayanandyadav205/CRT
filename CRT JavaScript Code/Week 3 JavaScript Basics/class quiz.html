@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Simple Quiz Application using JavaScript</h1>
+
+  <h2>Question No. 01: What is 2+3?</h2>
+  <input type="radio" name="question1">3 <br>
+  <input type="radio" name="question1" id="correct1">5 <br>
+  <input type="radio" name="question1">7 <br>
+  <input type="radio" name="question1">1 <br>
+
+  <h2>Question No. 02: What is 7-5?</h2>
+  <input type="radio" name="question2">5 <br>
+  <input type="radio" name="question2">7 <br>
+  <input type="radio" name="question2" id="correct2">2 <br>
+  <input type="radio" name="question2">0 <br>
+
+  <h2>Question No. 03: What is 8*3?</h2>
+  <input type="radio" name="question3" id="correct3" >24 <br>
+  <input type="radio" name="question3">5 <br>
+  <input type="radio" name="question3">7 <br>
+  <input type="radio" name="question3">1 <br>
+
+  <p id="result"></p>
+  <p id="percentage"></p>
+
+  <input type="submit" value="Show Score" onclick="quizResult()">
+
+  <script>
+    function quizResult(){
+    let score = 0;
+
+    if(document.getElementById("correct1").checked){
+      score++;
+    }
+    if(document.getElementById("correct2").checked){
+      score++;
+    }
+    if(document.getElementById("correct3").checked){
+      score++;
+    }
+
+    document.getElementById("result").innerHTML = "Your score is: " +score;
+
+    let percentage = score/3*100;
+    document.getElementById("percentage").innerHTML = percentage;
+  }
+  </script>
+</body>
+
+</html>

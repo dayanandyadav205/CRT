@@ -1,24 +1,20 @@
 /* Universal Selector */
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 /* Style the body */
 body {
   font-family: sans-serif;
-  /* background-color: #1abc9c; */
+  margin: 0;
+  scroll-behavior: smooth;
 }
 
 /* Header/logo Title */
 .header {
   display: flex;
   padding: 40px;
-  background: #ff8b24;
-  background: #d4d41f;
-  padding: 50px;
-  background-color: #066595;
+  background: #1abc9c;
   color: white;
   align-items: center;
   text-align: center;
@@ -31,14 +27,14 @@ body {
   height: 100px;
 }
 
-.header h1 {
+.header h1{
   font-family: "Audiowide", sans-serif;
 }
 
 /* Style the top navigation bar */
 .navbar {
   display: flex;
-  background-color: #000000;
+  background-color: #333333;
 }
 
 .navbar i {
@@ -53,8 +49,7 @@ body {
 }
 
 .navbar a:hover {
-  /* background-color: #1abc9c; */
-  background-color: #066595;
+  background-color: #1abc9c;
   color: #ffffff;
 }
 
@@ -69,9 +64,9 @@ body {
 }
 
 .top {
-  padding: 10px;
-  background: #000000;
-  border-radius: 50%;
+  padding: 20px;
+  background: #ff8b24;
+  border-radius: 10px;
 }
 
 .container-top a {
@@ -82,18 +77,20 @@ body {
 
 /* Column container */
 .row {
+  /* border: 10px solid red; */
   display: flex;
   width: 100%;
+  /* margin: 10px; */
 }
 
 /* Create two unequal columns that sits next to each other */
 /* Sidebar/left column */
 .row .side {
+  /* display: flex; */
   flex: 25%;
-  /* background-color: #1abc9c; */
-  background-color: #066595;
-  flex: 20%;
+  background-color: #1abc9c;
   padding: 20px;
+  margin-top: -40px;
 }
 
 .row .side .aboutMe {
@@ -102,38 +99,28 @@ body {
   box-sizing: border-box;
   padding: 10px;
   height: auto;
-  box-shadow: 20px 10px 50px 5px rgb(47, 34, 31);
-  border-radius: 10px;
-  color: white;
 }
 
 .row .side .aboutMe .myImg img {
   border-radius: 50%;
   width: 120px;
   height: 130px;
-  box-shadow: 20px 10px 50px 5px rgb(47, 34, 31);
-  border-radius: 50%;
 }
 
 .row .side .aboutMe .myIntro {
   padding: 10px;
   text-align: left;
-  /* color: white; */
+  color: white;
+  margin-top: -30px;
 }
 
-.row .side .aboutMe .myIntro p {
-  font-size: 14px;
-}
-
-.row .side .myLinks {
-  display: flex;
+.row .side .myLinks{
+ display: flex;
   border: 2px solid white;
   box-sizing: border-box;
   padding: 10px;
   height: auto;
   color: white;
-  box-shadow: 20px 10px 50px 5px rgb(47, 34, 31);
-  border-radius: 10px;
 }
 
 .row .side .myLinks ul li {
@@ -149,59 +136,68 @@ body {
 }
 
 .row .side .myLinks ul li a:hover {
-  color: #012b41;
+  color: #333333;
 }
 
 /* Main column/right column */
 .row .main {
   flex: 75%;
-  padding: 10px;
-  /* background-color: #1abc9c; */
-  background-color: whitesmoke;
+  padding: 20px;
+  margin-top: -50px;
 }
 
 .row .main img {
   width: 100%;
   height: 100%;
-  border-radius: 20px;
-  box-shadow: 20px 10px 50px 5px rgb(47, 34, 31);
-  border: 2px solid white;
 }
 
+.row .main h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  text-align: center;
+}
+
+.row .main .headings {
+  background-color: lightblue;
+}
+
+.row .main .para-formatting {
+  background-color: lightcoral;
+}
+
+.row .main .myLists {
+  background-color: lightgreen;
+}
+
+.row .main .myTable {
+  background-color: lightsalmon;
+}
+
+.row .main .myMedia {
+  padding: 10px;
+  background-color: lightpink;
+}
 
 /* Footer */
 .footer {
   padding: 20px;
-  background: #000000;
+  background: #333333;
   align-items: center;
   justify-items: center;
   align-content: center;
   justify-content: center;
-  color: white;
-}
-
-/* Contact CSS */
-.contact-container {
-  background-color: #066595;
-  border-radius: 20px;
-  margin: 50px;
-  margin-left: 20%;
-  padding: 20px;
-  width: 750px;
-  height: 600px;
-}
-
-.map-iframe iframe {
-  width: 700px;
-  height: 500px;
+    color: white;
 }
 
 /* ================================================================ */
 /* Form CSS */
 .form_container {
   max-width: 500px;
-  background-color: #066595;
-  border: 2px solid white;
+  background-color: #1abc9c;
   margin: 20px 20px;
   padding: 30px;
   box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.5);
@@ -300,16 +296,16 @@ body {
     text-align: center;
   }
 
+  /* .side {
+    margin-top: -40px;
+  }
+
+  .main {
+    margin-top: 10px;
+  } */
+
   .form_container .form {
-    width: 70%;
-  }
-
-  .contact-container {
-    width: 70%;
-  }
-
-  .map-iframe iframe {
-    width: 100%;
+    width: 50%;
   }
 
   .form_container .form .input_field {
