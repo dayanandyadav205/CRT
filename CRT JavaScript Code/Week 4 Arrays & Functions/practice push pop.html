@@ -24,10 +24,10 @@
 
     function pushItem() {
       const input = document.getElementById("itemInput").value;
+      document.getElementById("itemInput").value = "";
 
       if (input !== "") {
         item.push(input);
-        document.getElementById("itemInput").value = "";
         renderItems();
       }
     }

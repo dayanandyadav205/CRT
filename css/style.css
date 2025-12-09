@@ -8,15 +8,12 @@
 /* Style the body */
 body {
   font-family: sans-serif;
-  /* background-color: #1abc9c; */
 }
 
 /* Header/logo Title */
 .header {
   display: flex;
   padding: 40px;
-  background: #ff8b24;
-  background: #d4d41f;
   padding: 50px;
   background-color: #066595;
   color: white;
@@ -53,7 +50,6 @@ body {
 }
 
 .navbar a:hover {
-  /* background-color: #1abc9c; */
   background-color: #066595;
   color: #ffffff;
 }
@@ -90,7 +86,6 @@ body {
 /* Sidebar/left column */
 .row .side {
   flex: 25%;
-  /* background-color: #1abc9c; */
   background-color: #066595;
   flex: 20%;
   padding: 20px;
@@ -238,7 +233,6 @@ body {
 .form_container .form .input_field textarea {
   width: 100%;
   outline: none;
-  border: 1px solid #1abc9c;
   font-size: 15px;
   padding: 8px 10px;
   border-radius: 3px;
@@ -259,7 +253,6 @@ body {
   width: 100%;
   height: 100%;
   padding: 8px 10px;
-  border: 1px solid #1abc9c;
   border-radius: 3px;
 }
 

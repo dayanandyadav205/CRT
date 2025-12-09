@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="ref" refre>
+  <title>Document</title>
+  <style>
+    img{
+      width: 50px;
+      height: 50px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <img src="" alt="" id="imgCompMove">
+  <br><br>
+  
+  <button onclick="rock()"><img src="img/rock.png" alt=""></button>
+  <button onclick="paper()"><img src="img/paper.png" alt=""></button>
+
+  <button onclick="scissor()"><img src="img/scissors.png" alt=""></button>
+
+
+  <br><br>
+
+  <span id="demo"></span>
+
+  <script>
+    function rock() {
+
+      let score = JSON.parse(localStorage.getItem('score'))||
+      {wins:0, losses:0, ties:0};
+
+      const randomNumber = Math.random();
+
+      let computerMove = "";
+
+      if (randomNumber >= 0 && randomNumber < 1 / 3) {
+        computerMove = "Rock";
+        document.getElementById("imgCompMove").src= "img/rock.png"
+      }
+      else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+        computerMove = "Paper";
+         document.getElementById("imgCompMove").src= "img/paper.png";
+      }
+      else if (randomNumber >= 2 / 3 && randomNumber < 1) {
+        computerMove = "Scissor";
+        document.getElementById("imgCompMove").src= "img/scissors.png";
+      }
+
+      let result = "";
+
+      if (computerMove === "Rock") {
+        result = "Tie";
+      }
+      else if (computerMove === "Paper") {
+        result = "You Lose";
+      }
+      else if (computerMove === "Scissor") {
+        result = "You Win"
+      }
+
+      if(result == "You Win"){
+        score.wins += 1;
+      }else if(result == "You Lose"){
+        score.losses += 1;
+      }else if(result == "Tie"){
+        score.ties += 1;
+      }
+
+
+      localStorage.setItem('score', JSON.stringify(score));
+
+      document.getElementById("demo").innerHTML = `You Select Rock. Computer Select ${computerMove}. ${result}. Wins: ${score.wins}. Losses: ${score.losses}. Ties: ${score.ties}`;
+    }
+  </script>
+
+</body>
+
+</html>
