@@ -319,3 +319,15 @@ body {
     flex-direction: row;
   }
 }
+
+
+/* CSS for Service page */
+.serviceContainer{
+  background-color: lightgreen;
+  width: 500px;
+  height: 500px;
+  border: 5px solid red;
+  margin-left: 25%;
+  margin-top: 2%;
+  padding: 30px;
+}
