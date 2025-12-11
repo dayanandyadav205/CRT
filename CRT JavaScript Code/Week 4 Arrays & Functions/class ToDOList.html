@@ -1,20 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
 <body>
-  <h1>TO DO LIST APPLICATION</h1>
 
-  <input type="text">
-  <button>Add Task</button>
-  <button>Remove Task</button>
+  <div class="listContainer">
+    <h1>To Do List application</h1>
 
-  <ol>
-    <h4>List Items</h4>
+    <input type="text" placeholder="Enter an item" id="itemInput">
 
-  </ol>
+    <button onclick="pushItem()">Add item</button>
+
+    <button onclick="popItem()">Remove Item</button>
+
+    <h4>Task List</h4>
+    <ol id="toDoList">
+      <!-- Items will be generated later -->
+    </ol>
+
+    <script>
+      let items = [];
+
+      function pushItem() {
+        let input = document.getElementById("itemInput").value;
+        document.getElementById("itemInput").value = "";
+
+        if (input !== "") {
+          items.push(input);
+
+          let itemList = document.getElementById("toDoList");
+          document.getElementById("toDoList").innerHTML = "";
+          items.forEach((items => {
+            let li = document.createElement('li');
+            li.textContent = `${items}`;
+            itemList.appendChild(li);
+
+            let deletebtn = document.createElement('button');
+            deletebtn.textContent = 'Delete';
+            deletebtn.addEventListener('click', deleteTask);
+            li.appendChild(deletebtn);
+          }));
+        }
+      }
+
+      // function deleteTask(event) {
+      //   items.remove(items);
+
+      //    let itemList = document.getElementById("toDoList");
+      //     document.getElementById("toDoList").innerHTML = "";
+      //     items.forEach((items => {
+      //       let li = document.createElement('li');
+      //       li.textContent = `${items}`;
+      //       itemList.appendChild(li);
+      //     }));
+        
+      // }
+
+
+
+      function deleteTask(event){
+        if(items.length>0)
+        items.pop();
+      // console.log(items);
+      //  let itemList = document.getElementById("toDoList");
+      //     document.getElementById("toDoList").innerHTML = "";
+      //     items.forEach((items => {
+      //       let li = document.createElement('li');
+      //       li.textContent = `${items}`;
+      //       itemList.appendChild(li);
+      //     }));
+
+      // renderItem();
+
+      }
+
+      // function renderItem() {
+      //   let itemList = document.getElementById("toDoList");
+
+      //   document.getElementById("toDoList").innerHTML = "";
+
+      //   items.forEach((items => {
+      //     let li = document.createElement('li');
+      //     li.textContent = `${items}`;
+      //     itemList.appendChild(li);
+      //   }));
+      // }
+    </script>
+
+  </div>
 </body>
+
 </html>

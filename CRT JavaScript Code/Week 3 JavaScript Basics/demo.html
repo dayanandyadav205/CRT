@@ -6,21 +6,16 @@
   <title>Document</title>
 </head>
 <body>
-  <p id="demo">My Paragraph</p>
-
-  <button onclick="myFunction()">Click here</button>
-
   
+
+  <img src="" alt="" id="myImg">
+
+  <button onclick="loadImg()">Click here</button>
 
   <script>
-    function myFunction(){
-      document.writeln("Hello JS");
+    function loadImg(){
+      document.getElementById("myImg").src = "img/paper.png";
     }
-
-    //  console.log("Welcome");
   </script>
-
-
-  
 </body>
 </html>

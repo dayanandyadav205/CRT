@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h1>Simple Quiz Application Using JavaScript</h1>
+
+  <h3>Question 1: What is 7-3</h3>
+  <input type="radio" name="question1" id="correct1">a. 4 <br>
+  <input type="radio" name="question1"> b. 0 <br>
+  <input type="radio" name="question1"> c. 5 <br>
+  <input type="radio" name="question1"> d. 9
+
+  <h3>Question 2: What is 4*7</h3>
+  <input type="radio" name="question2"> a. 24<br>
+  <input type="radio" name="question2"> b. 21<br>
+  <input type="radio" name="question2" id="correct2">c. 28<br>
+  <input type="radio" name="question2"> d. 25
+
+  <h3>Question 3: What is 18/3</h3>
+  <input type="radio" name="question3"> a. 4<br>
+  <input type="radio" name="question3"> b. 7<br>
+  <input type="radio" name="question3"> c. 3<br>
+  <input type="radio" name="question3" id="correct3">d. 6
+
+  <h3>Question 4: What is 5-1</h3>
+  <input type="radio" name="question4"> a. 7<br>
+  <input type="radio" name="question4" id="correct4">b. 4<br>
+  <input type="radio" name="question4"> c. 9<br>
+  <input type="radio" name="question4"> d. 2
+
+  <br>
+  <p id="score"></p>
+  <br>
+  <p id="percentage"></p>
+  <button onclick="myScore()">Show Score</button>
+
+
+
+  <script>
+    
+    function myScore() {
+      let score = 0;
+
+      //For Question 1
+      if (document.getElementById("correct1").checked) {
+        score++;
+      }
+
+      //for question2
+      if (document.getElementById("correct2").checked) {
+        score++;
+      }
+
+      if (document.getElementById("correct3").checked) {
+        score++;
+      }
+
+      if (document.getElementById("correct4").checked) {
+        score++;
+      }
+      
+      document.getElementById("score").innerHTML ="Your Score: " +score;
+
+    let percentage = (score/4)*100;
+    document.getElementById("percentage").innerHTML ="Your :percentage" +percentage;
+    }
+  </script>
+</body>
+
+</html>
