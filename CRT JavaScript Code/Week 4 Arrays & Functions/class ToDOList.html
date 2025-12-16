@@ -8,91 +8,51 @@
 </head>
 
 <body>
+  <h1>To DO List Application</h1>
 
-  <div class="listContainer">
-    <h1>To Do List application</h1>
+  <input type="text" placeholder="Enter an Item" id="inputItem">
+  <button onclick="pushItem()">Push Item</button>
+  <button onclick="popItem()">Pop Item</button>
 
-    <input type="text" placeholder="Enter an item" id="itemInput">
+  <ol id="toDoList">
+    <h3>List Items:</h3>
 
-    <button onclick="pushItem()">Add item</button>
+  </ol>
 
-    <button onclick="popItem()">Remove Item</button>
+  <script>
+    let item = [];
 
-    <h4>Task List</h4>
-    <ol id="toDoList">
-      <!-- Items will be generated later -->
-    </ol>
+    function pushItem() {
+      let input = document.getElementById("inputItem").value;
+      document.getElementById("inputItem").value = "";
 
-    <script>
-      let items = [];
-
-      function pushItem() {
-        let input = document.getElementById("itemInput").value;
-        document.getElementById("itemInput").value = "";
-
-        if (input !== "") {
-          items.push(input);
-
-          let itemList = document.getElementById("toDoList");
-          document.getElementById("toDoList").innerHTML = "";
-          items.forEach((items => {
-            let li = document.createElement('li');
-            li.textContent = `${items}`;
-            itemList.appendChild(li);
-
-            let deletebtn = document.createElement('button');
-            deletebtn.textContent = 'Delete';
-            deletebtn.addEventListener('click', deleteTask);
-            li.appendChild(deletebtn);
-          }));
-        }
+      if (input !== "") {
+        item.push(input);
+        renderItems()
       }
+    }
 
-      // function deleteTask(event) {
-      //   items.remove(items);
-
-      //    let itemList = document.getElementById("toDoList");
-      //     document.getElementById("toDoList").innerHTML = "";
-      //     items.forEach((items => {
-      //       let li = document.createElement('li');
-      //       li.textContent = `${items}`;
-      //       itemList.appendChild(li);
-      //     }));
-        
-      // }
-
-
-
-      function deleteTask(event){
-        if(items.length>0)
-        items.pop();
-      // console.log(items);
-      //  let itemList = document.getElementById("toDoList");
-      //     document.getElementById("toDoList").innerHTML = "";
-      //     items.forEach((items => {
-      //       let li = document.createElement('li');
-      //       li.textContent = `${items}`;
-      //       itemList.appendChild(li);
-      //     }));
-
-      // renderItem();
-
+    function popItem(){
+      if(item.length > 0){
+        item.pop();
+        renderItems();
       }
+      else{
+        alert("List is empty");
+      }
+    }
 
-      // function renderItem() {
-      //   let itemList = document.getElementById("toDoList");
+    function renderItems() {
+      let listItems = document.getElementById("toDoList");
+      listItems.innerHTML = "";
 
-      //   document.getElementById("toDoList").innerHTML = "";
-
-      //   items.forEach((items => {
-      //     let li = document.createElement('li');
-      //     li.textContent = `${items}`;
-      //     itemList.appendChild(li);
-      //   }));
-      // }
-    </script>
-
-  </div>
+      item.forEach((item) =>{
+        const li = document.createElement('li');
+        li.textContent = `${item}`;
+        listItems.appendChild(li);
+      });
+  }
+  </script>
 </body>
 
 </html>
