@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real-Time Reading Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    #readings {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      background: #f0f0f0;
+      margin: 5px 0;
+      padding: 10px;
+      border-radius: 2px;
+    }
+
+    .latest {
+      background: #d1ffd1;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <h1><img src="images/real-time.jpg" alt="" width="50" height="50"> Real-Time Reading Dashboard</h1>
+  <h3>Latest Readings</h3>
+  <ul id="readings"></ul>
+
+  <script>
+    let readings = [];
+    const MAX_READINGS = 8; // keep only 8 latest readings
+
+    function renderReadings() {
+      let list = document.getElementById("readings");
+      list.innerHTML = "";
+      readings.forEach((reading, index) => {
+        let li = document.createElement("li");
+        li.textContent = reading;
+        if (index === 0) li.classList.add("latest"); // highlight newest
+        list.appendChild(li);
+      });
+    }
+
+    function addReading() {
+      let timestamp = new Date().toLocaleTimeString();
+      let value = (Math.random() * 100).toFixed(2); // simulate sensor value
+      let newReading = `Reading: ${value} units at ${timestamp}`;
+
+      readings.unshift(newReading); // newest at top
+
+      if (readings.length > MAX_READINGS) {
+        readings.pop(); // discard oldest
+      }
+
+      renderReadings();
+    }
+
+    // Auto-update every 3 seconds
+    setInterval(addReading, 2000);
+
+    renderReadings();
+  </script>
+</body>
+
+</html>
