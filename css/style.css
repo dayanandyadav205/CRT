@@ -193,141 +193,30 @@ body {
 
 /* ================================================================ */
 /* Form CSS */
-.form_container {
-  max-width: 500px;
-  background-color: #066595;
-  border: 2px solid white;
-  margin: 20px 20px;
-  padding: 30px;
-  box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.5);
-  border-radius: 20px;
+/* css for form */
+.formCotainer {
+  background-color: lightcoral;
+  padding: 20px;
+  margin-left: 50px;
+  margin-top: 20px;
+  width: 500px;
 }
 
-.form_container .title {
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 25px;
-  color: #ffffff;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-.form_container .form {
+.input,
+.btnSubmit {
+  height: 30px;
   width: 100%;
 }
 
-.form_container .form .input_field {
-  margin-bottom: 15px;
-  display: flex;
-  align-items: center;
-}
-
-.form_container .form .input_field label {
-  width: 200px;
-  margin-right: 10px;
-  font-size: 14px;
-  color: #ffffff;
-}
-
-.form_container .form .input_field .input,
-.form_container .form .input_field textarea {
-  width: 100%;
-  outline: none;
-  font-size: 15px;
-  padding: 8px 10px;
-  border-radius: 3px;
-  transition: all 0.5s ease;
-}
-
-.form_container .form .input_field textarea {
-  resize: none;
-  height: 100px;
-}
-
-.form_container .form .input_field .custom_select {
-  width: 100%;
-  height: 37px;
-}
-
-.form_container .form .input_field .custom_select select {
-  width: 100%;
-  height: 100%;
-  padding: 8px 10px;
-  border-radius: 3px;
-}
-
-.form_container .form .input_field p {
-  font-size: 14px;
-  color: #757575;
-}
-
-.form_container .form .input_field .check {
-  width: 15px;
-  height: 15px;
-}
-
-.form_container .form .input_field .btn {
-  width: 100%;
-  padding: 8px 10px;
-  font-size: 15px;
-  border: 0;
-  background: #665e5e;
-  color: white;
-  cursor: pointer;
-  border-radius: 3px;
-}
-
-.form_container .form .input_field .btn:hover {
-  background: #333333;
-}
 
 /* ======================================================================================== */
-/* Media Qury for all pages */
-/* Responsive layout - when the screen is between 360px wide and 768px wide make the two columns stack on top of each other instead of next to each other */
-@media (min-width: 360px) and (max-width: 768px) {
+/* Media Query for all pages */
+/* Responsive layout - /* responsive layout */
+@media (min-width:400px) and (max-width:768px) {
 
-  .navbar,
-  .row {
+  .nav,
+  .main {
     flex-direction: column;
-    /* Stack items vertically */
     text-align: center;
   }
-
-  .form_container .form {
-    width: 70%;
-  }
-
-  .contact-container {
-    width: 70%;
-  }
-
-  .map-iframe iframe {
-    width: 100%;
-  }
-
-  .form_container .form .input_field {
-    flex-direction: column;
-    align-items: flex-start;
-
-  }
-
-  .form_container .form .input_field label {
-    margin-bottom: 5px;
-  }
-
-  .form_container .form .input_field.terms {
-    flex-direction: row;
-  }
-}
-
-
-/* CSS for Service page */
-.serviceContainer{
-  background-color: lightgreen;
-  width: 500px;
-  height: 500px;
-  border: 5px solid red;
-  margin-left: 25%;
-  margin-top: 2%;
-  padding: 30px;
 }

@@ -35,7 +35,7 @@
     </div>
 
     <!-- Navigation Bar -->
-    <div class="navbar">
+    <div class="nav">
         <a href="index.html"><i class="fa-solid fa-house"></i></a>
         <a href="file:///C:\xampp\htdocs\CRT\CRT HTML Code" target="_blank">HTML Code</a>
         <a href="file:///C:\xampp\htdocs\CRT\CRT CSS Code" target="_blank">CSS Code</a>
@@ -47,31 +47,16 @@
     </div>
 
     <!-- Form -->
-    <div class="form_container" style="width: 400px;">
-        <div class="title">
-            User Login
-        </div>
-        <form action="#" method="POST" autocomplete="off" enctype="multipart/form-data">
-            <div class="form">
-                <div class="input_field">
-                    <input type="text" class="input" name="username" placeholder="Email">
-                </div>
-
-                <div class="input_field">
-                    <input type="password" class="input" name="password" placeholder="Password">
-                </div>
-
-                <div class="forgotpass">
-                    <a href="#" class="link" onclick="message()">Forgot Password?</a>
-                </div>
-
-                <div class="input_field">
-                    <input type="submit" name="login" value="Login" class="btn">
-                </div>
-                <div class="signup">New Member?<a href="form.html" class="link"> Sign Up Here</a></div>
-            </div>
+    <div class="formCotainer">
+        <h1>Login page</h1>
+        <form action="">
+            <fieldset>
+                <legend>Login Form</legend>
+                <input type="text" placeholder="User Name" required class="input"><br><br>
+                <input type="password" placeholder="Password" required class="input"><br><br>
+                <input type="submit" value="Login" class="btnSubmit">
+            </fieldset>
         </form>
-
     </div>
 
     <!-- Footer -->
