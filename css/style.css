@@ -1,25 +1,13 @@
-/* Universal Selector */
 * {
-  box-sizing: border-box;
   margin: 0;
-  padding: 0;
-}
-
-/* Style the body */
-body {
   font-family: sans-serif;
 }
 
-/* Header/logo Title */
 .header {
+  background-color: rgb(4, 131, 185);
   display: flex;
-  padding: 40px;
-  padding: 50px;
-  background-color: #066595;
-  color: white;
-  align-items: center;
-  text-align: center;
   justify-content: space-between;
+  padding: 50px;
 }
 
 .header img {
@@ -29,172 +17,77 @@ body {
 }
 
 .header h1 {
-  font-family: "Audiowide", sans-serif;
+  color: white;
 }
 
-/* Style the top navigation bar */
-.navbar {
+.nav {
   display: flex;
-  background-color: #000000;
+  background-color: rgb(36, 35, 35);
+  padding: 10px;
 }
 
-.navbar i {
-  font-size: 20px;
-}
-
-.navbar a {
+.nav a {
   color: white;
   padding: 20px;
   text-decoration: none;
-  transition: all 0.5s ease-in-out;
 }
 
-.navbar a:hover {
-  background-color: #066595;
-  color: #ffffff;
+.nav a:hover {
+  background-color: aqua;
 }
 
-/* Go to Top button */
-.container-top {
-  display: flex;
+/* top button css */
+.topBtn{
+  background-color: rgb(229, 5, 5);
+  padding: 20px;
   position: sticky;
-  right: 10px;
-  top: 20px;
-  width: 60px;
+  top:20px;
+  right: 20px;
   float: right;
-}
-
-.top {
-  padding: 10px;
-  background: #000000;
   border-radius: 50%;
 }
-
-.container-top a {
-  text-decoration: none;
+.topBtn a{
   color: white;
-  font-size: 14px;
 }
-
-/* Column container */
-.row {
+/* main content CSS */
+.main {
   display: flex;
-  width: 100%;
 }
 
-/* Create two unequal columns that sits next to each other */
-/* Sidebar/left column */
-.row .side {
-  flex: 25%;
-  background-color: #066595;
+.main .aside {
+  background-color: lightcoral;
   flex: 20%;
   padding: 20px;
 }
 
-.row .side .aboutMe {
-  display: flex;
-  border: 2px solid white;
-  box-sizing: border-box;
-  padding: 10px;
-  height: auto;
-  box-shadow: 20px 10px 50px 5px rgb(47, 34, 31);
-  border-radius: 10px;
-  color: white;
+.main .aside img {
+  height: 100px;
+  width: 100px;
 }
 
-.row .side .aboutMe .myImg img {
-  border-radius: 50%;
-  width: 120px;
-  height: 130px;
-  box-shadow: 20px 10px 50px 5px rgb(47, 34, 31);
-  border-radius: 50%;
-}
-
-.row .side .aboutMe .myIntro {
-  padding: 10px;
-  text-align: left;
-  /* color: white; */
-}
-
-.row .side .aboutMe .myIntro p {
-  font-size: 14px;
-}
-
-.row .side .myLinks {
-  display: flex;
-  border: 2px solid white;
-  box-sizing: border-box;
-  padding: 10px;
-  height: auto;
-  color: white;
-  box-shadow: 20px 10px 50px 5px rgb(47, 34, 31);
-  border-radius: 10px;
-}
-
-.row .side .myLinks ul li {
-  list-style: none;
-  font-size: 30px;
-  align-self: center;
-  line-height: 50px;
-}
-
-.row .side .myLinks ul li a {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-.row .side .myLinks ul li a:hover {
-  color: #012b41;
-}
-
-/* Main column/right column */
-.row .main {
-  flex: 75%;
-  padding: 10px;
-  /* background-color: #1abc9c; */
-  background-color: whitesmoke;
-}
-
-.row .main img {
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-  box-shadow: 20px 10px 50px 5px rgb(47, 34, 31);
-  border: 2px solid white;
-}
-
-
-/* Footer */
-.footer {
+.main .content {
+  background-color: lightseagreen;
+  flex: 80%;
   padding: 20px;
-  background: #000000;
-  align-items: center;
-  justify-items: center;
-  align-content: center;
-  justify-content: center;
+}
+
+.main .content img {
+  height: 300px;
+  width: 400px;
+}
+
+/* footer css */
+.footer{
+  background-color: rgb(42, 41, 41);
   color: white;
-}
-
-/* Contact CSS */
-.contact-container {
-  background-color: #066595;
-  border-radius: 20px;
-  margin: 50px;
-  margin-left: 20%;
   padding: 20px;
-  width: 750px;
-  height: 600px;
+}
+.footer p{
+  text-align: center;
 }
 
-.map-iframe iframe {
-  width: 700px;
-  height: 500px;
-}
-
-/* ================================================================ */
-/* Form CSS */
 /* css for form */
-.formCotainer {
+.formCotainer{
   background-color: lightcoral;
   padding: 20px;
   margin-left: 50px;
@@ -202,20 +95,15 @@ body {
   width: 500px;
 }
 
-.input,
-.btnSubmit {
+.input, .btnSubmit{
   height: 30px;
   width: 100%;
 }
 
 
-/* ======================================================================================== */
-/* Media Query for all pages */
-/* Responsive layout - /* responsive layout */
-@media (min-width:400px) and (max-width:768px) {
-
-  .nav,
-  .main {
+/* responsive layout */
+@media (min-width:400px) and (max-width:768px){
+  .nav, .main{
     flex-direction: column;
     text-align: center;
   }
