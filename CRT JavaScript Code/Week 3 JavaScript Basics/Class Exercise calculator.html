@@ -5,13 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-
-  <script src="js/script.js"></script>
-
 </head>
 
 <body>
-  <form action="#">
+
     <label>Enter the value of first no.</label>
     <input type="text" id="num1">
     <br>
@@ -33,7 +30,7 @@
 
     <br>
     <span id="result"></span>
-  </form>
+
 
   <script>
     function addition(){
@@ -45,6 +42,18 @@
     let sum = num1 + num2;
 
     document.getElementById("result").innerHTML = sum;
+    }
+
+
+    function substraction(){
+
+    let num1 =  parseFloat(document.getElementById("num1").value);
+
+    let num2 = parseFloat(document.getElementById("num2").value);
+
+    let diff = num1 - num2;
+
+    document.getElementById("result").innerHTML = diff;
     }
 
   </script>

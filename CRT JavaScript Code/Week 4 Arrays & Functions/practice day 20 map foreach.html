@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Day 20 Foreach loop and map</h1>
+  <h2>Temperature Converter (Celcius to Fehrenheit)</h2>
+
+  <ul id="temps">
+
+  </ul>
+
+  <script>
+    let celciusTemps = [0, 12, 15, 36, 58];
+
+    document.writeln("Temperature in Celcius: ", celciusTemps + "<br>");
+
+    let fehrenheitTemps = celciusTemps.map(c => ((c * 9 / 5) + 32));
+
+
+    // console.log(fehrenheitTemps);
+    document.writeln("Temperature in Fehrenheit: ", fehrenheitTemps);
+
+    let temps = document.getElementById('temps');
+    // temps.innerHTML = '';
+
+    fehrenheitTemps.forEach((fehrenheitTemps) => {
+      let li = document.createElement('li');
+      li.textContent = fehrenheitTemps;
+      temps.appendChild(li);
+    });
+  </script>
+
+</body>
+
+</html>

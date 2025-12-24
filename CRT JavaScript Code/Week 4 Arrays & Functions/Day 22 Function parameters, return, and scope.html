@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Function Parameters: Inputs you pass into a function so it can work with different data</h1>
+  <script>
+    function greet(name) {
+      console.log("Hello, " + name + "!");
+    }
+
+    greet("Dayanand"); // Output: Hello, Dayanand!
+  </script>
+
+  <hr>
+
+  <h1>Return Values: The output a function gives back after execution</h1>
+
+  <script>
+    function add(a, b) {
+      return a + b;
+    }
+
+    let sum = add(5, 3);
+    console.log(sum); // Output: 8
+  </script>
+
+  <hr>
+
+  <h1>Scope Definition: The context where variables are accessible</h1>
+
+  <script>
+    let globalVar = "I am global";
+
+    function testScope() {
+      let localVar = "I am local";
+      console.log(globalVar); // Accessible
+      console.log(localVar);  // Accessible
+    }
+
+    testScope();
+    console.log(globalVar); // Accessible
+    console.log(localVar);  // Error: localVar is not defined
+  </script>
+</body>
+
+</html>

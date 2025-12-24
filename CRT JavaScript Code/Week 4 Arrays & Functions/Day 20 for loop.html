@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Select Item by Button & Image</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .products {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .product {
+      text-align: center;
+    }
+
+    .product img {
+      width: 100px;
+      height: 100px;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 8px 0;
+    }
+
+    button {
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    #total {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <h2><img src="images/cart.jpg" alt="" width="50" height="50"> Shopping Cart</h2>
+  <br>
+
+  <!-- Product Selection -->
+  <div class="products">
+    <div class="product">
+      <img src="images/laptop.jpg" alt="Laptop">
+      <button onclick="addItem('Laptop', 50000)">Add Laptop (&#8377; 50000)</button>
+    </div>
+
+    <div class="product">
+      <img src="images/headphone.jpg" alt="Headphones">
+      <button onclick="addItem('Headphones', 2000)">Add Headphones (&#8377; 2000)</button>
+    </div>
+    
+    <div class="product">
+      <img src="images/mouse.jpg" alt="Mouse">
+      <button onclick="addItem('Mouse', 500)">Add Mouse (&#8377; 500)</button>
+    </div>
+  </div>
+
+  <!-- Cart Display -->
+  <ul id="cart"></ul>
+  <p id="total"></p>
+
+  <script>
+    let cart = [];
+
+    // Add item function
+    function addItem(item, price) {
+      cart.push({ item, price });
+      renderCart();
+    }
+
+    // Render cart
+    function renderCart() {
+      const cartList = document.getElementById("cart");
+      cartList.innerHTML = "";
+
+      const totalEl = document.getElementById("total");
+      let total = 0;
+
+      for (let i = 0; i < cart.length; i++) {
+        const li = document.createElement("li");
+        li.textContent = `${cart[i].item}: ${cart[i].price}`;
+        cartList.appendChild(li);
+        total += cart[i].price;
+      }
+
+      totalEl.textContent = `Total: ${total}`;
+    }
+  </script>
+</body>
+
+</html>

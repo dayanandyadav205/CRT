@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .products{
+      display: flex;
+      gap: 30px;
+    }
+    img{
+      height: 100px;
+      width: 100px;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Day 20: For Loop</h1>
+  <h2>Shopping Cart</h2>
+
+  <div class="products">
+    <div class="product1">
+      <img src="images/laptop.jpg" alt=""><br>
+      <button onclick="addCart('Laptop', 50000)">Buy (Laptop: &#8377; 50,000)</button>
+    </div>
+
+    <div class="product2">
+      <img src="images/headphone.jpg" alt=""><br>
+      <button onclick="addCart('Headphone', 2000)">Buy (Headphone: 2,000)</button>
+      </div>
+
+      <div class="product3">
+        <img src="images/mouse.jpg" alt=""><br>
+        <button onclick="addCart('Mouse', 500)">Buy (Mouse: 5,00)</button>
+        </div>
+  </div>
+
+  <ul id="cartItem">
+
+  </ul>
+  
+  <p id="totalPrice"></p>
+
+
+
+  <Script>
+    let cart = [];
+
+    function addCart(item, price){
+      cart.push({item, price})
+      console.log(item, price);
+      renderCart();
+    }
+
+    function renderCart(){
+      let cartItem = document.getElementById('cartItem');
+      cartItem.innerHTML = '';
+
+      let totalPrice = document.getElementById('totalprice');
+    
+      let total = 0;
+
+      for(let i=0; i<cart.length; i++){
+        let li = document.createElement('li');
+        li.textContent = `${cart[i].item}: ${cart[i].price}`;
+        cartItem.appendChild(li);
+        total += cart[i].price;
+        console.log(total);
+       
+      }
+       totalPrice.innerText = total;
+    }
+  </Script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // Shopping cart function with callback and nested helper
+function addItemToCart(cart, item, callback) {
+  cart.push(item); // add item to cart
+
+  // Callback: notify or update UI after adding
+  if (callback) {
+    callback(item);
+  }
+}
+
+function calculateCartTotal(cart, discountRate) {
+  let subtotal = 0;
+
+  for (let item of cart) {
+    subtotal += item.price * item.quantity;
+  }
+
+  // Nested function: private helper to apply tax
+  function applyTax(amount) {
+    const taxRate = 0.05; // 5% tax
+    return amount + amount * taxRate;
+  }
+
+  let discount = subtotal * discountRate;
+  let finalTotal = applyTax(subtotal - discount);
+
+  return {
+    subtotal: subtotal,
+    discount: discount,
+    finalTotal: finalTotal
+  };
+}
+
+// Example usage
+let cart = [];
+
+// Callback logs when item is added
+addItemToCart(cart, { name: "Laptop", price: 1000, quantity: 1 }, function(item) {
+  console.log(item.name + " added to cart!");
+});
+
+addItemToCart(cart, { name: "Mouse", price: 50, quantity: 2 }, function(item) {
+  console.log(item.name + " added to cart!");
+});
+
+// Calculate total with 10% discount
+let result = calculateCartTotal(cart, 0.1);
+
+console.log(result);
+// { subtotal: 1100, discount: 110, finalTotal: 1039.5 }
+  </script>
+</body>
+</html>
