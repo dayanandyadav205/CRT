@@ -16,8 +16,10 @@
   height: 100px;
 }
 
-.header h1 {
+
+.headerText{
   color: white;
+  text-align: center;
 }
 
 .nav {
@@ -33,7 +35,7 @@
 }
 
 .nav a:hover {
-  background-color: aqua;
+  background-color: rgb(36, 124, 124);
 }
 
 /* top button css */

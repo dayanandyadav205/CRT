@@ -11,35 +11,7 @@
 
 <body>
     <!-- Header -->
-    <div class="header">
-        <div>
-            <img src="images/cdgi.jpg" alt="CDGI Logo" />
-        </div>
-
-        <div>
-            <h1>Chameli Devi Group of Institutions, Indore (MP)</h1><br>
-            <h2>Class Room Training (CRT)</h2><br>
-            <h3>Web Development</h3><br>
-            <h4>B.Tech-CSE, III Semester</h4>
-        </div>
-
-        <div>
-
-        </div>
-
-    </div>
-
-    <!-- Navigation Bar -->
-    <div class="nav">
-        <a href="index.html"><i class="fa-solid fa-house"></i></a>
-        <a href="file:///C:\xampp\htdocs\CRT\CRT HTML Code" target="_blank">HTML Code</a>
-        <a href="file:///C:\xampp\htdocs\CRT\CRT CSS Code" target="_blank">CSS Code</a>
-        <a href="file:///C:\xampp\htdocs\CRT\CRT JavaScript Code" target="_blank">JavaScript Code</a>
-        <a href="contact.html">Our Contact</a>
-        <a href="signup.html">Sign Up</a>
-        <a href="login.html">User Login</a>
-
-    </div>
+    <div id="header"></div>
 
     <!-- sign up page -->
     <div class="formCotainer">
@@ -75,6 +47,8 @@
         </form>
     </div>
 
+    <div id="footer"></div>
+
     <script>
         function showpwd() {
             let pwd = document.getElementById('pwd');
@@ -100,14 +74,16 @@
                 return false;
             }
         }
+
+        //To include header footer on each page
+        async function loadComponent(id, file) {
+            const response = await fetch(file);
+            document.getElementById(id).innerHTML = await response.text();
+        }
+        loadComponent("header", "header.html");
+        loadComponent("footer", "footer.html");
     </script>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer">
-            <p>&copy; Designed & Developed by Dayanand Yadav, Assistant Professor, CSE Department, CDGI, Indore</p>
-        </div>
-    </footer>
 </body>
 
 </html>

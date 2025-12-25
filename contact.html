@@ -11,38 +11,10 @@
 
 <body>
   <!-- Header -->
-  <div class="header">
-    <div>
-      <img src="images/cdgi.jpg" alt="CDGI Logo" />
-    </div>
-
-    <div>
-      <h1>Chameli Devi Group of Institutions, Indore (MP)</h1><br>
-      <h2>Class Room Training (CRT)</h2><br>
-      <h3>Web Development</h3><br>
-      <h4>B.Tech-CSE, III Semester</h4>
-    </div>
-
-    <div>
-
-    </div>
-
-  </div>
-
-  <!-- Navigation Bar -->
-  <div class="nav">
-    <a href="index.html"><i class="fa-solid fa-house"></i></a>
-    <a href="file:///C:\xampp\htdocs\CRT\CRT HTML Code" target="_blank">HTML Code</a>
-    <a href="file:///C:\xampp\htdocs\CRT\CRT CSS Code" target="_blank">CSS Code</a>
-    <a href="file:///C:\xampp\htdocs\CRT\CRT JavaScript Code" target="_blank">JavaScript Code</a>
-    <a href="contact.html">Our Contact</a>
-    <a href="signup.html">Sign Up</a>
-    <a href="login.html">User Login</a>
-
-  </div>
+  <div id="header"></div>
 
   <!-- Main Section -->
-  <div class="contact-container">
+  <div class="formCotainer">
     <div>
       <p style="font-size: 20px;color: white;"><strong>Address:</strong> Khandwa Road, Village Umrikheda, Near Toll booth, Indore, Madhya Pradesh 452020</p>
     </div><br>  
@@ -53,7 +25,7 @@
     <br>
     <div class="map-iframe">
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2642.3867536361213!2d75.88653547530167!3d22.615117879461543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fb28a5660d8b%3A0x2a7a0698a930c80f!2sChameli%20Devi%20Group%20of%20Institutions!5e1!3m2!1sen!2sin!4v1758175120964!5m2!1sen!2sin">
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2642.3867536361213!2d75.88653547530167!3d22.615117879461543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fb28a5660d8b%3A0x2a7a0698a930c80f!2sChameli%20Devi%20Group%20of%20Institutions!5e1!3m2!1sen!2sin!4v1758175120964!5m2!1sen!2sin" width="500" height="300">
       </iframe>
     </div>
 
@@ -61,9 +33,18 @@
 
   </div>
 
-  <!-- Footer JS -->
-  <script src="js/footer.js"></script>
-  <my-footer></my-footer>
+  <!-- Footer -->
+   <div id="footer"></div>
+  
+  <!-- To include header footer on each page -->
+  <script>
+    async function loadComponent(id, file) {
+      const response = await fetch(file);
+      document.getElementById(id).innerHTML = await response.text();
+    }
+    loadComponent("header", "header.html");
+    loadComponent("footer", "footer.html");
+  </script>
 </body>
 
 </html>
