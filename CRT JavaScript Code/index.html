@@ -4,8 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+  <div id="header"></div>
+  
+  <br>
+
   <h1>CRT JavaScript Code</h1>
   <h2>Week 3: JavaScript Basics</h2>
   <ul>
@@ -60,5 +65,17 @@
 
     <a href="/CRT JavaScript Code/Week 4 Arrays & Functions/class shopping cart.html">Shopping Cart Application</a>
   </ul>
+
+  <div id="footer"></div>
+
+  <script>
+    async function loadContent(id, file) {
+    let response = await fetch(file);
+    
+    document.getElementById(id).innerHTML = await response.text();
+    }
+
+    loadContent('header', '/header.html');
+  </script>
 </body>
 </html>

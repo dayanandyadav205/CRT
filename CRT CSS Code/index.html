@@ -5,9 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
+  <div id="header"></div>
+
   <h1>CRT CSS Code</h1>
 <ul>
     <!-- <a href="/CRT CSS Code/CSS Code/i">CRT CSS Code</a> -->
@@ -26,6 +29,18 @@
     <a href="/CRT CSS Code/CSS Code/8. grid layout.html">CSS Layout</a><br><br>
     <a href="/CRT CSS Code/CSS Code/9. responsive flexbox layout.html">CSS Responsive Layout</a>
     </ul>
+
+    <div id="footer"></div>
+
+    <script>
+      async function loadContent(id, file){
+        let response = await fetch(file);
+        document.getElementById(id).innerHTML = await response.text();
+      }
+
+      loadContent('header', '/header.html');
+      loadContent('footer', '/footer.html');
+    </script>
 </body>
 
 </html>

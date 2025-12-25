@@ -25,7 +25,6 @@
 .nav {
   display: flex;
   background-color: rgb(36, 35, 35);
-  padding: 10px;
 }
 
 .nav a {
@@ -35,7 +34,7 @@
 }
 
 .nav a:hover {
-  background-color: rgb(36, 124, 124);
+  background-color: rgb(2, 182, 140);
 }
 
 /* top button css */
@@ -65,6 +64,11 @@
 .main .aside img {
   height: 100px;
   width: 100px;
+}
+
+.myLinks{
+  font-size: 30px;
+  line-height: 50px;
 }
 
 .main .content {
