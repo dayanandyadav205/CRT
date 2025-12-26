@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home</title>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
@@ -194,11 +195,13 @@
   <!-- To include header footer on each page -->
   <script>
     async function loadComponent(id, file) {
-      const response = await fetch(file);
-      document.getElementById(id).innerHTML = await response.text();
+      const response = await fetch(file);              // fetch the external HTML file
+      document.getElementById(id).innerHTML =          // find the target element by id
+        await response.text();                         // insert the fetched HTML content
     }
-    loadComponent("header", "header.html");
-    loadComponent("footer", "footer.html");
+
+    loadComponent("header", "header.html");            // load header.html into <div id="header">
+    loadComponent("footer", "footer.html");            // load footer.html into <div id="footer">
   </script>
 </body>
 

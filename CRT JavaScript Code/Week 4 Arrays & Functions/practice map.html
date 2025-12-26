@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Map</h1>
+
+  <script>
+    let celciusTemp = [4, 12, 20, 30, 40];
+    let ferhrenheit = celciusTemp.map(c => (c * 9 / 5 + 32));
+
+    ferhrenheit.forEach((ferhrenheit) => {
+      document.writeln(ferhrenheit + '<br>');
+    })
+  </script>
+</body>
+
+</html>

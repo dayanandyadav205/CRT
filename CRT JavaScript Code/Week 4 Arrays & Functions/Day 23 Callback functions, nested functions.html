@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .products {
+      display: flex;
+      gap: 30px;
+    }
+
+    img {
+      height: 100px;
+      width: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Day 23 Callback functions, nested functions</h1>
+  <h2>Refer Shopping Cart Application</h2>
+  <h3>callback function & nested function</h3>
+  <script>
+    //callback function
+    btnDecrement.onclick = () => {
+      if (cart[i].quantity > 1) {
+        cart[i].quantity -= 1;
+      } else {
+        cart.splice(i, 1); // remove item if quantity is 0
+      }
+      renderCart(); //nested function
+    };
+  </script>
+</body>
+
+</html>

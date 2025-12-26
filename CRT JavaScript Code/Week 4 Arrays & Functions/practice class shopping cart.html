@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .products {
+      display: flex;
+      gap: 30px;
+    }
+
+    img {
+      height: 100px;
+      width: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Day 20: For Loop</h1>
+  <h2>Shopping Cart Application</h2>
+
+  <div class="products">
+    <div class="product1">
+      <img src="images/laptop.jpg" alt=""><br>
+      <button onclick="addCart('Laptop', 50000)">Buy (Laptop: &#8377; 50,000)</button>
+    </div>
+
+    <div class="product2">
+      <img src="images/headphone.jpg" alt=""><br>
+      <button onclick="addCart('Headphone', 2000)">Buy (Headphone: 2,000)</button>
+    </div>
+
+    <div class="product3">
+      <img src="images/mouse.jpg" alt=""><br>
+      <button onclick="addCart('Mouse', 500)">Buy (Mouse: 5,00)</button>
+    </div>
+  </div>
+
+  <ul id="cartItem">
+
+  </ul>
+
+  <p id="totalPrice"></p>
+
+  <p id="totalItem"></p>
+
+
+
+  <Script>
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    function saveCart() {
+      localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+    function addCart(item, price) {
+      let existingItem = cart.find(c => c.item === item)
+      if (existingItem) {
+        existingItem.quantity += 1;
+      } else
+        cart.push({ item, price, quantity: 1 })
+      renderCart();
+      saveCart()
+    }
+
+    function renderCart() {
+      let cartItem = document.getElementById('cartItem');
+      cartItem.innerHTML = '';
+
+      let totalPrice = document.getElementById('totalPrice');
+      let totalItem = document.getElementById('totalItem');
+
+      let total = 0;
+
+      for (let i = 0; i < cart.length; i++) {
+        let li = document.createElement('li');
+        li.textContent = `${cart[i].item} (x ${cart[i].quantity}): ${cart[i].price * cart[i].quantity}`;
+        cartItem.appendChild(li);
+
+        let btnIncrement = document.createElement('button');
+        btnIncrement.textContent = '+';
+        li.appendChild(btnIncrement);
+
+        btnIncrement.onclick = () => {
+          cart[i].quantity += 1;
+          renderCart();
+          saveCart()
+        }
+
+        let btnDecrement = document.createElement('button');
+        btnDecrement.textContent = '-';
+        li.appendChild(btnDecrement);
+
+        btnDecrement.onclick = () => {
+          if (cart[i].quantity > 1) {
+            cart[i].quantity -= 1;
+          } else {
+            cart.splice(i, 1);
+          }
+          renderCart();
+          saveCart()
+        }
+
+        total += cart[i].price * cart[i].quantity;
+
+      }
+      totalPrice.innerHTML = "Total Price: " + total;
+      totalItem.innerHTML = 'Total Item in cart: ' + cart.length;
+
+    }
+
+    renderCart();
+  </Script>
+</body>
+
+</html>

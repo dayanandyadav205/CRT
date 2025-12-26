@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>map & foreach loop</h1>
+  <h3>Temperatures in Fahrenheit</h3>
+  <ul id="temps"></ul>
+
+  <script>
+    // Original array in Celsius
+    const celsiusTemps = [0, 20, 30, 100];
+
+    // Use map() to convert to Fahrenheit
+    const fahrenheitTemps = celsiusTemps.map(c => (c * 9 / 5) + 32);
+
+    // Render results
+    const list = document.getElementById("temps");
+    fahrenheitTemps.forEach(fahrenheitTemps => {
+      const li = document.createElement("li");
+      li.textContent = `${fahrenheitTemps} F`;
+      list.appendChild(li);
+    });
+  </script>
+</body>
+
+</html>
