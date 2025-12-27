@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
+    .cartContainer{
+      line-height: 40px;
+      padding: 20PX;
+    }
     .products {
       display: flex;
       gap: 30px;
@@ -19,40 +23,52 @@
     p {
       font-weight: bold;
     }
+
+
   </style>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/script.js"></script>
 </head>
 
 <body>
-  <h1>Day 20: For Loop</h1>
-  <h2>Shopping Cart Application</h2>
+  <div id="header"></div>
+  <br><br>
 
-  <div class="products">
-    <div>
-      <img src="images/laptop.jpg" alt=""><br>
-      <button onclick="addCart('Laptop', 50000)">Buy (Laptop: &#8377; 50,000)</button>
+  <div class="cartContainer">
+    <h1>Day 20: For Loop</h1>
+    <h2>Shopping Cart Application</h2>
+
+    <div class="products">
+      <div>
+        <img src="images/laptop.jpg" alt=""><br>
+        <button onclick="addCart('Laptop', 50000)">Buy (Laptop: &#8377; 50,000)</button>
+      </div>
+
+      <div>
+        <img src="images/headphone.jpg" alt=""><br>
+        <button onclick="addCart('Headphone', 2000)">Buy (HeadPhone: &#8377; 2,000)</button>
+      </div>
+
+      <div>
+        <img src="images/mouse.jpg" alt=""><br>
+        <button onclick="addCart('Mouse',500)">Buy Mouse (Mouse: &#8377; 5,00) </button>
+      </div>
     </div>
 
-    <div>
-      <img src="images/headphone.jpg" alt=""><br>
-      <button onclick="addCart('Headphone', 2000)">Buy (HeadPhone: &#8377; 2,000)</button>
-    </div>
+    <h4>Cart Items</h4>
+    <ul id="cartItems">
 
-    <div>
-      <img src="images/mouse.jpg" alt=""><br>
-      <button onclick="addCart('Mouse',500)">Buy Mouse (Mouse: &#8377; 5,00) </button>
-    </div>
+    </ul>
+
+    <p id="totalPrice"></p>
+
   </div>
 
-  <h4>Cart Items</h4>
-  <ul id="cartItems">
+  <br><br><br>
 
-  </ul>
+  <div id="footer"></div>
 
-  <p id="totalPrice"></p>
-
-  <script src="js/script_cart.js">
-    
-  </script>
+  <script src="/js/script_cart.js"></script>
 </body>
 
 </html>
