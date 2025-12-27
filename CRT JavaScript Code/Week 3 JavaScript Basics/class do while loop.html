@@ -7,7 +7,7 @@
   <title>Document</title>
   <style>
     p{
-      /* font-size: 50px; */
+      font-size: 50px;
     }
   </style>
 
@@ -17,7 +17,21 @@
   <h1>class do while loop</h1>
   <p id="result2"></p>
 
- <script src="/js/script.js"></script>
+ <script>
+   //Do while loop
+    let i = 0;
+    do {
+      // document.writeln("Welcome to JavaScript" + "<br>")
+      document.getElementById("result2").innerHTML = "Welcome to JavaScript";
+      document.getElementById("result2").style.fontSize = "50px";
+      document.getElementById("result2").style.color = "blue";
+      i = i + 1;
+    }
+
+    while (i <= 5)
+
+
+ </script>
 
 
 </body>
