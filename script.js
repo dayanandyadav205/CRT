@@ -332,62 +332,102 @@ function quizResult() {
   document.getElementById("percentage").innerHTML = "Your percentage is: " + percentage;
 }
 
+//To Do List 1
+let item = [];
 
+function pushItem() {
+  let input = document.getElementById("inputItem").value;
+  document.getElementById("inputItem").value = "";
 
-//Shopping cart
-//cart
-let cart = []; //global
-
-function addCart(item, price) {
-  let existingItem = cart.find(c => c.item === item); //local variable
-
-  if (existingItem) {
-    cart[i].quantity += 1;
+  if (input !== "") {
+    item.push(input);
+    renderItems()
   }
-  cart.push({ item, price, quantity: 1 });
-  renderCart(); //nested function
 }
 
-function renderCart() {
-  let cartItem = document.getElementById('cartItems');
-  cartItem.innerHTML = "";
+function popItem() {
+  if (item.length > 0) {
+    item.pop();
+    renderItems();
+  }
+  else {
+    alert("List is empty");
+  }
+}
 
-  let totalPrice = document.getElementById('totalPrice');
+function renderItems() {
+  let listItems = document.getElementById("toDoList");
+  listItems.innerHTML = "";
 
-  let total = 0;
+  item.forEach((item) => {
+    const li = document.createElement('li');
+    li.textContent = `${item}`;
+    listItems.appendChild(li);
+  });
+}
 
-  for (let i = 0; i <= cart.length; i++) {
+//To Do List Application 2
+let items = JSON.parse(localStorage.getItem("items")) || [];
+
+function saveItems() {
+  localStorage.setItem("items", JSON.stringify(items));
+}
+
+function addItem() {
+  let input = document.getElementById("inputItem").value;
+  document.getElementById("inputItem").value = "";
+
+  if (input === "") {
+    alert("Please enter an item");
+  } else {
+    items.push(input);
+  }
+  saveItems()
+  renderItems();
+}
+
+function deleteItem(index) {
+  items.splice(index, 1);
+  saveItems()
+  renderItems();
+}
+
+function editItem(index) {
+  let newValue = prompt("Edit Item:", items[index]);
+  if (newValue !== '' && newValue !== null) {
+    items[index] = newValue;
+  }
+  saveItems()
+  renderItems();
+}
+
+function renderItems() {
+  let itemList = document.getElementById("toDoList");
+  document.getElementById("toDoList").innerHTML = "";
+
+  items.forEach((items, index) => {
     let li = document.createElement('li');
-    li.textContent = `${cart[i].item} (x ${cart[i].quantity}): ${cart[i].price * cart[i].quantity}`;
-    cartItem.appendChild(li);
-    total = total + cart[i].price * cart[i].quantity;
+    li.textContent = items;
+    itemList.appendChild(li);
 
-    let btnIncrement = document.createElement('button');
-    btnIncrement.textContent = '+';
-    li.appendChild(btnIncrement);
+    let deleteBtn = document.createElement('button');
+    deleteBtn.textContent = 'X';
+    li.appendChild(deleteBtn);
+    deleteBtn.addEventListener('click', () => deleteItem(index));
 
-    btnIncrement.onclick = () => {
-      cart[i].quantity += 1;
-      renderCart();
-    }
-
-    let btnDecrement = document.createElement('button');
-    btnDecrement.textContent = '-';
-    li.appendChild(btnDecrement);
-
-    btnDecrement.onclick = () => {
-
-      if (cart[i].quantity > 1) {
-        cart[i].quantity -= 1;
-      } else {
-        cart.splice(i, 1);
-      }
-      renderCart();
-    }
-    totalPrice.innerHTML = 'Total Price: ' + total;
-  }
-
+    let editBtn = document.createElement('button');
+    editBtn.textContent = 'Edit';
+    li.appendChild(editBtn);
+    editBtn.addEventListener('click', () => editItem(index));
+  });
 }
+renderItems();
+
+
+
+
+
+
 
 
 
