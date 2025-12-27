@@ -23,26 +23,27 @@
 }
 
 /* Navigation bar */
-.navbarContainer{
-  display: flex;
-}
 
 .navbar {
   background: #333;
-  padding: 0.5rem 1rem;
-  padding: 20px;
+  padding: 1.5rem; 
 }
 
 .nav-list {
   list-style: none;
   display: flex;
-  gap: 1rem;
+   margin-left: -2.5rem;
 }
 
 .nav-list a {
   color: white;
   text-decoration: none;
-  padding: 0.5rem;
+  padding: 1.5rem;
+  
+}
+
+.nav-list a:hover{
+  background-color:#555 ;
 }
 
 /* Dropdown container */
