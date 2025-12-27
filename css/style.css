@@ -22,7 +22,57 @@
   text-align: center;
 }
 
-.nav {
+/* Navigation bar */
+.navbar {
+  background: #333;
+  padding: 0.5rem 1rem;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+}
+
+/* Dropdown menu hidden by default */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #444;
+  list-style: none;
+  padding: 0.5rem 0;
+  display: none;
+  min-width: 180px;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: white;
+}
+
+.dropdown-menu li a:hover {
+  background: #555;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* .nav {
   display: flex;
   background-color: rgb(36, 35, 35);
 }
@@ -35,7 +85,7 @@
 
 .nav a:hover {
   background-color: rgb(2, 182, 140);
-}
+} */
 
 /* top button css */
 .topBtn{

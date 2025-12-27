@@ -5,9 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
+  <div id="header"></div>
+
+  <br><br>
 
     <label>Enter the value of first no.</label>
     <input type="text" id="num1">
@@ -32,54 +36,12 @@
     <span id="result"></span>
 
 
-  <script>
-    function addition(){
+  <script src="/js/script.js"></script>
 
-    let num1 =  parseFloat(document.getElementById("num1").value);
+  <br><br><br><br><br><br><br><br><br><br><br><br>
 
-    let num2 = parseFloat(document.getElementById("num2").value);
+    <div id="footer"></div>
 
-    let sum = num1 + num2;
-
-    document.getElementById("result").innerHTML = sum;
-    }
-
-
-    function substraction(){
-
-    let num1 =  parseFloat(document.getElementById("num1").value);
-
-    let num2 = parseFloat(document.getElementById("num2").value);
-
-    let diff = num1 - num2;
-
-    document.getElementById("result").innerHTML = diff;
-    }
-
-    function multiply(){
-
-    let num1 =  parseFloat(document.getElementById("num1").value);
-
-    let num2 = parseFloat(document.getElementById("num2").value);
-
-    let mult = num1 * num2;
-
-    document.getElementById("result").innerHTML = mult;
-    }
-
-
-    function division(){
-
-    let num1 =  parseFloat(document.getElementById("num1").value);
-
-    let num2 = parseFloat(document.getElementById("num2").value);
-
-    let div = num1 / num2;
-
-    document.getElementById("result").innerHTML = div;
-    }
-
-  </script>
 </body>
 
 </html>

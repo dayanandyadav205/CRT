@@ -5,54 +5,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    .quizContainer {
+      padding: 20px;
+    }
+
+    .questionContainer{
+      padding: 20px;
+      line-height: 40px;
+    }
+  </style>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-  <h1>Simple Quiz Application using JavaScript</h1>
+  <div id="header"></div>
 
-  <h2>Question No. 01: What is 2+3?</h2>
-  <input type="radio" name="question1">3 <br>
-  <input type="radio" name="question1" id="correct1">5 <br>
-  <input type="radio" name="question1">7 <br>
-  <input type="radio" name="question1">1 <br>
+  <br>
+  <div class="quizContainer">
+    <h1>Simple Quiz Application using JavaScript</h1>
 
-  <h2>Question No. 02: What is 7-5?</h2>
-  <input type="radio" name="question2">5 <br>
-  <input type="radio" name="question2">7 <br>
-  <input type="radio" name="question2" id="correct2">2 <br>
-  <input type="radio" name="question2">0 <br>
+    <div class="questionContainer">
+      <h2>Q 01: What is 2+3?</h2>
+      <input type="radio" name="question1"> (a) 3 <br>
+      <input type="radio" name="question1" id="correct1"> (b) 5 <br>
+      <input type="radio" name="question1"> (c) 7 <br>
+      <input type="radio" name="question1"> (d) 1 <br>
 
-  <h2>Question No. 03: What is 8*3?</h2>
-  <input type="radio" name="question3" id="correct3" >24 <br>
-  <input type="radio" name="question3">5 <br>
-  <input type="radio" name="question3">7 <br>
-  <input type="radio" name="question3">1 <br>
 
-  <p id="result"></p>
-  <p id="percentage"></p>
+      <h2>Q 02: What is 7-5?</h2>
+      <input type="radio" name="question2"> (a) 5 <br>
+      <input type="radio" name="question2"> (b) 7 <br>
+      <input type="radio" name="question2" id="correct2"> (c) 2 <br>
+      <input type="radio" name="question2"> (d) 0 <br>
 
-  <input type="submit" value="Show Score" onclick="quizResult()">
+      <h2>Q 03: What is 8*3?</h2>
+      <input type="radio" name="question3" id="correct3"> (a) 24 <br>
+      <input type="radio" name="question3"> (b) 5 <br>
+      <input type="radio" name="question3"> (c) 7 <br>
+      <input type="radio" name="question3"> (d) 1 <br>
+    </div>
 
-  <script>
-    function quizResult(){
-    let score = 0;
+    <p id="score"></p><br>
+    <p id="percentage"></p> <br>
 
-    if(document.getElementById("correct1").checked){
-      score++;
-    }
-    if(document.getElementById("correct2").checked){
-      score++;
-    }
-    if(document.getElementById("correct3").checked){
-      score++;
-    }
+    <input type="submit" value="Show Score" onclick="quizResult()">
+  </div>
 
-    document.getElementById("result").innerHTML = "Your score is: " +score;
+  <script src="/js/script.js"></script>
 
-    let percentage = score/3*100;
-    document.getElementById("percentage").innerHTML = percentage;
-  }
-  </script>
+  <br><br><br><br>
+  <br><br><br><br>
+  <br><br><br><br>
+
+  <div id="footer"></div>
 </body>
 
 </html>
