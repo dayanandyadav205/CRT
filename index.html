@@ -6,22 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home</title>
   <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/script.js"></script>
 </head>
 
 <body>
   <div id="header"></div>
 
   <!--Go to Top -->
-  <div class="topBtn">
+  <!-- <div class="topBtn">
     <a href="#top">Top</a>
-  </div>
+  </div> -->
 
   <!-- The flexible grid (content) -->
   <div class="main">
     <div class="aside">
       <div class="aboutMe">
         <div class="myImg">
-          <img src="images/dayanand.jpg" alt=" " />
+          <img src="/images/dayanand.jpg" alt=" " />
         </div>
         <div class="myIntro">
           <h3>About Me</h3>
@@ -29,6 +30,7 @@
             Chameli Devi Group of Institutions, Indore</p>
         </div>
       </div>
+   
       <div class="myLinks">
         <h3 style="color: white;">My Links</h3>
         <ul>
@@ -39,7 +41,6 @@
           <li><a href="https://www.w3.org/" target="_blank"><i class="fa-brands fa-w3c"></i></a></li>
         </ul>
       </div>
-
     </div>
 
     <div class="content">
@@ -192,17 +193,6 @@
   <!-- Footer -->
   <div id="footer"></div>
 
-  <!-- To include header footer on each page -->
-  <script>
-    async function loadComponent(id, file) {
-      const response = await fetch(file);              // fetch the external HTML file
-      document.getElementById(id).innerHTML =          // find the target element by id
-        await response.text();                         // insert the fetched HTML content
-    }
-
-    loadComponent("header", "header.html");            // load header.html into <div id="header">
-    loadComponent("footer", "footer.html");            // load footer.html into <div id="footer">
-  </script>
 </body>
 
 </html>

@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/script.js"></script>
+
 </head>
 
 <body>
@@ -14,8 +17,9 @@
   <!-- Main Section -->
   <div class="formCotainer">
     <div>
-      <p style="font-size: 20px;color: white;"><strong>Address:</strong> Khandwa Road, Village Umrikheda, Near Toll booth, Indore, Madhya Pradesh 452020</p>
-    </div><br>  
+      <p style="font-size: 20px;color: white;"><strong>Address:</strong> Khandwa Road, Village Umrikheda, Near Toll
+        booth, Indore, Madhya Pradesh 452020</p>
+    </div><br>
 
     <div>
       <h2 style="color: white;text-align: center;">Locate Us on Google Map</h2>
@@ -23,23 +27,15 @@
     <br>
     <div class="map-iframe">
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2642.3867536361213!2d75.88653547530167!3d22.615117879461543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fb28a5660d8b%3A0x2a7a0698a930c80f!2sChameli%20Devi%20Group%20of%20Institutions!5e1!3m2!1sen!2sin!4v1758175120964!5m2!1sen!2sin" width="500" height="300">
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2642.3867536361213!2d75.88653547530167!3d22.615117879461543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fb28a5660d8b%3A0x2a7a0698a930c80f!2sChameli%20Devi%20Group%20of%20Institutions!5e1!3m2!1sen!2sin!4v1758175120964!5m2!1sen!2sin"
+        width="500" height="300">
       </iframe>
     </div>
   </div>
 
   <!-- Footer -->
-   <div id="footer"></div>
-  
-  <!-- To include header footer on each page -->
-  <script>
-    async function loadComponent(id, file) {
-      const response = await fetch(file);
-      document.getElementById(id).innerHTML = await response.text();
-    }
-    loadComponent("header", "header.html");
-    loadComponent("footer", "footer.html");
-  </script>
+  <div id="footer"></div>
+
 </body>
 
 </html>

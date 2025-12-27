@@ -6,13 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/script.js"></script>
 </head>
 
 <body>
   <div id="header"></div>
 
   <h1>CRT CSS Code</h1>
-<ul>
+  <ul>
     <!-- <a href="/CRT CSS Code/CSS Code/i">CRT CSS Code</a> -->
     <a href="/CRT CSS Code/CSS Code/1. CSS_Selectors.html">CSS Selectors</a><br><br>
     <a href="/CRT CSS Code/CSS Code/2. background images.html">BG Images</a><br><br>
@@ -28,19 +29,9 @@
     <a href="/CRT CSS Code/CSS Code/7.5 positioning absolute.html">CSS positioning Absolute</a><br><br>
     <a href="/CRT CSS Code/CSS Code/8. grid layout.html">CSS Layout</a><br><br>
     <a href="/CRT CSS Code/CSS Code/9. responsive flexbox layout.html">CSS Responsive Layout</a>
-    </ul>
+  </ul>
 
-    <div id="footer"></div>
-
-    <script>
-      async function loadContent(id, file){
-        let response = await fetch(file);
-        document.getElementById(id).innerHTML = await response.text();
-      }
-
-      loadContent('header', '/header.html');
-      loadContent('footer', '/footer.html');
-    </script>
+  <div id="footer"></div>
 </body>
 
 </html>

@@ -55,10 +55,23 @@
   display: flex;
 }
 
-.main .aside {
+.aside {
+  /* display: flex; */
   background-color: lightcoral;
-  flex: 20%;
+  flex: 25%;
   padding: 20px;
+}
+
+.aside .aboutMe{
+  display: flex;
+  gap: 10px;
+  border: 2px solid;
+  padding: 10px;
+  text-align: justify;
+}
+
+.aside .aboutMe img{
+  border-radius: 50%;
 }
 
 .main .aside img {
@@ -73,13 +86,13 @@
 
 .main .content {
   background-color: lightseagreen;
-  flex: 80%;
+  flex: 75%;
   padding: 20px;
 }
 
 .main .content img {
   height: 300px;
-  width: 400px;
+  width: 600px;
 }
 
 /* footer css */
@@ -98,6 +111,7 @@
   padding: 20px;
   margin-left: 50px;
   margin-top: 20px;
+  margin-bottom: 30px;
   width: 500px;
 }
 
@@ -106,11 +120,26 @@
   width: 100%;
 }
 
+.btnSubmit{
+  background-color: rgb(42, 41, 41);
+  color: white;
+}
+
 
 /* responsive layout */
-@media (min-width:400px) and (max-width:768px){
+@media (min-width:200px) and (max-width:768px){
   .nav, .main{
     flex-direction: column;
     text-align: center;
+  }
+
+
+  .header h1,h2{
+    font-size: 20px;
+  }
+
+  .header img{
+    width: 50px;
+    height: 50px;
   }
 }

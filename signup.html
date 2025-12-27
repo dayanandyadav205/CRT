@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/script.js"></script>
 </head>
 
 <body>
@@ -33,54 +35,22 @@
                     <option value="">Male</option>
                     <option value="">Female</option>
                 </select><br><br>
-                <input type="date" required><br><br>
+               DOB <input type="date" style="width: 200px; height: 40px;" required><br><br>
 
                 Branch: <input type="radio" name="branch" required>CS
                 <input type="radio" name="branch" required>IT <br><br>
-                <textarea name="" id="" placeholder="Address" required></textarea><br><br>
+
+                <textarea name="" id="" placeholder="Address" style="width: 400px; height: 100px;" required></textarea><br><br>
+
                 <input type="file" required>
 
-                <input type="submit" value="Sign up">
+                <br><br>
+                <input type="submit" value="Sign up" class="btnSubmit">
             </fieldset>
         </form>
     </div>
 
     <div id="footer"></div>
-
-    <script>
-        function showpwd() {
-            let pwd = document.getElementById('pwd');
-
-            if (pwd.type == 'password') {
-                pwd.type = 'text';
-            }
-            else {
-                pwd.type = 'password';
-            }
-        }
-
-        // js for pwd match
-        function chkpwd() {
-            let p1 = document.f1.password.value;
-            let p2 = document.f1.cpassword.value;
-
-            if (p1 == p2) {
-                return true;
-            }
-            else {
-                alert("Password Mismach");
-                return false;
-            }
-        }
-
-        //To include header footer on each page
-        async function loadComponent(id, file) {
-            const response = await fetch(file);
-            document.getElementById(id).innerHTML = await response.text();
-        }
-        loadComponent("header", "header.html");
-        loadComponent("footer", "footer.html");
-    </script>
 
 </body>
 
