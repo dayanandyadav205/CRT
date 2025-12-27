@@ -232,15 +232,15 @@ function showpwd(){
 
       if (randomNumber >= 0 && randomNumber < 1 / 3) {
         computerMove = "Rock";
-        document.getElementById("imgCompMove").src = "img/rock.png"
+        document.getElementById("imgCompMove").src = "/images/rock.png"
       }
       else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
         computerMove = "Paper";
-        document.getElementById("imgCompMove").src = "img/paper.png";
+        document.getElementById("imgCompMove").src = "/images/paper.png";
       }
       else if (randomNumber >= 2 / 3 && randomNumber < 1) {
         computerMove = "Scissor";
-        document.getElementById("imgCompMove").src = "img/scissors.png";
+        document.getElementById("imgCompMove").src = "/images/Scissors.png";
       }
 
       let result = "";
@@ -283,15 +283,15 @@ function showpwd(){
 
       if (randomNumber >= 0 && randomNumber < 1 / 3) {
         computerMove = "Rock";
-        document.getElementById("imgCompMove").src = "img/rock.png"
+        document.getElementById("imgCompMove").src = "/images/rock.png"
       }
       else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
         computerMove = "Paper";
-        document.getElementById("imgCompMove").src = "img/paper.png";
+        document.getElementById("imgCompMove").src = "/images/paper.png";
       }
       else if (randomNumber >= 2 / 3 && randomNumber < 1) {
         computerMove = "Scissor";
-        document.getElementById("imgCompMove").src = "img/scissors.png";
+        document.getElementById("imgCompMove").src = "/images/Scissors.png";
       }
 
       let result = "";
@@ -329,19 +329,19 @@ function showpwd(){
 
       console.log(randomNumber);
 
-      let computerMove = "";
+       let computerMove = "";
 
       if (randomNumber >= 0 && randomNumber < 1 / 3) {
         computerMove = "Rock";
-        document.getElementById("imgCompMove").src = "img/rock.png"
+        document.getElementById("imgCompMove").src = "/images/rock.png"
       }
       else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
         computerMove = "Paper";
-        document.getElementById("imgCompMove").src = "img/paper.png";
+        document.getElementById("imgCompMove").src = "/images/paper.png";
       }
       else if (randomNumber >= 2 / 3 && randomNumber < 1) {
         computerMove = "Scissor";
-        document.getElementById("imgCompMove").src = "img/scissors.png";
+        document.getElementById("imgCompMove").src = "/images/Scissors.png";
       }
 
       let result = "";
