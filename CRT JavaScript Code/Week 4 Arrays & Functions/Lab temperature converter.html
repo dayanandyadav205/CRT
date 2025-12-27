@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="/css/style.css">
-  
+  <script src="/js/script.js"></script>
 </head>
 
 <body>
@@ -16,12 +16,23 @@
   <h1>Day 20: Foreach & Map</h1>
   <h2>Temperature Converter (Celcius to Fehrenheit)</h2><br><br>
 
-    <h3 style="color: red;">output will be display on the console</h3>
+  <h3 style="color: red;">output will be display on the console</h3>
 
-  <script src="/js/script.js"></script>
+  <script>
+    //Temperature Converter
+    let tempCelcius = [0, 14, 18, 23, 39, 47];
+
+    let tempFehrenheit = tempCelcius.map(c => ((c * 9 / 5) + 32));
+
+    tempFehrenheit.forEach((tempFehrenheit) => {
+      console.log(tempFehrenheit)
+    });
 
 
-   <br><br><br>
+  </script>
+
+
+  <br><br><br>
 
   <div id="footer"></div>
 
