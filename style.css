@@ -165,6 +165,27 @@
   color: white;
 }
 
+/* To do List */
+.todoContainer{
+padding: 30px;
+background-color: lightsalmon;
+width: 700px;
+margin: 20px;
+line-height: 30px;
+}
+
+.todoContainer input{
+  height: 30px;
+  width: 70%;
+}
+
+.todoContainer .btnaddItem{
+  height: 40px;
+  width: 20%;
+}
+
+
+
 
 /* responsive layout */
 @media (min-width:200px) and (max-width:768px){
@@ -173,6 +194,10 @@
     text-align: center;
   }
 
+.main .content img{
+  width: 70%;
+  height: 70%;
+}
   .nav-list {
   list-style: none;
   display: block;
