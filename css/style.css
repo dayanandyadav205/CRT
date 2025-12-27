@@ -23,9 +23,14 @@
 }
 
 /* Navigation bar */
+.navbarContainer{
+  display: flex;
+}
+
 .navbar {
   background: #333;
   padding: 0.5rem 1rem;
+  padding: 20px;
 }
 
 .nav-list {
@@ -72,25 +77,10 @@
   display: block;
 }
 
-/* .nav {
-  display: flex;
-  background-color: rgb(36, 35, 35);
-}
-
-.nav a {
-  color: white;
-  padding: 20px;
-  text-decoration: none;
-}
-
-.nav a:hover {
-  background-color: rgb(2, 182, 140);
-} */
-
 /* top button css */
 .topBtn{
   background-color: rgb(229, 5, 5);
-  padding: 20px;
+  padding: 10px;
   position: sticky;
   top:20px;
   right: 20px;
@@ -178,11 +168,22 @@
 
 /* responsive layout */
 @media (min-width:200px) and (max-width:768px){
-  .nav, .main{
+    .main{
     flex-direction: column;
     text-align: center;
   }
 
+  .nav-list {
+  list-style: none;
+  display: block;
+  text-align: center;
+  line-height: 40px;
+  gap: 1rem;
+}
+
+  .dropdown:focus-within .dropdown-menu {
+  display: block;
+}
 
   .header h1,h2{
     font-size: 20px;
