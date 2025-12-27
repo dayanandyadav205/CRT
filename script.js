@@ -332,41 +332,8 @@ function quizResult() {
   document.getElementById("percentage").innerHTML = "Your percentage is: " + percentage;
 }
 
-//To Do List 1
-let item = [];
 
-function pushItem() {
-  let input = document.getElementById("inputItem").value;
-  document.getElementById("inputItem").value = "";
-
-  if (input !== "") {
-    item.push(input);
-    renderItems()
-  }
-}
-
-function popItem() {
-  if (item.length > 0) {
-    item.pop();
-    renderItems();
-  }
-  else {
-    alert("List is empty");
-  }
-}
-
-function renderItems() {
-  let listItems = document.getElementById("toDoList");
-  listItems.innerHTML = "";
-
-  item.forEach((item) => {
-    const li = document.createElement('li');
-    li.textContent = `${item}`;
-    listItems.appendChild(li);
-  });
-}
-
-//To Do List Application 2
+//To Do List Application 
 let items = JSON.parse(localStorage.getItem("items")) || [];
 
 function saveItems() {
