@@ -110,13 +110,13 @@
             cart[i].quantity -= 1;
           } else {
             cart.splice(i, 1);
+            totalPrice.innerHTML = "Total Price: 0";
           }
           renderCart();
         }
         totalPrice.innerHTML = 'Total Price: ' + total;
       }
     }
-
   </script>
 
   <br><br><br>

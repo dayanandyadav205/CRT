@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>How getElementById Works</h1>
+
+  <div class="myDiv">
+    <p class="p1">This is My Paragraph1</p>
+    <p>This is My Paragraph2</p>
+    <p>This is My Paragraph3</p>
+  </div>
+
+
+  <button class="btn-buy">Buy</button>
+
+
+  <script>
+
+    let x = document.querySelectorAll('.myDiv');
+    {
+      for (let i = 0; i < x.length; i++) {
+        x[i].style.color = 'red';
+      }
+
+    }
+
+    let p1 = document.querySelector('.p1'); {
+      p1.style.color = 'blue';
+    }
+
+    let btnbuy = document.querySelectorAll('btn-buy'); {
+      btnbuy.foreach((btnbuy) => {
+        btnbuy.style.height = "100px";
+      });
+    }
+  </script>
+
+</body>
+
+</html>

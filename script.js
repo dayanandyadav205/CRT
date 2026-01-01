@@ -83,6 +83,8 @@ function showpwd() {
 function rock() {
   const randomNumber = Math.random();
 
+  console.log(randomNumber);
+  
   let computerMove = "";
 
   if (randomNumber >= 0 && randomNumber < 1 / 3) {
